@@ -18,159 +18,249 @@
 
         <title>Clinic</title>
         <link rel="icon" type="image/png" href="assets/images/favicon.png">
-<style>
-    /* Bottom Navigation - Mobile Only */
-  /* Bottom Navigation - Mobile */
-  .mobile-bottom-nav {
-      display: none;
-    }
-/* .bottom-menu-drawer{
-    display: none;
-} */
-    @media (max-width: 768px) {
-      .mobile-bottom-nav {
-        display: flex;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        background-color: #f4f0ec;
-        border-top: 1px solid #ccc;
-        justify-content: space-around;
-        align-items: center;
-        padding: 10px 0;
-        z-index: 9999;
-        box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
-      }
 
-      .mobile-bottom-nav a {
-        text-decoration: none;
-        color: #333;
-        font-size: 12px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
+        <style>
+          .mobile-bottom-nav {
+            display: none;
+          }
 
-      .mobile-bottom-nav i {
-        font-size: 18px;
-        margin-bottom: 4px;
-      }
+          @media (max-width: 768px) {
+            .mobile-bottom-nav {
+              display: flex;
+              position: fixed;
+              bottom: 0;
+              left: 0;
+              width: 100%;
+              background-color: #f4f0ec;
+              border-top: 1px solid #ccc;
+              justify-content: space-around;
+              align-items: center;
+              padding: 10px 0;
+              z-index: 9999;
+              box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+              border-radius: 25px 25px 0 0;
+            }
 
-      /* Slide-up Menu */
-      .bottom-menu-drawer {
-        position: fixed;
-        bottom: -100%;
-        left: 0;
-        width: 100%;
-        background: #fff;
-        transition: bottom 0.4s ease;
-        z-index: 10000;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
-        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.15);
-        padding: 20px;
-      }
+            .mobile-bottom-nav a {
+              text-decoration: none;
+              color: #333;
+              font-size: 12px;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+            }
 
-      .bottom-menu-drawer.active {
-        bottom: 60px; /* height of bottom nav */
-      }
+            .mobile-bottom-nav i {
+              font-size: 18px;
+              margin-bottom: 4px;
+            }
 
-      .drawer-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 20px;
-      }
+            .bottom-menu-drawer {
+              position: fixed;
+              bottom: -100%;
+              left: 0;
+              width: 100%;
+              background: #fff;
+              transition: bottom 2s ease;
+              z-index: 10000;
+              border-top-left-radius: 20px;
+              border-top-right-radius: 20px;
+              box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.15);
+              padding: 20px;
+            }
 
-      .drawer-header h3 {
-        margin: 0;
-        font-size: 18px;
-      }
+            .bottom-menu-drawer.active {
+              bottom: 60px;
+            }
 
-      .drawer-close {
-        font-size: 20px;
-        cursor: pointer;
-      }
+            .drawer-header {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              margin-bottom: 20px;
+            }
 
-      .drawer-menu a {
-        display: block;
-        padding: 10px 0;
-        font-size: 16px;
-        color: #333;
-        border-bottom: 1px solid #eee;
-        text-decoration: none;
-      }
+            .drawer-header h3 {
+              margin: 0;
+              font-size: 18px;
+            }
 
-      .drawer-menu a:last-child {
-        border-bottom: none;
-      }
-    }
-    /* Hide mobile menu & bottom nav on larger screens */
-@media (min-width: 769px) {
-  .mobile-bottom-nav,
-  .bottom-menu-drawer {
-    display: none !important;
-  }
-}
+            .drawer-close {
+              font-size: 22px;
+              cursor: pointer;
+            }
 
-  </style>
-    </head>
-    <body>
-  <!-- Bottom Navigation -->
-  <div class="mobile-bottom-nav">
-    <a href="#"><i class="fas fa-bars"></i>Menu</a>
-    <a href="tel:+123456789"><i class="fas fa-phone"></i>Call</a>
-    <a href="#"><i class="fas fa-calendar-check"></i>Book Now</a>
-    <a href="#"><i class="fas fa-user-md"></i>Specialists</a>
-    <a href="https://wa.me/123456789" target="_blank"><i class="fab fa-whatsapp"></i>WhatsApp</a>
-  </div>
-        <!-- Start Preloader Area -->
-          <!-- Slide-Up Drawer -->
-  <div class="bottom-menu-drawer" id="menuDrawer">
-    <div class="drawer-header">
-      <h3>Menu</h3>
-      <span class="drawer-close" id="closeDrawer">&times;</span>
-    </div>
-    <div class="drawer-menu">
-      <a href="#">Home</a>
-      <a href="#">Services</a>
-      <a href="#">Pages</a>
-      <a href="#">Shop</a>
-      <a href="#">Blog</a>
-      <a href="#">Contact Us</a>
-    </div>
-  </div>
+            .drawer-menu {
+              display: flex;
+              flex-direction: column;
+            }
 
-  <!-- Bottom Navigation -->
-  <div class="mobile-bottom-nav">
-    <a href="#" id="openDrawer"><i class="fas fa-bars"></i>Menu</a>
-    <a href="tel:+123456789"><i class="fas fa-phone"></i>Call</a>
-    <a href="#"><i class="fas fa-calendar-check"></i>Book Now</a>
-    <a href="#"><i class="fas fa-user-md"></i>Specialists</a>
-    <a href="https://wa.me/123456789"><i class="fab fa-whatsapp"></i>WhatsApp</a>
-  </div>
-  <script>
-    const openDrawer = document.getElementById("openDrawer");
-    const closeDrawer = document.getElementById("closeDrawer");
-    const menuDrawer = document.getElementById("menuDrawer");
+            .accordion-item {
+              border-bottom: 1px solid #eee;
+            }
 
-    openDrawer.addEventListener("click", (e) => {
-      e.preventDefault();
-      menuDrawer.classList.add("active");
-    });
+            .accordion-button {
+              width: 100%;
+              text-align: left;
+              background: none;
+              border: none;
+              font-size: 16px;
+              padding: 12px 0;
+              cursor: pointer;
+              font-weight: bold;
+              color: #000;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+                  border: 2px solid;
+    border-radius: 20px;
+    padding: 12px;
+    margin-bottom: 20px;
+            }
 
-    closeDrawer.addEventListener("click", () => {
-      menuDrawer.classList.remove("active");
-    });
+            .accordion-content {
+              display: none;
+              padding-left: 10px;
+              padding-bottom: 10px;
+            }
 
-    // Optional: close drawer when clicking outside
-    window.addEventListener("click", (e) => {
-      if (!menuDrawer.contains(e.target) && !openDrawer.contains(e.target)) {
-        menuDrawer.classList.remove("active");
-      }
-    });
-  </script>
+            .accordion-content a {
+              display: block;
+              padding: 6px 0;
+              font-size: 14px;
+              color: #555;
+              text-decoration: none;
+            }
+
+            .accordion-item.open .accordion-content {
+              display: block;
+            }
+
+            .accordion-button i {
+              transition: transform 0.5s ease;
+            }
+
+            .accordion-item.open .accordion-button i {
+              transform: rotate(180deg);
+            }
+
+          }
+
+          @media (min-width: 769px) {
+            .mobile-bottom-nav,
+            .bottom-menu-drawer {
+              display: none !important;
+            }
+          }
+        </style>
+
+        <!-- Bottom Navigation -->
+        <div class="mobile-bottom-nav">
+          <a href="#" id="openDrawer"><i class="fas fa-bars"></i>Menu</a>
+          <a href="tel:+123456789"><i class="fas fa-phone"></i>Call</a>
+          <a href="#"><i class="fas fa-calendar-check"></i>Book Now</a>
+          <a href="#"><i class="fas fa-user-md"></i>Specialists</a>
+          <a href="https://wa.me/123456789" target="_blank"><i class="fab fa-whatsapp"></i>WhatsApp</a>
+        </div>
+
+        <!-- Bottom Menu Drawer -->
+        <div class="bottom-menu-drawer" id="menuDrawer">
+          <div class="drawer-header">
+            <h3>Menu</h3>
+            <span class="drawer-close" id="closeDrawer">&times;</span>
+          </div>
+          <div class="drawer-menu">
+            <div class="accordion-item">
+              <button class="accordion-button">
+                HOME <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="accordion-content">
+                <a href="index.html">Dental Clinic Home</a>
+                <a href="index-2.html">Pediatric Dentist Home</a>
+                <a href="index-3.html">Dental Treatment Home</a>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-button">
+                SERVICES <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="accordion-content">
+                <a href="#">General Dentistry</a>
+                <a href="#">Orthodontics</a>
+                <a href="#">Cosmetic</a>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-button">
+                PAGES <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="accordion-content">
+                <a href="#">About Us</a>
+                <a href="#">Team</a>
+                <a href="#">FAQs</a>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-button">
+                SHOP <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="accordion-content">
+                <a href="#">Dental Products</a>
+                <a href="#">Oral Care</a>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-button">
+                BLOG <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="accordion-content">
+                <a href="#">Latest Articles</a>
+                <a href="#">Tips & Guides</a>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <a class="accordion-button" href="#">Contact Us</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- JS -->
+        <script>
+          const openDrawer = document.getElementById("openDrawer");
+          const closeDrawer = document.getElementById("closeDrawer");
+          const menuDrawer = document.getElementById("menuDrawer");
+
+          openDrawer.addEventListener("click", (e) => {
+            e.preventDefault();
+            menuDrawer.classList.add("active");
+          });
+
+          closeDrawer.addEventListener("click", () => {
+            menuDrawer.classList.remove("active");
+          });
+
+          // Accordion toggle
+          const accordionButtons = document.querySelectorAll(".accordion-button");
+          accordionButtons.forEach((button) => {
+            button.addEventListener("click", function () {
+              const item = this.parentElement;
+              item.classList.toggle("open");
+            });
+          });
+
+          // Close drawer if clicked outside
+          window.addEventListener("click", (e) => {
+            if (!menuDrawer.contains(e.target) && !openDrawer.contains(e.target)) {
+              menuDrawer.classList.remove("active");
+            }
+          });
+        </script>
+
 
         <!-- End Preloader Area -->
 
