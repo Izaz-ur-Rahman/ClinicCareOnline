@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="zxx">
-    
+
 <!-- Mirrored from templates.hibotheme.com/doral/default/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 May 2025 06:36:35 GMT -->
 <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        
+
         <!-- Link of CSS Files -->
         <link rel="stylesheet" href="assets/css/animate.min.css">
         <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
@@ -14,29 +14,168 @@
         <link rel="stylesheet" href="assets/css/scrollCue.min.css">
         <link rel="stylesheet" href="assets/css/style.css">
         <link rel="stylesheet" href="assets/css/responsive.css">
-        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
         <title>Clinic</title>
         <link rel="icon" type="image/png" href="assets/images/favicon.png">
+<style>
+    /* Bottom Navigation - Mobile Only */
+  /* Bottom Navigation - Mobile */
+  .mobile-bottom-nav {
+      display: none;
+    }
+/* .bottom-menu-drawer{
+    display: none;
+} */
+    @media (max-width: 768px) {
+      .mobile-bottom-nav {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #f4f0ec;
+        border-top: 1px solid #ccc;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px 0;
+        z-index: 9999;
+        box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .mobile-bottom-nav a {
+        text-decoration: none;
+        color: #333;
+        font-size: 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .mobile-bottom-nav i {
+        font-size: 18px;
+        margin-bottom: 4px;
+      }
+
+      /* Slide-up Menu */
+      .bottom-menu-drawer {
+        position: fixed;
+        bottom: -100%;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        transition: bottom 0.4s ease;
+        z-index: 10000;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.15);
+        padding: 20px;
+      }
+
+      .bottom-menu-drawer.active {
+        bottom: 60px; /* height of bottom nav */
+      }
+
+      .drawer-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      .drawer-header h3 {
+        margin: 0;
+        font-size: 18px;
+      }
+
+      .drawer-close {
+        font-size: 20px;
+        cursor: pointer;
+      }
+
+      .drawer-menu a {
+        display: block;
+        padding: 10px 0;
+        font-size: 16px;
+        color: #333;
+        border-bottom: 1px solid #eee;
+        text-decoration: none;
+      }
+
+      .drawer-menu a:last-child {
+        border-bottom: none;
+      }
+    }
+    /* Hide mobile menu & bottom nav on larger screens */
+@media (min-width: 769px) {
+  .mobile-bottom-nav,
+  .bottom-menu-drawer {
+    display: none !important;
+  }
+}
+
+  </style>
     </head>
     <body>
-
+  <!-- Bottom Navigation -->
+  <div class="mobile-bottom-nav">
+    <a href="#"><i class="fas fa-bars"></i>Menu</a>
+    <a href="tel:+123456789"><i class="fas fa-phone"></i>Call</a>
+    <a href="#"><i class="fas fa-calendar-check"></i>Book Now</a>
+    <a href="#"><i class="fas fa-user-md"></i>Specialists</a>
+    <a href="https://wa.me/123456789" target="_blank"><i class="fab fa-whatsapp"></i>WhatsApp</a>
+  </div>
         <!-- Start Preloader Area -->
-        <div class="preloader-area text-center position-fixed top-0 bottom-0 start-0 end-0" id="preloader">
-            <div class="loader position-absolute start-0 end-0">
-                <img src="assets/images/favicon.png" alt="favicon">
-                <div class="waviy position-relative">
-                    <span class="d-inline-block">D</span>
-                    <span class="d-inline-block">O</span>
-                    <span class="d-inline-block">R</span>
-                    <span class="d-inline-block">A</span>
-                    <span class="d-inline-block">L</span>
-                </div>
-            </div>
-        </div>
+          <!-- Slide-Up Drawer -->
+  <div class="bottom-menu-drawer" id="menuDrawer">
+    <div class="drawer-header">
+      <h3>Menu</h3>
+      <span class="drawer-close" id="closeDrawer">&times;</span>
+    </div>
+    <div class="drawer-menu">
+      <a href="#">Home</a>
+      <a href="#">Services</a>
+      <a href="#">Pages</a>
+      <a href="#">Shop</a>
+      <a href="#">Blog</a>
+      <a href="#">Contact Us</a>
+    </div>
+  </div>
+
+  <!-- Bottom Navigation -->
+  <div class="mobile-bottom-nav">
+    <a href="#" id="openDrawer"><i class="fas fa-bars"></i>Menu</a>
+    <a href="tel:+123456789"><i class="fas fa-phone"></i>Call</a>
+    <a href="#"><i class="fas fa-calendar-check"></i>Book Now</a>
+    <a href="#"><i class="fas fa-user-md"></i>Specialists</a>
+    <a href="https://wa.me/123456789"><i class="fab fa-whatsapp"></i>WhatsApp</a>
+  </div>
+  <script>
+    const openDrawer = document.getElementById("openDrawer");
+    const closeDrawer = document.getElementById("closeDrawer");
+    const menuDrawer = document.getElementById("menuDrawer");
+
+    openDrawer.addEventListener("click", (e) => {
+      e.preventDefault();
+      menuDrawer.classList.add("active");
+    });
+
+    closeDrawer.addEventListener("click", () => {
+      menuDrawer.classList.remove("active");
+    });
+
+    // Optional: close drawer when clicking outside
+    window.addEventListener("click", (e) => {
+      if (!menuDrawer.contains(e.target) && !openDrawer.contains(e.target)) {
+        menuDrawer.classList.remove("active");
+      }
+    });
+  </script>
+
         <!-- End Preloader Area -->
 
         <!-- Start Top Header Area -->
-        <div class="top-header-area top-header-wrap-area">
+      <!-- <div class="top-header-area top-header-wrap-area">
             <div class="container-fluid">
                 <div class="top-header-with-border">
                     <div class="row justify-content-center">
@@ -88,9 +227,9 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- End Top Header Area -->
-        
+
         <!-- Start Navbar Area -->
         <nav class="navbar navbar-expand-xl navbar-style-two-area" id="navbar">
             <div class="container-fluid">
@@ -99,7 +238,7 @@
                     <img src="assets/images/ProtoUpdatedLogo.png" />
                 </a>
                 <button class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvas">
-                    <span class="burger-menu">
+                    <span class="burger-menu" id="menuDrawer">
                         <span class="top-bar"></span>
                         <span class="middle-bar"></span>
                         <span class="bottom-bar"></span>
@@ -114,7 +253,7 @@
                             <ul class="dropdown-menu">
                                 <li class="nav-item">
                                     <a href="index.html" class="nav-link">
-                                        Dental Clinic Home 
+                                        Dental Clinic Home
                                     </a>
                                 </li>
                                 <li class="nav-item">
@@ -124,7 +263,7 @@
                                 </li>
                                 <li class="nav-item">
                                     <a href="index-3.html" class="nav-link">
-                                        Dental Treatment Home  
+                                        Dental Treatment Home
                                     </a>
                                 </li>
                             </ul>
@@ -306,7 +445,7 @@
                             </div>
                         </div>
                     </div>
-                </div> 
+                </div>
             </div>
         </nav>
         <!-- End Navbar Area -->
@@ -324,7 +463,7 @@
             </div>
         </div>
         <!-- End Search Popup -->
-        
+
         <!-- Start Responsive Navbar Area -->
         <div class="responsive-navbar offcanvas offcanvas-end" tabindex="-1" id="navbarOffcanvas">
             <div class="offcanvas-header">
@@ -679,7 +818,7 @@
             </div>
         </div>
         <!-- End Pediatric Dentist Banner Area -->
-        
+
         <!-- Start Features Wrap Area -->
         <div class="features-wrap-area pt-150 pb-125">
             <div class="container-fluid">
@@ -811,11 +950,11 @@
                                     <ul class="list">
                                         <li>
                                             <i data-feather="check"></i>
-                                            Insurance Accepted 
+                                            Insurance Accepted
                                         </li>
                                         <li>
                                             <i data-feather="check"></i>
-                                            Set Of Diagnostics 
+                                            Set Of Diagnostics
                                         </li>
                                     </ul>
                                 </div>
@@ -1112,7 +1251,7 @@
             </div>
         </div>
         <!-- End Real Results Wrap Area -->
-        
+
         <!-- Start Review Wrap Area -->
         <div class="review-wrap-area pb-125">
             <div class="container-fluid">
@@ -1359,11 +1498,11 @@
                                     <ul class="list">
                                         <li>
                                             <i data-feather="check"></i>
-                                            10 Dental Cleanings 
+                                            10 Dental Cleanings
                                         </li>
                                         <li>
                                             <i data-feather="check"></i>
-                                            2 Panoramic X-ray 
+                                            2 Panoramic X-ray
                                         </li>
                                     </ul>
                                 </div>
@@ -1371,11 +1510,11 @@
                                     <ul class="list">
                                         <li>
                                             <i data-feather="check"></i>
-                                            5 Fluoride Treatments 
+                                            5 Fluoride Treatments
                                         </li>
                                         <li>
                                             <i data-feather="check"></i>
-                                            Set Of Diagnostics 
+                                            Set Of Diagnostics
                                         </li>
                                     </ul>
                                 </div>
@@ -1404,7 +1543,7 @@
                                 <h3>Modern Clinics</h3>
                                 <p>Our offices are one of the things that make us one of the highest-rated dentists in Chicago Illinois.</p>
                                 <a href="find-location.html" class="choose-btn">
-                                    Explore Locations 
+                                    Explore Locations
                                     <i class="flaticon-up-right-arrow"></i>
                                 </a>
                             </div>
@@ -1419,7 +1558,7 @@
                                 <h3>Science-Based Care</h3>
                                 <p>You are receiving care that is grounded in scientific evidence and delivered with compassion and integrity.</p>
                                 <a href="service-details.html" class="choose-btn">
-                                    Explore Services  
+                                    Explore Services
                                     <i class="flaticon-up-right-arrow"></i>
                                 </a>
                             </div>
@@ -1444,7 +1583,7 @@
             </div>
         </div>
         <!-- End Why Choose Us Area -->
-        
+
         <!-- Start Video Area -->
         <div class="video-area bgImageParallax">
             <div class="container">
@@ -1460,7 +1599,7 @@
             </div>
         </div>
         <!-- End Video Area -->
-        
+
         <!-- Start Fun Fact Area -->
         <div class="fun-fact-area">
             <div class="container">
