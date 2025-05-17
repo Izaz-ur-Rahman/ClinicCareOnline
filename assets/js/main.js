@@ -10,7 +10,7 @@
             searchTogglers.forEach((searchToggler) => {
                 searchToggler.addEventListener("click", function (e) {
                 e.preventDefault();
-                
+
                 // Toggle the class "active" on elements with the class "search-popup"
                 const searchPopup = document.querySelector(".search-popup");
                 if (searchPopup) {
@@ -25,7 +25,7 @@
                 });
             });
         }
-        
+
         // Back to Top
         const getId = document.getElementById("back-to-top");
         if (getId) {
@@ -76,7 +76,7 @@
                 });
             }
         } catch {}
-        
+
         // Plus Minus JS
         try {
             var resultEl = document.querySelector(".resultSet"),
@@ -90,7 +90,7 @@
                     var countEl = event.target.parentNode.querySelector(".count");
                     if (event.target.className.match(/\bminusBtn\b/)) {
                         countEl.value = Number(countEl.value) - 1;
-                    } 
+                    }
                     else if (event.target.className.match(/\bplusBtn\b/)) {
                         countEl.value = Number(countEl.value) + 1;
                     }
@@ -107,7 +107,7 @@
                     var e = document.createEvent('HTMLEvents');
                     e.initEvent(type, false, true);
                     el.dispatchEvent(e);
-                } 
+                }
                 else {
                     var e = document.createEventObject();
                     e.eventType = type;
@@ -335,7 +335,7 @@
             clickable: true,
         },
     });
-    
+
     // Hover JS
     try {
         var elements = document.querySelectorAll("[id^='services-element']");
@@ -347,7 +347,7 @@
                 element.classList.add("active");
             });
         });
-    
+
     } catch (err) {}
 
     // scrollCue JS
@@ -355,7 +355,7 @@
 
     // Feather Icon JS
     feather.replace();
-    
+
 })();
 
 // Header Sticky
@@ -363,12 +363,29 @@ window.addEventListener('scroll', event => {
     const height = 150;
     const { scrollTop } = event.target.scrollingElement;
     document.querySelector('#navbar').classList.toggle('sticky', scrollTop >= height);
-});    
+});
 
-// Hide Show JS With Menu
-try {
-    function toggleElement() {
-        var element = document.getElementById('toggleElement');
+// // Hide Show JS With Menu
+// try {
+//     function toggleElement() {
+//         var element = document.getElementById('toggleElement');
+//         element.classList.toggle('menu-show');
+//     }
+// } catch {}
+
+// Show menu by default on desktop
+document.addEventListener('DOMContentLoaded', function () {
+    var element = document.getElementById('toggleElement');
+    if (window.innerWidth >= 1200) { // XL breakpoint (Bootstrap)
+        element.classList.add('menu-show');
+    }
+});
+
+// Toggle function for smaller screens
+function toggleElement() {
+    var element = document.getElementById('toggleElement');
+    if (window.innerWidth < 1200) {
         element.classList.toggle('menu-show');
     }
-} catch {}
+}
+
