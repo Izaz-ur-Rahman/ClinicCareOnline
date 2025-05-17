@@ -13378,10 +13378,10 @@ Navbar Area CSS
   stroke: #407881;
 }
     .navbar .others-option .option-item .default-btn {
-        background-color: #a68656;
+        background-color: #b2915b;
     }
 .navbar .others-option .option-item .default-btn::before {
-  background-color: #407881;
+  background-color: #9a784c;
 }
 
 .navbar-style-two-area.sticky {
