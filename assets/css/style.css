@@ -15031,7 +15031,7 @@ Features Area CSS
 
 }
 .features-wrap-card:hover p,
-.features-wrap-card:hover h3,
+.features-wrap-card:hover h3 a,
 .features-wrap-card:hover .service-btn {
   color: #ffffff !important;
 }
