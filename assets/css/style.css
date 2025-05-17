@@ -16683,8 +16683,11 @@ Fun Fact Area CSS
 .fun-fact-card p {
   margin-bottom: 0;
   font-weight: 500;
-  color: #002345;
+  color: #fff;
   margin-left: 20px;
+}
+.fun-fact-card h3{
+color:#fff;
 }
 .fun-fact-card p span {
   display: block;
