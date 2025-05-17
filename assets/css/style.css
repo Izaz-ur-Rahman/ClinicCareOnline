@@ -12888,7 +12888,7 @@ Top Header Area CSS
 .top-header-left li svg {
   width: 18px;
   height: 18px;
-  stroke: #FFCD8B;
+  stroke: #b2915b;
   margin-right: 8px;
 }
 .top-header-left li:last-child {
@@ -13005,7 +13005,7 @@ Top Header Area CSS
 .top-header-info li svg {
   width: 18px;
   height: 18px;
-  stroke: #FFCD8B;
+  stroke: #b2915b;
   margin-right: 8px;
 }
 .top-header-info li a {
@@ -13021,7 +13021,7 @@ Top Header Area CSS
   color: #ffffff;
 }
 .top-header-info.hover-color li a:hover {
-  color: #FFCD8B;
+  color: #b2915b;
 }
 
 .top-header-wrap-area {
@@ -13572,7 +13572,7 @@ Navbar Area CSS
   stroke: #ffffff;
 }
 .navbar-with-white-border .others-option .option-item .search-bar svg:hover {
-  stroke: #FFCD8B;
+  stroke: #b2915b;
 }
 
 .main-header-area {
@@ -13695,7 +13695,7 @@ Search Popup CSS
 .search-popup .search-popup-content .search-popup-form button svg {
   width: 25px;
   height: 25px;
-  stroke: #FFCD8B;
+  stroke: #b2915b;
 }
 .search-popup .search-popup-content .search-popup-form button:focus {
   box-shadow: unset;
@@ -13794,7 +13794,7 @@ Responsive Navbar Area CSS
   color: #9a784c;
 }
 .responsive-navbar .offcanvas-body .accordion .accordion-item .accordion-button:hover::before, .responsive-navbar .offcanvas-body .accordion .accordion-item .accordion-button.active::before {
-  background-color: #FFCD8B;
+  background-color: #b2915b;
   color: #002345;
 }
 .responsive-navbar .offcanvas-body .accordion .accordion-item .accordion-collapse .accordion-body {
@@ -13948,8 +13948,8 @@ Dental Clinic Slider Area CSS
 }
 .dental-clinic-slider-content .sub {
   border-radius: 15px;
-  border-right: 3px solid #FFCD8B;
-  border-left: 3px solid #FFCD8B;
+  border-right: 3px solid #b2915b;
+  border-left: 3px solid #b2915b;
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.16) 24%, rgba(255, 255, 255, 0.04) 100%);
   color: #ffffff;
   backdrop-filter: blur(15px);
@@ -13982,7 +13982,7 @@ Dental Clinic Slider Area CSS
   margin-right: 0;
 }
 .dental-clinic-slider-content .slider-btn li:last-child .default-btn {
-  background-color: #FFCD8B;
+  background-color: #b2915b;
   color: #002345;
 }
 .dental-clinic-slider-content .slider-btn li:last-child .default-btn:hover {
@@ -14007,7 +14007,7 @@ Dental Clinic Slider Area CSS
   margin: 0 7px !important;
 }
 .dental-clinic-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
-  background-color: #FFCD8B;
+  background-color: #b2915b;
   width: 35px;
 }
 
@@ -14171,7 +14171,7 @@ About Area CSS
   color: #002345;
   letter-spacing: 0.35px;
   border-radius: 15px;
-  border-left: 3px solid #FFCD8B;
+  border-left: 3px solid #b2915b;
   background: #ffffff;
   padding: 20px 25px;
   margin-bottom: 20px;
@@ -14353,7 +14353,7 @@ About Area CSS
   margin-bottom: 20px;
 }
 .about-wrap-content .list li svg {
-  stroke: #FFCD8B;
+  stroke: #b2915b;
   width: 22px;
   height: 22px;
   margin-right: 8px;
@@ -14691,11 +14691,11 @@ Services Area CSS
 .services-wrap-card .services-btn .default-btn {
   width: 100%;
   background-color: transparent;
-  border: 1px solid #FFCD8B;
+  border: 1px solid #b2915b;
   color: #9a784c;
 }
 .services-wrap-card .services-btn .default-btn::before {
-  background-color: #FFCD8B;
+  background-color: #b2915b;
 }
 .services-wrap-card:hover .icon i {
   animation: jackInTheBox 1s;
@@ -14896,7 +14896,7 @@ Features Area CSS
   padding: 72px 55px;
 }
 .features-content h3, .features-content .h3 {
-  color: #FFCD8B;
+  color: #b2915b;
   font-size: 40px;
   margin-bottom: 25px;
 }
@@ -15016,7 +15016,7 @@ Features Area CSS
   top: 0;
   height: 10px;
   width: 10px;
-  background-color: #FFCD8B;
+  background-color: #b2915b;
   transition: 0.6s;
   opacity: 0;
   visibility: hidden;
@@ -15209,7 +15209,7 @@ Insurance Area CSS
   letter-spacing: 0.32px;
 }
 .insurance-wrap-content .list li svg {
-  stroke: #FFCD8B;
+  stroke: #b2915b;
   width: 22px;
   height: 22px;
   margin-right: 8px;
@@ -15316,14 +15316,14 @@ Doctors Area CSS
   justify-content: center;
   align-items: center;
   border-radius: 30px;
-  border: 1px solid #FFCD8B;
+  border: 1px solid #b2915b;
   letter-spacing: 0.32px;
   font-size: 15px;
   transition: 0.6s;
   color: #002345;
 }
 .doctors-card .doctor-content .list li a:hover {
-  background-color: #FFCD8B;
+  background-color: #b2915b;
 }
 .doctors-card .doctor-content .list li:last-child {
   margin-right: 0;
@@ -15599,7 +15599,7 @@ Review Area CSS
 }
 .review-inner .ratings-box .content .list li i {
   font-size: 25px;
-  color: #FFCD8B;
+  color: #b2915b;
 }
 .review-inner .ratings-box .content .list li span {
   font-size: 15px;
@@ -15632,7 +15632,7 @@ Review Area CSS
 }
 .review-card .rating li i {
   font-size: 25px;
-  color: #FFCD8B;
+  color: #b2915b;
 }
 .review-card .rating li:last-child {
   margin-right: 0;
@@ -15700,7 +15700,7 @@ Review Area CSS
 }
 .review-wrap-card .rating li i {
   font-size: 25px;
-  color: #FFCD8B;
+  color: #b2915b;
 }
 .review-wrap-card .rating li:last-child {
   margin-right: 0;
@@ -15797,7 +15797,7 @@ Review Area CSS
   background-color: #B24445;
 }
 .review-wrap-content .review-btn .default-btn::before {
-  background-color: #FFCD8B;
+  background-color: #b2915b;
 }
 
 .review-wrap-pagination {
@@ -15851,7 +15851,7 @@ Review Area CSS
 }
 .ratings-wrap-box .content .list li i {
   font-size: 25px;
-  color: #FFCD8B;
+  color: #b2915b;
 }
 .ratings-wrap-box .content .list li span {
   font-size: 15px;
@@ -16032,7 +16032,7 @@ Real Results Area CSS
   white-space: nowrap;
   font-size: 72px;
   margin-bottom: 0;
-  color: #FFCD8B;
+  color: #b2915b;
   animation: marquee 5s linear infinite forwards;
 }
 .real-results-view-content h1:hover, .real-results-view-content .h1:hover {
@@ -16158,7 +16158,7 @@ Blog Area CSS
   padding: 5px 10px;
   justify-content: center;
   align-items: center;
-  background-color: #FFCD8B;
+  background-color: #b2915b;
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 0.7px;
@@ -16265,7 +16265,7 @@ Blog Area CSS
   padding: 2px 7px;
   justify-content: center;
   align-items: center;
-  background-color: #FFCD8B;
+  background-color: #b2915b;
   color: #002345;
   font-size: 14px;
   font-weight: 500;
@@ -16290,7 +16290,7 @@ Blog Area CSS
   padding: 2px 7px;
   justify-content: center;
   align-items: center;
-  background-color: #FFCD8B;
+  background-color: #b2915b;
   color: #002345;
   font-size: 14px;
   font-weight: 500;
@@ -16386,7 +16386,7 @@ Pediatric Dentist Banner Area CSS
   display: inline-block;
   height: 70px;
   width: 70px;
-  background-color: #FFCD8B;
+  background-color: #b2915b;
   text-align: center;
   border-radius: 50px;
   position: relative;
@@ -16395,7 +16395,7 @@ Pediatric Dentist Banner Area CSS
 .pediatric-dentist-banner-content .bottom-content .info .icon svg {
   width: 30px;
   height: 30px;
-  stroke: #002345;
+  stroke: #fff;
   position: absolute;
   left: 0;
   right: 0;
@@ -16652,7 +16652,7 @@ Video Area CSS
 Fun Fact Area CSS
 =================================================*/
 .fun-fact-area {
-  background-color: #FFCD8B;
+  background-color: #b2915b;
   padding-top: 100px;
   padding-bottom: 75px;
 }
@@ -16850,7 +16850,7 @@ Dental Treatment Banner Area CSS
   background-color: #FBF692;
 }
 .dental-treatment-review-card .content.wrap3::before {
-  background-color: #FFCD8B;
+  background-color: #b2915b;
 }
 
 .dental-treatment-review-pagination {
@@ -16896,7 +16896,7 @@ Dental Treatment Banner Area CSS
   display: inline-block;
   height: 22px;
   width: 22px;
-  background-color: #FFCD8B;
+  background-color: #b2915b;
   border-radius: 50px;
   border: 5px solid #ffffff;
   position: absolute;
@@ -17227,7 +17227,7 @@ Page Banner Area CSS
   color: #A0B1C1;
 }
 .page-banner-content .list li a:hover {
-  color: #FFCD8B;
+  color: #b2915b;
 }
 .page-banner-content .list li::before {
   position: absolute;
@@ -17311,7 +17311,7 @@ Membership Plan Area CSS
 .membership-plan-card .price-btn .default-btn {
   width: 100%;
   background-color: transparent;
-  border: 1px solid #FFCD8B;
+  border: 1px solid #b2915b;
   color: #9a784c;
 }
 .membership-plan-card .price-btn .default-btn::before {
@@ -17321,7 +17321,7 @@ Membership Plan Area CSS
   border: 1px solid #9a784c;
 }
 .membership-plan-card:hover .price-btn .default-btn {
-  background-color: #FFCD8B;
+  background-color: #b2915b;
 }
 
 /*================================================
@@ -17771,7 +17771,7 @@ Services Details Area CSS
   color: #002345;
   letter-spacing: 0.35px;
   border-radius: 15px;
-  border-left: 3px solid #FFCD8B;
+  border-left: 3px solid #b2915b;
   background: #F8F8F5;
   padding: 20px 25px;
   margin-bottom: 20px;
@@ -18058,7 +18058,7 @@ Compassionate Area CSS
   color: #002345;
   letter-spacing: 0.35px;
   border-radius: 15px;
-  border-left: 3px solid #FFCD8B;
+  border-left: 3px solid #b2915b;
   background: #ffffff;
   padding: 20px 25px;
   margin-bottom: 20px;
@@ -18125,7 +18125,7 @@ New Patients Area CSS
   background-color: #B24445;
 }
 .new-patients-item .item .default-btn::before {
-  background-color: #FFCD8B;
+  background-color: #b2915b;
 }
 .new-patients-item .item:last-child {
   margin-bottom: 0;
@@ -18263,7 +18263,7 @@ Contact Info Area CSS
   background-color: #FBF692;
 }
 .contact-info-card .icon.bg3 {
-  background-color: #FFCD8B;
+  background-color: #b2915b;
 }
 .contact-info-card .icon.bg4 {
   background-color: #95D9FF;
@@ -18395,7 +18395,7 @@ Blog Details Area CSS
   padding: 5px 10px;
   border-radius: 5px;
   display: inline-block;
-  background-color: #FFCD8B;
+  background-color: #b2915b;
   color: #002345;
   letter-spacing: 0.7px;
   font-size: 14.5px;
@@ -18489,7 +18489,7 @@ Blog Details Area CSS
   padding: 5px 10px;
   border-radius: 5px;
   display: inline-block;
-  background-color: #FFCD8B;
+  background-color: #b2915b;
   color: #002345;
   letter-spacing: 0.7px;
   font-size: 14.5px;
@@ -18597,7 +18597,7 @@ Blog Details Area CSS
 }
 .blog-details-desc .article-comment .comment-list .rating li i {
   font-size: 25px;
-  color: #FFCD8B;
+  color: #b2915b;
 }
 .blog-details-desc .article-comment .comment-list .rating li:last-child {
   margin-right: 0;
@@ -18610,7 +18610,7 @@ Blog Details Area CSS
   padding: 2px 10px;
   border-radius: 10px;
   display: inline-block;
-  background-color: #FFCD8B;
+  background-color: #b2915b;
   color: #002345;
   letter-spacing: 0.7px;
   transition: 0.6s;
@@ -18750,7 +18750,7 @@ Products Area CSS
 .products-card .products-image .add-to-cart-btn .default-btn svg {
   width: 18px;
   height: 18px;
-  stroke: #FFCD8B;
+  stroke: #b2915b;
   margin-left: 7px;
 }
 .products-card .products-content {
@@ -18819,7 +18819,7 @@ Products Area CSS
 }
 .products-card .sale-btn:hover {
   color: #002345;
-  background-color: #FFCD8B;
+  background-color: #b2915b;
 }
 .products-card:hover .products-image .add-to-cart-btn {
   bottom: 0;
@@ -19216,7 +19216,7 @@ Checkout Area CSS
   content: "";
   width: 15px;
   height: 15px;
-  background-color: #FFCD8B;
+  background-color: #b2915b;
   position: absolute;
   top: 50%;
   transform: translateY(-50%) !important;
@@ -19343,7 +19343,7 @@ Wishlist Area CSS
 .wishlist-table .table tbody tr td.add-to-cart-btn .default-btn svg {
   width: 18px;
   height: 18px;
-  stroke: #FFCD8B;
+  stroke: #b2915b;
   margin-left: 10px;
 }
 .wishlist-table .table tbody tr td.remove svg {
@@ -19603,7 +19603,7 @@ Product Details Area CSS
 }
 .product-details-content .rating li i {
   font-size: 25px;
-  color: #FFCD8B;
+  color: #b2915b;
 }
 .product-details-content .rating li:last-child {
   margin-right: 0;
@@ -19658,7 +19658,7 @@ Product Details Area CSS
 .product-details-content .quantity-and-add-to-cart li .default-btn svg {
   width: 18px;
   height: 18px;
-  stroke: #FFCD8B;
+  stroke: #b2915b;
   margin-left: 10px;
 }
 .product-details-content .quantity-and-add-to-cart li:last-child {
@@ -19800,7 +19800,7 @@ Product Details Area CSS
 }
 .product-details-information-tabs .comment-area .comment-list .rating li i {
   font-size: 25px;
-  color: #FFCD8B;
+  color: #b2915b;
 }
 .product-details-information-tabs .comment-area .comment-list .rating li:last-child {
   margin-right: 0;
@@ -20141,7 +20141,7 @@ Blog Sidebar Widget Area CSS
 }
 .widget-area .widget_tag_cloud .tagcloud a:hover {
   color: #002345;
-  background-color: #FFCD8B;
+  background-color: #b2915b;
 }
 
 /*================================================
@@ -20176,7 +20176,7 @@ CTA Area CSS
   display: inline-block;
   height: 70px;
   width: 70px;
-  background-color: #FFCD8B;
+  background-color: #b2915b;
   text-align: center;
   border-radius: 50px;
   position: relative;
@@ -20203,7 +20203,7 @@ CTA Area CSS
   color: #ffffff;
 }
 .cta-info span a:hover {
-  color: #FFCD8B;
+  color: #b2915b;
 }
 
 /*================================================
@@ -20220,8 +20220,8 @@ Subscribe Area CSS
 
 .subscribe-content .sub {
   border-radius: 15px;
-  border-right: 3px solid #FFCD8B;
-  border-left: 3px solid #FFCD8B;
+  border-right: 3px solid #b2915b;
+  border-left: 3px solid #b2915b;
   background: linear-gradient(0deg, rgba(0, 35, 69, 0.05) 24%, rgba(255, 255, 255, 0.04) 100%);
   color: #002345;
   backdrop-filter: blur(15px);
@@ -20304,7 +20304,7 @@ Footer Area CSS
   margin-bottom: 20px;
 }
 .single-footer-widget .info-list li span {
-  color: #FFCD8B;
+  color: #b2915b;
   font-weight: 800;
 }
 .single-footer-widget .info-list li a {
@@ -20357,11 +20357,11 @@ Footer Area CSS
   letter-spacing: 0.75px;
 }
 .copyright-area p span {
-  color: #FFCD8B;
+  color: #b2915b;
   font-weight: 700;
 }
 .copyright-area p a {
-  color: #FFCD8B;
+  color: #b2915b;
   font-weight: 700;
 }
 .copyright-area p a:hover {
