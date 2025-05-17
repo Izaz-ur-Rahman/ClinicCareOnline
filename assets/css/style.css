@@ -16416,7 +16416,7 @@ Pediatric Dentist Banner Area CSS
   color: #407881;
 }
 
-.pediatric-dentist-banner-image {
+/* .pediatric-dentist-banner-image {
   background-image: url(../images/pediatric-dentist/banner1.jpg);
   background-position: center center;
   background-size: cover;
@@ -16425,13 +16425,47 @@ Pediatric Dentist Banner Area CSS
   border-radius: 15px;
   position: relative;
   margin-left: 70px;
+} */
+.pediatric-dentist-banner-image {
+  position: relative;
+  height: 100%;
+  border-radius: 15px;
+  margin-left: 70px;
 }
+
+.pediatric-dentist-banner-image .zoom-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/pediatric-dentist/banner1.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  transition: transform 8.5s ease;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.pediatric-dentist-banner-image:hover .zoom-background {
+  transform: scale(1.1);
+}
+
 .pediatric-dentist-banner-image .video-wrap {
   position: absolute;
   left: -70px;
   bottom: 150px;
   z-index: 1;
 }
+
+/* .pediatric-dentist-banner-image .video-wrap {
+  position: absolute;
+  left: -70px;
+  bottom: 150px;
+  z-index: 1;
+} */
 .pediatric-dentist-banner-image .video-wrap img {
   animation-name: rotateme;
   animation-duration: 5s;
