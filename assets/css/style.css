@@ -12829,6 +12829,7 @@ Default Btn Area CSS
 
 .default-btn-outline:hover {
   color: #ffffff;
+  border:none;
 }
 
 /*================================================
