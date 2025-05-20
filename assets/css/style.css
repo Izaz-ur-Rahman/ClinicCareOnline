@@ -12790,7 +12790,7 @@ Default Btn Area CSS
 =================================================*/
 .default-btn {
   display: inline-flex;
-  padding: 15.5px 35px;
+  padding: 15.5px 20px;
   justify-content: center;
   align-items: center;
   background-color: #b2915b;
@@ -12816,6 +12816,19 @@ Default Btn Area CSS
 }
 .default-btn:hover::before {
   width: 100%;
+}
+.default-btn-outline {
+  background-color: #ffffff !important;
+  color: #b2915b;
+  border: 2px solid #b2915b;
+}
+
+.default-btn-outline::before {
+  background-color: #b2915b; /* fill color on hover */
+}
+
+.default-btn-outline:hover {
+  color: #ffffff;
 }
 
 /*================================================

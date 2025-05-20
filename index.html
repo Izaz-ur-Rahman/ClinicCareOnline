@@ -24,7 +24,34 @@
         .mobile-bottom-nav {
             display: none;
         }
+        .second_btn_color{
+            display: inline-flex;
+  padding: 15.5px 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: #b2915b;
+  color: #ffffff;
+  font-weight: 500;
+  letter-spacing: 0.32px;
+  border-radius: 30px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  transition: 0.6s;
 
+    border:2px solid #B2915B ;
+        }
+.second_btn_color::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0%;
+  background-color: #9a784c;
+  z-index: -1;
+  transition: 0.6s;
+}
 .icon-wrapper {
         display: none; /* Hide menu icon on desktop */
     }
@@ -362,195 +389,100 @@
                 <ul id="toggleElement" class="navbar-nav m-auto menu-hide">
                     <li class="nav-item">
                         <a href="javascript:void(0)" class="dropdown-toggle nav-link active">
-                            HOME
+                            Home
                         </a>
-                        <!-- <ul class="dropdown-menu">
-                            <li class="nav-item">
-                                <a href="index.html" class="nav-link">
-                                    Dental Clinic Home
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="index-2.html" class="nav-link active">
-                                    Pediatric Dentist Home
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="index-3.html" class="nav-link">
-                                    Dental Treatment Home
-                                </a>
-                            </li>
-                        </ul> -->
+
                     </li>
                     <li class="nav-item">
+                        <a href="javascript:void(0)" class="dropdown-toggle nav-link">
+                            Facilities
+
+                        </a>
+                         <ul class="dropdown-menu">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Diagnostic Testing</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Wellness Programs
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" class="dropdown-toggle nav-link">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Facial Aesthetics
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Body Aesthetics
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Hair & Scalp
+
+                                </a>
+                            </li>
+                        </ul>
+
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a href="javascript:void(0)" class="dropdown-toggle nav-link">
+                            REGENERATIVE
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Advanced Therapies
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Skin Rejuvenation
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Specialized Treatments
+
+
+                                </a>
+                            </li>
+                        </ul>
+
+                    </li> -->
+                    <!-- <li class="nav-item">
                         <a href="javascript:void(0)" class="dropdown-toggle nav-link">
                             SERVICES
                         </a>
-                        <!-- <ul class="dropdown-menu">
+                        <ul class="dropdown-menu">
                             <li class="nav-item">
-                                <a href="#" class="nav-link">Services Style One</a>
+                                <a href="#" class="nav-link">Personal Care
+                                </a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link">Services Style Two</a>
+                                <a href="#" class="nav-link">Virtual Care
+
+                                </a>
                             </li>
-                            <li class="nav-item">
-                                <a href="services-style-three.html" class="nav-link">Services Style Three</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">Service Details</a>
-                            </li>
-                        </ul> -->
+
+                        </ul>
+
+                    </li> -->
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a href="javascript:void(0)" class="dropdown-toggle nav-link">
-                            PAGES
-                        </a>
-                        <!-- <ul class="dropdown-menu">
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">About Us</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="javascript:void(0)" class="dropdown-toggle nav-link">
-                                    Appointment
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item">
-                                        <a href="appointment.html" class="nav-link">Appointment</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="appointment-with-new-patient.html" class="nav-link">Appointment With
-                                            New Patient</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="appointment-with-existing-patient.html" class="nav-link">Appointment
-                                            With Existing Patient</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">Membership Plan</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="javascript:void(0)" class="dropdown-toggle nav-link">
-                                    Dentist
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item">
-                                        <a href="dentist-style-one.html" class="nav-link">Dentist Style One</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="dentist-style-two.html" class="nav-link">Dentist Style Two</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">Dentist Profile</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a href="insurance.html" class="nav-link">Insurance</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">Find Location</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="real-result.html" class="nav-link">Real Result</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="patient-form-and-instruction.html" class="nav-link">Patient Form &
-                                    Instruction</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="gallery.html" class="nav-link">Gallery</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="javascript:void(0)" class="dropdown-toggle nav-link">
-                                    Additional Pages
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">Privacy Policy</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">Terms & Conditions</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="not-found.html" class="nav-link">404 Error Page</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a href="faq.html" class="nav-link">FAQ</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="review.html" class="nav-link">Client's Review</a>
-                            </li>
-                        </ul> -->
-                    </li>
-                    <li class="nav-item">
-                        <a href="javascript:void(0)" class="dropdown-toggle nav-link">
-                            SHOP
-                        </a>
-                        <!-- <ul class="dropdown-menu">
-                            <li class="nav-item">
-                                <a href="products.html" class="nav-link">Products</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="cart.html" class="nav-link">Cart</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="checkout.html" class="nav-link">Checkout</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="wishlist.html" class="nav-link">Wishlist</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="javascript:void(0)" class="dropdown-toggle nav-link">
-                                    My Account
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item">
-                                        <a href="login.html" class="nav-link">Login</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="register.html" class="nav-link">Register</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a href="product-details.html" class="nav-link">Product Details</a>
-                            </li>
-                        </ul> -->
-                    </li>
-                    <li class="nav-item">
-                        <a href="javascript:void(0)" class="dropdown-toggle nav-link">
-                            BLOG
-                        </a>
-                        <!-- <ul class="dropdown-menu">
-                            <li class="nav-item">
-                                <a href="blog-style-one.html" class="nav-link">Blog Style One</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="blog-style-two.html" class="nav-link">Blog Style Two</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="blog-with-sidebar.html" class="nav-link">Blog With Sidebar</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="blog-details.html" class="nav-link">Blog Details</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="blog-details-without-sidebar.html" class="nav-link">Blog Details Without
-                                    Sidebar</a>
-                            </li>
-                        </ul> -->
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">CONTACT US</a>
+                        <a href="#" class="nav-link">Contact Us</a>
                     </li>
                 </ul>
                 <div class="others-option d-flex align-items-center">
                     <div class="option-item">
-                        <a href="#" class="default-btn">Book an Appointment</a>
+                        <a href="#" class="default-btn">Book Consultation</a>
+                    </div>
+                    <div class="option-item">
+                        <a href="#" class="default-btn default-btn-outline">Virtual Assessment</a>
                     </div>
 
                     <!-- Menu Toggle Button (for mobile only) -->
@@ -595,6 +527,7 @@
                 <i data-feather="x"></i>
             </button>
         </div>
+
         <div class="offcanvas-body">
             <div class="accordion" id="navbarAccordion">
                 <div class="accordion-item">
@@ -913,27 +846,26 @@
                     <div class="pediatric-dentist-banner-content">
                         <h1>
                             <span>
-                                Welcome To The Holistic Approach To Wellness And Longevity
+                                Welcome To The Holistic Approach To Wellness, Longevity & Regeneration
                                 <img src="assets/images/pediatric-dentist/arrow.png" alt=" circle image">
                         </h1>
                         <ul class="list">
                             <li>
                                 <img src="assets/images/pediatric-dentist/award1.png" alt="award image">
-                                <span class="text-black">2021 Top Patient Care Award</span>
+                                <span class="text-black">2023 Excellence in Regenerative Medicine Award</span>
                             </li>
                             <li>
                                 <img src="assets/images/pediatric-dentist/award1.png" alt="award image">
-                                <span class="text-black">2023 Top Dentist Award</span>
+                                <span class="text-black">2024 Leading Wellness Innovation Award</span>
                             </li>
                         </ul>
                         <div class="bottom-content">
-                            <p>Here at ProtoWellness, we provide tailored and personalized wellness programs based on a
-                                360-degree view of your body from the inside and outside.</p>
+                            <p>Here at Protoclinic, we provide scientifically-backed, personalized wellness and aesthetic programs based on comprehensive diagnostics and cutting-edge regenerative therapies.</p>
                             <div class="info">
                                 <div class="icon">
                                     <i data-feather="phone"></i>
                                 </div>
-                                <span>Call: <a href="tel:0053194215">(005) 319-4215</a></span>
+                                <span>Call: <a href="tel:0053194215">(XXX) XXX-XXXX</a></span>
                             </div>
                         </div>
                     </div>
@@ -970,10 +902,9 @@
                             <img src="assets/images/features/icon1.png" alt="image">
                         </div>
                         <h3>
-                            <a href="#">General Dentistry</a>
+                            <a href="#">Longevity Assessment</a>
                         </h3>
-                        <p>General and cosmetic dental treatments cover a wide range of services aimed at maintaining
-                            oral health.</p>
+                        <p>Comprehensive DNA testing and personalized health evaluations designed to optimize your biological age and extend your health span.</p>
                         <a href="#" class="service-btn">
                             Get Started
                             <i class="flaticon-up-right-arrow"></i>
@@ -986,10 +917,9 @@
                             <img src="assets/images/features/icon2.png" alt="image">
                         </div>
                         <h3>
-                            <a href="#">Surgical Treatment</a>
+                            <a href="#">Advanced Aesthetics</a>
                         </h3>
-                        <p>Advanced surgical equipment and infrastructure, ensuring the highest standards of safety,
-                            precision.</p>
+                        <p>Non-invasive and minimally invasive treatments utilizing the latest technology for natural-looking rejuvenation and enhancement.</p>
                         <a href="#" class="service-btn">
                             Get Started
                             <i class="flaticon-up-right-arrow"></i>
@@ -1002,10 +932,9 @@
                             <img src="assets/images/features/icon3.png" alt="image">
                         </div>
                         <h3>
-                            <a href="#">Dental Implants</a>
+                            <a href="#">Regenerative Therapies</a>
                         </h3>
-                        <p>Dental implants are small titanium posts that are surgically placed into the jawbone, sturdy
-                            anchors for replacement teeth.</p>
+                        <p>Platelet-Rich Plasma and biostimulation treatments that harness your body's natural healing abilities to restore and revitalize.</p>
                         <a href="#" class="service-btn">
                             Get Started
                             <i class="flaticon-up-right-arrow"></i>
@@ -1018,10 +947,9 @@
                             <img src="assets/images/features/icon4.png" alt="image">
                         </div>
                         <h3>
-                            <a href="#">Invisalign</a>
+                            <a href="#">Hair & Scalp Solutions</a>
                         </h3>
-                        <p>Invisalign is a brand of clear aligners used to straighten teeth. These aligners are
-                            custom-made to fit over the patient's teeth.</p>
+                        <p>Innovative approaches to hair restoration and scalp health through advanced therapeutic techniques and personalized treatment plans.</p>
                         <a href="#" class="service-btn">
                             Get Started
                             <i class="flaticon-up-right-arrow"></i>
@@ -1059,8 +987,8 @@
                                     <div class="star-wrap">
                                         <img src="assets/images/about/star.png" alt="image">
                                         <div class="rating">
-                                            <h5>4.98</h5>
-                                            <span>Ratings</span>
+                                            <h5>4.96</h5>
+                                            <span>Patient Satisfaction Rating</span>
                                         </div>
                                     </div>
                                 </div>
@@ -1075,42 +1003,35 @@
                 </div>
                 <div class="col-xl-6 col-md-12">
                     <div class="about-wrap-content">
-                        <h2>Your Smile, Our Expertise Comprehensive Dental Solutions</h2>
-                        <strong>We are proud to be recognized for our commitment to excellence in dental care. Since our
-                            establishment in 1996, we have been dedicated to providing top-notch dental
-                            services.</strong>
-                        <p>At Doral, we believe that a healthy and beautiful smile is a gateway to confidence,
-                            well-being, and a vibrant life. Established with a passion for precision dentistry and
-                            patient-centered care, our clinic is dedicated to providing comprehensive dental solutions.
+                        <h2>Transform Your Future Self Through Wellness Innovation</h2>
+                        <strong>We are recognized pioneers in the integration of longevity science, aesthetic medicine, and regenerative therapies. Our passion lies in helping you reclaim the vibrant energy and confidence that time gradually diminishes.</strong>
+                        <p>At Protoclinic, we understand that true wellness radiates from within. Your appearance reflects your internal health, and both deserve equal attention. Our science-backed approach doesn't just mask symptoms or temporarily enhance your look—it addresses the root causes of aging, helping you feel as vibrant as you appear.
                         </p>
                         <div class="row justify-content-center">
                             <div class="col-lg-6 col-md-6">
                                 <ul class="list">
                                     <li>
                                         <i data-feather="check"></i>
-                                        Safety First
+                                        Scientifically Validated Protocols
                                     </li>
                                     <li>
                                         <i data-feather="check"></i>
-                                        Full Service Dentistry
-                                    </li>
+                                        Comprehensive Wellness Testing                                    </li>
                                 </ul>
                             </div>
                             <div class="col-lg-6 col-md-6">
                                 <ul class="list">
                                     <li>
                                         <i data-feather="check"></i>
-                                        Insurance Accepted
-                                    </li>
+                                        Personalized Treatment Plans                                    </li>
                                     <li>
                                         <i data-feather="check"></i>
-                                        Set Of Diagnostics
-                                    </li>
+                                        Advanced Aesthetic Technology                                    </li>
                                 </ul>
                             </div>
                         </div>
                         <div class="about-btn">
-                            <a href="#" class="default-btn">About Our Hospital</a>
+                            <a href="#" class="default-btn">About ProtoClinic </a>
                         </div>
                     </div>
                 </div>
@@ -1123,7 +1044,7 @@
     <div class="services-wrap-area ptb-150">
         <div class="container" data-cues="slideInUp">
             <div class="section-title">
-                <h2>Enjoy Specialized Dental Services</h2>
+                <h2>Experience Transformative Wellness & Aesthetic Services</h2>
             </div>
             <div class="services-wrap-item" id="services-element1">
                 <div class="row justify-content-center align-items-center">
@@ -1131,7 +1052,7 @@
                         <div class="services-left">
                             <div class="number">1</div>
                             <h3>
-                                <a href="#">Cosmetic Dentistry</a>
+                                <a href="#">Longevity Medicine</a>
                             </h3>
                             <div class="arrow-btn">
                                 <a href="#">
@@ -1142,8 +1063,7 @@
                     </div>
                     <div class="col-lg-5 col-md-12">
                         <div class="services-middle">
-                            <p>Cosmetic dentistry mainly concerns improving the appearance of your teeth, including
-                                whitening.</p>
+                            <p>Our science-based longevity programs unlock your body's hidden potential, reversing biological aging at the cellular level while optimizing vitality for years to come.</p>
                         </div>
                     </div>
                     <div class="col-lg-2 col-md-12">
@@ -1168,7 +1088,7 @@
                         <div class="services-left">
                             <div class="number">2</div>
                             <h3>
-                                <a href="#">Pediatric Dentistry</a>
+                                <a href="#">Aesthetic Medicine</a>
                             </h3>
                             <div class="arrow-btn">
                                 <a href="#">
@@ -1179,8 +1099,7 @@
                     </div>
                     <div class="col-lg-5 col-md-12">
                         <div class="services-middle">
-                            <p>Pediatric dentistry is tailored to ensure infants, children, and teens can receive the
-                                best dental care.</p>
+                            <p>Non-surgical rejuvenation treatments that honor your natural beauty, enhancing your features while preserving the authentic expression that makes you uniquely you.</p>
                         </div>
                     </div>
                     <div class="col-lg-2 col-md-12">
@@ -1205,7 +1124,7 @@
                         <div class="services-left">
                             <div class="number">3</div>
                             <h3>
-                                <a href="#">Dental Implants</a>
+                                <a href="#">Regenerative Therapies</a>
                             </h3>
                             <div class="arrow-btn">
                                 <a href="#">
@@ -1216,8 +1135,7 @@
                     </div>
                     <div class="col-lg-5 col-md-12">
                         <div class="services-middle">
-                            <p>Dental implants replace the missing tooth by implanting artificial roots into the jaw
-                                under surgical.</p>
+                            <p>Revolutionary PRP and biostimulation treatments awaken your body's innate healing intelligence, creating lasting renewal from within rather than temporary fixes.</p>
                         </div>
                     </div>
                     <div class="col-lg-2 col-md-12">
@@ -1242,7 +1160,7 @@
                         <div class="services-left">
                             <div class="number">4</div>
                             <h3>
-                                <a href="#">Periodontal Therapy</a>
+                                <a href="#">GUT Health Optimization</a>
                             </h3>
                             <div class="arrow-btn">
                                 <a href="#">
@@ -1253,8 +1171,7 @@
                     </div>
                     <div class="col-lg-5 col-md-12">
                         <div class="services-middle">
-                            <p>Periodontal therapy is technically all about restoring the diseased or damaged tissues to
-                                an original</p>
+                            <p>Discover the profound connection between your digestive wellness and overall vitality through advanced microbiome analysis and personalized healing protocols.</p>
                         </div>
                     </div>
                     <div class="col-lg-2 col-md-12">
@@ -1279,8 +1196,7 @@
                         <div class="services-left">
                             <div class="number">5</div>
                             <h3>
-                                <a href="#">Teeth Whitening</a>
-                            </h3>
+                                <a href="#">Hair & Scalp Solutions
                             <div class="arrow-btn">
                                 <a href="#">
                                     <i class="flaticon-up-right-arrow"></i>
@@ -1290,8 +1206,7 @@
                     </div>
                     <div class="col-lg-5 col-md-12">
                         <div class="services-middle">
-                            <p>Our dentists will clean up your teeth, conduct a thorough check before covering the teeth
-                                with a new.</p>
+                            <p>Reclaim the confidence that comes with healthy, vibrant hair through cutting-edge diagnostics and regenerative treatments for thinning and loss concerns.</p>
                         </div>
                     </div>
                     <div class="col-lg-2 col-md-12">
@@ -1563,7 +1478,7 @@
     <div class="appointment-area bg-wrap-two bgImageParallax ptb-150">
         <div class="container">
             <div class="appointment-form" data-cues="slideInUp">
-                <h3>Book For Consultation</h3>
+                <h3>Voices of Transformation</h3>
                 <form>
                     <div class="row justify-content-center">
                         <div class="col-lg-6 col-md-12">
@@ -1597,7 +1512,7 @@
                             </div>
                         </div>
                         <div class="col-lg-12 col-md-12">
-                            <button type="submit" class="default-btn">Book Appointment</button>
+                            <button type="submit" class="default-btn">Book Your Consultation</button>
                         </div>
                     </div>
                 </form>
@@ -1658,19 +1573,22 @@
                 </div>
                 <div class="col-xl-6 col-md-12">
                     <div class="insurance-wrap-content">
-                        <h3>Covering Your Smile: Unveiling Our Dental Insurance Options</h3>
-                        <p>We're all for convenience and confidence, not on cost. Get on-demand teeth cleanings for just
-                            $149. No drills, judgment, or surprise treatments, ever.</p>
+                        <h3>Elevate Your Wellness Journey: Protoclinic Membership Options</h3>
+                        <p>Invest in your long-term health and appearance with our comprehensive membership plans. Experience priority scheduling, preferred pricing, and personalized wellness monitoring throughout your journey.</p>
                         <div class="row justify-content-center">
                             <div class="col-lg-6 col-md-6">
                                 <ul class="list">
                                     <li>
                                         <i data-feather="check"></i>
-                                        10 Dental Cleanings
+                                        Quarterly Health Assessments
                                     </li>
                                     <li>
                                         <i data-feather="check"></i>
-                                        2 Panoramic X-ray
+                                        Monthly Aesthetic Treatments
+                                    </li>
+                                    <li>
+                                        <i data-feather="check"></i>
+                                        Exclusive Member Workshops
                                     </li>
                                 </ul>
                             </div>
@@ -1678,18 +1596,17 @@
                                 <ul class="list">
                                     <li>
                                         <i data-feather="check"></i>
-                                        5 Fluoride Treatments
+                                        Personalized Supplement Protocol
                                     </li>
                                     <li>
                                         <i data-feather="check"></i>
-                                        Set Of Diagnostics
+                                        Priority Appointment Scheduling
                                     </li>
+
                                 </ul>
                             </div>
                         </div>
-                        <p>Our mission it to provide quick & convenient teeth cleanings and whitenings without breaking
-                            the bank. If you don't have dental insurance, simply book an appointment online and pay at
-                            the end of your visit.</p>
+                        <p>Our mission embraces the science of longevity with the art of aesthetic enhancement. We believe consistent, evidence-based care creates sustainable transformation, ensuring your wellness journey continues to evolve as you do.</p>
                     </div>
                 </div>
             </div>
@@ -1701,7 +1618,7 @@
     <div class="why-choose-us-area pb-125">
         <div class="container-fluid">
             <div class="section-title" data-cues="slideInUp">
-                <h2>We Have Over 25 Years Of Experience</h2>
+                <h2>15 Years of Excellence in Integrative Wellness</h2>
             </div>
             <div class="row justify-content-center" data-cues="slideInUp">
                 <div class="col-lg-4 col-md-6">
@@ -1710,9 +1627,8 @@
                             <img src="assets/images/choose/choose1.jpg" alt="image">
                         </div>
                         <div class="choose-content">
-                            <h3>Modern Clinics</h3>
-                            <p>Our offices are one of the things that make us one of the highest-rated dentists in
-                                Chicago Illinois.</p>
+                            <h3>State-of-the-Art Wellness Facilities</h3>
+                            <p>Our sanctuaries of healing feature cutting-edge diagnostic and therapeutic technologies in an environment designed to nurture both body and spirit.</p>
                             <a href="#" class="choose-btn">
                                 Explore Locations
                                 <i class="flaticon-up-right-arrow"></i>
@@ -1726,9 +1642,8 @@
                             <img src="assets/images/choose/choose2.jpg" alt="image">
                         </div>
                         <div class="choose-content">
-                            <h3>Science-Based Care</h3>
-                            <p>You are receiving care that is grounded in scientific evidence and delivered with
-                                compassion and integrity.</p>
+                            <h3>Evidence-Based Regenerative Protocols</h3>
+                            <p>Every treatment recommendation emerges from rigorous scientific research, clinical validation, and a deep understanding of the body's natural healing processes.</p>
                             <a href="#" class="choose-btn">
                                 Explore Services
                                 <i class="flaticon-up-right-arrow"></i>
@@ -1742,11 +1657,10 @@
                             <img src="assets/images/choose/choose3.jpg" alt="image">
                         </div>
                         <div class="choose-content">
-                            <h3>Specialist Dentists</h3>
-                            <p>Specialist dentists are dedicated to providing exceptional care for all your dental
-                                needs.</p>
+                            <h3>Board-Certified Wellness Practitioners</h3>
+                            <p>Our elite team includes physicians, aesthetic specialists, and wellness experts who combine advanced medical training with a holistic healing philosophy.</p>
                             <a href="#" class="choose-btn">
-                                Meet Your Dentist
+                                Meet Our Dentist
                                 <i class="flaticon-up-right-arrow"></i>
                             </a>
                         </div>
@@ -1766,8 +1680,8 @@
                         <i class="flaticon-play-button-arrowhead"></i>
                     </a>
                 </div>
-                <span class="sub">Board Certified In Periodontology & Dentist</span>
-                <h3>Your Smile, Our Expertise, Comprehensive Dental Solutions</h3>
+                <span class="sub">Leaders in Regenerative Medicine & Aesthetic Wellness</span>
+                <h3>Your Transformation Journey, Our Scientific Expertise</h3>
             </div>
         </div>
     </div>
@@ -1780,10 +1694,10 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="fun-fact-card">
                         <div class="d-flex align-items-center">
-                            <h3 class="counter">15</h3>
-                            <h3 class="sub">K</h3>
+                            <h3 class="counter">12</h3>
+                            <h3 class="sub">K+</h3>
                         </div>
-                        <p>Happy Users Around <span>World</span></p>
+                        <p>Transformed Lives<span>Worldwide</span></p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
@@ -1792,15 +1706,15 @@
                             <h3 class="counter">1000</h3>
                             <h3 class="sub">+</h3>
                         </div>
-                        <p>Dental Patients <span>Worldwide</span></p>
+                        <p>Advanced Rejuvenation  <span>Procedures</span></p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="fun-fact-card">
                         <div class="d-flex align-items-center">
-                            <h3>4.98</h3>
+                            <h3>4.96</h3>
                         </div>
-                        <p>Quality Of Our Dental <span>Service</span></p>
+                        <p>Client Experience<span>Rating</span></p>
                     </div>
                 </div>
             </div>
@@ -1812,7 +1726,7 @@
     <div class="doctors-area pt-150 pb-125">
         <div class="container">
             <div class="section-title" data-cues="slideInUp">
-                <h2>Meet Our Doctors</h2>
+                <h2>Meet Our Wellness Architects</h2>
             </div>
             <div class="row justify-content-center" data-cues="slideInUp">
                 <div class="col-lg-4 col-md-6">
@@ -1846,9 +1760,9 @@
                         </div>
                         <div class="doctor-content">
                             <h3>
-                                <a href="#">Dr. Lauren Mitchell, DMD</a>
+                                <a href="#">Dr. Alexandra Mitchell, MD</a>
                             </h3>
-                            <span>Dentist-Surgeon</span>
+                            <span>Longevity Medicine Specialist</span>
                         </div>
                     </div>
                 </div>
@@ -1883,9 +1797,9 @@
                         </div>
                         <div class="doctor-content">
                             <h3>
-                                <a href="#">Dr. Ethan Reynolds, DDS</a>
+                                <a href="#">Dr. Nathan Reynolds, DO</a>
                             </h3>
-                            <span>Dentist-Consultant</span>
+                            <span>Regenerative Medicine Expert</span>
                         </div>
                     </div>
                 </div>
@@ -1920,9 +1834,9 @@
                         </div>
                         <div class="doctor-content">
                             <h3>
-                                <a href="#">Dr. Bradley Foster, DDS</a>
+                                <a href="#">Dr. Sophia Foster, MD</a>
                             </h3>
-                            <span>Maxillofacial Surgeon</span>
+                            <span>Aesthetic Medicine Director</span>
                         </div>
                     </div>
                 </div>
@@ -1938,8 +1852,8 @@
                 <div class="row justify-content-center align-items-end" data-cues="slideInUp">
                     <div class="col-lg-7 col-md-12">
                         <div class="subscribe-content">
-                            <span class="sub">Healthy News And Solutions</span>
-                            <h3>Sign Up For Health Information</h3>
+                            <span class="sub">Insights For Your Wellness Journey</span>
+                            <h3>Sign Up For Exclusive Health Research & Updates</h3>
                         </div>
                     </div>
                     <div class="col-lg-5 col-md-12">
