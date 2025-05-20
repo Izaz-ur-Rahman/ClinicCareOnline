@@ -16467,7 +16467,7 @@ Pediatric Dentist Banner Area CSS
   height: 100%;
   background-image: url(../images/pediatric-dentist/banner1.jpg);
   background-position: center center;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   border-radius: 15px;
   transition: transform 8.5s ease;
