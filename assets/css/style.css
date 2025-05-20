@@ -14989,6 +14989,7 @@ Features Area CSS
 }
 .features-wrap-card .icon {
   margin-bottom: 35px;
+
 }
 .features-wrap-card h3, .features-wrap-card .h3 {
   font-size: 25px;
@@ -15023,6 +15024,7 @@ Features Area CSS
   background-color: #9a784c;
   color: #ffffff;
 }
+
 .features-wrap-card::before {
   position: absolute;
   content: "";
@@ -15065,6 +15067,12 @@ Features Area CSS
 }
 .features-wrap-bottom-shape img {
   width: 100%;
+}
+.features-wrap-card:hover .icon img {
+  filter: brightness(0) invert(1);
+}
+.features-wrap-card .icon img {
+  transition: filter 0.4s ease;
 }
 
 /*================================================
@@ -16527,7 +16535,7 @@ Pediatric Dentist Banner Area CSS
 
 .pediatric-dentist-banner-shape {
   position: absolute;
-  top: 52%;
+  top: 62%;
   left: 50%;
   transform: translateY(-52%) translateX(-50%);
   z-index: -1;
