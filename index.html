@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 
     <title>Clinic</title>
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
@@ -24,37 +26,41 @@
         .mobile-bottom-nav {
             display: none;
         }
-        .second_btn_color{
-            display: inline-flex;
-  padding: 15.5px 20px;
-  justify-content: center;
-  align-items: center;
-  background-color: #b2915b;
-  color: #ffffff;
-  font-weight: 500;
-  letter-spacing: 0.32px;
-  border-radius: 30px;
-  overflow: hidden;
-  position: relative;
-  z-index: 1;
-  transition: 0.6s;
 
-    border:2px solid #B2915B ;
+        .second_btn_color {
+            display: inline-flex;
+            padding: 15.5px 20px;
+            justify-content: center;
+            align-items: center;
+            background-color: #b2915b;
+            color: #ffffff;
+            font-weight: 500;
+            letter-spacing: 0.32px;
+            border-radius: 30px;
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+            transition: 0.6s;
+
+            border: 2px solid #B2915B;
         }
-.second_btn_color::before {
-  position: absolute;
-  content: "";
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 0%;
-  background-color: #9a784c;
-  z-index: -1;
-  transition: 0.6s;
-}
-.icon-wrapper {
-        display: none; /* Hide menu icon on desktop */
-    }
+
+        .second_btn_color::before {
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 0%;
+            background-color: #9a784c;
+            z-index: -1;
+            transition: 0.6s;
+        }
+
+        .icon-wrapper {
+            display: none;
+            /* Hide menu icon on desktop */
+        }
 
         img.zoom-hover {
             display: block;
@@ -223,18 +229,14 @@
         <div class="drawer-menu">
             <div class="accordion-item">
                 <button class="accordion-button">
-                    HOME <i class="fas fa-chevron-down"></i>
+                    HOME
                 </button>
-                <div class="accordion-content">
-                    <a href="index.html">Dental Clinic Home</a>
-                    <a href="index-2.html">Pediatric Dentist Home</a>
-                    <a href="index-3.html">Dental Treatment Home</a>
-                </div>
+
             </div>
 
             <div class="accordion-item">
                 <button class="accordion-button">
-                   Longevity <i class="fas fa-chevron-down"></i>
+                    Longevity <i class="fas fa-chevron-down"></i>
                 </button>
                 <div class="accordion-content">
                     <a href="#">Diagnostic Testing</a>
@@ -245,29 +247,29 @@
 
             <div class="accordion-item">
                 <button class="accordion-button">
-                  Aesthetic <i class="fas fa-chevron-down"></i>
+                    Aesthetic <i class="fas fa-chevron-down"></i>
                 </button>
-                 <div class="accordion-content">
+                <div class="accordion-content">
                     <a href="#">Facial Aesthetics</a>
                     <a href="#">Body Aesthetics</a>
                     <a href="#">Hair & Scalp</a>
                 </div>
             </div>
-              <div class="accordion-item">
+            <div class="accordion-item">
                 <button class="accordion-button">
-                  Regenerative <i class="fas fa-chevron-down"></i>
+                    Regenerative <i class="fas fa-chevron-down"></i>
                 </button>
-                 <div class="accordion-content">
+                <div class="accordion-content">
                     <a href="#">Advanced Therapies</a>
                     <a href="#">Skin Rejuvenation</a>
                     <a href="#">Specialized Treatments</a>
                 </div>
             </div>
-              <div class="accordion-item">
+            <div class="accordion-item">
                 <button class="accordion-button">
-                  Services <i class="fas fa-chevron-down"></i>
+                    Services <i class="fas fa-chevron-down"></i>
                 </button>
-                 <div class="accordion-content">
+                <div class="accordion-content">
                     <a href="#">Personal Care</a>
                     <a href="#">Virtual Care</a>
 
@@ -276,7 +278,7 @@
 
             <div class="accordion-item">
                 <button class="accordion-button">
-                    About Us  <i class="fas fa-chevron-down"></i>
+                    About Us <i class="fas fa-chevron-down"></i>
                 </button>
                 <!-- <div class="accordion-content">
                     <a href="#">Dental Products</a>
@@ -415,10 +417,10 @@
                     </li>
                     <li class="nav-item">
                         <a href="javascript:void(0)" class="dropdown-toggle nav-link">
-                       Longevity
+                            Longevity
 
                         </a>
-                         <ul class="dropdown-menu">
+                        <ul class="dropdown-menu">
                             <li class="nav-item">
                                 <a href="#" class="nav-link">Diagnostic Testing</a>
                             </li>
@@ -431,7 +433,7 @@
                     </li>
                     <li class="nav-item">
                         <a href="javascript:void(0)" class="dropdown-toggle nav-link">
-                         Aesthetic
+                            Aesthetic
                         </a>
                         <ul class="dropdown-menu">
                             <li class="nav-item">
@@ -450,9 +452,9 @@
                         </ul>
 
                     </li>
-                     <li class="nav-item">
+                    <li class="nav-item">
                         <a href="javascript:void(0)" class="dropdown-toggle nav-link">
-                       Regeneration
+                            Regeneration
                         </a>
                         <ul class="dropdown-menu">
                             <li class="nav-item">
@@ -471,9 +473,9 @@
                         </ul>
 
                     </li>
-                     <li class="nav-item">
+                    <li class="nav-item">
                         <a href="javascript:void(0)" class="dropdown-toggle nav-link">
-                       Services
+                            Services
                         </a>
                         <ul class="dropdown-menu">
                             <li class="nav-item">
@@ -619,30 +621,30 @@
                 <div class="accordion-item">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                      Longevity
+                        Longevity
                     </button>
-                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#navbarAccordion">
-                            <div class="accordion-body">
-                                <div class="accordion" id="navbarAccordion">
-                                    <div class="accordion-item">
-                                        <a href="#" class="accordion-link">
-                                           Diagnostic Testing
-                                        </a>
-                                    </div>
-                                    <div class="accordion-item">
-                                        <a href="#" class="accordion-link">
-                                           Wellness Programs
-                                        </a>
-                                    </div>
-
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#navbarAccordion">
+                        <div class="accordion-body">
+                            <div class="accordion" id="navbarAccordion">
+                                <div class="accordion-item">
+                                    <a href="#" class="accordion-link">
+                                        Diagnostic Testing
+                                    </a>
                                 </div>
+                                <div class="accordion-item">
+                                    <a href="#" class="accordion-link">
+                                        Wellness Programs
+                                    </a>
+                                </div>
+
                             </div>
                         </div>
+                    </div>
                 </div>
                 <div class="accordion-item">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                   Aesthetic
+                        Aesthetic
                     </button>
                     <!-- <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#navbarAccordion">
                         <div class="accordion-body">
@@ -681,20 +683,19 @@
                                             </div>
                                         </div>
                                     </div> -->
-                                </div>
-                                <!-- <div class="accordion-item">
+                </div>
+                <!-- <div class="accordion-item">
                                     <a href="#" class="accordion-link">
                                        About Us
                                     </a> -->
 
 
-                                <div class="accordion-item">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseOne2" aria-expanded="false"
-                                        aria-controls="collapseOne2">
-                                 About Us
-                                    </button>
-                                    <!-- <div id="collapseOne2" class="accordion-collapse collapse"
+                <div class="accordion-item">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne2" aria-expanded="false" aria-controls="collapseOne2">
+                        About Us
+                    </button>
+                    <!-- <div id="collapseOne2" class="accordion-collapse collapse"
                                         data-bs-parent="#navbarAccordionOne">
                                         <div class="accordion-body">
                                             <div class="accordion" id="navbarAccordionOne">
@@ -814,7 +815,9 @@
                             </li>
                         </ul>
                         <div class="bottom-content">
-                            <p>Here at Protoclinic, we provide scientifically-backed, personalized wellness and aesthetic programs based on comprehensive diagnostics and cutting-edge regenerative therapies.</p>
+                            <p>Here at Protoclinic, we provide scientifically-backed, personalized wellness and
+                                aesthetic programs based on comprehensive diagnostics and cutting-edge regenerative
+                                therapies.</p>
                             <div class="info">
                                 <div class="icon">
                                     <i data-feather="phone"></i>
@@ -826,16 +829,17 @@
                 </div>
                 <div class="col-xl-5 col-md-12">
                     <div class="pediatric-dentist-banner-image">
-                      <div class="zoom-background"></div> <!-- This is new -->
+                        <div class="zoom-background"></div> <!-- This is new -->
 
-                      <div class="video-wrap">
-                        <img src="assets/images/pediatric-dentist/wrap.png" alt="Wrap">
-                        <a data-fslightbox="video" class="video-btn" href="https://youtu.be/mUzq_h1GCXE?si=8aVtXL3GZXr3t5wn">
-                          <i class="flaticon-play-button-arrowhead"></i>
-                        </a>
-                      </div>
+                        <div class="video-wrap">
+                            <img src="assets/images/pediatric-dentist/wrap.png" alt="Wrap">
+                            <a data-fslightbox="video" class="video-btn"
+                                href="https://youtu.be/mUzq_h1GCXE?si=8aVtXL3GZXr3t5wn">
+                                <i class="flaticon-play-button-arrowhead"></i>
+                            </a>
+                        </div>
                     </div>
-                  </div>
+                </div>
 
 
             </div>
@@ -858,7 +862,8 @@
                         <h3>
                             <a href="#">Longevity Assessment</a>
                         </h3>
-                        <p>Comprehensive DNA testing and personalized health evaluations designed to optimize your biological age and extend your health span.</p>
+                        <p>Comprehensive DNA testing and personalized health evaluations designed to optimize your
+                            biological age and extend your health span.</p>
                         <a href="#" class="service-btn">
                             Get Started
                             <i class="flaticon-up-right-arrow"></i>
@@ -873,7 +878,8 @@
                         <h3>
                             <a href="#">Advanced Aesthetics</a>
                         </h3>
-                        <p>Non-invasive and minimally invasive treatments utilizing the latest technology for natural-looking rejuvenation and enhancement.</p>
+                        <p>Non-invasive and minimally invasive treatments utilizing the latest technology for
+                            natural-looking rejuvenation and enhancement.</p>
                         <a href="#" class="service-btn">
                             Get Started
                             <i class="flaticon-up-right-arrow"></i>
@@ -888,7 +894,8 @@
                         <h3>
                             <a href="#">Regenerative Therapies</a>
                         </h3>
-                        <p>Platelet-Rich Plasma and biostimulation treatments that harness your body's natural healing abilities to restore and revitalize.</p>
+                        <p>Platelet-Rich Plasma and biostimulation treatments that harness your body's natural healing
+                            abilities to restore and revitalize.</p>
                         <a href="#" class="service-btn">
                             Get Started
                             <i class="flaticon-up-right-arrow"></i>
@@ -903,7 +910,8 @@
                         <h3>
                             <a href="#">Hair & Scalp Solutions</a>
                         </h3>
-                        <p>Innovative approaches to hair restoration and scalp health through advanced therapeutic techniques and personalized treatment plans.</p>
+                        <p>Innovative approaches to hair restoration and scalp health through advanced therapeutic
+                            techniques and personalized treatment plans.</p>
                         <a href="#" class="service-btn">
                             Get Started
                             <i class="flaticon-up-right-arrow"></i>
@@ -938,9 +946,10 @@
                             <div class="col-lg-6 col-sm-6">
                                 <div class="image-three">
                                     <img class="zoom-hover" src="assets/images/about/about4.jpg" alt="about 4 img">
-                                    <div class="star-wrap" style="left:60;" >
-                                        <img style="max-width: 150%;width:150%;" src="assets/images/about/star.png" alt="image">
-                                        <div class="rating"  style="    position: absolute;
+                                    <div class="star-wrap" style="left:60;">
+                                        <img style="max-width: 150%;width:150%;" src="assets/images/about/star.png"
+                                            alt="image">
+                                        <div class="rating" style="    position: absolute;
                                        margin-left: 50px;
                                         right: 0;
                                         top: 50%;
@@ -963,8 +972,13 @@
                 <div class="col-xl-6 col-md-12">
                     <div class="about-wrap-content">
                         <h2>Transform Your Future Self Through Wellness Innovation</h2>
-                        <strong>We are recognized pioneers in the integration of longevity science, aesthetic medicine, and regenerative therapies. Our passion lies in helping you reclaim the vibrant energy and confidence that time gradually diminishes.</strong>
-                        <p>At Protoclinic, we understand that true wellness radiates from within. Your appearance reflects your internal health, and both deserve equal attention. Our science-backed approach doesn't just mask symptoms or temporarily enhance your look—it addresses the root causes of aging, helping you feel as vibrant as you appear.
+                        <strong>We are recognized pioneers in the integration of longevity science, aesthetic medicine,
+                            and regenerative therapies. Our passion lies in helping you reclaim the vibrant energy and
+                            confidence that time gradually diminishes.</strong>
+                        <p>At Protoclinic, we understand that true wellness radiates from within. Your appearance
+                            reflects your internal health, and both deserve equal attention. Our science-backed approach
+                            doesn't just mask symptoms or temporarily enhance your look—it addresses the root causes of
+                            aging, helping you feel as vibrant as you appear.
                         </p>
                         <div class="row justify-content-center">
                             <div class="col-lg-6 col-md-6">
@@ -975,17 +989,20 @@
                                     </li>
                                     <li>
                                         <i data-feather="check"></i>
-                                        Comprehensive Wellness Testing                                    </li>
+                                        Comprehensive Wellness Testing
+                                    </li>
                                 </ul>
                             </div>
                             <div class="col-lg-6 col-md-6">
                                 <ul class="list">
                                     <li>
                                         <i data-feather="check"></i>
-                                        Personalized Treatment Plans                                    </li>
+                                        Personalized Treatment Plans
+                                    </li>
                                     <li>
                                         <i data-feather="check"></i>
-                                        Advanced Aesthetic Technology                                    </li>
+                                        Advanced Aesthetic Technology
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -1022,7 +1039,8 @@
                     </div>
                     <div class="col-lg-5 col-md-12">
                         <div class="services-middle">
-                            <p>Our science-based longevity programs unlock your body's hidden potential, reversing biological aging at the cellular level while optimizing vitality for years to come.</p>
+                            <p>Our science-based longevity programs unlock your body's hidden potential, reversing
+                                biological aging at the cellular level while optimizing vitality for years to come.</p>
                         </div>
                     </div>
                     <div class="col-lg-2 col-md-12">
@@ -1058,7 +1076,8 @@
                     </div>
                     <div class="col-lg-5 col-md-12">
                         <div class="services-middle">
-                            <p>Non-surgical rejuvenation treatments that honor your natural beauty, enhancing your features while preserving the authentic expression that makes you uniquely you.</p>
+                            <p>Non-surgical rejuvenation treatments that honor your natural beauty, enhancing your
+                                features while preserving the authentic expression that makes you uniquely you.</p>
                         </div>
                     </div>
                     <div class="col-lg-2 col-md-12">
@@ -1094,7 +1113,8 @@
                     </div>
                     <div class="col-lg-5 col-md-12">
                         <div class="services-middle">
-                            <p>Revolutionary PRP and biostimulation treatments awaken your body's innate healing intelligence, creating lasting renewal from within rather than temporary fixes.</p>
+                            <p>Revolutionary PRP and biostimulation treatments awaken your body's innate healing
+                                intelligence, creating lasting renewal from within rather than temporary fixes.</p>
                         </div>
                     </div>
                     <div class="col-lg-2 col-md-12">
@@ -1130,7 +1150,8 @@
                     </div>
                     <div class="col-lg-5 col-md-12">
                         <div class="services-middle">
-                            <p>Discover the profound connection between your digestive wellness and overall vitality through advanced microbiome analysis and personalized healing protocols.</p>
+                            <p>Discover the profound connection between your digestive wellness and overall vitality
+                                through advanced microbiome analysis and personalized healing protocols.</p>
                         </div>
                     </div>
                     <div class="col-lg-2 col-md-12">
@@ -1142,7 +1163,8 @@
                             </div>
                             <div class="services-image">
                                 <a href="#">
-                                    <img src="assets/images/services/GUT-Health-Optimization-Image.png" alt="GUT Health image">
+                                    <img src="assets/images/services/GUT-Health-Optimization-Image.png"
+                                        alt="GUT Health image">
                                 </a>
                             </div>
                         </div>
@@ -1166,7 +1188,8 @@
                     </div>
                     <div class="col-lg-5 col-md-12">
                         <div class="services-middle">
-                            <p>Reclaim the confidence that comes with healthy, vibrant hair through cutting-edge diagnostics and regenerative treatments for thinning and loss concerns.</p>
+                            <p>Reclaim the confidence that comes with healthy, vibrant hair through cutting-edge
+                                diagnostics and regenerative treatments for thinning and loss concerns.</p>
                         </div>
                     </div>
                     <div class="col-lg-2 col-md-12">
@@ -1207,14 +1230,14 @@
                             </div>
                             <div class="real-content">
                                 <ul class="list">
-                                  <li>
-    <span>TREATMENTS:</span>
-    <h3>Hair Restoration Therapy</h3>
-</li>
-<li>
-    <span>RESULT:</span>
-    <p>Visible Hair Regrowth in Just 6 Weeks</p>
-</li>
+                                    <li>
+                                        <span>TREATMENTS:</span>
+                                        <h3>Hair Restoration Therapy</h3>
+                                    </li>
+                                    <li>
+                                        <span>RESULT:</span>
+                                        <p>Visible Hair Regrowth in Just 6 Weeks</p>
+                                    </li>
 
                                 </ul>
                             </div>
@@ -1229,14 +1252,14 @@
                             </div>
                             <div class="real-content">
                                 <ul class="list">
-                                   <li>
-    <span>TREATMENTS:</span>
-    <h3>Advanced Face Brightening Therapy</h3>
-</li>
-<li>
-    <span>GLOW:</span>
-    <p>Visible Skin Radiance in Just 35 Minutes</p>
-</li>
+                                    <li>
+                                        <span>TREATMENTS:</span>
+                                        <h3>Advanced Face Brightening Therapy</h3>
+                                    </li>
+                                    <li>
+                                        <span>GLOW:</span>
+                                        <p>Visible Skin Radiance in Just 35 Minutes</p>
+                                    </li>
 
                                 </ul>
                             </div>
@@ -1302,13 +1325,13 @@
                                 <li><i class="flaticon-star"></i></li>
                                 <li><i class="flaticon-star"></i></li>
                             </ul>
-                            <p>“I recently had the pleasure of visiting Doral for a dental check-up, and I couldn't be
-                                more impressed. From the moment I walked in, the friendly and welcoming staff set the
-                                tone for a positive experience.”</p>
+                            <p>“The hair hasn’t just doubled; what’s making me the happiest is the presence of baby
+                                hair! There are hair follicles on my scalp!”</p>
                             <div class="info">
                                 <div class="title">
                                     <img src="assets/images/user/img1.png" alt="image">
-                                    <h5>Allison Hayes</h5>
+                                    <h5>Taim Alfalasi</h5>
+
                                 </div>
                                 <div class="quote">
                                     <i class="flaticon-quote"></i>
@@ -1325,13 +1348,13 @@
                                 <li><i class="flaticon-star"></i></li>
                                 <li><i class="flaticon-star"></i></li>
                             </ul>
-                            <p>“I must recommend Doral enough! From the moment I walked in, I felt welcomed and cared
-                                for. The staff was incredibly friendly and professional, and my dentist was thorough and
-                                attentive.”</p>
+                            <p>“There’s a history of balding in my family. The treatment starts professionally, by a
+                                blood test so the doctor can indicate the problem. Hair loss became less; I thought I’d
+                                get around 10/20 of the results, but I got much more!”</p>
                             <div class="info">
                                 <div class="title">
                                     <img src="assets/images/user/img2.png" alt="image">
-                                    <h5>Samantha Hernandez</h5>
+                                    <h5>Nour Aldin</h5>
                                 </div>
                                 <div class="quote">
                                     <i class="flaticon-quote"></i>
@@ -1348,13 +1371,12 @@
                                 <li><i class="flaticon-star"></i></li>
                                 <li><i class="flaticon-star"></i></li>
                             </ul>
-                            <p>“Five stars for Doral Service! I recently had a dental emergency and was able to get an
-                                appointment right away. They took the time to listen to my concerns and address them
-                                with care.”</p>
+                            <p>“When I first came to Dr. Wissam, I thought, removing fat from my body? How can I do
+                                that? But now I’m doing the procedure for the second time!”</p>
                             <div class="info">
                                 <div class="title">
                                     <img src="assets/images/user/img3.png" alt="image">
-                                    <h5>Christopher Taylor</h5>
+                                    <h5>Roaa Al Sabban</h5>
                                 </div>
                                 <div class="quote">
                                     <i class="flaticon-quote"></i>
@@ -1371,13 +1393,15 @@
                                 <li><i class="flaticon-star"></i></li>
                                 <li><i class="flaticon-star"></i></li>
                             </ul>
-                            <p>“I recently had the pleasure of visiting Doral for a dental check-up, and I couldn't be
-                                more impressed. From the moment I walked in, the friendly and welcoming staff set the
-                                tone for a positive experience.”</p>
+                            <p>“My hair used to fall so much. When I came to Dr. Wissam, I told him we have hair loss
+                                problems in the family. He gave me many solutions that we worked on. There’s no one like
+                                Dr. Wissam; believe me, I have gone to many clinics. He works on your well-being as
+                                well. That’s the most important factor for hair loss. When you’re satisfied, your hair
+                                won’t fall”</p>
                             <div class="info">
                                 <div class="title">
-                                    <img src="assets/images/user/img1.png" alt="image">
-                                    <h5>Allison Hayes</h5>
+                                    <img src="assets/images/user/Testimonial-Image-4.png" alt="image">
+                                    <h5>Ahmad Qassim</h5>
                                 </div>
                                 <div class="quote">
                                     <i class="flaticon-quote"></i>
@@ -1537,7 +1561,9 @@
                 <div class="col-xl-6 col-md-12">
                     <div class="insurance-wrap-content">
                         <h3>Elevate Your Wellness Journey: Protoclinic Membership Options</h3>
-                        <p>Invest in your long-term health and appearance with our comprehensive membership plans. Experience priority scheduling, preferred pricing, and personalized wellness monitoring throughout your journey.</p>
+                        <p>Invest in your long-term health and appearance with our comprehensive membership plans.
+                            Experience priority scheduling, preferred pricing, and personalized wellness monitoring
+                            throughout your journey.</p>
                         <div class="row justify-content-center">
                             <div class="col-lg-6 col-md-6">
                                 <ul class="list">
@@ -1569,7 +1595,9 @@
                                 </ul>
                             </div>
                         </div>
-                        <p>Our mission embraces the science of longevity with the art of aesthetic enhancement. We believe consistent, evidence-based care creates sustainable transformation, ensuring your wellness journey continues to evolve as you do.</p>
+                        <p>Our mission embraces the science of longevity with the art of aesthetic enhancement. We
+                            believe consistent, evidence-based care creates sustainable transformation, ensuring your
+                            wellness journey continues to evolve as you do.</p>
                     </div>
                 </div>
             </div>
@@ -1591,7 +1619,8 @@
                         </div>
                         <div class="choose-content">
                             <h3>State-of-the-Art Wellness Facilities</h3>
-                            <p>Our sanctuaries of healing feature cutting-edge diagnostic and therapeutic technologies in an environment designed to nurture both body and spirit.</p>
+                            <p>Our sanctuaries of healing feature cutting-edge diagnostic and therapeutic technologies
+                                in an environment designed to nurture both body and spirit.</p>
                             <a href="#" class="choose-btn">
                                 Explore Locations
                                 <i class="flaticon-up-right-arrow"></i>
@@ -1606,7 +1635,8 @@
                         </div>
                         <div class="choose-content">
                             <h3>Evidence-Based Regenerative Protocols</h3>
-                            <p>Every treatment recommendation emerges from rigorous scientific research, clinical validation, and a deep understanding of the body's natural healing processes.</p>
+                            <p>Every treatment recommendation emerges from rigorous scientific research, clinical
+                                validation, and a deep understanding of the body's natural healing processes.</p>
                             <a href="#" class="choose-btn">
                                 Explore Services
                                 <i class="flaticon-up-right-arrow"></i>
@@ -1621,7 +1651,8 @@
                         </div>
                         <div class="choose-content">
                             <h3>Board-Certified Wellness Practitioners</h3>
-                            <p>Our elite team includes physicians, aesthetic specialists, and wellness experts who combine advanced medical training with a holistic healing philosophy.</p>
+                            <p>Our elite team includes physicians, aesthetic specialists, and wellness experts who
+                                combine advanced medical training with a holistic healing philosophy.</p>
                             <a href="#" class="choose-btn">
                                 Meet Our Dentist
                                 <i class="flaticon-up-right-arrow"></i>
@@ -1657,27 +1688,43 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="fun-fact-card">
                         <div class="d-flex align-items-center">
-                            <h3 class="counter">12</h3>
-                            <h3 class="sub">K+</h3>
-                        </div>
-                        <p>Transformed Lives<span>Worldwide</span></p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="fun-fact-card">
-                        <div class="d-flex align-items-center">
                             <h3 class="counter">1000</h3>
                             <h3 class="sub">+</h3>
                         </div>
-                        <p>Advanced Rejuvenation  <span>Procedures</span></p>
+                        <p>Hair Transplant  <span>Procedure</span></p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="fun-fact-card">
                         <div class="d-flex align-items-center">
-                            <h3>4.96</h3>
+                            <h3 class="counter">2000</h3>
+                            <h3 class="sub">+</h3>
                         </div>
-                        <p>Client Experience<span>Rating</span></p>
+                        <p>Hair Loss<span> Treatments </span></p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="fun-fact-card">
+                        <div class="d-flex align-items-center">
+                            <h3>1000+</h3>
+                        </div>
+                        <p>Eyebrows</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="fun-fact-card">
+                        <div class="d-flex align-items-center">
+                            <h3>1000+</h3>
+                        </div>
+                        <p>Beard</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="fun-fact-card">
+                        <div class="d-flex align-items-center">
+                            <h3>20+</h3>
+                        </div>
+                        <p>Years Of Experience</p>
                     </div>
                 </div>
             </div>
@@ -1686,127 +1733,584 @@
     <!-- End Fun Fact Area -->
 
     <!-- Start Doctors Area -->
+    <!-- Swiper CSS -->
+    <!-- Swiper CSS in <head> -->
     <div class="doctors-area pt-150 pb-125">
         <div class="container">
-            <div class="section-title" data-cues="slideInUp">
+            <div class="section-title">
                 <h2>Meet Our Wellness Architects</h2>
             </div>
-            <div class="row justify-content-center" data-cues="slideInUp">
-                <div class="col-lg-4 col-md-6">
-                    <div class="doctors-card">
-                        <div class="doctor-image">
-                            <a href="#">
-                                <img src="assets/images/doctors/doctors1.jpg" alt="image">
-                            </a>
-                            <ul class="social">
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i data-feather="facebook"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i data-feather="twitter"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i data-feather="instagram"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i data-feather="linkedin"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="doctor-content">
-                            <h3>
-                                <a href="#">Dr. Alexandra Mitchell, MD</a>
-                            </h3>
-                            <span>Longevity Medicine Specialist</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="doctors-card">
-                        <div class="doctor-image">
-                            <a href="#">
-                                <img src="assets/images/doctors/doctors2.jpg" alt="image">
-                            </a>
-                            <ul class="social">
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i data-feather="facebook"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i data-feather="twitter"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i data-feather="instagram"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i data-feather="linkedin"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="doctor-content">
-                            <h3>
-                                <a href="#">Dr. Nathan Reynolds, DO</a>
-                            </h3>
-                            <span>Regenerative Medicine Expert</span>
+
+            <div class="swiper doctors-swiper">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                        <div class="doctors-card">
+                            <div class="doctor-image">
+                                <a href="#">
+                                    <img src="assets/images/doctors/Dr.-Wissam-Adada.png" alt="Dr. Wissam Adada">
+                                </a>
+                                <ul class="social">
+                                    <li>
+                                        <a href="https://www.facebook.com/" target="_blank">
+                                            <i data-feather="facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://twitter.com/" target="_blank">
+                                            <i data-feather="twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/" target="_blank">
+                                            <i data-feather="instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://bd.linkedin.com/" target="_blank">
+                                            <i data-feather="linkedin"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="doctor-content">
+                                <h3>Dr. Wissam Adada</h3>
+                                <span>Physician-Aesthetic/Hair transplant</span>
+                            </div>
+
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="doctors-card">
-                        <div class="doctor-image">
-                            <a href="#">
-                                <img src="assets/images/doctors/doctors3.jpg" alt="image">
-                            </a>
-                            <ul class="social">
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i data-feather="facebook"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i data-feather="twitter"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i data-feather="instagram"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i data-feather="linkedin"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="doctor-content">
-                            <h3>
-                                <a href="#">Dr. Sophia Foster, MD</a>
-                            </h3>
-                            <span>Aesthetic Medicine Director</span>
+
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                        <div class="doctors-card">
+                            <div class="doctor-image">
+                                <a href="#">
+                                    <img src="assets/images/doctors/Dr.-Ali-Basim.png" alt="image">
+                                </a>
+                                <ul class="social">
+                                    <li>
+                                        <a href="https://www.facebook.com/" target="_blank">
+                                            <i data-feather="facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://twitter.com/" target="_blank">
+                                            <i data-feather="twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/" target="_blank">
+                                            <i data-feather="instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://bd.linkedin.com/" target="_blank">
+                                            <i data-feather="linkedin"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="doctor-content">
+
+                                <h3>Dr. Ali Basim</h3>
+                                <span>General Practitioner</span>
+                            </div>
                         </div>
                     </div>
+
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                        <div class="doctors-card">
+                            <div class="doctor-image">
+                                <a href="#">
+                                    <img src="assets/images/doctors/Dr.Shireen-Abuharb.png" alt="Dr. Shireen Abuharb">
+                                </a>
+                                <ul class="social">
+                                    <li>
+                                        <a href="https://www.facebook.com/" target="_blank">
+                                            <i data-feather="facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://twitter.com/" target="_blank">
+                                            <i data-feather="twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/" target="_blank">
+                                            <i data-feather="instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://bd.linkedin.com/" target="_blank">
+                                            <i data-feather="linkedin"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="doctor-content">
+                                <h3>Dr. Shireen Abuharb</h3>
+                                <span>Aesthetic Doctor</span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                        <div class="doctors-card">
+                            <div class="doctor-image">
+                                <a href="#">
+                                    <img src="assets/images/doctors/Dr.-Fatima-Elzahraa.png" alt="image">
+                                </a>
+                                <ul class="social">
+                                    <li>
+                                        <a href="https://www.facebook.com/" target="_blank">
+                                            <i data-feather="facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://twitter.com/" target="_blank">
+                                            <i data-feather="twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/" target="_blank">
+                                            <i data-feather="instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://bd.linkedin.com/" target="_blank">
+                                            <i data-feather="linkedin"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="doctor-content">
+                                <h3>Dr. Fatima Elzahraa</h3>
+                                <span>General Practioner</span>
+                            </div>
+
+                        </div>
+                    </div> <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                        <div class="doctors-card">
+                            <div class="doctor-image">
+                                <a href="#">
+                                    <img src="assets/images/doctors/Dr.-Hala.png" alt="dr. hala image">
+                                </a>
+                                <ul class="social">
+                                    <li>
+                                        <a href="https://www.facebook.com/" target="_blank">
+                                            <i data-feather="facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://twitter.com/" target="_blank">
+                                            <i data-feather="twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/" target="_blank">
+                                            <i data-feather="instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://bd.linkedin.com/" target="_blank">
+                                            <i data-feather="linkedin"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="doctor-content">
+                                <h3>Dr. Hala</h3>
+                                <span>Aesthetic Doctor</span>
+                            </div>
+
+                        </div>
+                    </div> <!-- Slide 3 -->
+
+<div class="swiper-slide">
+                        <div class="doctors-card">
+                            <div class="doctor-image">
+                                <a href="#">
+                                    <img src="assets/images/doctors/Dr.-Wissam-Adada.png" alt="Dr. Wissam Adada">
+                                </a>
+                                <ul class="social">
+                                    <li>
+                                        <a href="https://www.facebook.com/" target="_blank">
+                                            <i data-feather="facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://twitter.com/" target="_blank">
+                                            <i data-feather="twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/" target="_blank">
+                                            <i data-feather="instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://bd.linkedin.com/" target="_blank">
+                                            <i data-feather="linkedin"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="doctor-content">
+                                <h3>Dr. Wissam Adada</h3>
+                                <span>Physician-Aesthetic/Hair transplant</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                        <div class="doctors-card">
+                            <div class="doctor-image">
+                                <a href="#">
+                                    <img src="assets/images/doctors/Dr.-Ali-Basim.png" alt="image">
+                                </a>
+                                <ul class="social">
+                                    <li>
+                                        <a href="https://www.facebook.com/" target="_blank">
+                                            <i data-feather="facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://twitter.com/" target="_blank">
+                                            <i data-feather="twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/" target="_blank">
+                                            <i data-feather="instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://bd.linkedin.com/" target="_blank">
+                                            <i data-feather="linkedin"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="doctor-content">
+
+                                <h3>Dr. Ali Basim</h3>
+                                <span>General Practitioner</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                        <div class="doctors-card">
+                            <div class="doctor-image">
+                                <a href="#">
+                                    <img src="assets/images/doctors/Dr.Shireen-Abuharb.png" alt="Dr. Shireen Abuharb">
+                                </a>
+                                <ul class="social">
+                                    <li>
+                                        <a href="https://www.facebook.com/" target="_blank">
+                                            <i data-feather="facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://twitter.com/" target="_blank">
+                                            <i data-feather="twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/" target="_blank">
+                                            <i data-feather="instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://bd.linkedin.com/" target="_blank">
+                                            <i data-feather="linkedin"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="doctor-content">
+                                <h3>Dr. Shireen Abuharb</h3>
+                                <span>Aesthetic Doctor</span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                        <div class="doctors-card">
+                            <div class="doctor-image">
+                                <a href="#">
+                                    <img src="assets/images/doctors/Dr.-Fatima-Elzahraa.png" alt="image">
+                                </a>
+                                <ul class="social">
+                                    <li>
+                                        <a href="https://www.facebook.com/" target="_blank">
+                                            <i data-feather="facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://twitter.com/" target="_blank">
+                                            <i data-feather="twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/" target="_blank">
+                                            <i data-feather="instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://bd.linkedin.com/" target="_blank">
+                                            <i data-feather="linkedin"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="doctor-content">
+                                <h3>Dr. Fatima Elzahraa</h3>
+                                <span>General Practioner</span>
+                            </div>
+
+                        </div>
+                    </div> <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                        <div class="doctors-card">
+                            <div class="doctor-image">
+                                <a href="#">
+                                    <img src="assets/images/doctors/Dr.-Hala.png" alt="dr. hala image">
+                                </a>
+                                <ul class="social">
+                                    <li>
+                                        <a href="https://www.facebook.com/" target="_blank">
+                                            <i data-feather="facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://twitter.com/" target="_blank">
+                                            <i data-feather="twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/" target="_blank">
+                                            <i data-feather="instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://bd.linkedin.com/" target="_blank">
+                                            <i data-feather="linkedin"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="doctor-content">
+                                <h3>Dr. Hala</h3>
+                                <span>Aesthetic Doctor</span>
+                            </div>
+
+                        </div>
+                    </div> <!-- Slide 3 -->
+<div class="swiper-slide">
+                        <div class="doctors-card">
+                            <div class="doctor-image">
+                                <a href="#">
+                                    <img src="assets/images/doctors/Dr.-Wissam-Adada.png" alt="Dr. Wissam Adada">
+                                </a>
+                                <ul class="social">
+                                    <li>
+                                        <a href="https://www.facebook.com/" target="_blank">
+                                            <i data-feather="facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://twitter.com/" target="_blank">
+                                            <i data-feather="twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/" target="_blank">
+                                            <i data-feather="instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://bd.linkedin.com/" target="_blank">
+                                            <i data-feather="linkedin"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="doctor-content">
+                                <h3>Dr. Wissam Adada</h3>
+                                <span>Physician-Aesthetic/Hair transplant</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                        <div class="doctors-card">
+                            <div class="doctor-image">
+                                <a href="#">
+                                    <img src="assets/images/doctors/Dr.-Ali-Basim.png" alt="image">
+                                </a>
+                                <ul class="social">
+                                    <li>
+                                        <a href="https://www.facebook.com/" target="_blank">
+                                            <i data-feather="facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://twitter.com/" target="_blank">
+                                            <i data-feather="twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/" target="_blank">
+                                            <i data-feather="instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://bd.linkedin.com/" target="_blank">
+                                            <i data-feather="linkedin"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="doctor-content">
+
+                                <h3>Dr. Ali Basim</h3>
+                                <span>General Practitioner</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                        <div class="doctors-card">
+                            <div class="doctor-image">
+                                <a href="#">
+                                    <img src="assets/images/doctors/Dr.Shireen-Abuharb.png" alt="Dr. Shireen Abuharb">
+                                </a>
+                                <ul class="social">
+                                    <li>
+                                        <a href="https://www.facebook.com/" target="_blank">
+                                            <i data-feather="facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://twitter.com/" target="_blank">
+                                            <i data-feather="twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/" target="_blank">
+                                            <i data-feather="instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://bd.linkedin.com/" target="_blank">
+                                            <i data-feather="linkedin"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="doctor-content">
+                                <h3>Dr. Shireen Abuharb</h3>
+                                <span>Aesthetic Doctor</span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                        <div class="doctors-card">
+                            <div class="doctor-image">
+                                <a href="#">
+                                    <img src="assets/images/doctors/Dr.-Fatima-Elzahraa.png" alt="image">
+                                </a>
+                                <ul class="social">
+                                    <li>
+                                        <a href="https://www.facebook.com/" target="_blank">
+                                            <i data-feather="facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://twitter.com/" target="_blank">
+                                            <i data-feather="twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/" target="_blank">
+                                            <i data-feather="instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://bd.linkedin.com/" target="_blank">
+                                            <i data-feather="linkedin"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="doctor-content">
+                                <h3>Dr. Fatima Elzahraa</h3>
+                                <span>General Practioner</span>
+                            </div>
+
+                        </div>
+                    </div> <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                        <div class="doctors-card">
+                            <div class="doctor-image">
+                                <a href="#">
+                                    <img src="assets/images/doctors/Dr.-Hala.png" alt="dr. hala image">
+                                </a>
+                                <ul class="social">
+                                    <li>
+                                        <a href="https://www.facebook.com/" target="_blank">
+                                            <i data-feather="facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://twitter.com/" target="_blank">
+                                            <i data-feather="twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/" target="_blank">
+                                            <i data-feather="instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://bd.linkedin.com/" target="_blank">
+                                            <i data-feather="linkedin"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="doctor-content">
+                                <h3>Dr. Hala</h3>
+                                <span>Aesthetic Doctor</span>
+                            </div>
+
+                        </div>
+                    </div> <!-- Slide 3 -->
+
+                    <!-- More slides as needed -->
                 </div>
+
             </div>
         </div>
     </div>
-    <!-- End Doctors Area -->
+
+
+
+
 
     <!-- Start Subscribe Area -->
     <div class="subscribe-area">
@@ -1903,9 +2407,37 @@
         <i data-feather="chevron-up"></i>
     </button>
     <!-- End Back to Top -->
+ <!-- Swiper JS before closing </body> -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
-    <!-- Link of JS Files -->
-    <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <!-- Swiper Init Script -->
+  <script>
+  const doctorSlider = new Swiper('.doctors-swiper', {
+    loop: true,
+    slidesPerView: 3,
+    spaceBetween: 30,
+    speed: 3000,
+    autoplay: {
+      delay: 0, // No delay — continuous movement
+      disableOnInteraction: false,
+    },
+    freeMode: true, // Enable continuous free scrolling
+    freeModeMomentum: false,
+    allowTouchMove: false, // Optional
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    },
+  });
+</script>
+
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/swiper-bundle.min.js"></script>
     <script src="assets/js/feather.min.js"></script>
@@ -1913,6 +2445,8 @@
     <script src="assets/js/scrollCue.min.js"></script>
     <script src="assets/js/simpleParallax.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <!-- Swiper JS -->
+
     </body>
 
     <!-- Mirrored from templates.hibotheme.com/doral/default/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 May 2025 06:36:42 GMT -->
