@@ -2350,30 +2350,29 @@ Home                        </a></div>
 
     <!-- Swiper Init Script -->
     <script>
-        const doctorSlider = new Swiper('.doctors-swiper', {
-            loop: true,
-            slidesPerView: 3,
-            spaceBetween: 30,
-            speed: 3000,
-            autoplay: {
-                delay: 0, // No delay — continuous movement
-                disableOnInteraction: false,
-            },
-            freeMode: true, // Enable continuous free scrolling
-            freeModeMomentum: false,
-            allowTouchMove: false, // Optional
-            breakpoints: {
-                0: {
-                    slidesPerView: 1,
-                },
-                768: {
-                    slidesPerView: 2,
-                },
-                1024: {
-                    slidesPerView: 3,
-                },
-            },
-        });
+     const doctorSlider = new Swiper('.doctors-swiper', {
+  loop: true,
+  slidesPerView: 3,
+  spaceBetween: 30,
+  speed: 3000,
+  autoplay: {
+    delay: 1, // very small delay
+    disableOnInteraction: false,
+  },
+  allowTouchMove: false, // Optional
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+    },
+  },
+});
+
     </script>
 
     <script src="assets/js/bootstrap.bundle.min.js"></script>
