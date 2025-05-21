@@ -16472,7 +16472,7 @@ Pediatric Dentist Banner Area CSS
   top: 0;
   left: 0;
   width: 100%;
-  height: 120vh;
+  height: 114vh;
   background-image: url(../images/pediatric-dentist/banner1.jpg);
   background-position: center center;
   background-size: contain;
@@ -16505,7 +16505,23 @@ Pediatric Dentist Banner Area CSS
 .pediatric-dentist-banner-image .zoom-background {
   animation: zoomIn 5.5s ease forwards;
 }
-
+@media (max-width:768px) {
+  .pediatric-dentist-banner-image .zoom-background {
+     position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/pediatric-dentist/banner1.jpg);
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  transition: transform 8.5s ease;
+  z-index: 0;
+  overflow: hidden;
+  }
+}
 /* .pediatric-dentist-banner-image .video-wrap {
   position: absolute;
   left: -70px;
@@ -20488,3 +20504,19 @@ Pagination Area CSS
 }
 
 /*# sourceMappingURL=style.css.map */
+@media only screen and (max-width: 767px) {
+  /* Hide about3, about4, about5 images */
+  .about-wrap-image .image-two,
+  .about-wrap-image .image-three,
+  .about-wrap-image .image-four {
+    display: none !important;
+  }
+.img-one{
+  margin-top:20px;
+}
+  /* Reverse order: show content before image */
+  .about-wrap-area .row.align-items-center {
+    flex-direction: column-reverse;
+
+  }
+}
