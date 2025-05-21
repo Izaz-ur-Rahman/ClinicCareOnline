@@ -16493,6 +16493,18 @@ Pediatric Dentist Banner Area CSS
   bottom: 150px;
   z-index: 1;
 }
+@keyframes zoomIn {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+.pediatric-dentist-banner-image .zoom-background {
+  animation: zoomIn 5.5s ease forwards;
+}
 
 /* .pediatric-dentist-banner-image .video-wrap {
   position: absolute;
