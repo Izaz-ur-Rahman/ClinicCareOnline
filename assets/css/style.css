@@ -13372,7 +13372,8 @@ Navbar Area CSS
   transform: translate3d(0, 0, 0);
 }
 .navbar .others-option {
-  margin-left: 25px;
+  /* margin-left: 25px; */
+  margin-left: 0;
 }
 .navbar .others-option .option-item {
   margin-right: 25px;
