@@ -18,9 +18,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-<!-- In your HTML head -->
-<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- In your HTML head -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
     <title>Clinic</title>
     <!-- <link rel="icon" type="image/png" href="assets/images/favicon.png"> -->
@@ -28,12 +28,13 @@
 
     <style>
         html[lang="ar"] body {
-font-family: 'IBM Plex Sans Arabic', sans-serif;
-  font-weight: 400;
-  line-height: 1.6;
-  direction: rtl; /* Arabic is right-to-left */
-  text-align: right;
-}
+            font-family: 'IBM Plex Sans Arabic', sans-serif;
+            font-weight: 400;
+            line-height: 1.6;
+            direction: rtl;
+            /* Arabic is right-to-left */
+            text-align: right;
+        }
 
         .mobile-bottom-nav {
             display: none;
@@ -221,108 +222,152 @@ font-family: 'IBM Plex Sans Arabic', sans-serif;
                 display: none !important;
             }
         }
+        .review-wrap-card {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            margin: 10px;
+        }
+
+        .review-wrap-card .info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            /* Ensures it doesn't overflow */
+            margin-top: 20px;
+        }
+
+        .review-wrap-card .info .title {
+            display: flex;
+            align-items: center;
+            flex: 1;
+            gap: 10px;
+        }
+
+        .review-wrap-card .info .title img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .review-wrap-card .info .title h5 {
+            font-size: 16px;
+            margin: 0;
+        }
+
+        .review-wrap-card .info .title span {
+            font-size: 12px;
+            color: #666;
+        }
+
+        .review-wrap-card .info .quote {
+            margin-left: auto;
+            font-size: 24px;
+            color: #999;
+        }
+
+        /* MOBILE FIXES */
+        @media (max-width: 576px) {
+            .review-wrap-card .info {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .review-wrap-card .info .quote {
+                margin-top: 10px;
+                margin-left: 0;
+                align-self: flex-end;
+            }
+
+            .review-wrap-card .info .title {
+                flex-direction: row;
+                gap: 10px;
+                align-items: center;
+                margin-bottom: 10px;
+            }
+
+            .review-wrap-card .info .title h5,
+            .review-wrap-card .info .title span {
+                font-size: 14px;
+            }
+        }
+
     </style>
 
 
-   <!-- Bottom Navigation -->
-<div class="mobile-bottom-nav">
-    <a href="#" id="openDrawer"><i class="fas fa-bars"></i> <span data-en="Menu" data-ar="القائمة">Menu</span></a>
-    <a href="tel:+97145136154"><i class="fas fa-phone"></i> <span data-en="Call" data-ar="اتصل">Call</span></a>
-    <a href="#"><i class="fas fa-calendar-check"></i> <span data-en="Book Now" data-ar="احجز الآن">Book Now</span></a>
-    <a href="#"><i class="fas fa-user-md"></i> <span data-en="Specialists" data-ar="المتخصصون">Specialists</span></a>
-    <a href="https://wa.me/+971528340712" target="_blank"><i class="fab fa-whatsapp"></i> <span data-en="WhatsApp" data-ar="واتساب">WhatsApp</span></a>
-</div>
-
-<!-- Bottom Menu Drawer -->
-<div class="bottom-menu-drawer" id="menuDrawer">
-    <div class="drawer-header">
-        <h3 data-en="Menu" data-ar="القائمة">Menu</h3>
-        <span class="drawer-close" id="closeDrawer">&times;</span>
+    <!-- Bottom Navigation -->
+    <div class="mobile-bottom-nav">
+        <a href="#" id="openDrawer"><i class="fas fa-bars"></i> <span data-en="Menu" data-ar="القائمة">Menu</span></a>
+        <a href="tel:+97145136154"><i class="fas fa-phone"></i> <span data-en="Call" data-ar="اتصل">Call</span></a>
+        <a href="#"><i class="fas fa-calendar-check"></i> <span data-en="Book Now" data-ar="احجز الآن">Book
+                Now</span></a>
+        <a href="#"><i class="fas fa-user-md"></i> <span data-en="Specialists"
+                data-ar="المتخصصون">Specialists</span></a>
+        <a href="https://wa.me/+971528340712" target="_blank"><i class="fab fa-whatsapp"></i> <span data-en="WhatsApp"
+                data-ar="واتساب">WhatsApp</span></a>
     </div>
-    <div class="drawer-menu">
-        <div class="accordion-item">
-            <button class="accordion-button" data-en="HOME" data-ar="الرئيسية">HOME</button>
-        </div>
 
-        <div class="accordion-item">
-            <button class="accordion-button" data-en="Longevity" data-ar="طول العمر">
-                Longevity <i class="fas fa-chevron-down"></i>
-            </button>
-            <div class="accordion-content">
-                <a href="#" data-en="Diagnostic Testing" data-ar="الاختبارات التشخيصية">Diagnostic Testing</a>
-                <a href="#" data-en="Wellness Programs" data-ar="برامج العافية">Wellness Programs</a>
+    <!-- Bottom Menu Drawer -->
+    <div class="bottom-menu-drawer" id="menuDrawer">
+        <div class="drawer-header">
+            <h3 data-en="Menu" data-ar="القائمة">Menu</h3>
+            <span class="drawer-close" id="closeDrawer">&times;</span>
+        </div>
+        <div class="drawer-menu">
+            <div class="accordion-item">
+                <button class="accordion-button" data-en="HOME" data-ar="الرئيسية">HOME</button>
             </div>
-        </div>
 
-        <div class="accordion-item">
-            <button class="accordion-button" data-en="Aesthetic" data-ar="الجمال">
-                Aesthetic <i class="fas fa-chevron-down"></i>
-            </button>
-            <div class="accordion-content">
-                <a href="#" data-en="Facial Aesthetics" data-ar="جمال الوجه">Facial Aesthetics</a>
-                <a href="#" data-en="Body Aesthetics" data-ar="جمال الجسم">Body Aesthetics</a>
-                <a href="#" data-en="Hair & Scalp" data-ar="الشعر وفروة الرأس">Hair & Scalp</a>
+            <div class="accordion-item">
+                <button class="accordion-button" data-en="Longevity" data-ar="طول العمر">
+                    Longevity <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="accordion-content">
+                    <a href="#" data-en="Diagnostic Testing" data-ar="الاختبارات التشخيصية">Diagnostic Testing</a>
+                    <a href="#" data-en="Wellness Programs" data-ar="برامج العافية">Wellness Programs</a>
+                </div>
             </div>
-        </div>
 
-        <div class="accordion-item">
-            <button class="accordion-button" data-en="Regenerative" data-ar="العلاج التجديدي">
-                Regenerative <i class="fas fa-chevron-down"></i>
-            </button>
-            <div class="accordion-content">
-                <a href="#" data-en="Advanced Therapies" data-ar="العلاجات المتقدمة">Advanced Therapies</a>
-                <a href="#" data-en="Skin Rejuvenation" data-ar="تجديد البشرة">Skin Rejuvenation</a>
-                <a href="#" data-en="Specialized Treatments" data-ar="العلاجات المتخصصة">Specialized Treatments</a>
+            <div class="accordion-item">
+                <button class="accordion-button" data-en="Aesthetic" data-ar="الجمال">
+                    Aesthetic <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="accordion-content">
+                    <a href="#" data-en="Facial Aesthetics" data-ar="جمال الوجه">Facial Aesthetics</a>
+                    <a href="#" data-en="Body Aesthetics" data-ar="جمال الجسم">Body Aesthetics</a>
+                    <a href="#" data-en="Hair & Scalp" data-ar="الشعر وفروة الرأس">Hair & Scalp</a>
+                </div>
             </div>
-        </div>
 
-        <div class="accordion-item">
-            <button class="accordion-button" data-en="Services" data-ar="الخدمات">
-                Services <i class="fas fa-chevron-down"></i>
-            </button>
-            <div class="accordion-content">
-                <a href="#" data-en="Personal Care" data-ar="العناية الشخصية">Personal Care</a>
-                <a href="#" data-en="Virtual Care" data-ar="العناية الافتراضية">Virtual Care</a>
+            <div class="accordion-item">
+                <button class="accordion-button" data-en="Regenerative" data-ar="العلاج التجديدي">
+                    Regenerative <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="accordion-content">
+                    <a href="#" data-en="Advanced Therapies" data-ar="العلاجات المتقدمة">Advanced Therapies</a>
+                    <a href="#" data-en="Skin Rejuvenation" data-ar="تجديد البشرة">Skin Rejuvenation</a>
+                    <a href="#" data-en="Specialized Treatments" data-ar="العلاجات المتخصصة">Specialized Treatments</a>
+                </div>
             </div>
-        </div>
 
-        <div class="accordion-item">
-            <button class="accordion-button" data-en="About Us" data-ar="من نحن">About Us</button>
+            <div class="accordion-item">
+                <button class="accordion-button" data-en="Services" data-ar="الخدمات">
+                    Services <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="accordion-content">
+                    <a href="#" data-en="Personal Care" data-ar="العناية الشخصية">Personal Care</a>
+                    <a href="#" data-en="Virtual Care" data-ar="العناية الافتراضية">Virtual Care</a>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-button" data-en="About Us" data-ar="من نحن">About Us</button>
+            </div>
         </div>
     </div>
-</div>
 
-    <!-- JS -->
-    <script>
-        const openDrawer = document.getElementById("openDrawer");
-        const closeDrawer = document.getElementById("closeDrawer");
-        const menuDrawer = document.getElementById("menuDrawer");
-
-        openDrawer.addEventListener("click", (e) => {
-            e.preventDefault();
-            menuDrawer.classList.add("active");
-        });
-
-        closeDrawer.addEventListener("click", () => {
-            menuDrawer.classList.remove("active");
-        });
-
-        // Accordion toggle
-        const accordionButtons = document.querySelectorAll(".accordion-button");
-        accordionButtons.forEach((button) => {
-            button.addEventListener("click", function () {
-                const item = this.parentElement;
-                item.classList.toggle("open");
-            });
-        });
-
-        // Close drawer if clicked outside
-        window.addEventListener("click", (e) => {
-            if (!menuDrawer.contains(e.target) && !openDrawer.contains(e.target)) {
-                menuDrawer.classList.remove("active");
-            }
-        });
-    </script>
 
 
     <!-- End Preloader Area -->
@@ -345,93 +390,99 @@ font-family: 'IBM Plex Sans Arabic', sans-serif;
             </button>
             <div class="collapse navbar-collapse">
                 <ul id="toggleElement" class="navbar-nav m-auto menu-hide">
-  <li class="nav-item">
-    <a href="javascript:void(0)" class="nav-link active" data-i18n="home">Home</a>
-  </li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" class="nav-link active" data-i18n="home">Home</a>
+                    </li>
 
-  <li class="nav-item">
-    <a href="javascript:void(0)" class="dropdown-toggle nav-link" data-i18n="longevity">Longevity</a>
-    <ul class="dropdown-menu">
-      <li class="nav-item">
-        <a href="#" class="nav-link" data-i18n="diagnosticTesting">Diagnostic Testing</a>
-      </li>
-      <li class="nav-item">
-        <a href="#" class="nav-link" data-i18n="wellnessPrograms">Wellness Programs</a>
-      </li>
-    </ul>
-  </li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" class="dropdown-toggle nav-link"
+                            data-i18n="longevity">Longevity</a>
+                        <ul class="dropdown-menu">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link" data-i18n="diagnosticTesting">Diagnostic Testing</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link" data-i18n="wellnessPrograms">Wellness Programs</a>
+                            </li>
+                        </ul>
+                    </li>
 
-  <li class="nav-item">
-    <a href="javascript:void(0)" class="dropdown-toggle nav-link" data-i18n="aesthetic">Aesthetic</a>
-    <ul class="dropdown-menu">
-      <li class="nav-item">
-        <a href="#" class="nav-link" data-i18n="facialAesthetics">Facial Aesthetics</a>
-      </li>
-      <li class="nav-item">
-        <a href="#" class="nav-link" data-i18n="bodyAesthetics">Body Aesthetics</a>
-      </li>
-      <li class="nav-item">
-        <a href="#" class="nav-link" data-i18n="hairScalp">Hair & Scalp</a>
-      </li>
-    </ul>
-  </li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" class="dropdown-toggle nav-link"
+                            data-i18n="aesthetic">Aesthetic</a>
+                        <ul class="dropdown-menu">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link" data-i18n="facialAesthetics">Facial Aesthetics</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link" data-i18n="bodyAesthetics">Body Aesthetics</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link" data-i18n="hairScalp">Hair & Scalp</a>
+                            </li>
+                        </ul>
+                    </li>
 
-  <li class="nav-item">
-    <a href="javascript:void(0)" class="dropdown-toggle nav-link" data-i18n="regenerative">Regeneration</a>
-    <ul class="dropdown-menu">
-      <li class="nav-item">
-        <a href="#" class="nav-link" data-i18n="advancedTherapies">Advanced Therapies</a>
-      </li>
-      <li class="nav-item">
-        <a href="#" class="nav-link" data-i18n="skinRejuvenation">Skin Rejuvenation</a>
-      </li>
-      <li class="nav-item">
-        <a href="#" class="nav-link" data-i18n="specializedTreatments">Specialized Treatments</a>
-      </li>
-    </ul>
-  </li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" class="dropdown-toggle nav-link"
+                            data-i18n="regenerative">Regeneration</a>
+                        <ul class="dropdown-menu">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link" data-i18n="advancedTherapies">Advanced Therapies</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link" data-i18n="skinRejuvenation">Skin Rejuvenation</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link" data-i18n="specializedTreatments">Specialized
+                                    Treatments</a>
+                            </li>
+                        </ul>
+                    </li>
 
-  <li class="nav-item">
-    <a href="javascript:void(0)" class="dropdown-toggle nav-link" data-i18n="services">Services</a>
-    <ul class="dropdown-menu">
-      <li class="nav-item">
-        <a href="#" class="nav-link" data-i18n="personalCare">Personal Care</a>
-      </li>
-      <li class="nav-item">
-        <a href="#" class="nav-link" data-i18n="virtualCare">Virtual Care</a>
-      </li>
-    </ul>
-  </li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" class="dropdown-toggle nav-link" data-i18n="services">Services</a>
+                        <ul class="dropdown-menu">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link" data-i18n="personalCare">Personal Care</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link" data-i18n="virtualCare">Virtual Care</a>
+                            </li>
+                        </ul>
+                    </li>
 
-  <li class="nav-item">
-    <a href="#" class="nav-link" data-i18n="aboutUs">About Us</a>
-  </li>
-</ul>
-  <div class="others-option d-flex align-items-center">
-  <!-- Language Toggle Button -->
-  <div class="option-item">
-    <a href="#" class="default-btn" style="padding:5px 20px;" id="langToggleBtn" onclick="toggleLanguage()">العربية</a>
-  </div>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-i18n="aboutUs">About Us</a>
+                    </li>
+                </ul>
+                <div class="others-option d-flex align-items-center">
+                    <!-- Language Toggle Button -->
+                    <div class="option-item">
+                        <a href="#" class="default-btn" style="padding:5px 20px;" id="langToggleBtn"
+                            onclick="toggleLanguage()">العربية</a>
+                    </div>
 
-  <!-- Optional: Virtual Assessment button -->
-  <!--
+                    <!-- Optional: Virtual Assessment button -->
+                    <!--
   <div class="option-item">
     <a href="#" class="default-btn default-btn-outline">Virtual Assessment</a>
   </div>
   -->
 
-  <!-- Menu Toggle Button (for mobile only) -->
-  <div class="option-item icon-wrapper">
-    <div onclick="toggleElement()" class="icon">
-      <i class="flaticon-text"></i>
-    </div>
-  </div>
-</div>
+                    <!-- Menu Toggle Button (for mobile only) -->
+                    <div class="option-item icon-wrapper">
+                        <div onclick="toggleElement()" class="icon">
+                            <i class="flaticon-text"></i>
+                        </div>
+                    </div>
+                </div>
 
 
                 <div class="others-option d-flex align-items-center">
                     <div class="option-item" style="pointer-events: none;">
-                        <a href="#" class="default-btn" style="pointer-events: none;" data-i18n="bookAppointment">Book Appointment</a>
+                        <a href="#" class="default-btn" style="pointer-events: none;" data-i18n="bookAppointment">Book
+                            Appointment</a>
                     </div>
                     <!-- <div class="option-item">
                         <a href="#" class="default-btn default-btn-outline">Virtual Assessment</a>
@@ -454,106 +505,7 @@ font-family: 'IBM Plex Sans Arabic', sans-serif;
         </div>
     </nav>
     <!-- End Navbar Area -->
-<script>
-const translations = {
-  en: {
-    home: "Home",
-    longevity: "Longevity",
-    diagnosticTesting: "Diagnostic Testing",
-    wellnessPrograms: "Wellness Programs",
-    aesthetic: "Aesthetic",
-    facialAesthetics: "Facial Aesthetics",
-    bodyAesthetics: "Body Aesthetics",
-    hairScalp: "Hair & Scalp",
-    regenerative: "Regenerative",
-    advancedTherapies: "Advanced Therapies",
-    skinRejuvenation: "Skin Rejuvenation",
-    specializedTreatments: "Specialized Treatments",
-    services: "Services",
-    personalCare: "Personal Care",
-    virtualCare: "Virtual Care",
-    aboutUs: "About Us",
-    bookAppointment: "Book Appointment",
-    search: "Search",
 
-    // Banner and Features Section
-    "banner.title": "Welcome To The Holistic Approach To Wellness, Longevity & Regeneration",
-    "banner.award1": "2023 Excellence in Regenerative Medicine Award",
-    "banner.award2": "2024 Leading Wellness Innovation Award",
-    "banner.description": "Here at Protoclinic, we provide scientifically-backed, personalized wellness and aesthetic programs based on comprehensive diagnostics and cutting-edge regenerative therapies.",
-    "banner.call": "Call: +971 4 513 6154",
-
-    "features.title1": "Longevity Assessment",
-    "features.desc1": "Comprehensive DNA testing and personalized health evaluations designed to optimize your biological age and extend your health span.",
-    "features.getStarted": "Get Started",
-
-    // New Transform Section
-    "section.transform_title": "Transform Your Future Self Through Wellness Innovation",
-    "section.transform_subtitle": "We are recognized pioneers in the integration of longevity science, aesthetic medicine, and regenerative therapies. Our passion lies in helping you reclaim the vibrant energy and confidence that time gradually diminishes.",
-    "section.transform_description": "At Protoclinic, we understand that true wellness radiates from within. Your appearance reflects your internal health, and both deserve equal attention. Our science-backed approach doesn't just mask symptoms or temporarily enhance your look—it addresses the root causes of aging, helping you feel as vibrant as you appear."
-  },
-  ar: {
-    home: "الرئيسية",
-    longevity: "طول العمر",
-    diagnosticTesting: "الاختبارات التشخيصية",
-    wellnessPrograms: "برامج العافية",
-    aesthetic: "الجمال",
-    facialAesthetics: "تجميل الوجه",
-    bodyAesthetics: "تجميل الجسم",
-    hairScalp: "الشعر وفروة الرأس",
-    regenerative: "العلاجات التجديدية",
-    advancedTherapies: "العلاجات المتقدمة",
-    skinRejuvenation: "تجديد البشرة",
-    specializedTreatments: "علاجات متخصصة",
-    services: "الخدمات",
-    personalCare: "الرعاية الشخصية",
-    virtualCare: "الرعاية الافتراضية",
-    aboutUs: "معلومات عنا",
-    bookAppointment: "احجز موعدًا",
-    search: "بحث",
-
-    // Banner and Features Section
-    "banner.title": "مرحبًا بكم في النهج الشامل نحو العافية وطول العمر والتجديد",
-    "banner.award1": "جائزة التميز في الطب التجديدي لعام 2023",
-    "banner.award2": "جائزة الابتكار في العافية لعام 2024",
-    "banner.description": "في بروتوكليك، نقدم برامج عافية وجمالية مخصصة ومدعومة علميًا بناءً على تشخيصات شاملة وعلاجات تجديدية متقدمة.",
-    "banner.call": "اتصل: +971 4 513 6154",
-
-    "features.title1": "تقييم طول العمر",
-    "features.desc1": "اختبارات DNA شاملة وتقييمات صحية مخصصة مصممة لتحسين عمرك البيولوجي وزيادة فترة صحتك.",
-    "features.getStarted": "ابدأ الآن",
-
-    // New Transform Section
-    "section.transform_title": "حوّل مستقبلك من خلال ابتكارات العافية",
-    "section.transform_subtitle": "نحن رواد معترف بهم في دمج علوم طول العمر، والطب التجميلي، والعلاجات التجديدية. شغفنا هو مساعدتك على استعادة الطاقة الحيوية والثقة التي يتضاءلها الزمن تدريجيًا.",
-    "section.transform_description": "في بروتوكليك، نفهم أن العافية الحقيقية تنبع من الداخل. مظهرك يعكس صحتك الداخلية، وكلاهما يستحقان اهتمامًا متساويًا. نهجنا العلمي لا يقتصر على إخفاء الأعراض أو تحسين مظهرك مؤقتًا - بل يعالج الأسباب الجذرية للشيخوخة، مما يساعدك على الشعور بالحيوية كما تبدو."
-  }
-};
-
-let currentLang = "en";
-
-function toggleLanguage() {
-  currentLang = currentLang === "en" ? "ar" : "en";
-  const langData = translations[currentLang];
-
-  document.querySelectorAll("[data-i18n]").forEach(el => {
-    const key = el.getAttribute("data-i18n");
-    el.textContent = langData[key] || key;
-  });
-
-  document.getElementById("langToggleBtn").textContent = currentLang === "en" ? "العربية" : "English";
-
-  document.body.dir = currentLang === "ar" ? "rtl" : "ltr";
-
-  // Add this block to change font-family based on language:
-  if (currentLang === "ar") {
-    document.body.style.fontFamily = "'Cairo', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif";
-  } else {
-    document.body.style.fontFamily = "'Roboto', Arial, sans-serif"; // Your default English font
-  }
-}
-
-</script>
 
     <!-- Start Search Popup -->
     <div class="search-popup">
@@ -732,33 +684,38 @@ function toggleLanguage() {
                 <div class="col-xl-7 col-md-12">
                     <div class="pediatric-dentist-banner-content">
 
-                      <h1>
-  <span data-i18n="banner.title">
-    Welcome To The Holistic Approach To Wellness, Longevity & Regeneration
-    <img src="assets/images/pediatric-dentist/arrow.png" alt=" circle image">
-  </span>
-</h1>
-                       <ul class="list">
-  <li>
-    <img src="assets/images/pediatric-dentist/award1.png" alt="award image">
-    <span class="text-black" data-i18n="banner.award1">2023 Excellence in Regenerative Medicine Award</span>
-  </li>
-  <li>
-    <img src="assets/images/pediatric-dentist/award1.png" alt="award image">
-    <span class="text-black" data-i18n="banner.award2">2024 Leading Wellness Innovation Award</span>
-  </li>
-</ul>
-                      <div class="bottom-content">
-  <p data-i18n="banner.description">
-    Here at Protoclinic, we provide scientifically-backed, personalized wellness and aesthetic programs based on comprehensive diagnostics and cutting-edge regenerative therapies.
-  </p>
-  <div class="info">
-    <div class="icon">
-      <i data-feather="phone"></i>
-    </div>
-    <span data-i18n="banner.call">Call: <a href="tel:+971 4 513 6154">+971 4 513 6154</a></span>
-  </div>
-</div>
+                        <h1>
+                            <span data-i18n="banner.title">
+                                Welcome To The Holistic Approach To Wellness, Longevity & Regeneration
+                                <img src="assets/images/pediatric-dentist/arrow.png" alt=" circle image">
+                            </span>
+                        </h1>
+                        <ul class="list">
+                            <li>
+                                <img src="assets/images/pediatric-dentist/award1.png" alt="award image">
+                                <span class="text-black" data-i18n="banner.award1">2023 Excellence in Regenerative
+                                    Medicine Award</span>
+                            </li>
+                            <li>
+                                <img src="assets/images/pediatric-dentist/award1.png" alt="award image">
+                                <span class="text-black" data-i18n="banner.award2">2024 Leading Wellness Innovation
+                                    Award</span>
+                            </li>
+                        </ul>
+                        <div class="bottom-content">
+                            <p data-i18n="banner.description">
+                                Here at Protoclinic, we provide scientifically-backed, personalized wellness and
+                                aesthetic programs based on comprehensive diagnostics and cutting-edge regenerative
+                                therapies.
+                            </p>
+                            <div class="info">
+                                <div class="icon">
+                                    <i data-feather="phone"></i>
+                                </div>
+                                <span data-i18n="banner.call">Call: <a href="tel:+971 4 513 6154">+971 4 513
+                                        6154</a></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-xl-5 col-md-12">
@@ -1241,79 +1198,7 @@ function toggleLanguage() {
         </div>
     </div>
     <!-- End Real Results Wrap Area -->
-    <style>
-        .review-wrap-card {
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            margin: 10px;
-        }
 
-        .review-wrap-card .info {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            /* Ensures it doesn't overflow */
-            margin-top: 20px;
-        }
-
-        .review-wrap-card .info .title {
-            display: flex;
-            align-items: center;
-            flex: 1;
-            gap: 10px;
-        }
-
-        .review-wrap-card .info .title img {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-
-        .review-wrap-card .info .title h5 {
-            font-size: 16px;
-            margin: 0;
-        }
-
-        .review-wrap-card .info .title span {
-            font-size: 12px;
-            color: #666;
-        }
-
-        .review-wrap-card .info .quote {
-            margin-left: auto;
-            font-size: 24px;
-            color: #999;
-        }
-
-        /* MOBILE FIXES */
-        @media (max-width: 576px) {
-            .review-wrap-card .info {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .review-wrap-card .info .quote {
-                margin-top: 10px;
-                margin-left: 0;
-                align-self: flex-end;
-            }
-
-            .review-wrap-card .info .title {
-                flex-direction: row;
-                gap: 10px;
-                align-items: center;
-                margin-bottom: 10px;
-            }
-
-            .review-wrap-card .info .title h5,
-            .review-wrap-card .info .title span {
-                font-size: 14px;
-            }
-        }
-    </style>
     <!-- Start Review Wrap Area -->
     <div class="review-wrap-area pb-125">
         <div class="container-fluid">
@@ -1490,7 +1375,8 @@ function toggleLanguage() {
                             </div>
                         </div>
                         <div class="col-lg-12 col-md-12" style="pointer-events: none;">
-                            <button type="submit" class="default-btn" style="pointer-events: none;">Book Your Consultation</button>
+                            <button type="submit" class="default-btn" style="pointer-events: none;">Book Your
+                                Consultation</button>
                         </div>
                     </div>
                 </form>
@@ -1612,10 +1498,10 @@ function toggleLanguage() {
                             <h3>State-of-the-Art Wellness Facilities</h3>
                             <p>Our sanctuaries of healing feature cutting-edge diagnostic and therapeutic technologies
                                 in an environment designed to nurture both body and spirit.</p>
-                         <a href="#" class="choose-btn" style="pointer-events: none;">
-    Explore Locations
-    <i class="flaticon-up-right-arrow" style="pointer-events: none;"></i>
-</a>
+                            <a href="#" class="choose-btn" style="pointer-events: none;">
+                                Explore Locations
+                                <i class="flaticon-up-right-arrow" style="pointer-events: none;"></i>
+                            </a>
 
                         </div>
                     </div>
@@ -1666,25 +1552,28 @@ function toggleLanguage() {
                         <i class="flaticon-play-button-arrowhead"></i>
                     </a>
                 </div> -->
-                 <span class="sub " style="font-weight: bold;">LED BY AN EXPERT</span>
-                                  <span class="sub " style="font-weight: bold;">The clinic was established by
-</span>
+                <span class="sub " style="font-weight: bold;">LED BY AN EXPERT</span>
+                <span class="sub " style="font-weight: bold;">The clinic was established by
+                </span>
 
                 <h3>
-DR. WISSAM ADADA
-</h3>
+                    DR. WISSAM ADADA
+                </h3>
                 <p class="text-white">
-                    A hair transplant specialist with years of global experience in dermatological surgery and aesthetic medicine.
+                    A hair transplant specialist with years of global experience in dermatological surgery and aesthetic
+                    medicine.
 
-He specialises in his ﬁeld and hair loss therapy, utilizing only the most cutting-edge treatments.
+                    He specialises in his ﬁeld and hair loss therapy, utilizing only the most cutting-edge treatments.
 
-His success is due to the passion he instils in his work. To him, beauty and wellness give individuals the conﬁdence, motivation and energy to excel in their lives.
+                    His success is due to the passion he instils in his work. To him, beauty and wellness give
+                    individuals the conﬁdence, motivation and energy to excel in their lives.
 
-He prioritises helping patients regain their self-esteem by providing them with a personalised treatment that matches their needs.
+                    He prioritises helping patients regain their self-esteem by providing them with a personalised
+                    treatment that matches their needs.
                 </p>
-                  <div class="view-all-services-btn" style="pointer-events: none;">
-                <a href="#" class="default-btn" style="pointer-events: none;">Meet our Doctors</a>
-            </div>
+                <div class="view-all-services-btn" style="pointer-events: none;">
+                    <a href="#" class="default-btn" style="pointer-events: none;">Meet our Doctors</a>
+                </div>
             </div>
         </div>
     </div>
@@ -2168,7 +2057,7 @@ He prioritises helping patients regain their self-esteem by providing them with 
                     </div> <!-- Slide 3 -->
                     <div class="swiper-slide">
                         <div class="doctors-card">
-                            <div class="doctor-image" >
+                            <div class="doctor-image">
                                 <a href="#">
                                     <img src="assets/images/doctors/Dr.-Hala.png" alt="dr. hala image">
                                 </a>
@@ -2246,7 +2135,7 @@ He prioritises helping patients regain their self-esteem by providing them with 
                         <ul class="info-list">
                             <li>
                                 <span>Location:</span> Dubai Healthcare City
-Ibn Sina Medical Complex, (Building 27), Block B – 1ST Floor.
+                                Ibn Sina Medical Complex, (Building 27), Block B – 1ST Floor.
                             </li>
                             <li>
                                 <span>Phone:</span> <a href="tel:+971 4 513 6154
@@ -2295,7 +2184,8 @@ info@protoclinic.com
                                 <ul class="custom-links">
                                     <li><a href="#" target="_blank">Facebook</a></li>
                                     <li><a href="#" target="_blank">Twitter</a></li>
-                                    <li><a href="https://www.instagram.com/drwissamadada/" target="_blank">Instagram</a></li>
+                                    <li><a href="https://www.instagram.com/drwissamadada/" target="_blank">Instagram</a>
+                                    </li>
                                     <li><a href="#" target="_blank">Linkedin</a></li>
                                 </ul>
                             </div>
@@ -2315,6 +2205,37 @@ info@protoclinic.com
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
+    <!-- JS -->
+    <script>
+        const openDrawer = document.getElementById("openDrawer");
+        const closeDrawer = document.getElementById("closeDrawer");
+        const menuDrawer = document.getElementById("menuDrawer");
+
+        openDrawer.addEventListener("click", (e) => {
+            e.preventDefault();
+            menuDrawer.classList.add("active");
+        });
+
+        closeDrawer.addEventListener("click", () => {
+            menuDrawer.classList.remove("active");
+        });
+
+        // Accordion toggle
+        const accordionButtons = document.querySelectorAll(".accordion-button");
+        accordionButtons.forEach((button) => {
+            button.addEventListener("click", function () {
+                const item = this.parentElement;
+                item.classList.toggle("open");
+            });
+        });
+
+        // Close drawer if clicked outside
+        window.addEventListener("click", (e) => {
+            if (!menuDrawer.contains(e.target) && !openDrawer.contains(e.target)) {
+                menuDrawer.classList.remove("active");
+            }
+        });
+    </script>
     <!-- Swiper Init Script -->
     <script>
         const doctorSlider = new Swiper('.doctors-swiper', {
@@ -2350,21 +2271,21 @@ info@protoclinic.com
     <script src="assets/js/simpleParallax.min.js"></script>
     <script src="assets/js/main.js"></script>
     <!-- Swiper JS -->
-<script>
-    document.getElementById("langToggle").addEventListener("click", function () {
-    const currentLang = document.documentElement.getAttribute("lang") || "en";
-    const newLang = currentLang === "en" ? "ar" : "en";
-    document.documentElement.setAttribute("lang", newLang);
-    document.body.dir = newLang === "ar" ? "rtl" : "ltr";
+    <script>
+        document.getElementById("langToggle").addEventListener("click", function () {
+            const currentLang = document.documentElement.getAttribute("lang") || "en";
+            const newLang = currentLang === "en" ? "ar" : "en";
+            document.documentElement.setAttribute("lang", newLang);
+            document.body.dir = newLang === "ar" ? "rtl" : "ltr";
 
-    document.querySelectorAll("[data-en]").forEach(el => {
-        el.textContent = el.getAttribute(`data-${newLang}`);
-    });
+            document.querySelectorAll("[data-en]").forEach(el => {
+                el.textContent = el.getAttribute(`data-${newLang}`);
+            });
 
-    this.textContent = newLang === "en" ? "عربي" : "English";
-});
+            this.textContent = newLang === "en" ? "عربي" : "English";
+        });
 
-</script>
+    </script>
     </body>
 
 

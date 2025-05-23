@@ -389,3 +389,102 @@ function toggleElement() {
     }
 }
 
+// arabic and english toggling js code is here
+ const translations = {
+            en: {
+                home: "Home",
+                longevity: "Longevity",
+                diagnosticTesting: "Diagnostic Testing",
+                wellnessPrograms: "Wellness Programs",
+                aesthetic: "Aesthetic",
+                facialAesthetics: "Facial Aesthetics",
+                bodyAesthetics: "Body Aesthetics",
+                hairScalp: "Hair & Scalp",
+                regenerative: "Regenerative",
+                advancedTherapies: "Advanced Therapies",
+                skinRejuvenation: "Skin Rejuvenation",
+                specializedTreatments: "Specialized Treatments",
+                services: "Services",
+                personalCare: "Personal Care",
+                virtualCare: "Virtual Care",
+                aboutUs: "About Us",
+                bookAppointment: "Book Appointment",
+                search: "Search",
+
+                // Banner and Features Section
+                "banner.title": "Welcome To The Holistic Approach To Wellness, Longevity & Regeneration",
+                "banner.award1": "2023 Excellence in Regenerative Medicine Award",
+                "banner.award2": "2024 Leading Wellness Innovation Award",
+                "banner.description": "Here at Protoclinic, we provide scientifically-backed, personalized wellness and aesthetic programs based on comprehensive diagnostics and cutting-edge regenerative therapies.",
+                "banner.call": "Call: +971 4 513 6154",
+
+                "features.title1": "Longevity Assessment",
+                "features.desc1": "Comprehensive DNA testing and personalized health evaluations designed to optimize your biological age and extend your health span.",
+                "features.getStarted": "Get Started",
+
+                // New Transform Section
+                "section.transform_title": "Transform Your Future Self Through Wellness Innovation",
+                "section.transform_subtitle": "We are recognized pioneers in the integration of longevity science, aesthetic medicine, and regenerative therapies. Our passion lies in helping you reclaim the vibrant energy and confidence that time gradually diminishes.",
+                "section.transform_description": "At Protoclinic, we understand that true wellness radiates from within. Your appearance reflects your internal health, and both deserve equal attention. Our science-backed approach doesn't just mask symptoms or temporarily enhance your look—it addresses the root causes of aging, helping you feel as vibrant as you appear."
+            },
+            ar: {
+                home: "الرئيسية",
+                longevity: "طول العمر",
+                diagnosticTesting: "الاختبارات التشخيصية",
+                wellnessPrograms: "برامج العافية",
+                aesthetic: "الجمال",
+                facialAesthetics: "تجميل الوجه",
+                bodyAesthetics: "تجميل الجسم",
+                hairScalp: "الشعر وفروة الرأس",
+                regenerative: "العلاجات التجديدية",
+                advancedTherapies: "العلاجات المتقدمة",
+                skinRejuvenation: "تجديد البشرة",
+                specializedTreatments: "علاجات متخصصة",
+                services: "الخدمات",
+                personalCare: "الرعاية الشخصية",
+                virtualCare: "الرعاية الافتراضية",
+                aboutUs: "معلومات عنا",
+                bookAppointment: "احجز موعدًا",
+                search: "بحث",
+
+                // Banner and Features Section
+                "banner.title": "مرحبًا بكم في النهج الشامل نحو العافية وطول العمر والتجديد",
+                "banner.award1": "جائزة التميز في الطب التجديدي لعام 2023",
+                "banner.award2": "جائزة الابتكار في العافية لعام 2024",
+                "banner.description": "في بروتوكليك، نقدم برامج عافية وجمالية مخصصة ومدعومة علميًا بناءً على تشخيصات شاملة وعلاجات تجديدية متقدمة.",
+                "banner.call": "اتصل: +971 4 513 6154",
+
+                "features.title1": "تقييم طول العمر",
+                "features.desc1": "اختبارات DNA شاملة وتقييمات صحية مخصصة مصممة لتحسين عمرك البيولوجي وزيادة فترة صحتك.",
+                "features.getStarted": "ابدأ الآن",
+
+                // New Transform Section
+                "section.transform_title": "حوّل مستقبلك من خلال ابتكارات العافية",
+                "section.transform_subtitle": "نحن رواد معترف بهم في دمج علوم طول العمر، والطب التجميلي، والعلاجات التجديدية. شغفنا هو مساعدتك على استعادة الطاقة الحيوية والثقة التي يتضاءلها الزمن تدريجيًا.",
+                "section.transform_description": "في بروتوكليك، نفهم أن العافية الحقيقية تنبع من الداخل. مظهرك يعكس صحتك الداخلية، وكلاهما يستحقان اهتمامًا متساويًا. نهجنا العلمي لا يقتصر على إخفاء الأعراض أو تحسين مظهرك مؤقتًا - بل يعالج الأسباب الجذرية للشيخوخة، مما يساعدك على الشعور بالحيوية كما تبدو."
+            }
+        };
+
+        let currentLang = "en";
+
+        function toggleLanguage() {
+            currentLang = currentLang === "en" ? "ar" : "en";
+            const langData = translations[currentLang];
+
+            document.querySelectorAll("[data-i18n]").forEach(el => {
+                const key = el.getAttribute("data-i18n");
+                el.textContent = langData[key] || key;
+            });
+
+            document.getElementById("langToggleBtn").textContent = currentLang === "en" ? "العربية" : "English";
+
+            document.body.dir = currentLang === "ar" ? "rtl" : "ltr";
+
+            // Add this block to change font-family based on language:
+            if (currentLang === "ar") {
+                document.body.style.fontFamily = "'Cairo', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif";
+            } else {
+                document.body.style.fontFamily = "'Roboto', Arial, sans-serif"; // Your default English font
+            }
+        }
+
