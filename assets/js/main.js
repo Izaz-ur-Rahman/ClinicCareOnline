@@ -431,7 +431,32 @@ function toggleElement() {
 
         "section.transform_title": "Transform Your Future Self Through Wellness Innovation",
         "section.transform_subtitle": "We are recognized pioneers in the integration of longevity science, aesthetic medicine, and regenerative therapies. Our passion lies in helping you reclaim the vibrant energy and confidence that time gradually diminishes.",
-        "section.transform_description": "At Protoclinic, we understand that true wellness radiates from within. Your appearance reflects your internal health, and both deserve equal attention. Our science-backed approach doesn't just mask symptoms or temporarily enhance your look—it addresses the root causes of aging, helping you feel as vibrant as you appear."
+        "section.transform_description": "At Protoclinic, we understand that true wellness radiates from within. Your appearance reflects your internal health, and both deserve equal attention. Our science-backed approach doesn't just mask symptoms or temporarily enhance your look—it addresses the root causes of aging, helping you feel as vibrant as you appear.",
+         "about.protocols": "Scientifically Validated Protocols",
+    "about.testing": "Comprehensive Wellness Testing",
+    "about.plans": "Personalized Treatment Plans",
+    "about.technology": "Advanced Aesthetic Technology",
+    "about.button": "About ProtoClinic",
+"services.section_title": "Experience Transformative Wellness & Aesthetic Services",
+"services.1.title": "Longevity Medicine",
+"services.1.description": "Our science-based longevity programs unlock your body's hidden potential, reversing biological aging at the cellular level while optimizing vitality for years to come.",
+"services.2.title": "Aesthetic Medicine",
+"services.2.description": "Non-surgical rejuvenation treatments that honor your natural beauty, enhancing your features while preserving the authentic expression that makes you uniquely you.",
+"services.3.title": "Regenerative Therapies",
+"services.3.description": "Revolutionary PRP and biostimulation treatments awaken your body's innate healing intelligence, creating lasting renewal from within rather than temporary fixes.",
+"services.4.title": "GUT Health Optimization",
+"services.4.description": "Discover the profound connection between your digestive wellness and overall vitality through advanced microbiome analysis and personalized healing protocols.",
+"services.5.title": "Hair & Scalp Solutions",
+"services.5.description": "Reclaim the confidence that comes with healthy, vibrant hair through cutting-edge diagnostics and regenerative treatments for thinning and loss concerns.",
+"services.view_all_button": "View All Services",
+  "real.image_alt": "image",
+  "real.before": "Before",
+  "real.after": "After",
+  "real.treatments_label": "TREATMENTS:",
+  "real.treatments_value": "Hair Restoration Therapy",
+  "real.result_label": "RESULT:",
+  "real.result_value": "Visible Hair Regrowth in Just 6 Weeks",
+
     },
     ar: {
         home: "الرئيسية",
@@ -473,7 +498,33 @@ function toggleElement() {
 
         "section.transform_title": "حوّل مستقبلك من خلال ابتكارات العافية",
         "section.transform_subtitle": "نحن رواد معترف بهم في دمج علوم طول العمر، والطب التجميلي، والعلاجات التجديدية. شغفنا هو مساعدتك على استعادة الطاقة الحيوية والثقة التي يتضاءلها الزمن تدريجيًا.",
-        "section.transform_description": "في بروتوكليك، نفهم أن العافية الحقيقية تنبع من الداخل. مظهرك يعكس صحتك الداخلية، وكلاهما يستحقان اهتمامًا متساويًا. نهجنا العلمي لا يقتصر على إخفاء الأعراض أو تحسين مظهرك مؤقتًا - بل يعالج الأسباب الجذرية للشيخوخة، مما يساعدك على الشعور بالحيوية كما تبدو."
+        "section.transform_description": "في بروتوكليك، نفهم أن العافية الحقيقية تنبع من الداخل. مظهرك يعكس صحتك الداخلية، وكلاهما يستحقان اهتمامًا متساويًا. نهجنا العلمي لا يقتصر على إخفاء الأعراض أو تحسين مظهرك مؤقتًا - بل يعالج الأسباب الجذرية للشيخوخة، مما يساعدك على الشعور بالحيوية كما تبدو.",
+           "about.protocols": "بروتوكولات مثبتة علميًا",
+    "about.testing": "اختبارات شاملة للعافية",
+    "about.plans": "خطط علاجية مخصصة",
+    "about.technology": "تقنيات تجميلية متقدمة",
+    "about.button": "حول بروتوكليك",
+    "services.section_title": "اختبر خدمات الصحة والجمال التحولية",
+"services.1.title": "طب طول العمر",
+"services.1.description": "برامجنا المعتمدة على العلم تطلق العنان لإمكانات جسمك الخفية، وتُعكس الشيخوخة البيولوجية على المستوى الخلوي، مع تعزيز الحيوية لسنوات قادمة.",
+"services.2.title": "الطب التجميلي",
+"services.2.description": "علاجات تجديد غير جراحية تحترم جمالك الطبيعي، وتعزز ملامحك مع الحفاظ على التعبير الأصيل الذي يجعلك فريدًا.",
+"services.3.title": "العلاجات التجديدية",
+"services.3.description": "علاجات PRP والتحفيز الحيوي الثورية تُفعّل الذكاء الشفائي الفطري في جسمك، مما يخلق تجديدًا دائمًا من الداخل بدلاً من حلول مؤقتة.",
+"services.4.title": "تحسين صحة الأمعاء",
+"services.4.description": "اكتشف العلاقة العميقة بين صحة جهازك الهضمي وحيويتك العامة من خلال تحليل الميكروبيوم المتقدم وبروتوكولات الشفاء المخصصة.",
+"services.5.title": "حلول الشعر وفروة الرأس",
+"services.5.description": "استعد الثقة التي تأتي مع شعر صحي وحيوي من خلال التشخيصات المتقدمة والعلاجات التجديدية لمشاكل التساقط والترقق.",
+"services.view_all_button": "عرض جميع الخدمات",
+ "real.image_alt": "صورة",
+  "real.before": "قبل",
+  "real.after": "بعد",
+  "real.treatments_label": "العلاجات:",
+  "real.treatments_value": "علاج استعادة الشعر",
+  "real.result_label": "النتيجة:",
+  "real.result_value": "نمو شعر واضح في 6 أسابيع فقط"
+
+
     }
 };
 
