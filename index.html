@@ -298,8 +298,154 @@
             }
         }
 
+  .navbar-default .nav-link {
+    color: white !important;
+    transition: color 0.3s ease;
+  }
+
+  .navbar-scrolled .nav-link {
+    color: black !important;
+  }
+
+
     </style>
 
+<!-- Custom CSS -->
+
+<style>
+.mega-menu {
+  display: none;
+  position: absolute;
+  background: white;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+  padding: 25px;
+  min-width: 500px;
+  border: 2px solid #B2915B1c;
+}
+
+/* Show menu when open */
+.nav-item.dropdown.open > .mega-menu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Tabs section */
+.mega-menu-tabs {
+  display: flex;
+  flex-direction: column;
+  border-right: 2px solid #eee;
+  padding-right: 20px;
+  margin-right: 25px;
+  min-width: 200px;
+}
+
+/* Tab button style */
+.tab-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 12px 18px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 15px;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+  position: relative;
+}
+
+.tab-btn::after {
+  content: "➜";
+  font-size: 14px;
+  color: #B2915B; /* Default arrow color */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.tab-btn:hover::after {
+  transform: translateX(5px);
+  color: #fff; /* Hover color */
+}
+
+.tab-btn.active::after {
+  color: #fff; /* Arrow turns white when active */
+}
+
+/* Tab content right area */
+.mega-menu-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-grow: 1;
+  min-width: 400px;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Dropdown links style */
+.dropdown-item {
+  display: block;
+  padding: 10px 15px;
+  background: #fff;
+  color: #333;
+ 
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.25s ease;
+  border: 1px solid transparent;
+}
+
+.dropdown-item:hover {
+  background: #e6f7ff;
+  color: #B2915B;
+  border-color: #B2915B33;
+  transform: translateX(5px);
+  box-shadow: 0 2px 6px rgba(59, 199, 237, 0.15);
+}
+
+/* Mobile responsive (optional) */
+@media (max-width: 768px) {
+  .mega-menu {
+    min-width: 100%;
+    flex-direction: column;
+  }
+  .mega-menu-tabs {
+    flex-direction: row;
+    border-right: none;
+    border-bottom: 2px solid #eee;
+    margin-bottom: 20px;
+    overflow-x: auto;
+    padding-right: 0;
+  }
+  .tab-btn {
+    min-width: 200px;
+    margin-right: 10px;
+  }
+}
+</style>
 
     <!-- Bottom Navigation -->
     <div class="mobile-bottom-nav">
@@ -396,6 +542,150 @@
     background-color: white !important;
     color: black !important;
   }
+ /* Dropdown container */
+.navbar-nav .dropdown-menu {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  padding: 12px 0;
+  min-width: 320px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(10px);
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Show dropdown on hover */
+.nav-item.dropdown:hover > .dropdown-menu,
+.nav-item.dropdown:focus-within > .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* Dropdown items */
+.navbar-nav .dropdown-menu .nav-link {
+  color: #333;
+  padding: 10px 20px;
+  font-weight: 500;
+  display: block;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 4px;
+}
+
+/* Hover/focus states */
+.navbar-nav .dropdown-menu .nav-link:hover,
+.navbar-nav .dropdown-menu .nav-link:focus {
+  background-color: #B2915B; /* your preferred accent color */
+  color: white;
+  text-decoration: none;
+}
+
+/* Add subtle icon arrow to dropdown toggles */
+.navbar-nav .dropdown-toggle::after {
+  content: "▾";
+  margin-left: 6px;
+  font-size: 0.7rem;
+  transition: transform 0.3s ease;
+}
+
+/* Rotate arrow on open */
+.nav-item.dropdown.show > .dropdown-toggle::after {
+  transform: rotate(180deg);
+}
+
+/* Optional: add slight shadow on dropdown toggle hover */
+.navbar-nav .dropdown-toggle:hover {
+  color: #B2915B;
+}
+
+/* Smooth fade-in for dropdown on mobile toggle */
+.collapse.navbar-collapse.show .dropdown-menu {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+/* Mega menu container */
+.mega-menu {
+  width: 600px;  /* wider dropdown */
+  border-radius: 10px;
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+  background: #fff;
+  padding: 1rem;
+}
+
+/* Flex container inside mega menu */
+.mega-menu-container {
+  display: flex;
+  gap: 2rem;
+}
+
+/* Left side tabs */
+.mega-menu-tabs {
+  display: flex;
+  flex-direction: column;
+  border-right: 2px solid #eee;
+  min-width: 140px;
+}
+
+/* Tab buttons */
+.mega-menu-tabs .tab-btn {
+  background: none;
+  border: none;
+  padding: 10px 15px;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 6px 0 0 6px;
+  margin-bottom: 6px;
+}
+
+/* Active tab style */
+.mega-menu-tabs .tab-btn.active,
+.mega-menu-tabs .tab-btn:hover {
+  background-color: #B2915B;
+  color: white;
+}
+
+/* Right side content */
+.mega-menu-content {
+  flex-grow: 1;
+}
+
+/* Hide inactive tab content */
+.tab-content {
+  display: none;
+}
+
+/* Show active tab content */
+.tab-content.active {
+  display: block;
+}
+
+/* Dropdown item styling */
+.dropdown-item {
+  display: block;
+  padding: 8px 15px;
+  color: #333;
+  width: 300px;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+.dropdown-item:hover {
+  background-color: #B2915B;
+  color: white;
+  text-decoration: none;
+}
+
 </style>
 
     <!-- Start Navbar Area -->
@@ -416,17 +706,13 @@
 
   <!-- Right: Arabic Button with spacing -->
   <div class="position-absolute end-0" style="right: 40px !important;">
-    <a href="#" class="default-btn" style="padding: 5px 20px;" onclick="toggleLanguage()">العربية</a>
+    <a href="#" class="default-btn" style="padding: 5px 20px;" onclick="toggleLaguage()">العربية</a>
   </div>
 </div>
 
 
-<!-- Custom CSS -->
-
-
-
 <!-- Navbar Section -->
-<nav class="navbar navbar-expand-xl navbar-style-two-area" id="navbar">
+<nav class="navbar navbar-expand-xl navbar-style-two-area navbar-default" id="navbar">
   <div class="container-fluid">
     <!-- Logo for mobile only -->
     <a class="navbar-brand d-xl-none" href="index-2.html">
@@ -443,40 +729,64 @@
     </button>
 
     <div class="collapse navbar-collapse">
-      <ul id="toggleElement" class="navbar-nav m-auto menu-hide">
+      <ul id="toggleElement" class="navbar-nav flex-grow-1 justify-content-center">
         <li class="nav-item"><a href="javascript:void(0)" class="nav-link active" data-i18n="home">Home</a></li>
 
+        <li class="nav-item dropdown" id="longevityDropdownParent">
+          <a href="javascript:void(0)" class="nav-link" id="longevityDropdown">
+            Longevity
+          </a>
+          <div class="mega-menu p-4" style="border: 2px solid #B2915B;">
+            <div class="mega-menu-container d-flex">
+              <div class="mega-menu-tabs flex-shrink-0">
+                <button class="tab-btn active" data-tab="diagnosticTesting">Diagnostic Testing</button>
+                <button class="tab-btn" data-tab="wellnessPrograms">Wellness Programs</button>
+                <button class="tab-btn" data-tab="nutritionAdvice">Nutrition Advice</button>
+              </div>
+              <div class="mega-menu-content flex-grow-1">
+                <div class="tab-content active" id="diagnosticTesting">
+                  <a href="#" class="dropdown-item">Blood Tests</a>
+                  <a href="#" class="dropdown-item">Genetic Screening</a>
+                  <a href="#" class="dropdown-item">Cardiovascular Evaluation</a>
+                </div>
+                <div class="tab-content" id="wellnessPrograms">
+                  <a href="#" class="dropdown-item">Weight Management</a>
+                  <a href="#" class="dropdown-item">Stress Reduction</a>
+                  <a href="#" class="dropdown-item">Sleep Improvement</a>
+                </div>
+                <div class="tab-content" id="nutritionAdvice">
+                  <a href="#" class="dropdown-item">Diet Planning</a>
+                  <a href="#" class="dropdown-item">Supplement Guidance</a>
+                  <a href="#" class="dropdown-item">Hydration Tips</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
         <li class="nav-item dropdown">
-          <a href="javascript:void(0)" class="dropdown-toggle nav-link" data-i18n="longevity">Longevity</a>
-          <ul class="dropdown-menu">
-            <li><a href="#" class="nav-link" data-i18n="diagnosticTesting">Diagnostic Testing</a></li>
-            <li><a href="#" class="nav-link" data-i18n="wellnessPrograms">Wellness Programs</a></li>
+          <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown" aria-expanded="false" data-i18n="aesthetic">Aesthetic</a>
+          <ul class="dropdown-menu fade shadow">
+            <li><a href="#" class="dropdown-item" data-i18n="facialAesthetics">Facial Aesthetics</a></li>
+            <li><a href="#" class="dropdown-item" data-i18n="bodyAesthetics">Body Aesthetics</a></li>
+            <li><a href="#" class="dropdown-item" data-i18n="hairScalp">Hair & Scalp</a></li>
           </ul>
         </li>
 
         <li class="nav-item dropdown">
-          <a href="javascript:void(0)" class="dropdown-toggle nav-link" data-i18n="aesthetic">Aesthetic</a>
-          <ul class="dropdown-menu">
-            <li><a href="#" class="nav-link" data-i18n="facialAesthetics">Facial Aesthetics</a></li>
-            <li><a href="#" class="nav-link" data-i18n="bodyAesthetics">Body Aesthetics</a></li>
-            <li><a href="#" class="nav-link" data-i18n="hairScalp">Hair & Scalp</a></li>
+          <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown" aria-expanded="false" data-i18n="regenerative">Regeneration</a>
+          <ul class="dropdown-menu fade shadow">
+            <li><a href="#" class="dropdown-item" data-i18n="advancedTherapies">Advanced Therapies</a></li>
+            <li><a href="#" class="dropdown-item" data-i18n="skinRejuvenation">Skin Rejuvenation</a></li>
+            <li><a href="#" class="dropdown-item" data-i18n="specializedTreatments">Specialized Treatments</a></li>
           </ul>
         </li>
 
         <li class="nav-item dropdown">
-          <a href="javascript:void(0)" class="dropdown-toggle nav-link" data-i18n="regenerative">Regeneration</a>
-          <ul class="dropdown-menu">
-            <li><a href="#" class="nav-link" data-i18n="advancedTherapies">Advanced Therapies</a></li>
-            <li><a href="#" class="nav-link" data-i18n="skinRejuvenation">Skin Rejuvenation</a></li>
-            <li><a href="#" class="nav-link" data-i18n="specializedTreatments">Specialized Treatments</a></li>
-          </ul>
-        </li>
-
-        <li class="nav-item dropdown">
-          <a href="javascript:void(0)" class="dropdown-toggle nav-link" data-i18n="services">Services</a>
-          <ul class="dropdown-menu">
-            <li><a href="#" class="nav-link" data-i18n="personalCare">Personal Care</a></li>
-            <li><a href="#" class="nav-link" data-i18n="virtualCare">Virtual Care</a></li>
+          <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown" aria-expanded="false" data-i18n="services">Services</a>
+          <ul class="dropdown-menu fade shadow">
+            <li><a href="#" class="dropdown-item" data-i18n="personalCare">Personal Care</a></li>
+            <li><a href="#" class="dropdown-item" data-i18n="virtualCare">Virtual Care</a></li>
           </ul>
         </li>
 
@@ -487,17 +797,14 @@
 
       <!-- Right side buttons -->
       <div class="others-option d-flex align-items-center">
-        <!-- Arabic Toggle (duplicate for safety on mobile) -->
         <div class="option-item d-xl-none">
-          <a href="#" class="default-btn" style="padding: 5px 20px;" onclick="toggleLanguage()">العربية</a>
+          <a href="#" class="default-btn" style="padding: 5px 20px;" onclick="toggleLaguage()">العربية</a>
         </div>
 
-        <!-- Book Appointment -->
-        <div class="option-item" style="pointer-events: none;">
+        <!-- <div class="option-item" style="pointer-events: none;">
           <a href="#" class="default-btn" data-i18n="bookAppointment">Book Appointment</a>
-        </div>
+        </div> -->
 
-        <!-- Mobile text icon -->
         <div class="option-item icon-wrapper">
           <div onclick="toggleElement()" class="icon">
             <i class="flaticon-text"></i>
@@ -2239,6 +2546,19 @@ info@protoclinic.com
         });
 
     </script>
+<script>
+  window.addEventListener('scroll', function () {
+    const navbar = document.getElementById('navbar');
+    if (window.scrollY > 50) {
+      navbar.classList.remove('navbar-default');
+      navbar.classList.add('navbar-scrolled');
+    } else {
+      navbar.classList.remove('navbar-scrolled');
+      navbar.classList.add('navbar-default');
+    }
+  });
+</script>
+
 
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/swiper-bundle.min.js"></script>
@@ -2261,8 +2581,74 @@ info@protoclinic.com
 
             this.textContent = newLang === "en" ? "عربي" : "English";
         });
+// document.querySelectorAll('.mega-menu').forEach(menu => {
+//   const tabs = menu.querySelectorAll('.tab-btn');
+//   const contents = menu.querySelectorAll('.tab-content');
+
+//   tabs.forEach(tab => {
+//     tab.addEventListener('click', (e) => {
+//       e.stopPropagation(); // ❗️prevent dropdown from closing
+//       // Remove active classes
+//       tabs.forEach(t => t.classList.remove('active'));
+//       contents.forEach(c => c.classList.remove('active'));
+//       // Activate clicked tab + corresponding content
+//       tab.classList.add('active');
+//       const tabId = tab.getAttribute('data-tab');
+//       const activeContent = menu.querySelector(`#${tabId}`);
+//       if (activeContent) activeContent.classList.add('active');
+//     });
+//   });
+// });
+
 
     </script>
+
+<script>
+
+document.addEventListener('DOMContentLoaded', () => {
+  const dropdown = document.getElementById('longevityDropdownParent');
+  const tabs = dropdown.querySelectorAll('.tab-btn');
+  const contents = dropdown.querySelectorAll('.tab-content');
+  let hideTimeout;
+
+  // Show menu on hover
+  dropdown.addEventListener('mouseenter', () => {
+    clearTimeout(hideTimeout);
+    dropdown.classList.add('open');
+  });
+
+  // Hide menu when mouse leaves dropdown area (including mega menu)
+  dropdown.addEventListener('mouseleave', () => {
+    hideTimeout = setTimeout(() => {
+      dropdown.classList.remove('open');
+    }, 150); // small delay for smoother UX
+  });
+
+  // Tab click to switch content
+  tabs.forEach(tab => {
+    tab.addEventListener('click', e => {
+      e.preventDefault();
+      tabs.forEach(t => t.classList.remove('active'));
+      contents.forEach(c => c.classList.remove('active'));
+      tab.classList.add('active');
+      const id = tab.getAttribute('data-tab');
+      const contentToShow = dropdown.querySelector(`#${id}`);
+      if (contentToShow) contentToShow.classList.add('active');
+    });
+  });
+
+  // Optional: Hide menu if clicked outside the dropdown at all
+  document.addEventListener('click', e => {
+    if (!dropdown.contains(e.target)) {
+      dropdown.classList.remove('open');
+    }
+  });
+});
+
+
+
+</script>
+
     </body>
 
 
