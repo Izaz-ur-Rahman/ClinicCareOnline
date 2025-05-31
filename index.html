@@ -21,6 +21,7 @@
     <!-- In your HTML head -->
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
 
     <title>Clinic</title>
     <!-- <link rel="icon" type="image/png" href="assets/images/favicon.png"> -->
@@ -34,8 +35,11 @@
             direction: rtl;
             /* Arabic is right-to-left */
             text-align: right;
+           
         }
-
+        html, body {
+            overflow-x: hidden !important;
+        }
         .mobile-bottom-nav {
             display: none;
         }
@@ -374,138 +378,107 @@
 
 
     <!-- Start Navbar Area -->
-    <nav class="navbar navbar-expand-xl navbar-style-two-area" id="navbar">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index-2.html">
+<!-- NAVBAR -->
+<!-- Top Row (Desktop Only) -->
+<div class="container-fluid d-none d-xl-flex justify-content-between align-items-center py-3">
+  <!-- Left placeholder (for optional E-Gift Vouchers or spacer) -->
+  <div class="flex-grow-1"></div>
 
-                <!--<img src="assets/images/logo2.png" alt="logo">-->
-                <img src="assets/images/ProtoUpdatedLogo.png" />
-            </a>
-            <button class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvas">
-                <span class="burger-menu" id="menuDrawer">
-                    <span class="top-bar"></span>
-                    <span class="middle-bar"></span>
-                    <span class="bottom-bar"></span>
-                </span>
-            </button>
-            <div class="collapse navbar-collapse">
-                <ul id="toggleElement" class="navbar-nav m-auto menu-hide">
-                    <li class="nav-item">
-                        <a href="javascript:void(0)" class="nav-link active" data-i18n="home">Home</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a href="javascript:void(0)" class="dropdown-toggle nav-link"
-                            data-i18n="longevity">Longevity</a>
-                        <ul class="dropdown-menu">
-                            <li class="nav-item">
-                                <a href="#" class="nav-link" data-i18n="diagnosticTesting">Diagnostic Testing</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link" data-i18n="wellnessPrograms">Wellness Programs</a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li class="nav-item">
-                        <a href="javascript:void(0)" class="dropdown-toggle nav-link"
-                            data-i18n="aesthetic">Aesthetic</a>
-                        <ul class="dropdown-menu">
-                            <li class="nav-item">
-                                <a href="#" class="nav-link" data-i18n="facialAesthetics">Facial Aesthetics</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link" data-i18n="bodyAesthetics">Body Aesthetics</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link" data-i18n="hairScalp">Hair & Scalp</a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li class="nav-item">
-                        <a href="javascript:void(0)" class="dropdown-toggle nav-link"
-                            data-i18n="regenerative">Regeneration</a>
-                        <ul class="dropdown-menu">
-                            <li class="nav-item">
-                                <a href="#" class="nav-link" data-i18n="advancedTherapies">Advanced Therapies</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link" data-i18n="skinRejuvenation">Skin Rejuvenation</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link" data-i18n="specializedTreatments">Specialized
-                                    Treatments</a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li class="nav-item">
-                        <a href="javascript:void(0)" class="dropdown-toggle nav-link" data-i18n="services">Services</a>
-                        <ul class="dropdown-menu">
-                            <li class="nav-item">
-                                <a href="#" class="nav-link" data-i18n="personalCare">Personal Care</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link" data-i18n="virtualCare">Virtual Care</a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li class="nav-item">
-                        <a href="#" class="nav-link" data-i18n="aboutUs">About Us</a>
-                    </li>
-                </ul>
-                <div class="others-option d-flex align-items-center">
-                    <!-- Language Toggle Button -->
-                    <div class="option-item">
-                        <a href="#" class="default-btn" style="padding:5px 20px;" id="langToggleBtn"
-                            onclick="toggleLanguage()">العربية</a>
-                    </div>
-
-                    <!-- Optional: Virtual Assessment button -->
-                    <!--
-  <div class="option-item">
-    <a href="#" class="default-btn default-btn-outline">Virtual Assessment</a>
+  <!-- Centered logo -->
+  <div class="text-center">
+    <a href="index-2.html">
+      <img src="assets/images/White-logo.png" alt="Logo" style="height: 50px;">
+    </a>
   </div>
-  -->
 
-                    <!-- Menu Toggle Button (for mobile only) -->
-                    <div class="option-item icon-wrapper">
-                        <div onclick="toggleElement()" class="icon">
-                            <i class="flaticon-text"></i>
-                        </div>
-                    </div>
-                </div>
+  <!-- Arabic button on the right -->
+  <div class="flex-grow-1 d-flex justify-content-end">
+    <a href="#" class="default-btn" style="padding: 5px 20px;" onclick="toggleLanguage()">العربية</a>
+  </div>
+</div>
 
+<!-- Navbar Section -->
+<nav class="navbar navbar-expand-xl navbar-style-two-area" id="navbar">
+  <div class="container-fluid">
+    <!-- Logo for mobile only -->
+    <a class="navbar-brand d-xl-none" href="index-2.html">
+      <img src="assets/images/White-logo.png" alt="logo">
+    </a>
 
-                <div class="others-option d-flex align-items-center">
-                    <div class="option-item" style="pointer-events: none;">
-                        <a href="#" class="default-btn" style="pointer-events: none;" data-i18n="bookAppointment">Book
-                            Appointment</a>
-                    </div>
-                    <!-- <div class="option-item">
-                        <a href="#" class="default-btn default-btn-outline">Virtual Assessment</a>
-                    </div> -->
+    <!-- Burger icon for offcanvas toggle -->
+    <button class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvas">
+      <span class="burger-menu" id="menuDrawer">
+        <span class="top-bar"></span>
+        <span class="middle-bar"></span>
+        <span class="bottom-bar"></span>
+      </span>
+    </button>
 
-                    <!-- Menu Toggle Button (for mobile only) -->
-                    <div class="option-item icon-wrapper">
-                        <div onclick="toggleElement()" class="icon">
-                            <i class="flaticon-text"></i>
-                        </div>
-                    </div>
-                </div>
+    <div class="collapse navbar-collapse">
+      <ul id="toggleElement" class="navbar-nav m-auto menu-hide">
+        <li class="nav-item"><a href="javascript:void(0)" class="nav-link active" data-i18n="home">Home</a></li>
 
-                <!-- Your actual menu -->
-                <div id="toggleElement" class="main-menu">
-                    <!-- menu items here -->
-                </div>
+        <li class="nav-item dropdown">
+          <a href="javascript:void(0)" class="dropdown-toggle nav-link" data-i18n="longevity">Longevity</a>
+          <ul class="dropdown-menu">
+            <li><a href="#" class="nav-link" data-i18n="diagnosticTesting">Diagnostic Testing</a></li>
+            <li><a href="#" class="nav-link" data-i18n="wellnessPrograms">Wellness Programs</a></li>
+          </ul>
+        </li>
 
-            </div>
+        <li class="nav-item dropdown">
+          <a href="javascript:void(0)" class="dropdown-toggle nav-link" data-i18n="aesthetic">Aesthetic</a>
+          <ul class="dropdown-menu">
+            <li><a href="#" class="nav-link" data-i18n="facialAesthetics">Facial Aesthetics</a></li>
+            <li><a href="#" class="nav-link" data-i18n="bodyAesthetics">Body Aesthetics</a></li>
+            <li><a href="#" class="nav-link" data-i18n="hairScalp">Hair & Scalp</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a href="javascript:void(0)" class="dropdown-toggle nav-link" data-i18n="regenerative">Regeneration</a>
+          <ul class="dropdown-menu">
+            <li><a href="#" class="nav-link" data-i18n="advancedTherapies">Advanced Therapies</a></li>
+            <li><a href="#" class="nav-link" data-i18n="skinRejuvenation">Skin Rejuvenation</a></li>
+            <li><a href="#" class="nav-link" data-i18n="specializedTreatments">Specialized Treatments</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a href="javascript:void(0)" class="dropdown-toggle nav-link" data-i18n="services">Services</a>
+          <ul class="dropdown-menu">
+            <li><a href="#" class="nav-link" data-i18n="personalCare">Personal Care</a></li>
+            <li><a href="#" class="nav-link" data-i18n="virtualCare">Virtual Care</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a href="#" class="nav-link" data-i18n="aboutUs">About Us</a>
+        </li>
+      </ul>
+
+      <!-- Right side buttons -->
+      <div class="others-option d-flex align-items-center">
+        <!-- Arabic Toggle (duplicate for safety on mobile) -->
+        <div class="option-item d-xl-none">
+          <a href="#" class="default-btn" style="padding: 5px 20px;" onclick="toggleLanguage()">العربية</a>
         </div>
-    </nav>
-    <!-- End Navbar Area -->
 
+        <!-- Book Appointment -->
+        <div class="option-item" style="pointer-events: none;">
+          <a href="#" class="default-btn" data-i18n="bookAppointment">Book Appointment</a>
+        </div>
+
+        <!-- Mobile text icon -->
+        <div class="option-item icon-wrapper">
+          <div onclick="toggleElement()" class="icon">
+            <i class="flaticon-text"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
 
     <!-- Start Search Popup -->
     <div class="search-popup">
@@ -645,10 +618,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="accordion-item">
-                                    <a href="#" class="accordion-link">
-                                       About Us
-                                    </a> -->
+             
 
 
                 <div class="accordion-item">
@@ -657,11 +627,7 @@
                     </a>
 
                 </div>
-                <!-- <div class="accordion-item">
-                    <a class="accordion-button without-icon" href="#">
-                        CONTACT US
-                    </a>
-                </div> -->
+            
             </div>
             <div class="others-option d-flex align-items-center justify-content-center">
                 <div class="option-item">
@@ -678,67 +644,43 @@
     <!-- End Responsive Navbar Area -->
 
     <!-- Start Pediatric Dentist Banner Area -->
-    <div class="pediatric-dentist-banner-area">
-        <div class="container-fluid">
-            <div class="row justify-content-center" data-cues="slideInUp">
-                <div class="col-xl-7 col-md-12">
-                    <div class="pediatric-dentist-banner-content">
+  <div class="youtube-bg">
+    <iframe src="video-player.html" frameborder="0" allow="autoplay; fullscreen" allowfullscreen
+      style="width: 100vw; height: 100vh; position: absolute; top: 0; left: 0; z-index: -10;"></iframe>
+  </div>
+  <div class="relative z-10 flex items-center justify-center h-[calc(80vh)] px-4 text-center">
+    <div class="max-w-2xl w-full">
+      <h2 class="text-3xl md:text-3xl font-bold text-white">Welcome To The</h2>
+      <h1 class="text-3xl md:text-3xl font-bold mb-4 text-white">
+        Holistic Approach To Wellness, Longevity & Regeneration
+      </h1>
+      <p class="text-sm mb-6 tracking-widest text-white">
+        Here at Protoclinic, we provide scientifically-backed, personalized wellness and aesthetic programs based on
+        comprehensive diagnostics and cutting-edge regenerative therapies.
+      </p>
+      <style>
 
-                        <h1>
-                            <span data-i18n="banner.title">
-                                Welcome To The Holistic Approach To Wellness, Longevity & Regeneration
-                                <img src="assets/images/pediatric-dentist/arrow.png" alt=" circle image">
-                            </span>
-                        </h1>
-                        <ul class="list">
-                            <li>
-                                <img src="assets/images/pediatric-dentist/award1.png" alt="award image">
-                                <span class="text-black" data-i18n="banner.award1">2023 Excellence in Regenerative
-                                    Medicine Award</span>
-                            </li>
-                            <li>
-                                <img src="assets/images/pediatric-dentist/award1.png" alt="award image">
-                                <span class="text-black" data-i18n="banner.award2">2024 Leading Wellness Innovation
-                                    Award</span>
-                            </li>
-                        </ul>
-                        <div class="bottom-content">
-                            <p data-i18n="banner.description">
-                                Here at Protoclinic, we provide scientifically-backed, personalized wellness and
-                                aesthetic programs based on comprehensive diagnostics and cutting-edge regenerative
-                                therapies.
-                            </p>
-                            <div class="info">
-                                <div class="icon">
-                                    <i data-feather="phone"></i>
-                                </div>
-                                <span data-i18n="banner.call">Call: <a href="tel:+971 4 513 6154">+971 4 513
-                                        6154</a></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-5 col-md-12">
-                    <div class="pediatric-dentist-banner-image">
-                        <div class="zoom-background"></div> <!-- This is new -->
+  .custom-hover-btn:hover {
+    background-color: white !important;
+    color: black !important;
+  }
+</style>
 
-                        <div class="video-wrap">
-                            <img src="assets/images/pediatric-dentist/wrap.png" alt="Wrap">
-                            <a data-fslightbox="video" class="video-btn"
-                                href="https://youtu.be/mUzq_h1GCXE?si=8aVtXL3GZXr3t5wn">
-                                <i class="flaticon-play-button-arrowhead"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+<button class="custom-hover-btn text-white text-sm px-6 mb-3 py-3 rounded-full border border-white bg-transparent tracking-widest transition duration-300 ease-in-out;">
+  BOOK APPOINTMENT
+</button>
 
 
-            </div>
-        </div>
-        <div class="pediatric-dentist-banner-shape">
-            <img src="assets/images/pediatric-dentist/vector.png" alt="arrow image">
-        </div>
+
+
+      <div class="border-2 border-white mx-auto  rounded-full h-10 w-6 flex items-center justify-center">
+        <div class="h-2 w-1 bg-white animate-bounce"></div>
+      </div>
+
     </div>
+  </div>
+
+
     <!-- End Pediatric Dentist Banner Area -->
 <!-- Start Features Wrap Area -->
 <div class="features-wrap-area pt-150 pb-125">
