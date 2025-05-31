@@ -13176,8 +13176,8 @@ Navbar Area CSS
   letter-spacing: 2.25px;
   padding-left: 0;
   padding-right: 0;
-  /* padding-top: 37px;
-  padding-bottom: 37px; */
+  padding-top: 17px;
+  padding-bottom: 17px;
 }
 .navbar .navbar-nav .nav-item .nav-link::after {
   position: absolute;
@@ -13230,7 +13230,7 @@ Navbar Area CSS
 }
 .navbar .navbar-nav .nav-item .dropdown-menu {
   left: 0;
-  /* top: 97px; */
+  top: 97px;
   opacity: 0;
   z-index: 99;
   border: none;
