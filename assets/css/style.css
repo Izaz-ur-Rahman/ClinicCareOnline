@@ -13089,7 +13089,8 @@ Navbar Area CSS
   z-index: 999;
   padding-left: 0;
   padding-right: 0;
-  padding-top: 0;
+  padding-top: 10px;
+
   padding-bottom: 0;
 }
 .navbar.sticky {
@@ -13175,8 +13176,8 @@ Navbar Area CSS
   letter-spacing: 2.25px;
   padding-left: 0;
   padding-right: 0;
-  padding-top: 37px;
-  padding-bottom: 37px;
+  /* padding-top: 37px;
+  padding-bottom: 37px; */
 }
 .navbar .navbar-nav .nav-item .nav-link::after {
   position: absolute;
@@ -13229,7 +13230,7 @@ Navbar Area CSS
 }
 .navbar .navbar-nav .nav-item .dropdown-menu {
   left: 0;
-  top: 97px;
+  /* top: 97px; */
   opacity: 0;
   z-index: 99;
   border: none;
@@ -13243,8 +13244,8 @@ Navbar Area CSS
   transition: all 0.2s ease-in-out;
   transform: translate3d(0, 18px, 0);
   box-shadow: 0px 4px 70px 0px rgba(0, 0, 0, 0.1);
-  padding-top: 20px;
-  padding-bottom: 20px;
+  /* padding-top: 20px;
+  padding-bottom: 20px; */
 }
 .navbar .navbar-nav .nav-item .dropdown-menu .nav-item {
   margin: 0;
