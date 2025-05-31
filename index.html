@@ -376,26 +376,54 @@
 
     <!-- End Preloader Area -->
 
+<style>
+  .e-gift-btn {
+    padding: 5px 20px;
+    border: 1px solid white;
+    color: white;
+    border-radius: 9999px;
+    background-color: transparent;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+
+  .e-gift-btn:hover {
+    background-color: white;
+    color: black;
+  }
+
+  .default-btn:hover {
+    background-color: white !important;
+    color: black !important;
+  }
+</style>
 
     <!-- Start Navbar Area -->
 <!-- NAVBAR -->
 <!-- Top Row (Desktop Only) -->
-<div class="container-fluid d-none d-xl-flex justify-content-between align-items-center py-3">
-  <!-- Left placeholder (for optional E-Gift Vouchers or spacer) -->
-  <div class="flex-grow-1"></div>
-
-  <!-- Centered logo -->
-  <div class="text-center">
-    <a href="index-2.html">
-      <img src="assets/images/White-logo.png" alt="Logo" style="height: 50px;">
-    </a>
+<!-- Top Row: Only for Desktop -->
+<!-- Top Row: Desktop Only -->
+<div class="container-fluid d-none d-xl-flex align-items-center justify-content-center py-3 position-relative" style="padding: 0 40px;">
+  <!-- Left: E-Gift Button with spacing -->
+  <div class="position-absolute start-0" style="left: 40px !important;">
+    <a href="#" class="e-gift-btn">E-Gift Vouchers</a>
   </div>
 
-  <!-- Arabic button on the right -->
-  <div class="flex-grow-1 d-flex justify-content-end">
+  <!-- Centered Logo -->
+  <a href="index-2.html" class="mx-auto">
+    <img src="assets/images/White-logo.png" alt="Logo" style="height: 50px;">
+  </a>
+
+  <!-- Right: Arabic Button with spacing -->
+  <div class="position-absolute end-0" style="right: 40px !important;">
     <a href="#" class="default-btn" style="padding: 5px 20px;" onclick="toggleLanguage()">العربية</a>
   </div>
 </div>
+
+
+<!-- Custom CSS -->
+
+
 
 <!-- Navbar Section -->
 <nav class="navbar navbar-expand-xl navbar-style-two-area" id="navbar">
