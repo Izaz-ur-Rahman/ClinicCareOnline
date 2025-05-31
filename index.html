@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <!-- Swiper CSS -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <!-- In your HTML head -->
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
@@ -554,6 +556,7 @@
   transform: translateY(10px);
   visibility: hidden;
   pointer-events: none;
+ 
 }
 
 /* Show dropdown on hover */
@@ -648,7 +651,7 @@
 /* Active tab style */
 .mega-menu-tabs .tab-btn.active,
 .mega-menu-tabs .tab-btn:hover {
-  background-color: #B2915B;
+  background-color: #D2BF92;
   color: white;
 }
 
@@ -727,46 +730,69 @@
         <span class="bottom-bar"></span>
       </span>
     </button>
+<style>
+  /* Custom white arrow for dropdown toggle */
+.custom-toggle::after {
+  display: none !important; /* Hide Bootstrap default arrow */
+}
 
+.dropdown-arrow {
+  transition: transform 0.3s ease;
+}
+
+.custom-toggle.show .dropdown-arrow {
+  transform: rotate(180deg); /* Rotate arrow when dropdown is open */
+}
+
+</style>
     <div class="collapse navbar-collapse">
       <ul id="toggleElement" class="navbar-nav flex-grow-1 justify-content-center">
         <li class="nav-item"><a href="javascript:void(0)" class="nav-link active" data-i18n="home">Home</a></li>
 
-        <li class="nav-item dropdown" id="longevityDropdownParent">
-          <a href="javascript:void(0)" class="nav-link" id="longevityDropdown">
-            Longevity
-          </a>
+      <li class="nav-item dropdown" id="longevityDropdownParent">
+<a href="javascript:void(0)" class="nav-link custom-toggle d-flex align-items-center" id="longevityDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+  <span>Longevity</span>
+  <svg class="ms-2 dropdown-arrow transition-transform duration-300" width="16" height="16" viewBox="0 0 24 24" fill="none"
+       stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="6 9 12 15 18 9" />
+  </svg>
+</a>
+
           <div class="mega-menu p-4" style="border: 2px solid #B2915B;">
             <div class="mega-menu-container d-flex">
               <div class="mega-menu-tabs flex-shrink-0">
                 <button class="tab-btn active" data-tab="diagnosticTesting">Diagnostic Testing</button>
                 <button class="tab-btn" data-tab="wellnessPrograms">Wellness Programs</button>
-                <button class="tab-btn" data-tab="nutritionAdvice">Nutrition Advice</button>
+                <!-- <button class="tab-btn" data-tab="nutritionAdvice">Nutrition Advice</button> -->
               </div>
               <div class="mega-menu-content flex-grow-1">
                 <div class="tab-content active" id="diagnosticTesting">
-                  <a href="#" class="dropdown-item">Blood Tests</a>
-                  <a href="#" class="dropdown-item">Genetic Screening</a>
-                  <a href="#" class="dropdown-item">Cardiovascular Evaluation</a>
+                  <a href="#" class="dropdown-item">🩸 Blood Tests</a>
+                  <a href="#" class="dropdown-item">🐞 Genetic Screening</a>
+                  <a href="#" class="dropdown-item">❤️ Cardiovascular Evaluation</a>
                 </div>
                 <div class="tab-content" id="wellnessPrograms">
-                  <a href="#" class="dropdown-item">Weight Management</a>
-                  <a href="#" class="dropdown-item">Stress Reduction</a>
-                  <a href="#" class="dropdown-item">Sleep Improvement</a>
+                  <a href="#" class="dropdown-item">🏋️ Weight Management</a>
+                  <a href="#" class="dropdown-item">🨪 Stress Reduction</a>
+                  <a href="#" class="dropdown-item">🛌 Sleep Improvement</a>
                 </div>
                 <div class="tab-content" id="nutritionAdvice">
-                  <a href="#" class="dropdown-item">Diet Planning</a>
-                  <a href="#" class="dropdown-item">Supplement Guidance</a>
-                  <a href="#" class="dropdown-item">Hydration Tips</a>
+                  <a href="#" class="dropdown-item">🍽️ Diet Planning</a>
+                  <a href="#" class="dropdown-item">🧪 Supplement Guidance</a>
+                  <a href="#" class="dropdown-item">💧 Hydration Tips</a>
                 </div>
               </div>
             </div>
           </div>
         </li>
-
         <li class="nav-item dropdown">
-          <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown" aria-expanded="false" data-i18n="aesthetic">Aesthetic</a>
-          <ul class="dropdown-menu fade shadow">
+<a href="#" class="nav-link custom-toggle d-flex align-items-center" id="aestheticDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+  <span data-i18n="aesthetic">Aesthetic</span>
+  <svg class="ms-2 dropdown-arrow transition-transform duration-300" width="16" height="16" viewBox="0 0 24 24" fill="none"
+       stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="6 9 12 15 18 9" />
+  </svg>
+</a>          <ul class="dropdown-menu fade shadow">
             <li><a href="#" class="dropdown-item" data-i18n="facialAesthetics">Facial Aesthetics</a></li>
             <li><a href="#" class="dropdown-item" data-i18n="bodyAesthetics">Body Aesthetics</a></li>
             <li><a href="#" class="dropdown-item" data-i18n="hairScalp">Hair & Scalp</a></li>
@@ -774,8 +800,13 @@
         </li>
 
         <li class="nav-item dropdown">
-          <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown" aria-expanded="false" data-i18n="regenerative">Regeneration</a>
-          <ul class="dropdown-menu fade shadow">
+<a href="#" class="nav-link custom-toggle d-flex align-items-center" id="regenerationDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+  <span data-i18n="regenerative">Regeneration</span>
+  <svg class="ms-2 dropdown-arrow transition-transform duration-300" width="16" height="16" viewBox="0 0 24 24" fill="none"
+       stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="6 9 12 15 18 9" />
+  </svg>
+</a>          <ul class="dropdown-menu fade shadow">
             <li><a href="#" class="dropdown-item" data-i18n="advancedTherapies">Advanced Therapies</a></li>
             <li><a href="#" class="dropdown-item" data-i18n="skinRejuvenation">Skin Rejuvenation</a></li>
             <li><a href="#" class="dropdown-item" data-i18n="specializedTreatments">Specialized Treatments</a></li>
@@ -783,8 +814,13 @@
         </li>
 
         <li class="nav-item dropdown">
-          <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown" aria-expanded="false" data-i18n="services">Services</a>
-          <ul class="dropdown-menu fade shadow">
+<a href="#" class="nav-link custom-toggle d-flex align-items-center" id="servicesDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+  <span data-i18n="services">Services</span>
+  <svg class="ms-2 dropdown-arrow transition-transform duration-300" width="16" height="16" viewBox="0 0 24 24" fill="none"
+       stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="6 9 12 15 18 9" />
+  </svg>
+</a>          <ul class="dropdown-menu fade shadow">
             <li><a href="#" class="dropdown-item" data-i18n="personalCare">Personal Care</a></li>
             <li><a href="#" class="dropdown-item" data-i18n="virtualCare">Virtual Care</a></li>
           </ul>
@@ -2648,6 +2684,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 </script>
+<script>
+  function setupDropdown(id) {
+    const toggle = document.getElementById(id);
+    const arrow = toggle.querySelector('.dropdown-arrow');
+
+    if (!toggle || !arrow) return;
+
+    toggle.addEventListener('show.bs.dropdown', () => {
+      toggle.classList.add('show');
+    });
+
+    toggle.addEventListener('hide.bs.dropdown', () => {
+      toggle.classList.remove('show');
+    });
+
+    window.addEventListener("scroll", () => {
+      const color = window.scrollY > 50 ? "black" : "white";
+      arrow.setAttribute("stroke", color);
+    });
+  }
+
+  // Initialize for all dropdowns
+  setupDropdown('longevityDropdown');
+  setupDropdown('aestheticDropdown');
+  setupDropdown('regenerationDropdown');
+  setupDropdown('servicesDropdown');
+</script>
+
 
     </body>
 
