@@ -2920,6 +2920,42 @@ info@protoclinic.com
         setupDropdown('servicesDropdown');
     </script>
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const navItems = document.querySelectorAll(".navbar-nav .dropdown");
+
+  navItems.forEach((item) => {
+    const toggle = item.querySelector("[data-bs-toggle='dropdown']");
+    const dropdownMenu = item.querySelector(".dropdown-menu");
+
+    // Use Bootstrap's dropdown instance
+    const bsDropdown = new bootstrap.Dropdown(toggle);
+
+    // When hovering over this item
+    item.addEventListener("mouseenter", () => {
+      // Close all other dropdowns first
+      navItems.forEach((otherItem) => {
+        if (otherItem !== item) {
+          const otherToggle = otherItem.querySelector("[data-bs-toggle='dropdown']");
+          const otherMenu = otherItem.querySelector(".dropdown-menu");
+
+          if (otherMenu.classList.contains("show")) {
+            const otherBsDropdown = bootstrap.Dropdown.getInstance(otherToggle);
+            otherBsDropdown.hide();
+          }
+        }
+      });
+
+      bsDropdown.show();
+    });
+
+    // Optional: Hide dropdown when mouse leaves the nav-item
+    item.addEventListener("mouseleave", () => {
+      bsDropdown.hide();
+    });
+  });
+});
+</script>
 
     </body>
 
