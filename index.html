@@ -671,6 +671,13 @@
             transform: rotate(180deg);
             /* Rotate arrow when dropdown is open */
         }
+        /* .default-btn.nav-link {
+  display: flex;
+  align-items: center;
+  padding: 5px 20px !important;
+  height: 80%;
+} */
+
     </style>
 
     <!-- Custom CSS -->
@@ -762,10 +769,7 @@
             <img src="assets/images/White-logo.png" alt="Logo" style="height: 60px;">
         </a>
 
-        <!-- Right: Arabic Button -->
-        <div class="position-absolute end-0">
-            <a href="#" class="default-btn" style="padding: 5px 20px;" onclick="toggleLaguage()">العربية</a>
-        </div>
+    
     </div>
 
 
@@ -893,7 +897,13 @@
                     <li class="nav-item">
                         <a href="#" class="nav-link" data-i18n="aboutUs">About Us</a>
                     </li>
+
+<li class="nav-item d-flex align-items-center">
+  <a href="#" class="default-btn" style="padding:8px 20px;" onclick="toggleLaguage()">العربية</a>
+</li>
+
                 </ul>
+ 
 
                 <!-- Right side buttons -->
                 <!-- <div class="others-option d-flex align-items-center">
@@ -1183,10 +1193,10 @@
                 </div>
 
                 <!-- E-Gift Vouchers -->
-                <div class="accordion-item">
+                <!-- <div class="accordion-item">
                     <a href="/e-gift-vouchers" class="accordion-link p-3 d-block text-primary fw-bold">🎁 E-Gift
                         Vouchers</a>
-                </div>
+                </div> -->
 
             </div>
         </div>
@@ -1235,7 +1245,7 @@
 
     <!-- End Pediatric Dentist Banner Area -->
     <!-- Start Features Wrap Area -->
-    <div class="features-wrap-area pt-150 pb-125 custom_padding" style="padding-top:180px;">
+    <div class="features-wrap-area  pb-125 custo">
         <div class="container-fluid">
             <div class="row justify-content-center" data-cues="slideInUp">
                 <div class="col-xxl-3 col-md-6">
