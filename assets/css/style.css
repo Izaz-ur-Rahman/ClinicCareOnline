@@ -20524,6 +20524,9 @@ Pagination Area CSS
   .about-wrap-image .image-four {
     display: none !important;
   }
+  .custom_padding{
+    padding-top: 230px;
+  }
 .img-one{
   margin-top:20px;
 }
@@ -20532,4 +20535,9 @@ Pagination Area CSS
     flex-direction: column-reverse;
 
   }
+}
+.features-wrap-card .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

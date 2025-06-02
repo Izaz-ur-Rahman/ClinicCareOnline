@@ -17,13 +17,13 @@
     <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <!-- Swiper CSS -->
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <!-- In your HTML head -->
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 
     <title>Clinic</title>
     <!-- <link rel="icon" type="image/png" href="assets/images/favicon.png"> -->
@@ -37,11 +37,14 @@
             direction: rtl;
             /* Arabic is right-to-left */
             text-align: right;
-           
+
         }
-        html, body {
+
+        html,
+        body {
             overflow-x: hidden !important;
         }
+
         .mobile-bottom-nav {
             display: none;
         }
@@ -228,6 +231,7 @@
                 display: none !important;
             }
         }
+
         .review-wrap-card {
             padding: 20px;
             background-color: #fff;
@@ -300,57 +304,205 @@
             }
         }
 
-  .navbar-default .nav-link {
-    color: white !important;
-    transition: color 0.3s ease;
-  }
+        .navbar-default .nav-link {
+            color: white !important;
+            transition: color 0.3s ease;
+        }
 
-  .navbar-scrolled .nav-link {
-    color: black !important;
-  }
+        .navbar-scrolled .nav-link {
+            color: black !important;
+        }
 
 
-    </style>
+        .default-btn:hover {
+            background-color: white !important;
+            /* color: black !important; */
+        }
 
-<!-- Custom CSS -->
+        /* Dropdown container */
+        .navbar-nav .dropdown-menu {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            padding: 12px 0;
+            min-width: 320px;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            opacity: 0;
+            transform: translateY(10px);
+            visibility: hidden;
+            pointer-events: none;
 
-<style>
-.mega-menu {
-  display: none;
-  position: absolute;
-  background: white;
-  z-index: 1000;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(10px);
-  transition: all 0.3s ease;
-  border-radius: 12px;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
-  padding: 25px;
-  min-width: 500px;
-  border: 2px solid #B2915B1c;
-}
+        }
 
-/* Show menu when open */
-.nav-item.dropdown.open > .mega-menu {
-  display: block;
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
+        /* Show dropdown on hover */
+        .nav-item.dropdown:hover>.dropdown-menu,
+        .nav-item.dropdown:focus-within>.dropdown-menu {
+            opacity: 1;
+            transform: translateY(0);
+            visibility: visible;
+            pointer-events: auto;
+        }
 
-/* Tabs section */
-.mega-menu-tabs {
-  display: flex;
-  flex-direction: column;
-  border-right: 2px solid #eee;
-  padding-right: 20px;
-  margin-right: 25px;
-  min-width: 200px;
-}
+        /* Dropdown items */
+        .navbar-nav .dropdown-menu .nav-link {
+            color: #333;
+            padding: 10px 20px;
+            font-weight: 500;
+            display: block;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            border-radius: 4px;
+        }
 
-/* Tab button style */
-.tab-btn {
+        /* Hover/focus states */
+        .navbar-nav .dropdown-menu .nav-link:hover,
+        .navbar-nav .dropdown-menu .nav-link:focus {
+            background-color: #B2915B;
+            /* your preferred accent color */
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Add subtle icon arrow to dropdown toggles */
+        .navbar-nav .dropdown-toggle::after {
+            content: "▾";
+            margin-left: 6px;
+            font-size: 0.7rem;
+            transition: transform 0.3s ease;
+        }
+
+        /* Rotate arrow on open */
+        .nav-item.dropdown.show>.dropdown-toggle::after {
+            transform: rotate(180deg);
+        }
+
+        /* Optional: add slight shadow on dropdown toggle hover */
+        .navbar-nav .dropdown-toggle:hover {
+            color: #B2915B;
+        }
+
+        /* Smooth fade-in for dropdown on mobile toggle */
+        .collapse.navbar-collapse.show .dropdown-menu {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+            visibility: visible !important;
+            pointer-events: auto !important;
+        }
+
+        /* Mega menu container */
+        .mega-menu {
+            width: 600px;
+            /* wider dropdown */
+            border-radius: 10px;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+            background: #fff;
+            padding: 1rem;
+        }
+
+        /* Flex container inside mega menu */
+        .mega-menu-container {
+            display: flex;
+            gap: 2rem;
+        }
+
+        /* Left side tabs */
+        .mega-menu-tabs {
+            display: flex;
+            flex-direction: column;
+            border-right: 2px solid #eee;
+            min-width: 140px;
+        }
+
+        /* Tab buttons */
+        .mega-menu-tabs .tab-btn {
+            background: none;
+            border: none;
+            padding: 10px 15px;
+            font-weight: 600;
+            text-align: left;
+            cursor: pointer;
+            color: #333;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            border-radius: 6px 6px 6px 6px;
+            margin-bottom: 6px;
+        }
+
+        /* Active tab style */
+        .mega-menu-tabs .tab-btn.active,
+        .mega-menu-tabs .tab-btn:hover {
+            background-color: #D2BF92;
+            color: white;
+        }
+
+        /* Right side content */
+        .mega-menu-content {
+            flex-grow: 1;
+        }
+
+        /* Hide inactive tab content */
+        .tab-content {
+            display: none;
+        }
+
+        /* Show active tab content */
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Dropdown item styling */
+        .dropdown-item {
+            display: block;
+            padding: 8px 15px;
+            color: #333;
+            width: 300px;
+            font-weight: 500;
+            border-radius: 6px;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            margin-bottom: 5px;
+        }
+
+        .dropdown-item:hover {
+            background-color: #B2915B;
+            color: white;
+            text-decoration: none;
+        }
+
+        .mega-menu {
+            display: none;
+            position: absolute;
+            background: white;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+            border-radius: 12px;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+            padding: 25px;
+            min-width: 500px;
+            border: 2px solid #B2915B1c;
+        }
+
+        /* Show menu when open */
+        .nav-item.dropdown.open>.mega-menu {
+            display: block;
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        /* Tabs section */
+        .mega-menu-tabs {
+            display: flex;
+            flex-direction: column;
+            border-right: 2px solid #eee;
+            padding-right: 20px;
+            margin-right: 25px;
+            min-width: 200px;
+        }
+
+        /* Tab button style */
+        /* .tab-btn {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -366,88 +518,163 @@
   transition: all 0.3s ease;
   box-shadow: 0 1px 2px rgba(0,0,0,0.04);
   position: relative;
-}
+} */
 
-.tab-btn::after {
+        /* .tab-btn::after {
   content: "➜";
   font-size: 14px;
-  color: #B2915B; /* Default arrow color */
+  color: #B2915B; 
   transition: transform 0.3s ease, color 0.3s ease;
-}
+} */
+        .tab-btn {
+            display: inline-flex;
+            align-items: center;
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 12px 18px;
+            margin-bottom: 10px;
+            font-weight: 500;
+            font-size: 15px;
+            color: #333;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+            position: relative;
+        }
 
-.tab-btn:hover::after {
-  transform: translateX(5px);
-  color: #fff; /* Hover color */
-}
+        .arrow-icon {
+            margin-left: 8px;
+            /* Space between text and arrow */
+            font-size: 14px;
+            color: #B2915B;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
 
-.tab-btn.active::after {
-  color: #fff; /* Arrow turns white when active */
-}
+        .tab-btn:hover .arrow-icon {
+            color: #fff;
+        }
 
-/* Tab content right area */
-.mega-menu-content {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  flex-grow: 1;
-  min-width: 400px;
-}
+        .tab-btn:hover::after {
+            transform: translateX(5px);
+            color: #fff;
+            /* Hover color */
+        }
 
-.tab-content {
-  display: none;
-}
+        .tab-btn.active::after {
+            color: #fff;
+            /* Arrow turns white when active */
+        }
 
-.tab-content.active {
-  display: block;
-  animation: fadeIn 0.4s ease;
-}
+        /* Tab content right area */
+        .mega-menu-content {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            flex-grow: 1;
+            min-width: 400px;
+        }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(5px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+        .tab-content {
+            display: none;
+        }
 
-/* Dropdown links style */
-.dropdown-item {
-  display: block;
-  padding: 10px 15px;
-  background: #fff;
-  color: #333;
- 
-  text-decoration: none;
-  border-radius: 6px;
-  transition: all 0.25s ease;
-  border: 1px solid transparent;
-}
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.4s ease;
+        }
 
-.dropdown-item:hover {
-  background: #e6f7ff;
-  color: #B2915B;
-  border-color: #B2915B33;
-  transform: translateX(5px);
-  box-shadow: 0 2px 6px rgba(59, 199, 237, 0.15);
-}
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(5px);
+            }
 
-/* Mobile responsive (optional) */
-@media (max-width: 768px) {
-  .mega-menu {
-    min-width: 100%;
-    flex-direction: column;
-  }
-  .mega-menu-tabs {
-    flex-direction: row;
-    border-right: none;
-    border-bottom: 2px solid #eee;
-    margin-bottom: 20px;
-    overflow-x: auto;
-    padding-right: 0;
-  }
-  .tab-btn {
-    min-width: 200px;
-    margin-right: 10px;
-  }
-}
-</style>
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Dropdown links style */
+        .dropdown-item {
+            display: block;
+            padding: 10px 15px;
+            background: #fff;
+            color: #333;
+
+            text-decoration: none;
+            border-radius: 6px;
+            transition: all 0.25s ease;
+            border: 1px solid transparent;
+        }
+
+        .dropdown-item:hover {
+            background: #e6f7ff;
+            color: #B2915B;
+            border-color: #B2915B33;
+            transform: translateX(5px);
+            box-shadow: 0 2px 6px rgba(59, 199, 237, 0.15);
+        }
+
+        /* Mobile responsive (optional) */
+        @media (max-width: 768px) {
+            .mega-menu {
+                min-width: 100%;
+                flex-direction: column;
+            }
+
+            .mega-menu-tabs {
+                flex-direction: row;
+                border-right: none;
+                border-bottom: 2px solid #eee;
+                margin-bottom: 20px;
+                overflow-x: auto;
+                padding-right: 0;
+            }
+
+            .tab-btn {
+                min-width: 200px;
+                margin-right: 10px;
+            }
+        }
+
+        .accordion-body h6 {
+            font-weight: 600;
+            font-size: 1rem;
+            margin-top: 1rem;
+        }
+
+        .accordion-link {
+            display: block;
+            padding: 6px 0;
+            text-decoration: none;
+            color: #333;
+            transition: color 0.2s ease;
+        }
+
+        .accordion-link:hover {
+            color: #0d6efd;
+            /* Bootstrap primary color */
+        }
+
+        .custom-toggle::after {
+            display: none !important;
+            /* Hide Bootstrap default arrow */
+        }
+
+        .dropdown-arrow {
+            transition: transform 0.3s ease;
+        }
+
+        .custom-toggle.show .dropdown-arrow {
+            transform: rotate(180deg);
+            /* Rotate arrow when dropdown is open */
+        }
+    </style>
+
+    <!-- Custom CSS -->
+
 
     <!-- Bottom Navigation -->
     <div class="mobile-bottom-nav">
@@ -522,340 +749,174 @@
 
 
 
-    <!-- End Preloader Area -->
-
-<style>
-  .e-gift-btn {
-    padding: 5px 20px;
-    border: 1px solid white;
-    color: white;
-    border-radius: 9999px;
-    background-color: transparent;
-    transition: all 0.3s ease;
-    text-decoration: none;
-  }
-
-  .e-gift-btn:hover {
-    background-color: white;
-    color: black;
-  }
-
-  .default-btn:hover {
-    background-color: white !important;
-    color: black !important;
-  }
- /* Dropdown container */
-.navbar-nav .dropdown-menu {
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-  padding: 12px 0;
-  min-width: 320px;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  opacity: 0;
-  transform: translateY(10px);
-  visibility: hidden;
-  pointer-events: none;
- 
-}
-
-/* Show dropdown on hover */
-.nav-item.dropdown:hover > .dropdown-menu,
-.nav-item.dropdown:focus-within > .dropdown-menu {
-  opacity: 1;
-  transform: translateY(0);
-  visibility: visible;
-  pointer-events: auto;
-}
-
-/* Dropdown items */
-.navbar-nav .dropdown-menu .nav-link {
-  color: #333;
-  padding: 10px 20px;
-  font-weight: 500;
-  display: block;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  border-radius: 4px;
-}
-
-/* Hover/focus states */
-.navbar-nav .dropdown-menu .nav-link:hover,
-.navbar-nav .dropdown-menu .nav-link:focus {
-  background-color: #B2915B; /* your preferred accent color */
-  color: white;
-  text-decoration: none;
-}
-
-/* Add subtle icon arrow to dropdown toggles */
-.navbar-nav .dropdown-toggle::after {
-  content: "▾";
-  margin-left: 6px;
-  font-size: 0.7rem;
-  transition: transform 0.3s ease;
-}
-
-/* Rotate arrow on open */
-.nav-item.dropdown.show > .dropdown-toggle::after {
-  transform: rotate(180deg);
-}
-
-/* Optional: add slight shadow on dropdown toggle hover */
-.navbar-nav .dropdown-toggle:hover {
-  color: #B2915B;
-}
-
-/* Smooth fade-in for dropdown on mobile toggle */
-.collapse.navbar-collapse.show .dropdown-menu {
-  opacity: 1 !important;
-  transform: translateY(0) !important;
-  visibility: visible !important;
-  pointer-events: auto !important;
-}
-/* Mega menu container */
-.mega-menu {
-  width: 600px;  /* wider dropdown */
-  border-radius: 10px;
-  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
-  background: #fff;
-  padding: 1rem;
-}
-
-/* Flex container inside mega menu */
-.mega-menu-container {
-  display: flex;
-  gap: 2rem;
-}
-
-/* Left side tabs */
-.mega-menu-tabs {
-  display: flex;
-  flex-direction: column;
-  border-right: 2px solid #eee;
-  min-width: 140px;
-}
-
-/* Tab buttons */
-.mega-menu-tabs .tab-btn {
-  background: none;
-  border: none;
-  padding: 10px 15px;
-  font-weight: 600;
-  text-align: left;
-  cursor: pointer;
-  color: #333;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  border-radius: 6px 0 0 6px;
-  margin-bottom: 6px;
-}
-
-/* Active tab style */
-.mega-menu-tabs .tab-btn.active,
-.mega-menu-tabs .tab-btn:hover {
-  background-color: #D2BF92;
-  color: white;
-}
-
-/* Right side content */
-.mega-menu-content {
-  flex-grow: 1;
-}
-
-/* Hide inactive tab content */
-.tab-content {
-  display: none;
-}
-
-/* Show active tab content */
-.tab-content.active {
-  display: block;
-}
-
-/* Dropdown item styling */
-.dropdown-item {
-  display: block;
-  padding: 8px 15px;
-  color: #333;
-  width: 300px;
-  font-weight: 500;
-  border-radius: 6px;
-  transition: background-color 0.3s ease;
-  text-decoration: none;
-  margin-bottom: 5px;
-}
-
-.dropdown-item:hover {
-  background-color: #B2915B;
-  color: white;
-  text-decoration: none;
-}
-/* #navbar {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-} */
-</style>
-
-    <!-- Start Navbar Area -->
-<!-- NAVBAR -->
-<!-- Top Row (Desktop Only) -->
-<!-- Top Row: Only for Desktop -->
-<!-- Top Row: Desktop Only -->
-<div class="container-fluid d-none d-xl-flex align-items-center justify-content-center py-3 position-relative" style="padding: 0px 40px;">
-  <!-- Left: E-Gift Button with spacing -->
-  <div class="position-absolute start-0" style="left: 40px !important;">
-    <a href="#" class="e-gift-btn">E-Gift Vouchers</a>
-  </div>
-
-  <!-- Centered Logo -->
-  <a href="index-2.html" class="mx-auto">
-    <img src="assets/images/White-logo.png" alt="Logo" style="height: 50px;">
-  </a>
-
-  <!-- Right: Arabic Button with spacing -->
-  <div class="position-absolute end-0" style="right: 40px !important;">
-    <a href="#" class="default-btn" style="padding: 5px 20px;" onclick="toggleLaguage()">العربية</a>
-  </div>
-</div>
 
 
-<!-- Navbar Section -->
-<nav class="navbar navbar-expand-xl navbar-style-two-area navbar-default" id="navbar">
-  <div class="container-fluid">
-    <!-- Logo for mobile only -->
-    <a class="navbar-brand d-xl-none" href="index-2.html">
-      <img src="assets/images/White-logo.png" alt="logo">
-    </a>
 
-    <!-- Burger icon for offcanvas toggle -->
-    <button class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvas">
-      <span class="burger-menu" id="menuDrawer">
-        <span class="top-bar"></span>
-        <span class="middle-bar"></span>
-        <span class="bottom-bar"></span>
-      </span>
-    </button>
-<style>
-  /* Custom white arrow for dropdown toggle */
-.custom-toggle::after {
-  display: none !important; /* Hide Bootstrap default arrow */
-}
 
-.dropdown-arrow {
-  transition: transform 0.3s ease;
-}
 
-.custom-toggle.show .dropdown-arrow {
-  transform: rotate(180deg); /* Rotate arrow when dropdown is open */
-}
 
-</style>
-    <div class="collapse navbar-collapse">
-      <ul id="toggleElement" class="navbar-nav flex-grow-1 justify-content-center">
-        <li class="nav-item"><a href="javascript:void(0)" class="nav-link active" data-i18n="home">Home</a></li>
+    <!-- Arabic Button Row with Matching Alignment -->
+    <div class="container-xl d-none d-xl-flex align-items-center justify-content-center py-3 position-relative">
+        <!-- Centered Logo -->
+        <a href="index-2.html" class="mx-auto" style="margin-top: 20px;">
+            <img src="assets/images/White-logo.png" alt="Logo" style="height: 60px;">
+        </a>
 
-      <li class="nav-item dropdown" id="longevityDropdownParent">
-<a href="javascript:void(0)" class="nav-link custom-toggle d-flex align-items-center" id="longevityDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-  <span>Longevity</span>
-  <svg class="ms-2 dropdown-arrow transition-transform duration-300" width="16" height="16" viewBox="0 0 24 24" fill="none"
-       stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <polyline points="6 9 12 15 18 9" />
-  </svg>
-</a>
+        <!-- Right: Arabic Button -->
+        <div class="position-absolute end-0">
+            <a href="#" class="default-btn" style="padding: 5px 20px;" onclick="toggleLaguage()">العربية</a>
+        </div>
+    </div>
 
-          <div class="mega-menu p-4">
-            <div class="mega-menu-container d-flex">
-              <div class="mega-menu-tabs flex-shrink-0">
-                <button class="tab-btn active" data-tab="diagnosticTesting">Diagnostic Testing</button>
-                <button class="tab-btn" data-tab="wellnessPrograms">Wellness Programs</button>
-                <!-- <button class="tab-btn" data-tab="nutritionAdvice">Nutrition Advice</button> -->
-              </div>
-              <div class="mega-menu-content flex-grow-1">
-                <div class="tab-content active" id="diagnosticTesting">
-                  <a href="#" class="dropdown-item">🩸 Blood Tests</a>
-                  <a href="#" class="dropdown-item">🐞 Genetic Screening</a>
-                  <a href="#" class="dropdown-item">❤️ Cardiovascular Evaluation</a>
-                </div>
-                <div class="tab-content" id="wellnessPrograms">
-                  <a href="#" class="dropdown-item">🏋️ Weight Management</a>
-                  <a href="#" class="dropdown-item">🨪 Stress Reduction</a>
-                  <a href="#" class="dropdown-item">🛌 Sleep Improvement</a>
-                </div>
-                <div class="tab-content" id="nutritionAdvice">
-                  <a href="#" class="dropdown-item">🍽️ Diet Planning</a>
-                  <a href="#" class="dropdown-item">🧪 Supplement Guidance</a>
-                  <a href="#" class="dropdown-item">💧 Hydration Tips</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-<a href="#" class="nav-link custom-toggle d-flex align-items-center" id="aestheticDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-  <span data-i18n="aesthetic">Aesthetic</span>
-  <svg class="ms-2 dropdown-arrow transition-transform duration-300" width="16" height="16" viewBox="0 0 24 24" fill="none"
-       stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <polyline points="6 9 12 15 18 9" />
-  </svg>
-</a>          <ul class="dropdown-menu fade shadow">
-            <li><a href="#" class="dropdown-item" data-i18n="facialAesthetics">Facial Aesthetics</a></li>
-            <li><a href="#" class="dropdown-item" data-i18n="bodyAesthetics">Body Aesthetics</a></li>
-            <li><a href="#" class="dropdown-item" data-i18n="hairScalp">Hair & Scalp</a></li>
-          </ul>
-        </li>
 
-        <li class="nav-item dropdown">
-<a href="#" class="nav-link custom-toggle d-flex align-items-center" id="regenerationDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-  <span data-i18n="regenerative">Regeneration</span>
-  <svg class="ms-2 dropdown-arrow transition-transform duration-300" width="16" height="16" viewBox="0 0 24 24" fill="none"
-       stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <polyline points="6 9 12 15 18 9" />
-  </svg>
-</a>          <ul class="dropdown-menu fade shadow">
-            <li><a href="#" class="dropdown-item" data-i18n="advancedTherapies">Advanced Therapies</a></li>
-            <li><a href="#" class="dropdown-item" data-i18n="skinRejuvenation">Skin Rejuvenation</a></li>
-            <li><a href="#" class="dropdown-item" data-i18n="specializedTreatments">Specialized Treatments</a></li>
-          </ul>
-        </li>
+    <!-- Navbar Section -->
+    <nav class="navbar navbar-expand-xl navbar-style-two-area navbar-default" id="navbar">
+        <div class="container-xl">
+            <!-- Logo for mobile only -->
+            <a class="navbar-brand d-xl-none" href="index-2.html">
+                <img src="assets/images/White-logo.png" alt="logo">
+            </a>
 
-        <li class="nav-item dropdown">
-<a href="#" class="nav-link custom-toggle d-flex align-items-center" id="servicesDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-  <span data-i18n="services">Services</span>
-  <svg class="ms-2 dropdown-arrow transition-transform duration-300" width="16" height="16" viewBox="0 0 24 24" fill="none"
-       stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <polyline points="6 9 12 15 18 9" />
-  </svg>
-</a>          <ul class="dropdown-menu fade shadow">
-            <li><a href="#" class="dropdown-item" data-i18n="personalCare">Personal Care</a></li>
-            <li><a href="#" class="dropdown-item" data-i18n="virtualCare">Virtual Care</a></li>
-          </ul>
-        </li>
+            <!-- Burger icon for offcanvas toggle -->
+            <button class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvas">
+                <span class="burger-menu" id="menuDrawer">
+                    <span class="top-bar"></span>
+                    <span class="middle-bar"></span>
+                    <span class="bottom-bar"></span>
+                </span>
+            </button>
 
-        <li class="nav-item">
-          <a href="#" class="nav-link" data-i18n="aboutUs">About Us</a>
-        </li>
-      </ul>
+            <div class="collapse navbar-collapse">
+                <ul id="toggleElement" class="navbar-nav flex-grow-1 justify-content-center">
+                    <li class="nav-item"><a href="javascript:void(0)" class="nav-link active" data-i18n="home">Home</a>
+                    </li>
 
-      <!-- Right side buttons -->
-      <div class="others-option d-flex align-items-center">
+                    <li class="nav-item dropdown" id="longevityDropdownParent">
+                        <a href="javascript:void(0)" class="nav-link custom-toggle d-flex align-items-center"
+                            id="longevityDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span>Longevity</span>
+                            <svg class="ms-2 dropdown-arrow transition-transform duration-300" width="16" height="16"
+                                viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9" />
+                            </svg>
+                        </a>
+
+                        <div class="mega-menu p-4">
+                            <div class="mega-menu-container d-flex">
+                                <div class="mega-menu-tabs flex-shrink-0">
+                                    <button class="tab-btn" data-tab="diagnosticTesting">
+                                        Diagnostic Testing
+                                        <span class="arrow-icon">➜</span>
+                                    </button>
+                                    <button class="tab-btn" data-tab="wellnessPrograms">
+                                        Wellness Programs
+                                        <span class="arrow-icon">➜</span>
+                                    </button>
+                                    <!-- <button class="tab-btn" data-tab="wellnessPrograms">Wellness Programs</button> -->
+                                    <!-- <button class="tab-btn" data-tab="nutritionAdvice">Nutrition Advice</button> -->
+                                </div>
+                                <div class="mega-menu-content flex-grow-1">
+                                    <div class="tab-content active" id="diagnosticTesting">
+                                        <a href="#" class="dropdown-item">🩸 Blood Tests</a>
+                                        <a href="#" class="dropdown-item">🐞 Genetic Screening</a>
+                                        <a href="#" class="dropdown-item">❤️ Cardiovascular Evaluation</a>
+                                    </div>
+                                    <div class="tab-content" id="wellnessPrograms">
+                                        <a href="#" class="dropdown-item">🏋️ Weight Management</a>
+                                        <a href="#" class="dropdown-item">🨪 Stress Reduction</a>
+                                        <a href="#" class="dropdown-item">🛌 Sleep Improvement</a>
+                                    </div>
+                                    <div class="tab-content" id="nutritionAdvice">
+                                        <a href="#" class="dropdown-item">🍽️ Diet Planning</a>
+                                        <a href="#" class="dropdown-item">🧪 Supplement Guidance</a>
+                                        <a href="#" class="dropdown-item">💧 Hydration Tips</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link custom-toggle d-flex align-items-center" id="aestheticDropdown"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <span data-i18n="aesthetic">Aesthetic</span>
+                            <svg class="ms-2 dropdown-arrow transition-transform duration-300" width="16" height="16"
+                                viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9" />
+                            </svg>
+                        </a>
+                        <ul class="dropdown-menu fade shadow">
+                            <li><a href="#" class="dropdown-item" data-i18n="facialAesthetics">Facial Aesthetics</a>
+                            </li>
+                            <li><a href="#" class="dropdown-item" data-i18n="bodyAesthetics">Body Aesthetics</a></li>
+                            <li><a href="#" class="dropdown-item" data-i18n="hairScalp">Hair & Scalp</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link custom-toggle d-flex align-items-center" id="regenerationDropdown"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <span data-i18n="regenerative">Regeneration</span>
+                            <svg class="ms-2 dropdown-arrow transition-transform duration-300" width="16" height="16"
+                                viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9" />
+                            </svg>
+                        </a>
+                        <ul class="dropdown-menu fade shadow">
+                            <li><a href="#" class="dropdown-item" data-i18n="advancedTherapies">Advanced Therapies</a>
+                            </li>
+                            <li><a href="#" class="dropdown-item" data-i18n="skinRejuvenation">Skin Rejuvenation</a>
+                            </li>
+                            <li><a href="#" class="dropdown-item" data-i18n="specializedTreatments">Specialized
+                                    Treatments</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link custom-toggle d-flex align-items-center" id="servicesDropdown"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <span data-i18n="services">Services</span>
+                            <svg class="ms-2 dropdown-arrow transition-transform duration-300" width="16" height="16"
+                                viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9" />
+                            </svg>
+                        </a>
+                        <ul class="dropdown-menu fade shadow">
+                            <li><a href="#" class="dropdown-item" data-i18n="personalCare">Personal Care</a></li>
+                            <li><a href="#" class="dropdown-item" data-i18n="virtualCare">Virtual Care</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-i18n="aboutUs">About Us</a>
+                    </li>
+                </ul>
+
+                <!-- Right side buttons -->
+                <!-- <div class="others-option d-flex align-items-center">
         <div class="option-item d-xl-none">
           <a href="#" class="default-btn" style="padding: 5px 20px;" onclick="toggleLaguage()">العربية</a>
-        </div>
+        </div> -->
 
-        <!-- <div class="option-item" style="pointer-events: none;">
+                <!-- <div class="option-item" style="pointer-events: none;">
           <a href="#" class="default-btn" data-i18n="bookAppointment">Book Appointment</a>
         </div> -->
 
-        <div class="option-item icon-wrapper">
+                <!-- <div class="option-item icon-wrapper">
           <div onclick="toggleElement()" class="icon">
             <i class="flaticon-text"></i>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</nav>
+      </div> -->
+            </div>
+        </div>
+    </nav>
 
     <!-- Start Search Popup -->
-    <div class="search-popup">
+    <!-- <div class="search-popup">
         <div class="search-popup-overlay search-toggler"></div>
         <div class="search-popup-content">
             <form role="search" method="get" class="search-popup-form">
@@ -865,11 +926,11 @@
                 </button>
             </form>
         </div>
-    </div>
+    </div> -->
     <!-- End Search Popup -->
 
     <!-- Start Responsive Navbar Area -->
-    <div class="responsive-navbar offcanvas offcanvas-end" tabindex="-1" id="navbarOffcanvas">
+    <!-- <div class="responsive-navbar offcanvas offcanvas-end" tabindex="-1" id="navbarOffcanvas">
 
         <div class="offcanvas-header">
             <a href="index-2.html" class="logo d-inline-block">
@@ -1014,131 +1075,248 @@
                 </div>
             </div>
         </div>
-    </div>
-    <!-- End Responsive Navbar Area -->
-
-    <!-- Start Pediatric Dentist Banner Area -->
-  <div class="youtube-bg">
-    <iframe src="video-player.html" frameborder="0" allow="autoplay; fullscreen" allowfullscreen
-      style="width: 100vw; height: 100vh; position: absolute; top: 0; left: 0; z-index: -10;"></iframe>
-  </div>
-  <div class="relative z-10 flex items-center justify-center h-[calc(70vh)] px-4 text-center">
-    <div class="max-w-2xl w-full">
-      <h2 class="text-3xl md:text-3xl font-bold text-white">Welcome To The</h2>
-      <h1 class="text-3xl md:text-3xl font-bold mb-4 text-white">
-        Holistic Approach To Wellness, Longevity & Regeneration
-      </h1>
-      <p class="text-sm mb-6 tracking-widest text-white">
-        Here at Protoclinic, we provide scientifically-backed, personalized wellness and aesthetic programs based on
-        comprehensive diagnostics and cutting-edge regenerative therapies.
-      </p>
-      <style>
-
-  .custom-hover-btn:hover {
-    background-color: white !important;
-    color: black !important;
-  }
-</style>
-
-<button class="custom-hover-btn text-white text-sm px-6 mb-3 py-3 rounded-full border border-white bg-transparent tracking-widest transition duration-300 ease-in-out;">
-  BOOK APPOINTMENT
-</button>
+    </div> -->
 
 
+    <!-- Responsive Offcanvas Menu -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="navbarOffcanvas" aria-labelledby="navbarOffcanvasLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="accordion" id="navbarAccordion">
 
-
-      <div class="border-2 border-white mx-auto  rounded-full h-10 w-6 flex items-center justify-center">
-        <div class="h-2 w-1 bg-white animate-bounce"></div>
-      </div>
-
-    </div>
-  </div>
-
-
-    <!-- End Pediatric Dentist Banner Area -->
-<!-- Start Features Wrap Area -->
-<div class="features-wrap-area pt-150 pb-125">
-    <div class="container-fluid">
-        <div class="row justify-content-center" data-cues="slideInUp">
-            <div class="col-xxl-3 col-md-6">
-                <div class="features-wrap-card">
-                    <div class="icon">
-                        <img src="assets/images/features/icon1.png" alt="Longevity Assessment icon">
-                    </div>
-                    <h3>
-                        <a href="#" data-i18n="features.longevity.title">Longevity Assessment</a>
-                    </h3>
-                    <p data-i18n="features.longevity.desc">
-                        Comprehensive DNA testing and personalized health evaluations designed to optimize your
-                        biological age and extend your health span.
-                    </p>
-                    <a href="#" class="service-btn" style="pointer-events: none;" data-i18n="features.getStarted">
-                        Get Started
-                        <i class="flaticon-up-right-arrow" style="pointer-events: none;"></i>
-                    </a>
+                <!-- Home -->
+                <div class="accordion-item">
+                    <a href="/" class="accordion-link p-3 d-block">Home</a>
                 </div>
-            </div>
-            <div class="col-xxl-3 col-md-6">
-                <div class="features-wrap-card">
-                    <div class="icon">
-                        <img src="assets/images/features/icon2.png" alt="Advanced Aesthetics icon">
-                    </div>
-                    <h3>
-                        <a href="#" data-i18n="features.aesthetics.title">Advanced Aesthetics</a>
-                    </h3>
-                    <p data-i18n="features.aesthetics.desc">
-                        Non-invasive and minimally invasive treatments utilizing the latest technology for
-                        natural-looking rejuvenation and enhancement.
-                    </p>
-                    <a href="#" class="service-btn" style="pointer-events: none;" data-i18n="features.getStarted">
-                        Get Started
-                        <i class="flaticon-up-right-arrow" style="pointer-events: none;"></i>
-                    </a>
+
+                <!-- About -->
+                <div class="accordion-item">
+                    <a href="/about" class="accordion-link p-3 d-block">About</a>
                 </div>
-            </div>
-            <div class="col-xxl-3 col-md-6">
-                <div class="features-wrap-card">
-                    <div class="icon">
-                        <img src="assets/images/features/icon3.png" alt="Regenerative Therapies icon">
+
+                <!-- Longevity -->
+                <div class="accordion-item">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseLongevity" aria-expanded="false" aria-controls="collapseLongevity">
+                        Longevity
+                    </button>
+                    <div id="collapseLongevity" class="accordion-collapse collapse" data-bs-parent="#navbarAccordion">
+                        <div class="accordion-body">
+                            <h6 class="mb-2">Diagnostic Testing</h6>
+                            <ul class="list-unstyled ps-3 mb-3">
+                                <li><a href="#" class="accordion-link">🩸 Blood Tests</a></li>
+                                <li><a href="#" class="accordion-link">🐞 Genetic Screening</a></li>
+                                <li><a href="#" class="accordion-link">❤️ Cardiovascular Evaluation</a></li>
+                            </ul>
+
+                            <h6 class="mb-2">Wellness Programs</h6>
+                            <ul class="list-unstyled ps-3">
+                                <li><a href="#" class="accordion-link">🏋️ Weight Management</a></li>
+                                <li><a href="#" class="accordion-link">🨪 Stress Reduction</a></li>
+                                <li><a href="#" class="accordion-link">🛌 Sleep Improvement</a></li>
+                            </ul>
+                        </div>
                     </div>
-                    <h3>
-                        <a href="#" data-i18n="features.regenerative.title">Regenerative Therapies</a>
-                    </h3>
-                    <p data-i18n="features.regenerative.desc">
-                        Platelet-Rich Plasma and biostimulation treatments that harness your body's natural healing
-                        abilities to restore and revitalize.
-                    </p>
-                    <a href="#" class="service-btn" style="pointer-events: none;" data-i18n="features.getStarted">
-                        Get Started
-                        <i class="flaticon-up-right-arrow" style="pointer-events: none;"></i>
-                    </a>
                 </div>
-            </div>
-            <div class="col-xxl-3 col-md-6">
-                <div class="features-wrap-card">
-                    <div class="icon">
-                        <img src="assets/images/features/icon4.png" alt="Hair & Scalp Solutions icon">
+
+                <!-- Aesthetic -->
+                <div class="accordion-item">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseAesthetic" aria-expanded="false" aria-controls="collapseAesthetic">
+                        Aesthetic
+                    </button>
+                    <div id="collapseAesthetic" class="accordion-collapse collapse" data-bs-parent="#navbarAccordion">
+                        <div class="accordion-body">
+                            <h6 class="mb-2">Skin Treatments</h6>
+                            <ul class="list-unstyled ps-3 mb-3">
+                                <li><a href="#" class="accordion-link">💉 Botox</a></li>
+                                <li><a href="#" class="accordion-link">🧪 Chemical Peels</a></li>
+                                <li><a href="#" class="accordion-link">🔬 Laser Resurfacing</a></li>
+                            </ul>
+
+                            <h6 class="mb-2">Body Sculpting</h6>
+                            <ul class="list-unstyled ps-3">
+                                <li><a href="#" class="accordion-link">⚡ CoolSculpting</a></li>
+                                <li><a href="#" class="accordion-link">🔥 Radiofrequency</a></li>
+                                <li><a href="#" class="accordion-link">💠 EMSculpt</a></li>
+                            </ul>
+                        </div>
                     </div>
-                    <h3>
-                        <a href="#" data-i18n="features.hair.title">Hair & Scalp Solutions</a>
-                    </h3>
-                    <p data-i18n="features.hair.desc">
-                        Innovative approaches to hair restoration and scalp health through advanced therapeutic
-                        techniques and personalized treatment plans.
-                    </p>
-                    <a href="#" class="service-btn" style="pointer-events: none;" data-i18n="features.getStarted">
-                        Get Started
-                        <i class="flaticon-up-right-arrow" style="pointer-events: none;"></i>
-                    </a>
                 </div>
+
+                <!-- Regenerative -->
+                <div class="accordion-item">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseRegenerative" aria-expanded="false"
+                        aria-controls="collapseRegenerative">
+                        Regenerative
+                    </button>
+                    <div id="collapseRegenerative" class="accordion-collapse collapse"
+                        data-bs-parent="#navbarAccordion">
+                        <div class="accordion-body">
+                            <h6 class="mb-2">Cellular Therapies</h6>
+                            <ul class="list-unstyled ps-3 mb-3">
+                                <li><a href="#" class="accordion-link">🧬 Stem Cell Therapy</a></li>
+                                <li><a href="#" class="accordion-link">🩸 PRP Therapy</a></li>
+                            </ul>
+
+                            <h6 class="mb-2">Joint & Tissue Repair</h6>
+                            <ul class="list-unstyled ps-3">
+                                <li><a href="#" class="accordion-link">🦴 Cartilage Regrowth</a></li>
+                                <li><a href="#" class="accordion-link">💪 Muscle Recovery</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Shop -->
+                <div class="accordion-item">
+                    <a href="/shop" class="accordion-link p-3 d-block">Shop</a>
+                </div>
+
+                <!-- Contact -->
+                <div class="accordion-item">
+                    <a href="/contact" class="accordion-link p-3 d-block">Contact</a>
+                </div>
+
+                <!-- E-Gift Vouchers -->
+                <div class="accordion-item">
+                    <a href="/e-gift-vouchers" class="accordion-link p-3 d-block text-primary fw-bold">🎁 E-Gift
+                        Vouchers</a>
+                </div>
+
             </div>
         </div>
     </div>
-    <div class="features-wrap-bottom-shape">
-        <img src="assets/images/features/shape2.png" alt="image">
+
+    <!-- Start Pediatric Dentist Banner Area -->
+    <div class="youtube-bg">
+        <iframe src="video-player.html" frameborder="0" allow="autoplay; fullscreen" allowfullscreen
+            style="width: 100vw; height: 100vh; position: absolute; top: 0; left: 0; z-index: -10;"></iframe>
     </div>
-</div>
-<!-- End Features Wrap Area -->
+    <div class="relative z-10 flex items-center justify-center h-[calc(70vh)] px-4 text-center">
+        <div class="max-w-2xl w-full">
+            <h2 class="text-3xl md:text-3xl font-bold text-white">Welcome To The</h2>
+            <h1 class="text-3xl md:text-3xl font-bold mb-4 text-white">
+                Holistic Approach To Wellness,
+                <span class="block">Longevity & Regeneration</span>
+            </h1>
+
+            <p class="text-sm mb-6 tracking-widest text-white">
+                Here at Protoclinic, we provide scientifically-backed, personalized wellness and aesthetic programs
+                based on
+                comprehensive diagnostics and cutting-edge regenerative therapies.
+            </p>
+            <style>
+                .custom-hover-btn:hover {
+                    background-color: white !important;
+                    color: black !important;
+                }
+            </style>
+
+            <button
+                class="custom-hover-btn text-white text-sm px-6 mb-3 py-3 rounded-full border border-white bg-transparent tracking-widest transition duration-300 ease-in-out;">
+                BOOK APPOINTMENT
+            </button>
+
+
+
+
+            <div class="border-2 border-white mx-auto  rounded-full h-10 w-6 flex items-center justify-center">
+                <div class="h-2 w-1 bg-white animate-bounce"></div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- End Pediatric Dentist Banner Area -->
+    <!-- Start Features Wrap Area -->
+    <div class="features-wrap-area pt-150 pb-125 custom_padding" style="padding-top:180px;">
+        <div class="container-fluid">
+            <div class="row justify-content-center" data-cues="slideInUp">
+                <div class="col-xxl-3 col-md-6">
+                    <div class="features-wrap-card ">
+                        <div class="icon ">
+                            <img src="assets/images/features/icon1.png" alt="Longevity Assessment icon">
+                        </div>
+                        <h3>
+                            <a href="#" data-i18n="features.longevity.title">Longevity Assessment</a>
+                        </h3>
+                        <p data-i18n="features.longevity.desc">
+                            Comprehensive DNA testing and personalized health evaluations designed to optimize your
+                            biological age and extend your health span.
+                        </p>
+                        <a href="#" class="service-btn" style="pointer-events: none;" data-i18n="features.getStarted">
+                            Get Started
+                            <i class="flaticon-up-right-arrow" style="pointer-events: none;"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xxl-3 col-md-6">
+                    <div class="features-wrap-card">
+                        <div class="icon">
+                            <img src="assets/images/features/icon2.png" alt="Advanced Aesthetics icon">
+                        </div>
+                        <h3>
+                            <a href="#" data-i18n="features.aesthetics.title">Advanced Aesthetics</a>
+                        </h3>
+                        <p data-i18n="features.aesthetics.desc">
+                            Non-invasive and minimally invasive treatments utilizing the latest technology for
+                            natural-looking rejuvenation and enhancement.
+                        </p>
+                        <a href="#" class="service-btn" style="pointer-events: none;" data-i18n="features.getStarted">
+                            Get Started
+                            <i class="flaticon-up-right-arrow" style="pointer-events: none;"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xxl-3 col-md-6">
+                    <div class="features-wrap-card">
+                        <div class="icon">
+                            <img src="assets/images/features/icon3.png" alt="Regenerative Therapies icon">
+                        </div>
+                        <h3>
+                            <a href="#" data-i18n="features.regenerative.title">Regenerative Therapies</a>
+                        </h3>
+                        <p data-i18n="features.regenerative.desc">
+                            Platelet-Rich Plasma and biostimulation treatments that harness your body's natural healing
+                            abilities to restore and revitalize.
+                        </p>
+                        <a href="#" class="service-btn" style="pointer-events: none;" data-i18n="features.getStarted">
+                            Get Started
+                            <i class="flaticon-up-right-arrow" style="pointer-events: none;"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xxl-3 col-md-6">
+                    <div class="features-wrap-card">
+                        <div class="icon">
+                            <img src="assets/images/features/icon4.png" alt="Hair & Scalp Solutions icon">
+                        </div>
+                        <h3>
+                            <a href="#" data-i18n="features.hair.title">Hair & Scalp Solutions</a>
+                        </h3>
+                        <p data-i18n="features.hair.desc">
+                            Innovative approaches to hair restoration and scalp health through advanced therapeutic
+                            techniques and personalized treatment plans.
+                        </p>
+                        <a href="#" class="service-btn" style="pointer-events: none;" data-i18n="features.getStarted">
+                            Get Started
+                            <i class="flaticon-up-right-arrow" style="pointer-events: none;"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="features-wrap-bottom-shape">
+            <img src="assets/images/features/shape2.png" alt="image">
+        </div>
+    </div>
+    <!-- End Features Wrap Area -->
 
     <!-- Start About Wrap Area -->
     <div class="about-wrap-area pb-150">
@@ -1185,11 +1363,14 @@
                 </div>
                 <div class="col-xl-6 col-md-12">
                     <div class="about-wrap-content">
-                        <h2 data-i18n="section.transform_title">Transform Your Future Self Through Wellness Innovation</h2>
-                        <strong data-i18n="section.transform_subtitle">We are recognized pioneers in the integration of longevity science, aesthetic medicine,
+                        <h2 data-i18n="section.transform_title">Transform Your Future Self Through Wellness Innovation
+                        </h2>
+                        <strong data-i18n="section.transform_subtitle">We are recognized pioneers in the integration of
+                            longevity science, aesthetic medicine,
                             and regenerative therapies. Our passion lies in helping you reclaim the vibrant energy and
                             confidence that time gradually diminishes.</strong>
-                        <p data-i18n="section.transform_description">At Protoclinic, we understand that true wellness radiates from within. Your appearance
+                        <p data-i18n="section.transform_description">At Protoclinic, we understand that true wellness
+                            radiates from within. Your appearance
                             reflects your internal health, and both deserve equal attention. Our science-backed approach
                             doesn't just mask symptoms or temporarily enhance your look—it addresses the root causes of
                             aging, helping you feel as vibrant as you appear.
@@ -1197,31 +1378,32 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-6 col-md-6">
                                 <ul class="list">
-                                     <li>
-            <i data-feather="check"></i>
-            <span data-i18n="about.protocols">Scientifically Validated Protocols</span>
-        </li>
-                                   <li>
-            <i data-feather="check"></i>
-            <span data-i18n="about.testing">Comprehensive Wellness Testing</span>
-        </li>
+                                    <li>
+                                        <i data-feather="check"></i>
+                                        <span data-i18n="about.protocols">Scientifically Validated Protocols</span>
+                                    </li>
+                                    <li>
+                                        <i data-feather="check"></i>
+                                        <span data-i18n="about.testing">Comprehensive Wellness Testing</span>
+                                    </li>
                                 </ul>
                             </div>
                             <div class="col-lg-6 col-md-6">
                                 <ul class="list">
-                                          <li>
-            <i data-feather="check"></i>
-            <span data-i18n="about.plans">Personalized Treatment Plans</span>
-        </li>
-                                   <li>
-            <i data-feather="check"></i>
-            <span data-i18n="about.technology">Advanced Aesthetic Technology</span>
-        </li>
+                                    <li>
+                                        <i data-feather="check"></i>
+                                        <span data-i18n="about.plans">Personalized Treatment Plans</span>
+                                    </li>
+                                    <li>
+                                        <i data-feather="check"></i>
+                                        <span data-i18n="about.technology">Advanced Aesthetic Technology</span>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
                         <div class="about-btn" style="pointer-events: none;">
-    <a href="#" class="default-btn" style="pointer-events: none;" data-i18n="about.button">About ProtoClinic</a>
+                            <a href="#" class="default-btn" style="pointer-events: none;" data-i18n="about.button">About
+                                ProtoClinic</a>
                         </div>
                     </div>
                 </div>
@@ -1234,14 +1416,14 @@
     <div class="services-wrap-area ptb-150">
         <div class="container" data-cues="slideInUp">
             <div class="section-title">
-            <h2 data-i18n="services.section_title">Experience Transformative Wellness & Aesthetic Services</h2>
+                <h2 data-i18n="services.section_title">Experience Transformative Wellness & Aesthetic Services</h2>
             </div>
             <div class="services-wrap-item" id="services-element1">
                 <div class="row justify-content-center align-items-center">
                     <div class="col-lg-5 col-md-12">
                         <div class="services-left">
                             <div class="number">1</div>
-                                                  <h3><a href="#" data-i18n="services.1.title">Longevity Medicine</a></h3>
+                            <h3><a href="#" data-i18n="services.1.title">Longevity Medicine</a></h3>
 
                             <div class="arrow-btn" style="pointer-events: none;">
                                 <a href="#">
@@ -1252,9 +1434,10 @@
                     </div>
                     <div class="col-lg-5 col-md-12">
                         <div class="services-middle">
-                           <p data-i18n="services.1.description">
-                            Our science-based longevity programs unlock your body's hidden potential, reversing biological aging at the cellular level while optimizing vitality for years to come.
-                        </p>
+                            <p data-i18n="services.1.description">
+                                Our science-based longevity programs unlock your body's hidden potential, reversing
+                                biological aging at the cellular level while optimizing vitality for years to come.
+                            </p>
                         </div>
                     </div>
                     <div class="col-lg-2 col-md-12">
@@ -1278,7 +1461,7 @@
                     <div class="col-lg-5 col-md-12">
                         <div class="services-left">
                             <div class="number">2</div>
-                                                 <h3><a href="#" data-i18n="services.2.title">Aesthetic Medicine</a></h3>
+                            <h3><a href="#" data-i18n="services.2.title">Aesthetic Medicine</a></h3>
 
                             <div class="arrow-btn" style="pointer-events: none;">
                                 <a href="#">
@@ -1289,9 +1472,10 @@
                     </div>
                     <div class="col-lg-5 col-md-12">
                         <div class="services-middle">
-                               <p data-i18n="services.2.description">
-                            Non-surgical rejuvenation treatments that honor your natural beauty, enhancing your features while preserving the authentic expression that makes you uniquely you.
-                        </p>
+                            <p data-i18n="services.2.description">
+                                Non-surgical rejuvenation treatments that honor your natural beauty, enhancing your
+                                features while preserving the authentic expression that makes you uniquely you.
+                            </p>
                         </div>
                     </div>
                     <div class="col-lg-2 col-md-12">
@@ -1315,7 +1499,7 @@
                     <div class="col-lg-5 col-md-12">
                         <div class="services-left">
                             <div class="number">3</div>
-                                           <h3><a href="#" data-i18n="services.3.title">Regenerative Therapies</a></h3>
+                            <h3><a href="#" data-i18n="services.3.title">Regenerative Therapies</a></h3>
 
                             <div class="arrow-btn" style="pointer-events: none;">
                                 <a href="#">
@@ -1327,8 +1511,9 @@
                     <div class="col-lg-5 col-md-12">
                         <div class="services-middle">
                             <p data-i18n="services.3.description">
-                            Revolutionary PRP and biostimulation treatments awaken your body's innate healing intelligence, creating lasting renewal from within rather than temporary fixes.
-                        </p>
+                                Revolutionary PRP and biostimulation treatments awaken your body's innate healing
+                                intelligence, creating lasting renewal from within rather than temporary fixes.
+                            </p>
                         </div>
                     </div>
                     <div class="col-lg-2 col-md-12">
@@ -1352,7 +1537,7 @@
                     <div class="col-lg-5 col-md-12">
                         <div class="services-left">
                             <div class="number">4</div>
-                                                <h3><a href="#" data-i18n="services.4.title">GUT Health Optimization</a></h3>
+                            <h3><a href="#" data-i18n="services.4.title">GUT Health Optimization</a></h3>
 
                             <div class="arrow-btn" style="pointer-events: none;">
                                 <a href="#">
@@ -1363,9 +1548,10 @@
                     </div>
                     <div class="col-lg-5 col-md-12">
                         <div class="services-middle">
-                         <p data-i18n="services.4.description">
-                            Discover the profound connection between your digestive wellness and overall vitality through advanced microbiome analysis and personalized healing protocols.
-                        </p>
+                            <p data-i18n="services.4.description">
+                                Discover the profound connection between your digestive wellness and overall vitality
+                                through advanced microbiome analysis and personalized healing protocols.
+                            </p>
                         </div>
                     </div>
                     <div class="col-lg-2 col-md-12">
@@ -1390,7 +1576,7 @@
                     <div class="col-lg-5 col-md-12">
                         <div class="services-left">
                             <div class="number">5</div>
-                                                 <h3><a href="#" data-i18n="services.5.title">Hair & Scalp Solutions</a></h3>
+                            <h3><a href="#" data-i18n="services.5.title">Hair & Scalp Solutions</a></h3>
 
                             <div class="arrow-btn" style="pointer-events: none;">
                                 <a href="#">
@@ -1401,9 +1587,10 @@
                     </div>
                     <div class="col-lg-5 col-md-12">
                         <div class="services-middle">
-                        <p data-i18n="services.5.description">
-                            Reclaim the confidence that comes with healthy, vibrant hair through cutting-edge diagnostics and regenerative treatments for thinning and loss concerns.
-                        </p>
+                            <p data-i18n="services.5.description">
+                                Reclaim the confidence that comes with healthy, vibrant hair through cutting-edge
+                                diagnostics and regenerative treatments for thinning and loss concerns.
+                            </p>
                         </div>
                     </div>
                     <div class="col-lg-2 col-md-12">
@@ -1424,7 +1611,7 @@
             </div>
 
             <div class="view-all-services-btn" style="pointer-events: none;">
-            <a href="#" class="default-btn" data-i18n="services.view_all_button">View All Services</a>
+                <a href="#" class="default-btn" data-i18n="services.view_all_button">View All Services</a>
             </div>
         </div>
     </div>
@@ -1438,7 +1625,7 @@
                     <div class="swiper-slide">
                         <div class="real-results-card">
                             <div class="real-image">
-                                <img src="assets/images/real-results/real-results3.png"  alt="image">
+                                <img src="assets/images/real-results/real-results3.png" alt="image">
                                 <div class="before" data-i18n="real.before">Before</div>
                                 <div class="after" data-i18n="real.after">After</div>
                             </div>
@@ -1952,9 +2139,9 @@
         </div>
     </div>
     <!-- End Fun Fact Area -->
-<style>
- 
-</style>
+    <style>
+
+    </style>
     <!-- Start Doctors Area -->
     <!-- Swiper CSS -->
     <!-- Swiper CSS in <head> -->
@@ -2587,18 +2774,18 @@ info@protoclinic.com
         });
 
     </script>
-<script>
-  window.addEventListener('scroll', function () {
-    const navbar = document.getElementById('navbar');
-    if (window.scrollY > 50) {
-      navbar.classList.remove('navbar-default');
-      navbar.classList.add('navbar-scrolled');
-    } else {
-      navbar.classList.remove('navbar-scrolled');
-      navbar.classList.add('navbar-default');
-    }
-  });
-</script>
+    <script>
+        window.addEventListener('scroll', function () {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 150) {
+                navbar.classList.remove('navbar-default');
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+                navbar.classList.add('navbar-default');
+            }
+        });
+    </script>
 
 
     <script src="assets/js/bootstrap.bundle.min.js"></script>
@@ -2622,100 +2809,101 @@ info@protoclinic.com
 
             this.textContent = newLang === "en" ? "عربي" : "English";
         });
-// document.querySelectorAll('.mega-menu').forEach(menu => {
-//   const tabs = menu.querySelectorAll('.tab-btn');
-//   const contents = menu.querySelectorAll('.tab-content');
+        // document.querySelectorAll('.mega-menu').forEach(menu => {
+        //   const tabs = menu.querySelectorAll('.tab-btn');
+        //   const contents = menu.querySelectorAll('.tab-content');
 
-//   tabs.forEach(tab => {
-//     tab.addEventListener('click', (e) => {
-//       e.stopPropagation(); // ❗️prevent dropdown from closing
-//       // Remove active classes
-//       tabs.forEach(t => t.classList.remove('active'));
-//       contents.forEach(c => c.classList.remove('active'));
-//       // Activate clicked tab + corresponding content
-//       tab.classList.add('active');
-//       const tabId = tab.getAttribute('data-tab');
-//       const activeContent = menu.querySelector(`#${tabId}`);
-//       if (activeContent) activeContent.classList.add('active');
-//     });
-//   });
-// });
+        //   tabs.forEach(tab => {
+        //     tab.addEventListener('click', (e) => {
+        //       e.stopPropagation(); // ❗️prevent dropdown from closing
+        //       // Remove active classes
+        //       tabs.forEach(t => t.classList.remove('active'));
+        //       contents.forEach(c => c.classList.remove('active'));
+        //       // Activate clicked tab + corresponding content
+        //       tab.classList.add('active');
+        //       const tabId = tab.getAttribute('data-tab');
+        //       const activeContent = menu.querySelector(`#${tabId}`);
+        //       if (activeContent) activeContent.classList.add('active');
+        //     });
+        //   });
+        // });
 
 
     </script>
 
-<script>
+    <script>
 
-document.addEventListener('DOMContentLoaded', () => {
-  const dropdown = document.getElementById('longevityDropdownParent');
-  const tabs = dropdown.querySelectorAll('.tab-btn');
-  const contents = dropdown.querySelectorAll('.tab-content');
-  let hideTimeout;
+        document.addEventListener('DOMContentLoaded', () => {
+            const dropdown = document.getElementById('longevityDropdownParent');
+            const tabs = dropdown.querySelectorAll('.tab-btn');
+            const contents = dropdown.querySelectorAll('.tab-content');
+            let hideTimeout;
 
-  // Show menu on hover
-  dropdown.addEventListener('mouseenter', () => {
-    clearTimeout(hideTimeout);
-    dropdown.classList.add('open');
-  });
+            // Show menu on hover
+            dropdown.addEventListener('mouseenter', () => {
+                clearTimeout(hideTimeout);
+                dropdown.classList.add('open');
+            });
 
-  // Hide menu when mouse leaves dropdown area (including mega menu)
-  dropdown.addEventListener('mouseleave', () => {
-    hideTimeout = setTimeout(() => {
-      dropdown.classList.remove('open');
-    }, 150); // small delay for smoother UX
-  });
+            // Hide menu when mouse leaves dropdown area (including mega menu)
+            dropdown.addEventListener('mouseleave', () => {
+                hideTimeout = setTimeout(() => {
+                    dropdown.classList.remove('open');
+                }, 150); // small delay for smoother UX
+            });
 
-  // Tab click to switch content
-  tabs.forEach(tab => {
-    tab.addEventListener('click', e => {
-      e.preventDefault();
-      tabs.forEach(t => t.classList.remove('active'));
-      contents.forEach(c => c.classList.remove('active'));
-      tab.classList.add('active');
-      const id = tab.getAttribute('data-tab');
-      const contentToShow = dropdown.querySelector(`#${id}`);
-      if (contentToShow) contentToShow.classList.add('active');
-    });
-  });
-
-  // Optional: Hide menu if clicked outside the dropdown at all
-  document.addEventListener('click', e => {
-    if (!dropdown.contains(e.target)) {
-      dropdown.classList.remove('open');
-    }
-  });
-});
+            // Tab click to switch content
+            // Tab hover to switch content
+            tabs.forEach(tab => {
+                tab.addEventListener('mouseenter', () => {
+                    tabs.forEach(t => t.classList.remove('active'));
+                    contents.forEach(c => c.classList.remove('active'));
+                    tab.classList.add('active');
+                    const id = tab.getAttribute('data-tab');
+                    const contentToShow = dropdown.querySelector(`#${id}`);
+                    if (contentToShow) contentToShow.classList.add('active');
+                });
+            });
 
 
+            // Optional: Hide menu if clicked outside the dropdown at all
+            document.addEventListener('click', e => {
+                if (!dropdown.contains(e.target)) {
+                    dropdown.classList.remove('open');
+                }
+            });
+        });
 
-</script>
-<script>
-  function setupDropdown(id) {
-    const toggle = document.getElementById(id);
-    const arrow = toggle.querySelector('.dropdown-arrow');
 
-    if (!toggle || !arrow) return;
 
-    toggle.addEventListener('show.bs.dropdown', () => {
-      toggle.classList.add('show');
-    });
+    </script>
+    <script>
+        function setupDropdown(id) {
+            const toggle = document.getElementById(id);
+            const arrow = toggle.querySelector('.dropdown-arrow');
 
-    toggle.addEventListener('hide.bs.dropdown', () => {
-      toggle.classList.remove('show');
-    });
+            if (!toggle || !arrow) return;
 
-    window.addEventListener("scroll", () => {
-      const color = window.scrollY > 50 ? "black" : "white";
-      arrow.setAttribute("stroke", color);
-    });
-  }
+            toggle.addEventListener('show.bs.dropdown', () => {
+                toggle.classList.add('show');
+            });
 
-  // Initialize for all dropdowns
-  setupDropdown('longevityDropdown');
-  setupDropdown('aestheticDropdown');
-  setupDropdown('regenerationDropdown');
-  setupDropdown('servicesDropdown');
-</script>
+            toggle.addEventListener('hide.bs.dropdown', () => {
+                toggle.classList.remove('show');
+            });
+
+            window.addEventListener("scroll", () => {
+                const color = window.scrollY > 50 ? "black" : "white";
+                arrow.setAttribute("stroke", color);
+            });
+        }
+
+        // Initialize for all dropdowns
+        setupDropdown('longevityDropdown');
+        setupDropdown('aestheticDropdown');
+        setupDropdown('regenerationDropdown');
+        setupDropdown('servicesDropdown');
+    </script>
 
 
     </body>
