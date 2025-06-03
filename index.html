@@ -101,13 +101,15 @@
             /* optional rounded corners */
         }
 
-   .custo{
-    padding-top: 200px;
-  }
+        .custo {
+            padding-top: 200px;
+        }
+
         @media (max-width: 768px) {
-               .custo{
-    padding-top: 300px;
-  }
+            .custo {
+                padding-top: 300px;
+            }
+
             .mobile-bottom-nav {
                 display: flex;
                 position: fixed;
@@ -405,13 +407,13 @@
             background: #fff;
             padding: 1rem;
         } */
-         /* Keep overall mega menu width reasonable */
-.mega-menu {
-    min-width: 900px;
-    background-color: white;
-    border: 1px solid #ddd;
-    /* box-shadow: 0 8px 16px rgba(0,0,0,0.1); */
-}
+        /* Keep overall mega menu width reasonable */
+        .mega-menu {
+            min-width: 900px;
+            background-color: white;
+            border: 1px solid #ddd;
+            /* box-shadow: 0 8px 16px rgba(0,0,0,0.1); */
+        }
 
         /* Flex container inside mega menu */
         .mega-menu-container {
@@ -421,25 +423,24 @@
 
         /* Left side tabs */
         .mega-menu-tabs {
-            display: flex;
-            flex-direction: column;
-            /* border-right: 2px solid #eee; */
-            min-width: 140px;
-        }
+    display: flex;
+    flex-direction: column;
+    min-width: 140px;
+}
 
-        /* Tab buttons */
-        .mega-menu-tabs .tab-btn {
-            background: none;
-            border: none;
-            padding: 10px 15px;
-            font-weight: 600;
-            text-align: left;
-            cursor: pointer;
-            color: #333;
-            transition: background-color 0.3s ease, color 0.3s ease;
-            border-radius: 6px 6px 6px 6px;
-            margin-bottom: 6px;
-        }
+/* Tab buttons */
+.mega-menu-tabs .tab-btn {
+    background: none;
+    border: none;
+    padding: 10px 15px;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 6px;
+    margin-bottom: 24px !important; /* Increased space between tabs */
+}
 
         /* Active tab style */
         .mega-menu-tabs .tab-btn.active,
@@ -617,7 +618,8 @@
             padding: 10px 15px;
             /* background: #fff; */
             color: #333;
-    border-bottom: 1px solid #ccc; /* or use 'gray' */
+            border-bottom: 1px solid #ccc;
+            /* or use 'gray' */
             text-decoration: none;
             /* border-radius: 6px; */
             transition: all 0.25s ease;
@@ -686,185 +688,207 @@
             transform: rotate(180deg);
             /* Rotate arrow when dropdown is open */
         }
+
         /* .default-btn.nav-link {
   display: flex;
   align-items: center;
   padding: 5px 20px !important;
   height: 80%;
 } */
-   /* 1. Wider mega menu */
-.mega-menu {
-    min-width: 900px;
+        /* 1. Wider mega menu */
+        .mega-menu {
+            min-width: 900px;
 
-    border: 1px solid #ddd;
-    /* box-shadow: 0 8px 16px rgba(0,0,0,0.1); */
-}
+            border: 1px solid #ddd;
+            /* box-shadow: 0 8px 16px rgba(0,0,0,0.1); */
+        }
 
-/* 2. Style each tab button */
-.mega-menu-tabs .tab-btn {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    background-color: #B2915B; /* Default brown */
-    color: #fff;
-    border: none;
-    padding: 12px 16px;
-    margin-bottom: 2px;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
+        /* 2. Style each tab button */
+        .mega-menu-tabs .tab-btn {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            background-color: #B2915B;
+            /* Default brown */
+            color: #fff;
+            border: none;
+            padding: 12px 16px;
+          
+            
+            font-weight: 500;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
 
-/* 3. On hover - darker brown and text shift */
-.mega-menu-tabs .tab-btn:hover {
-    background-color: #9a784c; /* Darker brown */
-    color: #fff;
-    padding-left: 20px;
-}
+        /* 3. On hover - darker brown and text shift */
+        .mega-menu-tabs .tab-btn:hover {
+            background-color: #9a784c;
+            /* Darker brown */
+            color: #fff;
+            padding-left: 20px;
+        }
 
-/* 4. Move arrow to far right */
-.mega-menu-tabs .arrow-icon {
-    margin-left: auto;
-    color: white;
-}/* Base style: look like text, not button */
-.mega-menu-content .dropdown-item {
-    display: block; /* change from flex to block */
-    padding: 8px 0;
-    color: black;
-    font-weight: 400;
-    text-decoration: none;
-    background: none;
-    border: none;
-    border-bottom: 1px solid #ccc;
-    transition: all 0.3s ease;
-}
+        /* 4. Move arrow to far right */
+        .mega-menu-tabs .arrow-icon {
+            margin-left: auto;
+            color: white;
+        }
 
-/* On hover: only text changes color and shifts slightly */
-.mega-menu-content .dropdown-item:hover {
-    color: #8B4513;
-    background-color: transparent;
-    padding-left: 8px; /* just enough shift, not too much */
-}
+        /* Base style: look like text, not button */
+        .mega-menu-content .dropdown-item {
+            display: block;
+            /* change from flex to block */
+            padding: 8px 0;
+            color: black;
+            font-weight: 400;
+            text-decoration: none;
+            background: none;
+            border: none;
+            border-bottom: 1px solid #ccc;
+            transition: all 0.3s ease;
+        }
 
-/* 7. Main nav link styling */
-.navbar-nav .nav-link {
-    color: black;
-    transition: all 0.3s ease;
-    position: relative;
-}
+        /* On hover: only text changes color and shifts slightly */
+        .mega-menu-content .dropdown-item:hover {
+            color: #8B4513;
+            background-color: transparent;
+            padding-left: 8px;
+            /* just enough shift, not too much */
+        }
 
-/* 8. Nav link on hover */
-.navbar-nav .nav-link:hover {
-    color: #8B4513;
-    padding-left: 4px;
-    background-color: transparent !important;
-}
+        /* 7. Main nav link styling */
+        .navbar-nav .nav-link {
+            color: black;
+            transition: all 0.3s ease;
+            position: relative;
+        }
 
-/* 9. Remove background color from dropdown items on hover */
-.dropdown-menu .dropdown-item:hover {
-    background-color: transparent !important;
-    color: #8B4513 !important;
-    padding-left: 20px;
-    transition: all 0.3s ease;
-}
+        /* 8. Nav link on hover */
+        .navbar-nav .nav-link:hover {
+            color: #8B4513;
+            padding-left: 4px;
+            background-color: transparent !important;
+        }
 
-/* Optional: Arrow icon rotation */
-.navbar-nav .nav-link .dropdown-arrow {
-    transition: transform 0.3s ease;
-}
-.navbar-nav .nav-link[aria-expanded="true"] .dropdown-arrow {
-    transform: rotate(180deg);
-}
-/* Keep overall mega menu width reasonable */
-.mega-menu {
-    min-width: 600px;
-    background-color: white;
-    border: 1px solid #ddd;
-    /* box-shadow: 0 8px 16px rgba(0,0,0,0.1); */
-}
+        /* 9. Remove background color from dropdown items on hover */
+        .dropdown-menu .dropdown-item:hover {
+            background-color: transparent !important;
+            color: #8B4513 !important;
+            padding-left: 20px;
+            transition: all 0.3s ease;
+        }
 
-/* Increase only the width of the tabs container */
-.mega-menu-tabs {
-    width: 300px; /* Adjust as needed */
-    padding-right: 10px;
-    /* border-right: 1px solid #ccc; */
-}
+        /* Optional: Arrow icon rotation */
+        .navbar-nav .nav-link .dropdown-arrow {
+            transition: transform 0.3s ease;
+        }
 
-/* Tab buttons */
-.mega-menu-tabs .tab-btn {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    background-color: #B2915B; /* Brown */
-    color: #fff;
-    border: none;
-    padding: 12px 16px;
-    margin-bottom: 2px;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
+        .navbar-nav .nav-link[aria-expanded="true"] .dropdown-arrow {
+            transform: rotate(180deg);
+        }
 
-/* Hover effect for tabs */
-.mega-menu-tabs .tab-btn:hover {
-    background-color: #9a784c; /* Darker brown */
-    color: #fff;
-    padding-left: 20px;
-}
+        /* Keep overall mega menu width reasonable */
+        .mega-menu {
+            min-width: 600px;
+            background-color: white;
+            border: 1px solid #ddd;
+            /* box-shadow: 0 8px 16px rgba(0,0,0,0.1); */
+        }
 
-/* Align arrow at end */
-.mega-menu-tabs .arrow-icon {
-    margin-left: auto;
-    color: white;
-}
-.mega-menu-content .dropdown-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 8px 0;
-    color: black;
-    font-weight: 400;
-    text-decoration: none;
-    background: none;
-    border: none;
-    border-bottom: 1px solid #ccc;
-    transition: all 0.3s ease;
-}
+        /* Increase only the width of the tabs container */
+        .mega-menu-tabs {
+            width: 300px;
+            /* Adjust as needed */
+            padding-right: 10px;
+            /* border-right: 1px solid #ccc; */
+        }
 
-.mega-menu-content .dropdown-item .icon {
-    flex-shrink: 0;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+        /* Tab buttons */
+        .mega-menu-tabs .tab-btn {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            background-color: #B2915B;
+            /* Default brown */
+            color: #fff;
+            border: none;
+            padding: 12px 16px;
+            margin-bottom: 2px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
 
-.mega-menu-content .dropdown-item .icon img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
+        /* Light gray for 2nd tab */
+        .mega-menu-tabs .tab-btn.gray-tab {
+            background-color: #e0e0e0;
+            color: #333;
+        }
 
-.mega-menu-content .dropdown-item .text {
-    transition: transform 0.3s ease, color 0.3s ease;
-}
+        /* Hover effect applies to all */
+        .mega-menu-tabs .tab-btn:hover {
+            background-color: #9a784c;
+            /* Darker brown */
+            color: #fff;
+            padding-left: 20px;
+        }
 
-/* On hover: only move text and change color */
-.mega-menu-content .dropdown-item:hover .text {
-    transform: translateX(6px);
-    color: #8B4513;
-}
 
-.mega-menu-content .dropdown-item:hover {
-    background-color: transparent;
-}
-.dropdown-item .icon img {
-width: 30px;
-height: 30px;
-}
+        /* Align arrow at end */
+        .mega-menu-tabs .arrow-icon {
+            margin-left: auto;
+            color: white;
+        }
+
+        .mega-menu-content .dropdown-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 0;
+            color: black;
+            font-weight: 400;
+            text-decoration: none;
+            background: none;
+            border: none;
+            border-bottom: 1px solid #ccc;
+            transition: all 0.3s ease;
+        }
+
+        .mega-menu-content .dropdown-item .icon {
+            flex-shrink: 0;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mega-menu-content .dropdown-item .icon img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .mega-menu-content .dropdown-item .text {
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        /* On hover: only move text and change color */
+        .mega-menu-content .dropdown-item:hover .text {
+            transform: translateX(6px);
+            color: #8B4513;
+        }
+
+        .mega-menu-content .dropdown-item:hover {
+            background-color: transparent;
+        }
+
+        .dropdown-item .icon img {
+            width: 30px;
+            height: 30px;
+        }
     </style>
 
     <!-- Custom CSS -->
@@ -956,7 +980,7 @@ height: 30px;
             <img src="assets/images/White-logo.png" alt="Logo" style="height: 60px;">
         </a>
 
-    
+
     </div>
 
 
@@ -1000,42 +1024,47 @@ height: 30px;
                                         Diagnostic Testing
                                         <span class="arrow-icon">➜</span>
                                     </button>
-                                    <button class="tab-btn" data-tab="wellnessPrograms">
+                                    <button class="tab-btn gray-tab" data-tab="wellnessPrograms">
                                         Wellness Programs
                                         <span class="arrow-icon">➜</span>
                                     </button>
-                                    <!-- <button class="tab-btn" data-tab="wellnessPrograms">Wellness Programs</button> -->
-                                    <!-- <button class="tab-btn" data-tab="nutritionAdvice">Nutrition Advice</button> -->
                                 </div>
+
                                 <div class="mega-menu-content flex-grow-1">
                                     <div class="tab-content active" id="diagnosticTesting">
-    <a href="#" class="dropdown-item">
-        <span class="icon"><img src="assets/images/icons/END-POINT-SECURITY.png" alt="icon"></span>
-        <span class="text">Blood Tests</span>
-    </a>
-    <a href="#" class="dropdown-item">
-        <span class="icon"><img src="assets/images/icons/END-POINT-SECURITY.png" alt="icon"></span>
-        <span class="text">Genetic Screening</span>
-    </a>
-    <a href="#" class="dropdown-item">
-        <span class="icon"><img src="assets/images/icons/END-POINT-SECURITY.png" alt="icon"></span>
-        <span class="text">Cardiovascular Evaluation</span>
-    </a>
-</div>
+                                        <a href="#" class="dropdown-item">
+                                            <span class="icon"><img src="assets/images/icons/END-POINT-SECURITY.png"
+                                                    alt="icon"></span>
+                                            <span class="text">Blood Tests</span>
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <span class="icon"><img src="assets/images/icons/END-POINT-SECURITY.png"
+                                                    alt="icon"></span>
+                                            <span class="text">Genetic Screening</span>
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <span class="icon"><img src="assets/images/icons/END-POINT-SECURITY.png"
+                                                    alt="icon"></span>
+                                            <span class="text">Cardiovascular Evaluation</span>
+                                        </a>
+                                    </div>
 
                                     <div class="tab-content" id="wellnessPrograms">
-                                       <a href="#" class="dropdown-item">
-        <span class="icon"><img src="assets/images/icons/END-POINT-SECURITY.png" alt="icon"></span>
-        <span class="text"> Hydration Tips</span>
-    </a>
-    <a href="#" class="dropdown-item">
-        <span class="icon"><img src="assets/images/icons/END-POINT-SECURITY.png" alt="icon"></span>
-        <span class="text">Supplement Guidance</span>
-    </a>
-    <a href="#" class="dropdown-item">
-        <span class="icon"><img src="assets/images/icons/END-POINT-SECURITY.png" alt="icon"></span>
-        <span class="text">Diet Planning</span>
-    </a>
+                                        <a href="#" class="dropdown-item">
+                                            <span class="icon"><img src="assets/images/icons/END-POINT-SECURITY.png"
+                                                    alt="icon"></span>
+                                            <span class="text"> Hydration Tips</span>
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <span class="icon"><img src="assets/images/icons/END-POINT-SECURITY.png"
+                                                    alt="icon"></span>
+                                            <span class="text">Supplement Guidance</span>
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <span class="icon"><img src="assets/images/icons/END-POINT-SECURITY.png"
+                                                    alt="icon"></span>
+                                            <span class="text">Diet Planning</span>
+                                        </a>
                                     </div>
                                     <!-- <div class="tab-content" id="nutritionAdvice">
                                         <a href="#" class="dropdown-item">🍽️ Diet Planning</a>
@@ -1047,124 +1076,124 @@ height: 30px;
                         </div>
                     </li>
                     <!-- Aesthetic Dropdown -->
-<li class="nav-item dropdown">
-    <a href="#" class="nav-link custom-toggle d-flex align-items-center" id="aestheticDropdown"
-        data-bs-toggle="dropdown" aria-expanded="false">
-        <span data-i18n="aesthetic">Aesthetic</span>
-        <svg class="ms-2 dropdown-arrow transition-transform duration-300" width="16" height="16"
-            viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
-            stroke-linejoin="round">
-            <polyline points="6 9 12 15 18 9" />
-        </svg>
-    </a>
-    <ul class="dropdown-menu fade shadow">
-        <li>
-            <a href="index.html" class="dropdown-item d-flex align-items-center">
-                <span class="icon me-2">
-                    <img src="assets/images/icons/END-POINT-SECURITY.png" alt="icon" width="18">
-                </span>
-                <span data-i18n="facialAesthetics">Facial Aesthetics</span>
-            </a>
-        </li>
-        <li>
-            <a href="index.html" class="dropdown-item d-flex align-items-center">
-                <span class="icon me-2">
-                    <img src="assets/images/icons/END-POINT-SECURITY.png" alt="icon" width="18">
-                </span>
-                <span data-i18n="bodyAesthetics">Body Aesthetics</span>
-            </a>
-        </li>
-        <li>
-            <a href="index.html" class="dropdown-item d-flex align-items-center">
-                <span class="icon me-2">
-                    <img src="assets/images/icons/END-POINT-SECURITY.png" alt="icon" width="18">
-                </span>
-                <span data-i18n="hairScalp">Hair & Scalp</span>
-            </a>
-        </li>
-    </ul>
-</li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link custom-toggle d-flex align-items-center" id="aestheticDropdown"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <span data-i18n="aesthetic">Aesthetic</span>
+                            <svg class="ms-2 dropdown-arrow transition-transform duration-300" width="16" height="16"
+                                viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9" />
+                            </svg>
+                        </a>
+                        <ul class="dropdown-menu fade shadow">
+                            <li>
+                                <a href="index.html" class="dropdown-item d-flex align-items-center">
+                                    <span class="icon me-2">
+                                        <img src="assets/images/icons/END-POINT-SECURITY.png" alt="icon" width="18">
+                                    </span>
+                                    <span data-i18n="facialAesthetics">Facial Aesthetics</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index.html" class="dropdown-item d-flex align-items-center">
+                                    <span class="icon me-2">
+                                        <img src="assets/images/icons/END-POINT-SECURITY.png" alt="icon" width="18">
+                                    </span>
+                                    <span data-i18n="bodyAesthetics">Body Aesthetics</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index.html" class="dropdown-item d-flex align-items-center">
+                                    <span class="icon me-2">
+                                        <img src="assets/images/icons/END-POINT-SECURITY.png" alt="icon" width="18">
+                                    </span>
+                                    <span data-i18n="hairScalp">Hair & Scalp</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
 
-<!-- Regeneration Dropdown -->
-<li class="nav-item dropdown">
-    <a href="#" class="nav-link custom-toggle d-flex align-items-center" id="regenerationDropdown"
-        data-bs-toggle="dropdown" aria-expanded="false">
-        <span data-i18n="regenerative">Regeneration</span>
-        <svg class="ms-2 dropdown-arrow transition-transform duration-300" width="16" height="16"
-            viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
-            stroke-linejoin="round">
-            <polyline points="6 9 12 15 18 9" />
-        </svg>
-    </a>
-    <ul class="dropdown-menu fade shadow">
-        <li>
-            <a href="index.html" class="dropdown-item d-flex align-items-center">
-                <span class="icon me-2">
-                    <img src="assets/images/icons/END-POINT-SECURITY.png" alt="icon" width="18">
-                </span>
-                <span data-i18n="advancedTherapies">Advanced Therapies</span>
-            </a>
-        </li>
-        <li>
-            <a href="index.html" class="dropdown-item d-flex align-items-center">
-                <span class="icon me-2">
-                    <img src="assets/images/icons/END-POINT-SECURITY.png" alt="icon" width="18">
-                </span>
-                <span data-i18n="skinRejuvenation">Skin Rejuvenation</span>
-            </a>
-        </li>
-        <li>
-            <a href="index.html" class="dropdown-item d-flex align-items-center">
-                <span class="icon me-2">
-                    <img src="assets/images/icons/END-POINT-SECURITY.png" alt="icon" width="18">
-                </span>
-                <span data-i18n="specializedTreatments">Specialized Treatments</span>
-            </a>
-        </li>
-    </ul>
-</li>
+                    <!-- Regeneration Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link custom-toggle d-flex align-items-center" id="regenerationDropdown"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <span data-i18n="regenerative">Regeneration</span>
+                            <svg class="ms-2 dropdown-arrow transition-transform duration-300" width="16" height="16"
+                                viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9" />
+                            </svg>
+                        </a>
+                        <ul class="dropdown-menu fade shadow">
+                            <li>
+                                <a href="index.html" class="dropdown-item d-flex align-items-center">
+                                    <span class="icon me-2">
+                                        <img src="assets/images/icons/END-POINT-SECURITY.png" alt="icon" width="18">
+                                    </span>
+                                    <span data-i18n="advancedTherapies">Advanced Therapies</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index.html" class="dropdown-item d-flex align-items-center">
+                                    <span class="icon me-2">
+                                        <img src="assets/images/icons/END-POINT-SECURITY.png" alt="icon" width="18">
+                                    </span>
+                                    <span data-i18n="skinRejuvenation">Skin Rejuvenation</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index.html" class="dropdown-item d-flex align-items-center">
+                                    <span class="icon me-2">
+                                        <img src="assets/images/icons/END-POINT-SECURITY.png" alt="icon" width="18">
+                                    </span>
+                                    <span data-i18n="specializedTreatments">Specialized Treatments</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
 
-<!-- Services Dropdown -->
-<li class="nav-item dropdown">
-    <a href="#" class="nav-link custom-toggle d-flex align-items-center" id="servicesDropdown"
-        data-bs-toggle="dropdown" aria-expanded="false">
-        <span data-i18n="services">Services</span>
-        <svg class="ms-2 dropdown-arrow transition-transform duration-300" width="16" height="16"
-            viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
-            stroke-linejoin="round">
-            <polyline points="6 9 12 15 18 9" />
-        </svg>
-    </a>
-    <ul class="dropdown-menu fade shadow">
-        <li>
-            <a href="index.html" class="dropdown-item d-flex align-items-center">
-                <span class="icon me-2">
-                    <img src="assets/images/icons/END-POINT-SECURITY.png" alt="icon" width="18">
-                </span>
-                <span data-i18n="personalCare">Personal Care</span>
-            </a>
-        </li>
-        <li>
-            <a href="index.html" class="dropdown-item d-flex align-items-center">
-                <span class="icon me-2">
-                    <img src="assets/images/icons/END-POINT-SECURITY.png" alt="icon" width="18">
-                </span>
-                <span data-i18n="virtualCare">Virtual Care</span>
-            </a>
-        </li>
-    </ul>
-</li>
+                    <!-- Services Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link custom-toggle d-flex align-items-center" id="servicesDropdown"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <span data-i18n="services">Services</span>
+                            <svg class="ms-2 dropdown-arrow transition-transform duration-300" width="16" height="16"
+                                viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9" />
+                            </svg>
+                        </a>
+                        <ul class="dropdown-menu fade shadow">
+                            <li>
+                                <a href="index.html" class="dropdown-item d-flex align-items-center">
+                                    <span class="icon me-2">
+                                        <img src="assets/images/icons/END-POINT-SECURITY.png" alt="icon" width="18">
+                                    </span>
+                                    <span data-i18n="personalCare">Personal Care</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index.html" class="dropdown-item d-flex align-items-center">
+                                    <span class="icon me-2">
+                                        <img src="assets/images/icons/END-POINT-SECURITY.png" alt="icon" width="18">
+                                    </span>
+                                    <span data-i18n="virtualCare">Virtual Care</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
 
                     <li class="nav-item">
                         <a href="#" class="nav-link" data-i18n="aboutUs">About Us</a>
                     </li>
 
-<li class="nav-item d-flex align-items-center px-4">
-  <a href="#" class="default-btn " style="padding:8px 20px;" onclick="toggleLaguage()">العربية</a>
-</li>
+                    <li class="nav-item d-flex align-items-center px-4">
+                        <a href="#" class="default-btn " style="padding:8px 20px;" onclick="toggleLaguage()">العربية</a>
+                    </li>
 
                 </ul>
- 
+
 
                 <!-- Right side buttons -->
                 <!-- <div class="others-option d-flex align-items-center">
