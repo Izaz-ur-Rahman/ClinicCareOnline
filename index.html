@@ -63,8 +63,8 @@
             position: relative;
             z-index: 1;
             transition: 0.6s;
-
-            border: 2px solid #B2915B;
+/* 
+            border: 2px solid #B2915B; */
         }
 
         .second_btn_color::before {
@@ -122,7 +122,7 @@
                 align-items: center;
                 padding: 10px 0;
                 z-index: 9999;
-                box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+          
                 border-radius: 25px 25px 0 0;
             }
 
@@ -197,7 +197,6 @@
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                border: 2px solid;
                 border-radius: 20px;
                 padding: 12px;
                 margin-bottom: 20px;
@@ -439,7 +438,7 @@
     color: #333;
     transition: background-color 0.3s ease, color 0.3s ease;
     border-radius: 6px;
-    margin-bottom: 24px !important; /* Increased space between tabs */
+    margin-bottom: 16px !important; /* Increased space between tabs */
 }
 
         /* Active tab style */
@@ -487,7 +486,7 @@
             display: none;
             position: absolute;
             background: white;
-            z-index: 1000;
+            /* z-index: 1000; */
             opacity: 0;
             visibility: hidden;
             transform: translateY(10px);
@@ -889,12 +888,362 @@
             width: 30px;
             height: 30px;
         }
+        @media (max-width: 768px) {
+    body {
+        padding-top: 60px;
+    }
+
+    .mobile-top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #f4f0ec;
+        padding: 10px 20px;
+        z-index: 9999;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .mobile-top-nav .logo img {
+        height: 40px;
+    }
+
+    .hamburger {
+        background: none;
+        border: none;
+        font-size: 24px;
+        color: #333;
+        cursor: pointer;
+    }
+
+    .left-drawer-menu {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100%;
+        background: #fff;
+        transition: left 0.3s ease;
+        z-index: 10000;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+    }
+
+    .left-drawer-menu.active {
+        left: 0;
+    }
+
+    .drawer-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .drawer-header h3 {
+        margin: 0;
+        font-size: 18px;
+    }
+
+    .drawer-close {
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .drawer-menu {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .accordion-item {
+        border-bottom: 1px solid #eee;
+    }
+
+    .accordion-button {
+        width: 100%;
+        background: none;
+        border-radius: 20px;
+        font-size: 16px;
+        padding: 12px;
+        font-weight: bold;
+        margin-bottom: 15px;
+        text-align: left;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .accordion-content {
+        display: none;
+        padding: 0 10px 10px;
+    }
+
+    .accordion-item.open .accordion-content {
+        display: block;
+    }
+
+    .accordion-button i {
+        transition: transform 0.4s ease;
+    }
+
+    .accordion-item.open .accordion-button i {
+        transform: rotate(180deg);
+    }
+}
+
+@media (min-width: 769px) {
+    .mobile-top-nav,
+    .left-drawer-menu {
+        display: none !important;
+    }
+}
+
+.drawer-menu .accordion-item {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom-width: 1px;
+}
+.drawer-menu a {
+    display: block;
+    padding: 6px 0;
+    color: #333;
+}
+.drawer-menu .accordion-content {
+    display: none;
+    flex-direction: column;
+}
+.accordion-item.open .accordion-content {
+    display: flex;
+}
+/* Sidebar container fixed and full height */
+.left-drawer-menu {
+  position: fixed;
+  top: 0; left: 0;
+  width: 280px; /* Adjust width as needed */
+  height: 120vh;
+  background: white;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.1);
+  overflow-y: auto; /* Scrollable sidebar */
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 9999999;
+}
+
+/* Show sidebar */
+.left-drawer-menu.active {
+  transform: translateX(0);
+}
+
+/* Prevent body scroll when sidebar open */
+.body-no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* Accordion content styling */
+.accordion-content {
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Links inside dropdown submenu: flex row with icon and text aligned */
+.accordion-content a.flex {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0;
+  color: #333;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.accordion-content a.flex img {
+  flex-shrink: 0;
+}
+
+/* Optional: style accordion open state for better UX */
+.accordion-item.open > .accordion-content {
+  display: block;
+}
+
+.accordion-content {
+  display: none;
+}
+
+
     </style>
 
     <!-- Custom CSS -->
 
+<!-- Top Mobile Navigation -->
+<!-- Top Mobile Navigation -->
+<div class="mobile-top-nav">
+    <div class="logo">
+        <img src="assets/images/ProtoUpdatedLogo.png" alt="Logo" />
+    </div>
+    <button id="openDrawer" class="hamburger">
+        <i class="fas fa-bars"></i>
+    </button>
+</div><!-- Drawer Menu (Slide from Left) -->
+<div class="left-drawer-menu" id="menuDrawer">
+    <div class="drawer-header">
+        <h3>Menu</h3>
+        <span class="drawer-close" id="closeDrawer">&times;</span>
+    </div>
 
-    <!-- Bottom Navigation -->
+    <div class="drawer-menu">
+
+        <!-- Home -->
+        <div class="accordion-item border-b border-gray-300">
+            <button class="accordion-button flex items-center gap-2 w-full text-left hover:translate-x-2 transition-all duration-200 ease-in-out">
+                Home
+            </button>
+        </div>
+
+        <!-- Longevity -->
+        <!-- Longevity -->
+<div class="accordion-item border-b border-gray-300">
+    <button class="accordion-button flex items-center gap-2 justify-between w-full hover:translate-x-2 transition-all duration-200 ease-in-out">
+        <span class="flex items-center gap-2">
+            Longevity
+        </span>
+        <i class="fas fa-chevron-down"></i>
+    </button>
+    <div class="accordion-content pl-6">
+      <button class="tab-btn" data-tab="wellnessPrograms">
+                                       Diagnostic Testing
+                                        <span class="arrow-icon">➜</span>
+                                    </button>
+        <a href="#" class="flex items-center gap-2">
+            <img src="assets/images/icons/END-POINT-SECURITY.png" width="16" />
+            Blood Tests
+        </a>
+          <a href="#" class="flex items-center gap-2">
+            <img src="assets/images/icons/END-POINT-SECURITY.png" width="16" />
+            Blood Tests
+        </a>  <a href="#" class="flex items-center gap-2">
+            <img src="assets/images/icons/END-POINT-SECURITY.png" width="16" />
+            Blood Tests
+        </a>
+ <button class="tab-btn gray-tab" data-tab="wellnessPrograms">
+                                        Wellness Programs
+                                        <span class="arrow-icon">➜</span>
+                                    </button>
+                                             <a href="#" class="flex items-center gap-2">
+            <img src="assets/images/icons/END-POINT-SECURITY.png" width="16" />
+            Blood Tests
+        </a>
+          <a href="#" class="flex items-center gap-2">
+            <img src="assets/images/icons/END-POINT-SECURITY.png" width="16" />
+            Blood Tests
+        </a>  <a href="#" class="flex items-center gap-2">
+            <img src="assets/images/icons/END-POINT-SECURITY.png" width="16" />
+            Blood Tests
+        </a>
+        <!-- Repeat other submenu items similarly -->
+    </div>
+</div>
+
+        <!-- Aesthetic -->
+         <div class="accordion-item border-b border-gray-300">
+    <button class="accordion-button flex items-center gap-2 justify-between w-full hover:translate-x-2 transition-all duration-200 ease-in-out">
+        <span class="flex items-center gap-2">
+          Aesthetic
+        </span>
+        <i class="fas fa-chevron-down"></i>
+    </button>
+    <div class="accordion-content pl-6">
+        <a href="#" class="flex items-center gap-2">
+            <img src="assets/images/icons/END-POINT-SECURITY.png" width="16" />
+             Facial Aesthetics
+        </a>
+          <a href="#" class="flex items-center gap-2">
+            <img src="assets/images/icons/END-POINT-SECURITY.png" width="16" />
+             Body Aesthetics
+        </a>  <a href="#" class="flex items-center gap-2">
+            <img src="assets/images/icons/END-POINT-SECURITY.png" width="16" />
+           Hair & Scalp
+        </a>
+        <!-- Repeat other submenu items similarly -->
+    </div>
+</div>
+
+
+       
+        <div class="accordion-item border-b border-gray-300">
+    <button class="accordion-button flex items-center gap-2 justify-between w-full hover:translate-x-2 transition-all duration-200 ease-in-out">
+        <span class="flex items-center gap-2">
+               Regeneration
+        </span>
+        <i class="fas fa-chevron-down"></i>
+    </button>
+    <div class="accordion-content pl-6">
+        <a href="#" class="flex items-center gap-2">
+            <img src="assets/images/icons/END-POINT-SECURITY.png" width="16" />
+             Advanced Therapies
+        </a>
+          <a href="#" class="flex items-center gap-2">
+            <img src="assets/images/icons/END-POINT-SECURITY.png" width="16" />
+           Skin Rejuvenation
+        </a>  <a href="#" class="flex items-center gap-2">
+            <img src="assets/images/icons/END-POINT-SECURITY.png" width="16" />
+               Specialized Treatments
+        </a>
+        <!-- Repeat other submenu items similarly -->
+    </div>
+</div>
+
+
+       
+        <!-- Services -->
+         <div class="accordion-item border-b border-gray-300">
+    <button class="accordion-button flex items-center gap-2 justify-between w-full hover:translate-x-2 transition-all duration-200 ease-in-out">
+        <span class="flex items-center gap-2">
+            Services
+        </span>
+        <i class="fas fa-chevron-down"></i>
+    </button>
+    <div class="accordion-content pl-6">
+        <a href="#" class="flex items-center gap-2">
+            <img src="assets/images/icons/END-POINT-SECURITY.png" width="16" />
+            Personal Care
+        </a>
+          <a href="#" class="flex items-center gap-2">
+            <img src="assets/images/icons/END-POINT-SECURITY.png" width="16" />
+           Virtual Care
+        </a>  
+        <!-- Repeat other submenu items similarly -->
+    </div>
+</div>
+
+
+        
+        <!-- About Us -->
+        <div class="accordion-item border-b border-gray-300">
+            <button class="accordion-button flex items-center gap-2 w-full text-left">
+                About Us
+            </button>
+        </div>
+
+        <!-- Language Switch -->
+        <div class="accordion-item border-b border-gray-300">
+            <button class="accordion-button flex items-center gap-2 w-full text-left" onclick="toggleLaguage()">
+                العربية
+            </button>
+        </div>
+
+    </div>
+</div>
+
+
+
+<!-- Bottom Navigation -->
     <div class="mobile-bottom-nav">
         <a href="#" id="openDrawer"><i class="fas fa-bars"></i> <span data-en="Menu" data-ar="القائمة">Menu</span></a>
         <a href="tel:+97145136154"><i class="fas fa-phone"></i> <span data-en="Call" data-ar="اتصل">Call</span></a>
@@ -976,7 +1325,7 @@
     <!-- Arabic Button Row with Matching Alignment -->
     <div class="container-xl d-none d-xl-flex align-items-center justify-content-center py-3 position-relative">
         <!-- Centered Logo -->
-        <a href="index-2.html" class="mx-auto" style="margin-top: 20px;">
+        <a href="index-2.html" class="mx-auto" style="margin-top: 20px; ">
             <img src="assets/images/White-logo.png" alt="Logo" style="height: 60px;">
         </a>
 
@@ -988,18 +1337,18 @@
     <nav class="navbar navbar-expand-xl navbar-style-two-area navbar-default" id="navbar">
         <div class="container-xl">
             <!-- Logo for mobile only -->
-            <a class="navbar-brand d-xl-none" href="index-2.html">
+            <!-- <a class="navbar-brand d-xl-none"  href="index-2.html">
                 <img src="assets/images/White-logo.png" alt="logo">
-            </a>
+            </a> -->
 
             <!-- Burger icon for offcanvas toggle -->
-            <button class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvas">
+            <!-- <button class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvas">
                 <span class="burger-menu" id="menuDrawer">
                     <span class="top-bar"></span>
                     <span class="middle-bar"></span>
                     <span class="bottom-bar"></span>
                 </span>
-            </button>
+            </button> -->
 
             <div class="collapse navbar-collapse">
                 <ul id="toggleElement" class="navbar-nav flex-grow-1 justify-content-center">
@@ -1379,7 +1728,7 @@
 
 
     <!-- Responsive Offcanvas Menu -->
-    <div class="offcanvas offcanvas-start" tabindex="-1" id="navbarOffcanvas" aria-labelledby="navbarOffcanvasLabel">
+    <!-- <div class="offcanvas offcanvas-start" tabindex="-1" id="navbarOffcanvas" aria-labelledby="navbarOffcanvasLabel">
         <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -1387,17 +1736,17 @@
         <div class="offcanvas-body">
             <div class="accordion" id="navbarAccordion">
 
-                <!-- Home -->
+           
                 <div class="accordion-item">
                     <a href="/" class="accordion-link p-3 d-block">Home</a>
                 </div>
 
-                <!-- About -->
+               
                 <div class="accordion-item">
                     <a href="/about" class="accordion-link p-3 d-block">About</a>
                 </div>
 
-                <!-- Longevity -->
+              
                 <div class="accordion-item">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseLongevity" aria-expanded="false" aria-controls="collapseLongevity">
@@ -1422,7 +1771,7 @@
                     </div>
                 </div>
 
-                <!-- Aesthetic -->
+              
                 <div class="accordion-item">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseAesthetic" aria-expanded="false" aria-controls="collapseAesthetic">
@@ -1447,7 +1796,7 @@
                     </div>
                 </div>
 
-                <!-- Regenerative -->
+              
                 <div class="accordion-item">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseRegenerative" aria-expanded="false"
@@ -1472,25 +1821,25 @@
                     </div>
                 </div>
 
-                <!-- Shop -->
+              
                 <div class="accordion-item">
-                    <a href="/shop" class="accordion-link p-3 d-block">Shop</a>
+                    <a href="/shop" class="accordion-link p-3 d-block">About Us</a>
                 </div>
 
-                <!-- Contact -->
-                <div class="accordion-item">
+                
+               <div class="accordion-item">
                     <a href="/contact" class="accordion-link p-3 d-block">Contact</a>
-                </div>
+                </div> 
 
-                <!-- E-Gift Vouchers -->
+              E-Gift Vouchers -->
                 <!-- <div class="accordion-item">
                     <a href="/e-gift-vouchers" class="accordion-link p-3 d-block text-primary fw-bold">🎁 E-Gift
                         Vouchers</a>
-                </div> -->
+                </div> 
 
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- Start Pediatric Dentist Banner Area -->
     <div class="youtube-bg">
@@ -3020,33 +3369,49 @@ info@protoclinic.com
     <!-- JS -->
     <script>
         const openDrawer = document.getElementById("openDrawer");
-        const closeDrawer = document.getElementById("closeDrawer");
-        const menuDrawer = document.getElementById("menuDrawer");
+const closeDrawer = document.getElementById("closeDrawer");
+const menuDrawer = document.getElementById("menuDrawer");
 
-        openDrawer.addEventListener("click", (e) => {
-            e.preventDefault();
-            menuDrawer.classList.add("active");
-        });
+openDrawer.addEventListener("click", (e) => {
+  e.preventDefault();
+  menuDrawer.classList.add("active");
+  document.body.classList.add("body-no-scroll");
+});
 
-        closeDrawer.addEventListener("click", () => {
-            menuDrawer.classList.remove("active");
-        });
+closeDrawer.addEventListener("click", () => {
+  menuDrawer.classList.remove("active");
+  document.body.classList.remove("body-no-scroll");
+});
 
-        // Accordion toggle
-        const accordionButtons = document.querySelectorAll(".accordion-button");
-        accordionButtons.forEach((button) => {
-            button.addEventListener("click", function () {
-                const item = this.parentElement;
-                item.classList.toggle("open");
-            });
-        });
+// Accordion toggle
+const accordionButtons = document.querySelectorAll(".accordion-button");
+accordionButtons.forEach((button) => {
+  button.addEventListener("click", function () {
+    const item = this.parentElement;
+    const isOpen = item.classList.contains("open");
+    // Close all open items (optional, if you want single open)
+    document.querySelectorAll(".accordion-item.open").forEach(openItem => {
+      if (openItem !== item) openItem.classList.remove("open");
+    });
+    // Toggle current
+    if (!isOpen) {
+      item.classList.add("open");
+    } else {
+      item.classList.remove("open");
+    }
+  });
+});
 
-        // Close drawer if clicked outside
-        window.addEventListener("click", (e) => {
-            if (!menuDrawer.contains(e.target) && !openDrawer.contains(e.target)) {
-                menuDrawer.classList.remove("active");
-            }
-        });
+// Close drawer if clicking outside sidebar or open button
+window.addEventListener("click", (e) => {
+  if (
+    !menuDrawer.contains(e.target) &&
+    !openDrawer.contains(e.target)
+  ) {
+    menuDrawer.classList.remove("active");
+    document.body.classList.remove("body-no-scroll");
+  }
+});
     </script>
     <!-- Swiper Init Script -->
     <script>
@@ -3115,7 +3480,7 @@ info@protoclinic.com
 
         //   tabs.forEach(tab => {
         //     tab.addEventListener('click', (e) => {
-        //       e.stopPropagation(); // ❗️prevent dropdown from closing
+        //       e.stopPropagation(); // prevent dropdown from closing
         //       // Remove active classes
         //       tabs.forEach(t => t.classList.remove('active'));
         //       contents.forEach(c => c.classList.remove('active'));
@@ -3203,7 +3568,44 @@ info@protoclinic.com
         setupDropdown('aestheticDropdown');
         setupDropdown('regenerationDropdown');
         setupDropdown('servicesDropdown');
+
+        document.querySelectorAll('.dropdown-toggle').forEach(el => {
+    el.addEventListener('hide.bs.dropdown', e => {
+        e.preventDefault(); // Prevent auto-closing
+    });
+});
+
     </script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const offcanvasEl = document.getElementById('navbarOffcanvas');
+
+    offcanvasEl.addEventListener('shown.bs.offcanvas', function () {
+        // Delay to let layout stabilize
+        setTimeout(() => {
+            const openItems = offcanvasEl.querySelectorAll('.accordion-collapse.show');
+            openItems.forEach(item => {
+                item.style.height = item.scrollHeight + 'px';
+            });
+        }, 100); // 100ms delay ensures DOM is settled
+    });
+
+    // Optional: Prevent accordion from auto-closing itself on click if it's already open
+    const accordionButtons = offcanvasEl.querySelectorAll('.accordion-button');
+    accordionButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            const targetId = button.getAttribute('data-bs-target');
+            const collapseEl = document.querySelector(targetId);
+
+            // Manually toggle if already open
+            if (collapseEl.classList.contains('show')) {
+                e.preventDefault();
+                bootstrap.Collapse.getInstance(collapseEl)?.hide();
+            }
+        });
+    });
+});
+</script>
 
 
     </body>
