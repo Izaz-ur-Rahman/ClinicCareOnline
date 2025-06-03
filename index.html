@@ -835,8 +835,8 @@
 
 .mega-menu-content .dropdown-item .icon {
     flex-shrink: 0;
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -860,6 +860,10 @@
 
 .mega-menu-content .dropdown-item:hover {
     background-color: transparent;
+}
+.dropdown-item .icon img {
+width: 30px;
+height: 30px;
 }
     </style>
 
@@ -1042,59 +1046,114 @@
                             </div>
                         </div>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a href="#" class="nav-link custom-toggle d-flex align-items-center" id="aestheticDropdown"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            <span data-i18n="aesthetic">Aesthetic</span>
-                            <svg class="ms-2 dropdown-arrow transition-transform duration-300" width="16" height="16"
-                                viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <polyline points="6 9 12 15 18 9" />
-                            </svg>
-                        </a>
-                        <ul class="dropdown-menu fade shadow">
-                            <li><a href="index.html" class="dropdown-item" data-i18n="facialAesthetics">Facial Aesthetics</a>
-                            </li>
-                            <li><a href="index.html" class="dropdown-item" data-i18n="bodyAesthetics">Body Aesthetics</a></li>
-                            <li><a href="index.html" class="dropdown-item" data-i18n="hairScalp">Hair & Scalp</a></li>
-                        </ul>
-                    </li>
+                    <!-- Aesthetic Dropdown -->
+<li class="nav-item dropdown">
+    <a href="#" class="nav-link custom-toggle d-flex align-items-center" id="aestheticDropdown"
+        data-bs-toggle="dropdown" aria-expanded="false">
+        <span data-i18n="aesthetic">Aesthetic</span>
+        <svg class="ms-2 dropdown-arrow transition-transform duration-300" width="16" height="16"
+            viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9" />
+        </svg>
+    </a>
+    <ul class="dropdown-menu fade shadow">
+        <li>
+            <a href="index.html" class="dropdown-item d-flex align-items-center">
+                <span class="icon me-2">
+                    <img src="assets/images/icons/END-POINT-SECURITY.png" alt="icon" width="18">
+                </span>
+                <span data-i18n="facialAesthetics">Facial Aesthetics</span>
+            </a>
+        </li>
+        <li>
+            <a href="index.html" class="dropdown-item d-flex align-items-center">
+                <span class="icon me-2">
+                    <img src="assets/images/icons/END-POINT-SECURITY.png" alt="icon" width="18">
+                </span>
+                <span data-i18n="bodyAesthetics">Body Aesthetics</span>
+            </a>
+        </li>
+        <li>
+            <a href="index.html" class="dropdown-item d-flex align-items-center">
+                <span class="icon me-2">
+                    <img src="assets/images/icons/END-POINT-SECURITY.png" alt="icon" width="18">
+                </span>
+                <span data-i18n="hairScalp">Hair & Scalp</span>
+            </a>
+        </li>
+    </ul>
+</li>
 
-                    <li class="nav-item dropdown">
-                        <a href="#" class="nav-link custom-toggle d-flex align-items-center" id="regenerationDropdown"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            <span data-i18n="regenerative">Regeneration</span>
-                            <svg class="ms-2 dropdown-arrow transition-transform duration-300" width="16" height="16"
-                                viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <polyline points="6 9 12 15 18 9" />
-                            </svg>
-                        </a>
-                        <ul class="dropdown-menu fade shadow">
-                            <li><a href="index.html" class="dropdown-item" data-i18n="advancedTherapies">Advanced Therapies</a>
-                            </li>
-                            <li><a href="index.html" class="dropdown-item" data-i18n="skinRejuvenation">Skin Rejuvenation</a>
-                            </li>
-                            <li><a href="index.html" class="dropdown-item" data-i18n="specializedTreatments">Specialized
-                                    Treatments</a></li>
-                        </ul>
-                    </li>
+<!-- Regeneration Dropdown -->
+<li class="nav-item dropdown">
+    <a href="#" class="nav-link custom-toggle d-flex align-items-center" id="regenerationDropdown"
+        data-bs-toggle="dropdown" aria-expanded="false">
+        <span data-i18n="regenerative">Regeneration</span>
+        <svg class="ms-2 dropdown-arrow transition-transform duration-300" width="16" height="16"
+            viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9" />
+        </svg>
+    </a>
+    <ul class="dropdown-menu fade shadow">
+        <li>
+            <a href="index.html" class="dropdown-item d-flex align-items-center">
+                <span class="icon me-2">
+                    <img src="assets/images/icons/END-POINT-SECURITY.png" alt="icon" width="18">
+                </span>
+                <span data-i18n="advancedTherapies">Advanced Therapies</span>
+            </a>
+        </li>
+        <li>
+            <a href="index.html" class="dropdown-item d-flex align-items-center">
+                <span class="icon me-2">
+                    <img src="assets/images/icons/END-POINT-SECURITY.png" alt="icon" width="18">
+                </span>
+                <span data-i18n="skinRejuvenation">Skin Rejuvenation</span>
+            </a>
+        </li>
+        <li>
+            <a href="index.html" class="dropdown-item d-flex align-items-center">
+                <span class="icon me-2">
+                    <img src="assets/images/icons/END-POINT-SECURITY.png" alt="icon" width="18">
+                </span>
+                <span data-i18n="specializedTreatments">Specialized Treatments</span>
+            </a>
+        </li>
+    </ul>
+</li>
 
-                    <li class="nav-item dropdown">
-                        <a href="#" class="nav-link custom-toggle d-flex align-items-center" id="servicesDropdown"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            <span data-i18n="services">Services</span>
-                            <svg class="ms-2 dropdown-arrow transition-transform duration-300" width="16" height="16"
-                                viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <polyline points="6 9 12 15 18 9" />
-                            </svg>
-                        </a>
-                        <ul class="dropdown-menu fade shadow">
-                            <li><a href="index.html" class="dropdown-item" data-i18n="personalCare">Personal Care</a></li>
-                            <li><a href="index.html" class="dropdown-item" data-i18n="virtualCare">Virtual Care</a></li>
-                        </ul>
-                    </li>
+<!-- Services Dropdown -->
+<li class="nav-item dropdown">
+    <a href="#" class="nav-link custom-toggle d-flex align-items-center" id="servicesDropdown"
+        data-bs-toggle="dropdown" aria-expanded="false">
+        <span data-i18n="services">Services</span>
+        <svg class="ms-2 dropdown-arrow transition-transform duration-300" width="16" height="16"
+            viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9" />
+        </svg>
+    </a>
+    <ul class="dropdown-menu fade shadow">
+        <li>
+            <a href="index.html" class="dropdown-item d-flex align-items-center">
+                <span class="icon me-2">
+                    <img src="assets/images/icons/END-POINT-SECURITY.png" alt="icon" width="18">
+                </span>
+                <span data-i18n="personalCare">Personal Care</span>
+            </a>
+        </li>
+        <li>
+            <a href="index.html" class="dropdown-item d-flex align-items-center">
+                <span class="icon me-2">
+                    <img src="assets/images/icons/END-POINT-SECURITY.png" alt="icon" width="18">
+                </span>
+                <span data-i18n="virtualCare">Virtual Care</span>
+            </a>
+        </li>
+    </ul>
+</li>
 
                     <li class="nav-item">
                         <a href="#" class="nav-link" data-i18n="aboutUs">About Us</a>
