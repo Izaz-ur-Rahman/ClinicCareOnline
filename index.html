@@ -394,14 +394,21 @@
         }
 
         /* Mega menu container */
-        .mega-menu {
+        /* .mega-menu {
             width: 600px;
-            /* wider dropdown */
+          
             border-radius: 10px;
             box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
             background: #fff;
             padding: 1rem;
-        }
+        } */
+         /* Keep overall mega menu width reasonable */
+.mega-menu {
+    min-width: 900px;
+    background-color: white;
+    border: 1px solid #ddd;
+    /* box-shadow: 0 8px 16px rgba(0,0,0,0.1); */
+}
 
         /* Flex container inside mega menu */
         .mega-menu-container {
@@ -413,7 +420,7 @@
         .mega-menu-tabs {
             display: flex;
             flex-direction: column;
-            border-right: 2px solid #eee;
+            /* border-right: 2px solid #eee; */
             min-width: 140px;
         }
 
@@ -434,7 +441,7 @@
         /* Active tab style */
         .mega-menu-tabs .tab-btn.active,
         .mega-menu-tabs .tab-btn:hover {
-            background-color: #D2BF92;
+            background-color: #B2915B;
             color: white;
         }
 
@@ -460,7 +467,7 @@
             color: #333;
             width: 300px;
             font-weight: 500;
-            border-radius: 6px;
+            /* border-radius: 6px; */
             transition: background-color 0.3s ease;
             text-decoration: none;
             margin-bottom: 5px;
@@ -482,7 +489,7 @@
             transform: translateY(10px);
             transition: all 0.3s ease;
             border-radius: 12px;
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+            /* box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12); */
             padding: 25px;
             min-width: 500px;
             border: 2px solid #B2915B1c;
@@ -500,7 +507,7 @@
         .mega-menu-tabs {
             display: flex;
             flex-direction: column;
-            border-right: 2px solid #eee;
+            /* border-right: 2px solid #eee; */
             padding-right: 20px;
             margin-right: 25px;
             min-width: 200px;
@@ -605,13 +612,13 @@
         .dropdown-item {
             display: block;
             padding: 10px 15px;
-            background: #fff;
+            /* background: #fff; */
             color: #333;
-
+    border-bottom: 1px solid #ccc; /* or use 'gray' */
             text-decoration: none;
-            border-radius: 6px;
+            /* border-radius: 6px; */
             transition: all 0.25s ease;
-            border: 1px solid transparent;
+            /* border: 1px solid transparent; */
         }
 
         .dropdown-item:hover {
@@ -619,7 +626,7 @@
             color: #B2915B;
             border-color: #B2915B33;
             transform: translateX(5px);
-            box-shadow: 0 2px 6px rgba(59, 199, 237, 0.15);
+            /* box-shadow: 0 2px 6px rgba(59, 199, 237, 0.15); */
         }
 
         /* Mobile responsive (optional) */
@@ -777,7 +784,178 @@
     
     </div>
 
+<style>
+    /* 1. Wider mega menu */
+.mega-menu {
+    min-width: 900px;
 
+    border: 1px solid #ddd;
+    /* box-shadow: 0 8px 16px rgba(0,0,0,0.1); */
+}
+
+/* 2. Style each tab button */
+.mega-menu-tabs .tab-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #B2915B; /* Default brown */
+    color: #fff;
+    border: none;
+    padding: 12px 16px;
+    margin-bottom: 2px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* 3. On hover - darker brown and text shift */
+.mega-menu-tabs .tab-btn:hover {
+    background-color: #9a784c; /* Darker brown */
+    color: #fff;
+    padding-left: 20px;
+}
+
+/* 4. Move arrow to far right */
+.mega-menu-tabs .arrow-icon {
+    margin-left: auto;
+    color: white;
+}/* Base style: look like text, not button */
+.mega-menu-content .dropdown-item {
+    display: block; /* change from flex to block */
+    padding: 8px 0;
+    color: black;
+    font-weight: 400;
+    text-decoration: none;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    transition: all 0.3s ease;
+}
+
+/* On hover: only text changes color and shifts slightly */
+.mega-menu-content .dropdown-item:hover {
+    color: #8B4513;
+    background-color: transparent;
+    padding-left: 8px; /* just enough shift, not too much */
+}
+
+/* 7. Main nav link styling */
+.navbar-nav .nav-link {
+    color: black;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* 8. Nav link on hover */
+.navbar-nav .nav-link:hover {
+    color: #8B4513;
+    padding-left: 4px;
+    background-color: transparent !important;
+}
+
+/* 9. Remove background color from dropdown items on hover */
+.dropdown-menu .dropdown-item:hover {
+    background-color: transparent !important;
+    color: #8B4513 !important;
+    padding-left: 20px;
+    transition: all 0.3s ease;
+}
+
+/* Optional: Arrow icon rotation */
+.navbar-nav .nav-link .dropdown-arrow {
+    transition: transform 0.3s ease;
+}
+.navbar-nav .nav-link[aria-expanded="true"] .dropdown-arrow {
+    transform: rotate(180deg);
+}
+/* Keep overall mega menu width reasonable */
+.mega-menu {
+    min-width: 600px;
+    background-color: white;
+    border: 1px solid #ddd;
+    /* box-shadow: 0 8px 16px rgba(0,0,0,0.1); */
+}
+
+/* Increase only the width of the tabs container */
+.mega-menu-tabs {
+    width: 300px; /* Adjust as needed */
+    padding-right: 10px;
+    /* border-right: 1px solid #ccc; */
+}
+
+/* Tab buttons */
+.mega-menu-tabs .tab-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #B2915B; /* Brown */
+    color: #fff;
+    border: none;
+    padding: 12px 16px;
+    margin-bottom: 2px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover effect for tabs */
+.mega-menu-tabs .tab-btn:hover {
+    background-color: #9a784c; /* Darker brown */
+    color: #fff;
+    padding-left: 20px;
+}
+
+/* Align arrow at end */
+.mega-menu-tabs .arrow-icon {
+    margin-left: auto;
+    color: white;
+}
+.mega-menu-content .dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0;
+    color: black;
+    font-weight: 400;
+    text-decoration: none;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    transition: all 0.3s ease;
+}
+
+.mega-menu-content .dropdown-item .icon {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mega-menu-content .dropdown-item .icon img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.mega-menu-content .dropdown-item .text {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* On hover: only move text and change color */
+.mega-menu-content .dropdown-item:hover .text {
+    transform: translateX(6px);
+    color: #8B4513;
+}
+
+.mega-menu-content .dropdown-item:hover {
+    background-color: transparent;
+}
+
+</style>
     <!-- Navbar Section -->
     <nav class="navbar navbar-expand-xl navbar-style-two-area navbar-default" id="navbar">
         <div class="container-xl">
@@ -827,10 +1005,20 @@
                                 </div>
                                 <div class="mega-menu-content flex-grow-1">
                                     <div class="tab-content active" id="diagnosticTesting">
-                                        <a href="#" class="dropdown-item">🩸 Blood Tests</a>
-                                        <a href="#" class="dropdown-item">🐞 Genetic Screening</a>
-                                        <a href="#" class="dropdown-item">❤️ Cardiovascular Evaluation</a>
-                                    </div>
+    <a href="#" class="dropdown-item">
+        <span class="icon"><img src="assets/images/icons/END-POINT-SECURITY.png" alt="icon"></span>
+        <span class="text">Blood Tests</span>
+    </a>
+    <a href="#" class="dropdown-item">
+        <span class="icon"><img src="assets/images/icons/END-POINT-SECURITY.png" alt="icon"></span>
+        <span class="text">Genetic Screening</span>
+    </a>
+    <a href="#" class="dropdown-item">
+        <span class="icon"><img src="assets/images/icons/END-POINT-SECURITY.png" alt="icon"></span>
+        <span class="text">Cardiovascular Evaluation</span>
+    </a>
+</div>
+
                                     <div class="tab-content" id="wellnessPrograms">
                                         <a href="#" class="dropdown-item">🏋️ Weight Management</a>
                                         <a href="#" class="dropdown-item">🨪 Stress Reduction</a>
