@@ -414,9 +414,11 @@
             margin-left: -250px;
             /* box-shadow: 0 8px 16px rgba(0,0,0,0.1); */
         }
-#exclusive_menu{
-    margin-left: -420px;
-}
+
+        #exclusive_menu {
+            margin-left: -420px;
+        }
+
         /* Flex container inside mega menu */
         .mega-menu-container {
             display: flex;
@@ -429,12 +431,15 @@
             flex-direction: column;
             min-width: 140px;
         }
-.tab-btn{
-    width: 20% !important ;
-}
-.tab-btn2{
-    width: 25% !important ;
-}
+
+        .tab-btn {
+            width: 20% !important;
+        }
+
+        .tab-btn2 {
+            width: 25% !important;
+        }
+
         /* Tab buttons */
         .mega-menu-tabs .tab-btn {
             background: none;
@@ -552,7 +557,7 @@
   transition: transform 0.3s ease, color 0.3s ease;
 } */
         .tab-btn {
-  
+
             display: inline-flex;
             align-items: center;
             background: #fff;
@@ -831,7 +836,7 @@
             font-weight: 500;
             transition: all 0.3s ease;
             cursor: pointer;
-          
+
         }
 
         /* Light gray for 2nd tab */
@@ -1099,34 +1104,34 @@
         .accordion-content {
             display: none;
         }
+
         .mega-menu-content .tab-content {
-    display: none;
-}
+            display: none;
+        }
 
-.mega-menu-content .tab-content.active {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-}
+        .mega-menu-content .tab-content.active {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
 
-.mega-menu-content .dropdown-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 8px;
-    color: black;
-    font-weight: 400;
-    text-decoration: none;
-    /* border: 1px solid #ccc; */
-    /* border-radius: 6px; */
-    transition: background 0.3s ease;
-    background-color: #fff;
-}
+        .mega-menu-content .dropdown-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px;
+            color: black;
+            font-weight: 400;
+            text-decoration: none;
+            /* border: 1px solid #ccc; */
+            /* border-radius: 6px; */
+            transition: background 0.3s ease;
+            background-color: #fff;
+        }
 
-.mega-menu-content .dropdown-item:hover {
-    /* background-color: #f0f0f0; */
-}
-
+        .mega-menu-content .dropdown-item:hover {
+            /* background-color: #f0f0f0; */
+        }
     </style>
 
     <!-- Custom CSS -->
@@ -1381,7 +1386,8 @@
     <div class="container-xl d-none d-xl-flex align-items-center justify-content-center position-relative">
         <!-- Centered Logo -->
         <a href="index-2.html" class="mx-auto" style="margin-top: 20px; ">
-            <img src="assets/images/3d proto logo with tagline (Wellness inside out).png" alt="Logo" style="height: 125px;">
+            <img src="assets/images/3d proto logo with tagline (Wellness inside out).png" alt="Logo"
+                style="height: 125px;">
         </a>
 
 
@@ -1423,382 +1429,427 @@
 
                         <div class="mega-menu   ">
                             <div class="mega-menu-container  flex flex-col">
-<!-- <div class="mega-menu-tabs flex flex-row justify-center w-full">
-  <button class="tab-btn active flex items-center gap-2 px-2 py-3" data-tab="diagnosticTesting">
-    <div class="w-8 h-8 rounded-full shadow-md overflow-hidden flex items-center justify-center">
-      <img src="assets/images/icons/New-Icon.png" alt="Diagnostic Icon" class="w-5 h-5" />
-    </div>
-    <span>Regenerative Wellness</span>
-  </button>
+                                <div class="mega-menu-tabs flex flex-row justify-center gap-2 w-full">
+                                    <button
+                                        class="tab-btn active flex items-center gap-2 px-2 py-3 hover:bg-gray-100 rounded"
+                                        data-tab="diagnosticTesting">
+                                        <div
+                                            class="w-8 h-8 rounded-full shadow-md overflow-hidden flex items-center justify-center bg-white">
+                                            <img src="assets/images/icons/New-Icon.png" alt="Diagnostic Icon"
+                                                class="w-5 h-5" />
+                                        </div>
+                                        <span>Regenerative Wellness</span>
+                                    </button>
 
-  <button class="tab-btn gray-tab flex items-center gap-2 px-2 py-3" data-tab="wellnessPrograms">
-    <div class="w-8 h-8 rounded-full shadow-md overflow-hidden flex items-center justify-center">
-      <img src="assets/images/icons/New-Icon.png" alt="Wellness Icon" class="w-5 h-5" />
-    </div>
-    <span>Aesthetic Treatments</span>
-  </button>
+                                    <button
+                                        class="tab-btn gray-tab flex items-center gap-2 px-2 py-3 hover:bg-gray-100 rounded"
+                                        data-tab="wellnessPrograms">
+                                        <div
+                                            class="w-8 h-8 rounded-full shadow-md overflow-hidden flex items-center justify-center bg-white">
+                                            <img src="assets/images/icons/New-Icon.png" alt="Wellness Icon"
+                                                class="w-5 h-5" />
+                                        </div>
+                                        <span>Aesthetic Treatments</span>
+                                    </button>
 
-  <button class="tab-btn gray-tab flex items-center gap-2 px-2 py-3" data-tab="regenerativeMedicine">
-    <div class="w-8 h-8 rounded-full shadow-md overflow-hidden flex items-center justify-center">
-      <img src="assets/images/icons/New-Icon.png" alt="Massage Icon" class="w-5 h-5" />
-    </div>
-    <span>Regenerative Medicine</span>
-  </button>
-</div> -->
-<div class="mega-menu-tabs flex flex-row justify-center gap-2 w-full">
-  <button class="tab-btn active flex items-center gap-2 px-2 py-3 hover:bg-gray-100 rounded" data-tab="diagnosticTesting">
-    <div class="w-8 h-8 rounded-full shadow-md overflow-hidden flex items-center justify-center bg-white">
-      <img src="assets/images/icons/New-Icon.png" alt="Diagnostic Icon" class="w-5 h-5" />
-    </div>
-    <span>Regenerative Wellness</span>
-  </button>
-
-  <button class="tab-btn gray-tab flex items-center gap-2 px-2 py-3 hover:bg-gray-100 rounded" data-tab="wellnessPrograms">
-    <div class="w-8 h-8 rounded-full shadow-md overflow-hidden flex items-center justify-center bg-white">
-      <img src="assets/images/icons/New-Icon.png" alt="Wellness Icon" class="w-5 h-5" />
-    </div>
-    <span>Aesthetic Treatments</span>
-  </button>
-
-  <button class="tab-btn gray-tab flex items-center gap-2 px-2 py-3 hover:bg-gray-100 rounded" data-tab="regenerativeMedicine">
-    <div class="w-8 h-8 rounded-full shadow-md overflow-hidden flex items-center justify-center bg-white">
-      <img src="assets/images/icons/New-Icon.png" alt="Massage Icon" class="w-5 h-5" />
-    </div>
-    <span>Regenerative Medicine</span>
-  </button>
-</div>
+                                    <button
+                                        class="tab-btn gray-tab flex items-center gap-2 px-2 py-3 hover:bg-gray-100 rounded"
+                                        data-tab="regenerativeMedicine">
+                                        <div
+                                            class="w-8 h-8 rounded-full shadow-md overflow-hidden flex items-center justify-center bg-white">
+                                            <img src="assets/images/icons/New-Icon.png" alt="Massage Icon"
+                                                class="w-5 h-5" />
+                                        </div>
+                                        <span>Regenerative Medicine</span>
+                                    </button>
+                                </div>
 
 
 
 
 
                                 <div class="mega-menu-content h-1/2 flex-grow-1">
-<div class="tab-content active grid grid-cols-3 gap-1 overflow-y-auto max-h-[400px] pr-2 px-4" id="diagnosticTesting">
-                                  <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon"  />
-  </span>
-  <span class="text">Detox Therapy in Dubai</span>
-</a>
+                                    <div class="tab-content active grid grid-cols-3 gap-1 overflow-y-auto max-h-[400px] pr-2 px-4"
+                                        id="diagnosticTesting">
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
+                                            <span class="text">Detox Therapy in Dubai</span>
+                                        </a>
 
-<a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
-  <span class="text">NAD IV Therapy in Dubai</span>
-</a>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
+                                            <span class="text">NAD IV Therapy in Dubai</span>
+                                        </a>
 
-                                   <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text">Therapy in Dubai</span>
                                         </a>
-                                      <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text">Hyperbaric Oxygen Therapy (HBOT)</span>
                                         </a>
-                                    <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text">Nutrition and Weight Loss Program in Dubai</span>
                                         </a>
-                                    <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text">Shock Wave Therapy</span>
                                         </a>
-                                    <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text">IV Laser Therapy in Dubai</span>
                                         </a>
-                                   <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text">PEMF Therapy in Dubai</span>
                                         </a>
-                                      <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text">Women’s Wellness In Dubai</span>
                                         </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text">IV Therapy Drips</span>
                                         </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text">Peptide Therapy</span>
                                         </a>
-                                     
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text">Red Light</span>
                                         </a>
-                                      
+
                                     </div>
 
 
-                                    <div class="tab-content grid grid-cols-3 gap-4 overflow-y-auto max-h-[400px] pr-2 px-4" id="wellnessPrograms">
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                    <div class="tab-content grid grid-cols-3 gap-4 overflow-y-auto max-h-[400px] pr-2 px-4"
+                                        id="wellnessPrograms">
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text"> Anti-wrinkle Injection in Dubai</span>
                                         </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text">Hollywood Facial in Dubai</span>
                                         </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
-                                            <span class="text">Regenera Activa – Non-surgical Hair Regeneration in Dubai</span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
+                                            <span class="text">Regenera Activa – Non-surgical Hair Regeneration in
+                                                Dubai</span>
                                         </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text"> Aquagold Facial in Dubai</span>
                                         </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text">HydraFacial in Dubai</span>
                                         </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text">Sculptra Fillers in Dubai</span>
                                         </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text"> Broadband Light Forever Young Treatment in Dubai</span>
                                         </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text">Jawline Filler in Dubai</span>
                                         </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text">Sculptra Fillers in Dubai</span>
                                         </a>
-                                                  <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text"> Cheek Filler in Dubai</span>
                                         </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text">Lip Fillers in Dubai</span>
                                         </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text">Skin Boosters in Dubai</span>
                                         </a>
-                                                    <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text"> Dermal Fillers in Dubai</span>
                                         </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text">MesoFacial in Dubai</span>
                                         </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text">Stem Cell Injections in Dubai</span>
                                         </a>
-                                                  <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text">Face Art in Dubai by Dr. Khan</span>
                                         </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text">Mesotherapy for Hair Loss in Dubai</span>
                                         </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
-                                            <span class="text"> Female Intimate Rejuvenation and Vaginal Tightening</span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
+                                            <span class="text"> Female Intimate Rejuvenation and Vaginal
+                                                Tightening</span>
                                         </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text">Morpheus 8 Pro Microneedling in Dubai</span>
                                         </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text">Stem Cells Infusion Facial in Dubai</span>
                                         </a>
-                                                  <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text">Fotona 4D: The Revolutionary Non-Invasive Facelift</span>
                                         </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text">Nose Filler in Dubai</span>
                                         </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text">Thread Lift in Dubai</span>
                                         </a>
-                                                    <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
-                                            <span class="text"> Fotona 4D: The Revolutionary Non-Invasive Facelift</span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
+                                            <span class="text"> Fotona 4D: The Revolutionary Non-Invasive
+                                                Facelift</span>
                                         </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text">Profhilo in Dubai</span>
                                         </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text">Ultherapy in Dubai</span>
                                         </a>
-                                                    <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text">PRP Hair Treatment in Dubai</span>
                                         </a>
-                                                  <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text">Ultimate Collagen Boost Facial</span>
                                         </a>
-                                        
+
                                     </div>
                                     <div class="mega-menu-content h-1/2 flex-grow-1">
-                                    <div class="tab-content grid grid-cols-3 px-4" id="regenerativeMedicine">
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
-                                            <span class="text">Biologicial Integrative Medicine</span>
-                                        </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
-                                            <span class="text">Exosome Therapy in Dubai</span>
-                                        </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
-                                            <span class="text">Functional Medicine in Dubai</span>
-                                        </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
-                                            <span class="text">Genomics Medicine</span>
-                                        </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
-                                            <span class="text">Naturopathic Medicine Treatment</span>
-                                        </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
-                                            <span class="text">Ozone Therapy in Dubai</span>
-                                        </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
-                                            <span class="text">Physiotherapy in Dubai</span>
-                                        </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
-                                            <span class="text">Sports Medicine in Dubai</span>
-                                        </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
-                                            <span class="text">Stem Cell Therapy in Dubai at AEON Clinic</span>
-                                        </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
-                                            <span class="text">IV Therapy Drips</span>
-                                        </a>
-                                    
-                                      
-                                    </div>
-                                    <!-- <div class="tab-content" id="nutritionAdvice">
+                                        <div class="tab-content grid grid-cols-3 px-4" id="regenerativeMedicine">
+                                            <a href="#" class="dropdown-item flex items-center gap-3">
+                                                <span
+                                                    class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                    <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                                </span>
+                                                <span class="text">Biologicial Integrative Medicine</span>
+                                            </a>
+                                            <a href="#" class="dropdown-item flex items-center gap-3">
+                                                <span
+                                                    class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                    <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                                </span>
+                                                <span class="text">Exosome Therapy in Dubai</span>
+                                            </a>
+                                            <a href="#" class="dropdown-item flex items-center gap-3">
+                                                <span
+                                                    class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                    <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                                </span>
+                                                <span class="text">Functional Medicine in Dubai</span>
+                                            </a>
+                                            <a href="#" class="dropdown-item flex items-center gap-3">
+                                                <span
+                                                    class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                    <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                                </span>
+                                                <span class="text">Genomics Medicine</span>
+                                            </a>
+                                            <a href="#" class="dropdown-item flex items-center gap-3">
+                                                <span
+                                                    class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                    <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                                </span>
+                                                <span class="text">Naturopathic Medicine Treatment</span>
+                                            </a>
+                                            <a href="#" class="dropdown-item flex items-center gap-3">
+                                                <span
+                                                    class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                    <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                                </span>
+                                                <span class="text">Ozone Therapy in Dubai</span>
+                                            </a>
+                                            <a href="#" class="dropdown-item flex items-center gap-3">
+                                                <span
+                                                    class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                    <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                                </span>
+                                                <span class="text">Physiotherapy in Dubai</span>
+                                            </a>
+                                            <a href="#" class="dropdown-item flex items-center gap-3">
+                                                <span
+                                                    class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                    <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                                </span>
+                                                <span class="text">Sports Medicine in Dubai</span>
+                                            </a>
+                                            <a href="#" class="dropdown-item flex items-center gap-3">
+                                                <span
+                                                    class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                    <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                                </span>
+                                                <span class="text">Stem Cell Therapy in Dubai at AEON Clinic</span>
+                                            </a>
+                                            <a href="#" class="dropdown-item flex items-center gap-3">
+                                                <span
+                                                    class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                    <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                                </span>
+                                                <span class="text">IV Therapy Drips</span>
+                                            </a>
+
+
+                                        </div>
+                                        <!-- <div class="tab-content" id="nutritionAdvice">
                                         <a href="#" class="dropdown-item">🍽️ Diet Planning</a>
                                         <a href="#" class="dropdown-item">🧪 Supplement Guidance</a>
                                         <a href="#" class="dropdown-item">💧 Hydration Tips</a>
                                     </div> -->
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                     </li>
-                     <li class="nav-item   dropdown" id="exclusiveDropdownParent">
+                    <li class="nav-item   dropdown" id="exclusiveDropdownParent">
                         <a href="javascript:void(0)" class="nav-link custom-toggle d-flex align-items-center"
                             id="longevityDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                             <span>Exclusives</span>
@@ -1811,322 +1862,384 @@
 
                         <div class="mega-menu   " id="exclusive_menu">
                             <div class="mega-menu-container  flex flex-col">
-<div class="mega-menu-tabs flex flex-row gap-2 justify-center w-full">
-  <button class="tab-btn active flex items-center gap-2 px-2 py-3 hover:bg-gray-100 rounded" data-tab="OurPrograms">
-    <div class="w-8 h-8 rounded-full shadow-md overflow-hidden flex items-center justify-center bg-white">
-      <img src="assets/images/icons/New-Icon.png" alt="Diagnostic Icon" class="w-5 h-5" />
-    </div>
-    <span>Our Programs</span>
-  </button>
+                                <div class="mega-menu-tabs flex flex-row gap-2 justify-center w-full">
+                                    <button
+                                        class="tab-btn active flex items-center gap-2 px-2 py-3 hover:bg-gray-100 rounded"
+                                        data-tab="OurPrograms">
+                                        <div
+                                            class="w-8 h-8 rounded-full shadow-md overflow-hidden flex items-center justify-center bg-white">
+                                            <img src="assets/images/icons/New-Icon.png" alt="Diagnostic Icon"
+                                                class="w-5 h-5" />
+                                        </div>
+                                        <span>Our Programs</span>
+                                    </button>
 
-  <button class="tab-btn gray-tab flex items-center gap-2 px-2 py-3 hover:bg-gray-100 rounded" data-tab="Atlantis">
-    <div class="w-8 h-8 rounded-full shadow-md overflow-hidden flex items-center justify-center bg-white">
-      <img src="assets/images/icons/New-Icon.png" alt="Wellness Icon" class="w-5 h-5" />
-    </div>
-    <span>Atlantis The Royal X Aeon</span>
-  </button>
+                                    <button
+                                        class="tab-btn gray-tab flex items-center gap-2 px-2 py-3 hover:bg-gray-100 rounded"
+                                        data-tab="Atlantis">
+                                        <div
+                                            class="w-8 h-8 rounded-full shadow-md overflow-hidden flex items-center justify-center bg-white">
+                                            <img src="assets/images/icons/New-Icon.png" alt="Wellness Icon"
+                                                class="w-5 h-5" />
+                                        </div>
+                                        <span>Atlantis The Royal X Aeon</span>
+                                    </button>
 
- <button class="tab-btn gray-tab flex items-center gap-2 px-2 py-3 hover:bg-gray-100 rounded" data-tab="International">
-  <div class="w-8 h-8 flex-shrink-0 rounded-full shadow-md overflow-hidden flex items-center justify-center bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="Massage Icon" class="w-5 h-5" />
-  </div>
-  <span class="block max-w-[150px] text-left leading-tight">Lorem Ipsum</span>
-</button>
+                                    <button
+                                        class="tab-btn gray-tab flex items-center gap-2 px-2 py-3 hover:bg-gray-100 rounded"
+                                        data-tab="International">
+                                        <div
+                                            class="w-8 h-8 flex-shrink-0 rounded-full shadow-md overflow-hidden flex items-center justify-center bg-white">
+                                            <img src="assets/images/icons/New-Icon.png" alt="Massage Icon"
+                                                class="w-5 h-5" />
+                                        </div>
+                                        <span class="block max-w-[150px] text-left leading-tight">Lorem Ipsum</span>
+                                    </button>
 
-</div>
+                                </div>
 
                                 <div class="mega-menu-content h-1/2 flex-grow-1">
-<div class="tab-content active grid grid-cols-3 gap-4 overflow-y-auto max-h-[400px] pr-2 px-3" id="OurPrograms">
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                    <div class="tab-content active grid grid-cols-3 gap-4 overflow-y-auto max-h-[400px] pr-2 px-3"
+                                        id="OurPrograms">
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text">REJUVENESCENCE</span>
                                         </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text">PAIN MANAGEMENT</span>
                                         </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text">IMMUNE & GUT HEALTH</span>
                                         </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text">PERFORMANCE ENHANCEMENT</span>
                                         </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text">CARDIOVASCULAR HEALTH</span>
                                         </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text">FUNCTIONAL / NATUROPATHY</span>
                                         </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text">LONGEVITY AND ANTI-AGEING</span>
                                         </a>
-                                        
+
                                     </div>
 
 
-                                    <div class="tab-content grid grid-cols-3 gap-4 overflow-y-auto max-h-[400px] pr-2 px-4"  id="wellnessPrograms">
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                    <div class="tab-content grid grid-cols-3 gap-4 overflow-y-auto max-h-[400px] pr-2 px-4"
+                                        id="wellnessPrograms">
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text"> Anti-wrinkle Injection in Dubai</span>
                                         </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text">Hollywood Facial in Dubai</span>
                                         </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
-                                            <span class="text">Regenera Activa – Non-surgical Hair Regeneration in Dubai</span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
+                                            <span class="text">Regenera Activa – Non-surgical Hair Regeneration in
+                                                Dubai</span>
                                         </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text"> Aquagold Facial in Dubai</span>
                                         </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text">HydraFacial in Dubai</span>
                                         </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text">Sculptra Fillers in Dubai</span>
                                         </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text"> Broadband Light Forever Young Treatment in Dubai</span>
                                         </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text">Jawline Filler in Dubai</span>
                                         </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text">Sculptra Fillers in Dubai</span>
                                         </a>
-                                                  <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text"> Cheek Filler in Dubai</span>
                                         </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text">Lip Fillers in Dubai</span>
                                         </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text">Skin Boosters in Dubai</span>
                                         </a>
-                                                    <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text"> Dermal Fillers in Dubai</span>
                                         </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text">MesoFacial in Dubai</span>
                                         </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text">Stem Cell Injections in Dubai</span>
                                         </a>
-                                                  <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text">Face Art in Dubai by Dr. Khan</span>
                                         </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text">Mesotherapy for Hair Loss in Dubai</span>
                                         </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
-                                            <span class="text"> Female Intimate Rejuvenation and Vaginal Tightening</span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
+                                            <span class="text"> Female Intimate Rejuvenation and Vaginal
+                                                Tightening</span>
                                         </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text">Morpheus 8 Pro Microneedling in Dubai</span>
                                         </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text">Stem Cells Infusion Facial in Dubai</span>
                                         </a>
-                                                  <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text">Fotona 4D: The Revolutionary Non-Invasive Facelift</span>
                                         </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text">Nose Filler in Dubai</span>
                                         </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text">Thread Lift in Dubai</span>
                                         </a>
-                                                    <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
-                                            <span class="text"> Fotona 4D: The Revolutionary Non-Invasive Facelift</span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
+                                            <span class="text"> Fotona 4D: The Revolutionary Non-Invasive
+                                                Facelift</span>
                                         </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text">Profhilo in Dubai</span>
                                         </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text">Ultherapy in Dubai</span>
                                         </a>
-                                                    <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text">PRP Hair Treatment in Dubai</span>
                                         </a>
-                                                  <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
                                             <span class="text">Ultimate Collagen Boost Facial</span>
                                         </a>
-                                        
+
                                     </div>
                                     <div class="mega-menu-content h-1/2 flex-grow-1">
-                                    <div class="tab-content grid grid-cols-3 px-2" id="regenerativeMedicine">
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
-                                            <span class="text">Biologicial Integrative Medicine</span>
-                                        </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
-                                            <span class="text">Exosome Therapy in Dubai</span>
-                                        </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
-                                            <span class="text">Functional Medicine in Dubai</span>
-                                        </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
-                                            <span class="text">Genomics Medicine</span>
-                                        </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
-                                            <span class="text">Naturopathic Medicine Treatment</span>
-                                        </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
-                                            <span class="text">Ozone Therapy in Dubai</span>
-                                        </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
-                                            <span class="text">Physiotherapy in Dubai</span>
-                                        </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
-                                            <span class="text">Sports Medicine in Dubai</span>
-                                        </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
-                                            <span class="text">Stem Cell Therapy in Dubai at AEON Clinic</span>
-                                        </a>
-                                                 <a href="#" class="dropdown-item flex items-center gap-3">
-  <span class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-  </span>
-                                            <span class="text">IV Therapy Drips</span>
-                                        </a>
-                                    
-                                      
-                                    </div>
-                                    <!-- <div class="tab-content" id="nutritionAdvice">
+                                        <div class="tab-content grid grid-cols-3 px-2" id="regenerativeMedicine">
+                                            <a href="#" class="dropdown-item flex items-center gap-3">
+                                                <span
+                                                    class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                    <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                                </span>
+                                                <span class="text">Biologicial Integrative Medicine</span>
+                                            </a>
+                                            <a href="#" class="dropdown-item flex items-center gap-3">
+                                                <span
+                                                    class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                    <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                                </span>
+                                                <span class="text">Exosome Therapy in Dubai</span>
+                                            </a>
+                                            <a href="#" class="dropdown-item flex items-center gap-3">
+                                                <span
+                                                    class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                    <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                                </span>
+                                                <span class="text">Functional Medicine in Dubai</span>
+                                            </a>
+                                            <a href="#" class="dropdown-item flex items-center gap-3">
+                                                <span
+                                                    class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                    <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                                </span>
+                                                <span class="text">Genomics Medicine</span>
+                                            </a>
+                                            <a href="#" class="dropdown-item flex items-center gap-3">
+                                                <span
+                                                    class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                    <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                                </span>
+                                                <span class="text">Naturopathic Medicine Treatment</span>
+                                            </a>
+                                            <a href="#" class="dropdown-item flex items-center gap-3">
+                                                <span
+                                                    class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                    <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                                </span>
+                                                <span class="text">Ozone Therapy in Dubai</span>
+                                            </a>
+                                            <a href="#" class="dropdown-item flex items-center gap-3">
+                                                <span
+                                                    class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                    <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                                </span>
+                                                <span class="text">Physiotherapy in Dubai</span>
+                                            </a>
+                                            <a href="#" class="dropdown-item flex items-center gap-3">
+                                                <span
+                                                    class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                    <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                                </span>
+                                                <span class="text">Sports Medicine in Dubai</span>
+                                            </a>
+                                            <a href="#" class="dropdown-item flex items-center gap-3">
+                                                <span
+                                                    class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                    <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                                </span>
+                                                <span class="text">Stem Cell Therapy in Dubai at AEON Clinic</span>
+                                            </a>
+                                            <a href="#" class="dropdown-item flex items-center gap-3">
+                                                <span
+                                                    class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                    <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                                </span>
+                                                <span class="text">IV Therapy Drips</span>
+                                            </a>
+
+
+                                        </div>
+                                        <!-- <div class="tab-content" id="nutritionAdvice">
                                         <a href="#" class="dropdown-item">🍽️ Diet Planning</a>
                                         <a href="#" class="dropdown-item">🧪 Supplement Guidance</a>
                                         <a href="#" class="dropdown-item">💧 Hydration Tips</a>
                                     </div> -->
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                     </li>
                     <!-- Aesthetic Dropdown -->
                     <!-- <li class="nav-item dropdown">
@@ -2166,10 +2279,10 @@
                             </li>
                         </ul>
                     </li> -->
-   <li class="nav-item">
+                    <li class="nav-item">
                         <a href="#" class="nav-link" data-i18n="aboutUs">Specialist</a>
                     </li>
-      <li class="nav-item">
+                    <li class="nav-item">
                         <a href="#" class="nav-link" data-i18n="aboutUs">Concierge</a>
                     </li>
                     <!-- Regeneration Dropdown -->
@@ -2242,8 +2355,8 @@
                         </ul>
                     </li> -->
 
-                 
-                          <li class="nav-item">
+
+                    <li class="nav-item">
                         <a href="#" class="nav-link" data-i18n="aboutUs">Book Now</a>
                     </li>
                     <!-- <li class="nav-item d-flex align-items-center px-4">
@@ -2599,7 +2712,8 @@
                 <div class="col-xxl-3 col-md-6">
                     <div class="features-wrap-card ">
                         <div class="icon ">
-                            <img src="assets/images/features/Longevity-Assessment-Brown.png" alt="Longevity Assessment icon">
+                            <img src="assets/images/features/Longevity-Assessment-Brown.png"
+                                alt="Longevity Assessment icon">
                         </div>
                         <h3>
                             <a href="#" data-i18n="features.longevity.title">Longevity Assessment</a>
@@ -2617,7 +2731,8 @@
                 <div class="col-xxl-3 col-md-6">
                     <div class="features-wrap-card">
                         <div class="icon">
-                            <img src="assets/images/features/Advance-aesthetics-Brown.png" alt="Advanced Aesthetics icon">
+                            <img src="assets/images/features/Advance-aesthetics-Brown.png"
+                                alt="Advanced Aesthetics icon">
                         </div>
                         <h3>
                             <a href="#" data-i18n="features.aesthetics.title">Advanced Aesthetics</a>
@@ -2635,7 +2750,8 @@
                 <div class="col-xxl-3 col-md-6">
                     <div class="features-wrap-card">
                         <div class="icon">
-                            <img src="assets/images/features/Regenerative-Therapies-Brown.png" alt="Regenerative Therapies icon">
+                            <img src="assets/images/features/Regenerative-Therapies-Brown.png"
+                                alt="Regenerative Therapies icon">
                         </div>
                         <h3>
                             <a href="#" data-i18n="features.regenerative.title">Regenerative Therapies</a>
@@ -2653,7 +2769,8 @@
                 <div class="col-xxl-3 col-md-6">
                     <div class="features-wrap-card">
                         <div class="icon">
-                            <img src="assets/images/features/Hair-&-Scalp-Solutions-Brown.png" alt="Hair & Scalp Solutions icon">
+                            <img src="assets/images/features/Hair-&-Scalp-Solutions-Brown.png"
+                                alt="Hair & Scalp Solutions icon">
                         </div>
                         <h3>
                             <a href="#" data-i18n="features.hair.title">Hair & Scalp Solutions</a>
@@ -4183,75 +4300,72 @@ info@protoclinic.com
 
             this.textContent = newLang === "en" ? "عربي" : "English";
         });
-        // document.querySelectorAll('.mega-menu').forEach(menu => {
-        //   const tabs = menu.querySelectorAll('.tab-btn');
-        //   const contents = menu.querySelectorAll('.tab-content');
-
-        //   tabs.forEach(tab => {
-        //     tab.addEventListener('click', (e) => {
-        //       e.stopPropagation(); // prevent dropdown from closing
-        //       // Remove active classes
-        //       tabs.forEach(t => t.classList.remove('active'));
-        //       contents.forEach(c => c.classList.remove('active'));
-        //       // Activate clicked tab + corresponding content
-        //       tab.classList.add('active');
-        //       const tabId = tab.getAttribute('data-tab');
-        //       const activeContent = menu.querySelector(`#${tabId}`);
-        //       if (activeContent) activeContent.classList.add('active');
-        //     });
-        //   });
-        // });
+  
 
 
     </script>
 
     <script>
-  document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
     function setupMegaMenu(dropdownId) {
-      const dropdown = document.getElementById(dropdownId);
-      if (!dropdown) return;
+        const dropdown = document.getElementById(dropdownId);
+        if (!dropdown) return;
 
-      const tabs = dropdown.querySelectorAll('.tab-btn');
-      const contents = dropdown.querySelectorAll('.tab-content');
-      let hideTimeout;
+        const tabs = dropdown.querySelectorAll('.tab-btn');
+        const contents = dropdown.querySelectorAll('.tab-content');
+        let hideTimeout;
 
-      // Show on hover
-      dropdown.addEventListener('mouseenter', () => {
-        clearTimeout(hideTimeout);
-        dropdown.classList.add('open');
-      });
+        function activateFirstTab() {
+            tabs.forEach(t => t.classList.remove('active'));
+            contents.forEach(c => c.classList.remove('active'));
 
-      // Hide on mouse leave
-      dropdown.addEventListener('mouseleave', () => {
-        hideTimeout = setTimeout(() => {
-          dropdown.classList.remove('open');
-        }, 150);
-      });
-
-      // Handle tab hover
-      tabs.forEach(tab => {
-        tab.addEventListener('mouseenter', () => {
-          tabs.forEach(t => t.classList.remove('active'));
-          contents.forEach(c => c.classList.remove('active'));
-          tab.classList.add('active');
-          const id = tab.getAttribute('data-tab');
-          const contentToShow = dropdown.querySelector(`#${id}`);
-          if (contentToShow) contentToShow.classList.add('active');
-        });
-      });
-
-      // Hide if clicked outside
-      document.addEventListener('click', e => {
-        if (!dropdown.contains(e.target)) {
-          dropdown.classList.remove('open');
+            if (tabs.length > 0) {
+                tabs[0].classList.add('active');
+                const id = tabs[0].getAttribute('data-tab');
+                const contentToShow = dropdown.querySelector(`#${id}`);
+                if (contentToShow) contentToShow.classList.add('active');
+            }
         }
-      });
+
+        // Show on hover
+        dropdown.addEventListener('mouseenter', () => {
+            clearTimeout(hideTimeout);
+            dropdown.classList.add('open');
+            activateFirstTab(); // 🔥 Reset active tab every time the menu opens
+        });
+
+        // Hide on mouse leave
+        dropdown.addEventListener('mouseleave', () => {
+            hideTimeout = setTimeout(() => {
+                dropdown.classList.remove('open');
+            }, 150);
+        });
+
+        // Handle tab hover
+        tabs.forEach(tab => {
+            tab.addEventListener('mouseenter', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                contents.forEach(c => c.classList.remove('active'));
+
+                tab.classList.add('active');
+                const id = tab.getAttribute('data-tab');
+                const contentToShow = dropdown.querySelector(`#${id}`);
+                if (contentToShow) contentToShow.classList.add('active');
+            });
+        });
+
+        // Hide if clicked outside
+        document.addEventListener('click', e => {
+            if (!dropdown.contains(e.target)) {
+                dropdown.classList.remove('open');
+            }
+        });
     }
 
     // Call the function for each mega menu
     setupMegaMenu('longevityDropdownParent');
     setupMegaMenu('exclusiveDropdownParent');
-  });
+});
 </script>
 
     <script>
@@ -4319,18 +4433,19 @@ info@protoclinic.com
         });
     </script>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const tabButtons = document.querySelectorAll('.tab-btn');
+    <!-- <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabButtons = document.querySelectorAll('.tab-btn');
 
-    tabButtons.forEach(btn => {
-      btn.addEventListener('mouseenter', () => {
-        tabButtons.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-      });
-    });
-  });
-</script>
+            tabButtons.forEach(btn => {
+                btn.addEventListener('mouseenter', () => {
+                    tabButtons.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                });
+            });
+        });
+    </script> -->
+    
     </body>
 
 
