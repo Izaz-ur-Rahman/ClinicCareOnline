@@ -229,7 +229,7 @@ hr {
 
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
    font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
+  font-weight: bold;
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-weight: 500;
