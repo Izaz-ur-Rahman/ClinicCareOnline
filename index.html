@@ -54,7 +54,7 @@
             padding: 15.5px 20px;
             justify-content: center;
             align-items: center;
-            background-color: #b2915b;
+            background-color: #B5946D;
             color: #ffffff;
             font-weight: 500;
             letter-spacing: 0.32px;
@@ -64,7 +64,7 @@
             z-index: 1;
             transition: 0.6s;
             /* 
-            border: 2px solid #B2915B; */
+            border: 2px solid #B5946D; */
         }
 
         .second_btn_color::before {
@@ -74,7 +74,7 @@
             top: 0;
             height: 100%;
             width: 0%;
-            background-color: #9a784c;
+            background-color: #896842;
             z-index: -1;
             transition: 0.6s;
         }
@@ -364,7 +364,7 @@
         /* Hover/focus states */
         .navbar-nav .dropdown-menu .nav-link:hover,
         .navbar-nav .dropdown-menu .nav-link:focus {
-            background-color: #B2915B;
+            background-color: #B5946D;
             /* your preferred accent color */
             color: white;
             text-decoration: none;
@@ -385,7 +385,7 @@
 
         /* Optional: add slight shadow on dropdown toggle hover */
         .navbar-nav .dropdown-toggle:hover {
-            color: #B2915B;
+            color: #B5946D;
         }
 
         /* Smooth fade-in for dropdown on mobile toggle */
@@ -457,7 +457,7 @@
         /* Active tab style */
         .mega-menu-tabs .tab-btn.active,
         .mega-menu-tabs .tab-btn:hover {
-            background-color: #B2915B;
+            background-color: #B5946D;
             color: white;
         }
 
@@ -491,7 +491,7 @@
         }
 
         .dropdown-item:hover {
-            background-color: #B2915B;
+            background-color: #B5946D;
             color: white;
             text-decoration: none;
         }
@@ -509,7 +509,7 @@
             /* box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12); */
             /* padding: 25px; */
             /* min-width: 500px; */
-            border: 2px solid #B2915B1c;
+            border: 2px solid #B5946D1c;
         }
 
         /* Show menu when open */
@@ -552,7 +552,7 @@
         /* .tab-btn::after {
   content: "➜";
   font-size: 14px;
-  color: #B2915B; 
+  color: #B5946D; 
   transition: transform 0.3s ease, color 0.3s ease;
 } */
         .tab-btn {
@@ -566,7 +566,7 @@
             margin-bottom: 10px;
             font-weight: 500;
             font-size: 15px;
-            color: #B2915B;
+            color: #B5946D;
             cursor: pointer;
             transition: all 0.3s ease;
             /* box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04); */
@@ -577,7 +577,7 @@
             margin-left: 8px;
             /* Space between text and arrow */
             font-size: 14px;
-            color: #B2915B;
+            color: #B5946D;
             transition: transform 0.3s ease, color 0.3s ease;
         }
 
@@ -642,8 +642,8 @@
 
         .dropdown-item:hover {
             background: #e6f7ff;
-            color: #B2915B;
-            border-color: #B2915B33;
+            color: #B5946D;
+            border-color: #B5946D33;
             transform: translateX(5px);
             /* box-shadow: 0 2px 6px rgba(59, 199, 237, 0.15); */
         }
@@ -723,7 +723,7 @@
             justify-content: space-between;
             align-items: center;
             width: 100%;
-            /* background-color: #9a784c; */
+            /* background-color: #896842; */
             /* Default brown */
             /* color: #fff; */
             border: none;
@@ -737,7 +737,7 @@
 
         /* 3. On hover - darker brown and text shift */
         .mega-menu-tabs .tab-btn:hover {
-            background-color: #9a784c;
+            background-color: #896842;
             /* Darker brown */
             color: #fff;
             padding-left: 20px;
@@ -826,7 +826,7 @@
             justify-content: center;
             align-items: center;
             width: 100%;
-            /* background-color: #9a784c; */
+            /* background-color: #896842; */
             /* Default brown */
             /* color: #fff; */
             border: none;
@@ -841,13 +841,13 @@
         /* Light gray for 2nd tab */
         .mega-menu-tabs .tab-btn.gray-tab {
             background-color: #FFF;
-            /* border: 1px solid #9a784c ; */
-            color: #9a784c;
+            /* border: 1px solid #896842 ; */
+            color: #896842;
         }
 
         /* Hover effect applies to all */
         .mega-menu-tabs .tab-btn:hover {
-            background-color: #9a784c;
+            background-color: #896842;
             /* Darker brown */
             color: #fff;
             padding-left: 20px;
@@ -1429,16 +1429,18 @@
                         <div class="mega-menu   ">
                             <div class="mega-menu-container  flex flex-col">
                                 <div class="mega-menu-tabs flex flex-row justify-center gap-2 w-full">
-                                    <button
-                                        class="tab-btn active flex items-center gap-2 px-2 py-3 hover:bg-gray-100 rounded"
-                                        data-tab="diagnosticTesting">
-                                        <div
-                                            class="w-8 h-8 rounded-full shadow-md overflow-hidden flex items-center justify-center bg-white">
-                                            <img src="assets/images/icons/New-Icon.png" alt="Diagnostic Icon"
-                                                class="w-5 h-5" />
-                                        </div>
-                                        <span>Regenerative Wellness</span>
-                                    </button>
+                            <button
+    id="regenerativeTab"
+    class="tab-btn active flex items-center gap-2 px-2 py-3 hover:bg-gray-100 rounded"
+    data-tab="diagnosticTesting">
+    <div
+        class="w-8 h-8 rounded-full shadow-md overflow-hidden flex items-center justify-center bg-white">
+        <img src="assets/images/icons/New-Icon.png" alt="Diagnostic Icon"
+            class="w-5 h-5" />
+    </div>
+    <span class="tab-text">Regenerative Wellness</span>
+</button>
+
 
                                     <button
                                         class="tab-btn gray-tab flex items-center gap-2 px-2 py-3 hover:bg-gray-100 rounded"
@@ -1839,18 +1841,14 @@
 
 
                                         </div>
-                                        <!-- <div class="tab-content" id="nutritionAdvice">
-                                        <a href="#" class="dropdown-item">🍽️ Diet Planning</a>
-                                        <a href="#" class="dropdown-item">🧪 Supplement Guidance</a>
-                                        <a href="#" class="dropdown-item">💧 Hydration Tips</a>
-                                    </div> -->
+                                  
                                     </div>
                                 </div>
                             </div>
                     </li>
                     <li class="nav-item   dropdown" id="exclusiveDropdownParent">
                         <a href="javascript:void(0)" class="nav-link custom-toggle d-flex align-items-center"
-                            id="longevityDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            id="exclusiveDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                             <span>Exclusives</span>
                             <svg class="ms-2 dropdown-arrow transition-transform duration-300" width="16" height="16"
                                 viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
@@ -1862,16 +1860,28 @@
                         <div class="mega-menu   " id="exclusive_menu">
                             <div class="mega-menu-container  flex flex-col">
                                 <div class="mega-menu-tabs flex flex-row gap-2 justify-center w-full">
-                                    <button
-                                        class="tab-btn active flex items-center gap-2 px-2 py-3 hover:bg-gray-100 rounded"
-                                        data-tab="OurPrograms">
+                                  <!-- <button
+    id="ourProgramsTab"
+    class="tab-btn active flex items-center gap-2 px-2 py-3 hover:bg-gray-100 rounded"
+    data-tab="OurPrograms">
                                         <div
                                             class="w-8 h-8 rounded-full shadow-md overflow-hidden flex items-center justify-center bg-white">
                                             <img src="assets/images/icons/New-Icon.png" alt="Diagnostic Icon"
                                                 class="w-5 h-5" />
                                         </div>
                                         <span>Our Programs</span>
-                                    </button>
+                                    </button> -->
+<button
+    id="ourProgramsTab"
+    class="tab-btn active flex items-center gap-2 px-2 py-3 hover:bg-gray-100 rounded"
+    data-tab="OurPrograms">
+     <div
+                                            class="w-8 h-8 rounded-full shadow-md overflow-hidden flex items-center justify-center bg-white">
+                                            <img src="assets/images/icons/New-Icon.png" alt="Diagnostic Icon"
+                                                class="w-5 h-5" />
+                                        </div>
+    <span class="tab-text">Our Programs</span>
+</button>
 
                                     <button
                                         class="tab-btn gray-tab flex items-center gap-2 px-2 py-3 hover:bg-gray-100 rounded"
@@ -1896,6 +1906,8 @@
                                     </button>
 
                                 </div>
+
+
 
                                 <div class="mega-menu-content h-1/2 flex-grow-1">
                                     <div class="tab-content active grid grid-cols-3 gap-4 overflow-y-auto max-h-[400px] pr-2 px-3"
@@ -4391,12 +4403,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 arrow.setAttribute("stroke", color);
             });
         }
-
+        
         // Initialize for all dropdowns
-        setupDropdown('longevityDropdown');
-        setupDropdown('aestheticDropdown');
-        setupDropdown('regenerationDropdown');
-        setupDropdown('servicesDropdown');
+   // Initialize for all dropdowns
+setupDropdown('longevityDropdown');
+setupDropdown('exclusiveDropdown'); // ✅ Add this line
+setupDropdown('aestheticDropdown');
+setupDropdown('regenerationDropdown');
+setupDropdown('servicesDropdown');
+
 
         document.querySelectorAll('.dropdown-toggle').forEach(el => {
             el.addEventListener('hide.bs.dropdown', e => {
@@ -4435,7 +4450,40 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     </script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const ourProgramsText = document.querySelector('#ourProgramsTab .tab-text');
+    const regenerativeText = document.querySelector('#regenerativeTab .tab-text');
 
+    const tabButtons = document.querySelectorAll('.tab-btn');
+
+    tabButtons.forEach(tab => {
+        tab.addEventListener('mouseenter', () => {
+            // Change Our Programs text color if hovering a different tab
+            if (tab.id !== 'ourProgramsTab' && ourProgramsText) {
+                ourProgramsText.style.color = '#896842';
+            }
+
+            // Change Regenerative Wellness text color if hovering a different tab
+            if (tab.id !== 'regenerativeTab' && regenerativeText) {
+                regenerativeText.style.color = '#896842';
+            }
+        });
+
+        tab.addEventListener('mouseleave', () => {
+            // Reset Our Programs text color
+            if (tab.id !== 'ourProgramsTab' && ourProgramsText) {
+                ourProgramsText.style.color = '';
+            }
+
+            // Reset Regenerative Wellness text color
+            if (tab.id !== 'regenerativeTab' && regenerativeText) {
+                regenerativeText.style.color = '';
+            }
+        });
+    });
+});
+</script>
     <!-- <script>
         document.addEventListener('DOMContentLoaded', function () {
             const tabButtons = document.querySelectorAll('.tab-btn');

@@ -27,7 +27,7 @@
   --bs-gray-700: #495057;
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
-  --bs-primary: #9a784c;
+  --bs-primary: #896842;
   --bs-secondary: #6c757d;
   --bs-success: #198754;
   --bs-info: #0dcaf0;
@@ -93,7 +93,7 @@
   --bs-tertiary-bg: #f8f9fa;
   --bs-tertiary-bg-rgb: 248, 249, 250;
   --bs-heading-color: inherit;
-  --bs-link-color: #9a784c;
+  --bs-link-color: #896842;
   --bs-link-color-rgb: 64, 120, 129;
   --bs-link-decoration: underline;
   --bs-link-hover-color: #336067;
@@ -747,7 +747,7 @@ progress {
   --bs-gray-700: #495057;
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
-  --bs-primary: #9a784c;
+  --bs-primary: #896842;
   --bs-secondary: #6c757d;
   --bs-success: #198754;
   --bs-info: #0dcaf0;
@@ -813,7 +813,7 @@ progress {
   --bs-tertiary-bg: #f8f9fa;
   --bs-tertiary-bg-rgb: 248, 249, 250;
   --bs-heading-color: inherit;
-  --bs-link-color: #9a784c;
+  --bs-link-color: #896842;
   --bs-link-color-rgb: 64, 120, 129;
   --bs-link-decoration: underline;
   --bs-link-hover-color: #336067;
@@ -3088,8 +3088,8 @@ textarea.form-control-lg {
   box-shadow: 0 0 0 0.25rem rgba(64, 120, 129, 0.25);
 }
 .form-check-input:checked {
-  background-color: #9a784c;
-  border-color: #9a784c;
+  background-color: #896842;
+  border-color: #896842;
 }
 .form-check-input:checked[type=checkbox] {
   --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
@@ -3098,8 +3098,8 @@ textarea.form-control-lg {
   --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
 }
 .form-check-input[type=checkbox]:indeterminate {
-  background-color: #9a784c;
-  border-color: #9a784c;
+  background-color: #896842;
+  border-color: #896842;
   --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/%3e%3c/svg%3e");
 }
 .form-check-input:disabled {
@@ -3189,7 +3189,7 @@ textarea.form-control-lg {
   height: 1rem;
   margin-top: -0.25rem;
   appearance: none;
-  background-color: #9a784c;
+  background-color: #896842;
   border: 0;
   border-radius: 1rem;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -3215,7 +3215,7 @@ textarea.form-control-lg {
   width: 1rem;
   height: 1rem;
   appearance: none;
-  background-color: #9a784c;
+  background-color: #896842;
   border: 0;
   border-radius: 1rem;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -3688,8 +3688,8 @@ textarea.form-control-lg {
 
 .btn-primary {
   --bs-btn-color: #fff;
-  --bs-btn-bg: #9a784c;
-  --bs-btn-border-color: #9a784c;
+  --bs-btn-bg: #896842;
+  --bs-btn-border-color: #896842;
   --bs-btn-hover-color: #fff;
   --bs-btn-hover-bg: #36666e;
   --bs-btn-hover-border-color: #336067;
@@ -3699,8 +3699,8 @@ textarea.form-control-lg {
   --bs-btn-active-border-color: #305a61;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #9a784c;
-  --bs-btn-disabled-border-color: #9a784c;
+  --bs-btn-disabled-bg: #896842;
+  --bs-btn-disabled-border-color: #896842;
 }
 
 .btn-secondary {
@@ -3840,19 +3840,19 @@ textarea.form-control-lg {
 }
 
 .btn-outline-primary {
-  --bs-btn-color: #9a784c;
-  --bs-btn-border-color: #9a784c;
+  --bs-btn-color: #896842;
+  --bs-btn-border-color: #896842;
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #9a784c;
-  --bs-btn-hover-border-color: #9a784c;
+  --bs-btn-hover-bg: #896842;
+  --bs-btn-hover-border-color: #896842;
   --bs-btn-focus-shadow-rgb: 64, 120, 129;
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #9a784c;
-  --bs-btn-active-border-color: #9a784c;
+  --bs-btn-active-bg: #896842;
+  --bs-btn-active-border-color: #896842;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #9a784c;
+  --bs-btn-disabled-color: #896842;
   --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #9a784c;
+  --bs-btn-disabled-border-color: #896842;
   --bs-gradient: none;
 }
 
@@ -4111,7 +4111,7 @@ textarea.form-control-lg {
   --bs-dropdown-link-hover-color: var(--bs-body-color);
   --bs-dropdown-link-hover-bg: var(--bs-tertiary-bg);
   --bs-dropdown-link-active-color: #fff;
-  --bs-dropdown-link-active-bg: #9a784c;
+  --bs-dropdown-link-active-bg: #896842;
   --bs-dropdown-link-disabled-color: var(--bs-tertiary-color);
   --bs-dropdown-item-padding-x: 1rem;
   --bs-dropdown-item-padding-y: 0.25rem;
@@ -4377,7 +4377,7 @@ textarea.form-control-lg {
   --bs-dropdown-divider-bg: var(--bs-border-color-translucent);
   --bs-dropdown-link-hover-bg: rgba(255, 255, 255, 0.15);
   --bs-dropdown-link-active-color: #fff;
-  --bs-dropdown-link-active-bg: #9a784c;
+  --bs-dropdown-link-active-bg: #896842;
   --bs-dropdown-link-disabled-color: #adb5bd;
   --bs-dropdown-header-color: #adb5bd;
 }
@@ -4560,7 +4560,7 @@ textarea.form-control-lg {
 .nav-pills {
   --bs-nav-pills-border-radius: var(--bs-border-radius);
   --bs-nav-pills-link-active-color: #fff;
-  --bs-nav-pills-link-active-bg: #9a784c;
+  --bs-nav-pills-link-active-bg: #896842;
 }
 .nav-pills .nav-link {
   border-radius: var(--bs-nav-pills-border-radius);
@@ -5417,8 +5417,8 @@ textarea.form-control-lg {
   --bs-pagination-focus-bg: var(--bs-secondary-bg);
   --bs-pagination-focus-box-shadow: 0 0 0 0.25rem rgba(64, 120, 129, 0.25);
   --bs-pagination-active-color: #fff;
-  --bs-pagination-active-bg: #9a784c;
-  --bs-pagination-active-border-color: #9a784c;
+  --bs-pagination-active-bg: #896842;
+  --bs-pagination-active-border-color: #896842;
   --bs-pagination-disabled-color: var(--bs-secondary-color);
   --bs-pagination-disabled-bg: var(--bs-secondary-bg);
   --bs-pagination-disabled-border-color: var(--bs-border-color);
@@ -5637,7 +5637,7 @@ textarea.form-control-lg {
   --bs-progress-border-radius: var(--bs-border-radius);
   --bs-progress-box-shadow: var(--bs-box-shadow-inset);
   --bs-progress-bar-color: #fff;
-  --bs-progress-bar-bg: #9a784c;
+  --bs-progress-bar-bg: #896842;
   --bs-progress-bar-transition: width 0.6s ease;
   display: flex;
   height: var(--bs-progress-height);
@@ -5702,8 +5702,8 @@ textarea.form-control-lg {
   --bs-list-group-disabled-color: var(--bs-secondary-color);
   --bs-list-group-disabled-bg: var(--bs-body-bg);
   --bs-list-group-active-color: #fff;
-  --bs-list-group-active-bg: #9a784c;
-  --bs-list-group-active-border-color: #9a784c;
+  --bs-list-group-active-bg: #896842;
+  --bs-list-group-active-border-color: #896842;
   display: flex;
   flex-direction: column;
   padding-left: 0;
@@ -12683,7 +12683,7 @@ body {
   color: #66798C;
   font-size: 16px;
   font-weight: 400;
-  background-color: #F8F8F5;
+  background-color: #fff;
 }
 
 p {
@@ -12704,7 +12704,7 @@ p:last-child {
   color: #002345;
 }
 .h1 a:hover, .h2 a:hover, .h3 a:hover, .h4 a:hover, .h5 a:hover, .h6 a:hover, h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
-  color: #9a784c;
+  color: #896842;
 }
 
 a {
@@ -12811,7 +12811,7 @@ Default Btn Area CSS
   padding: 15.5px 20px;
   justify-content: center;
   align-items: center;
-  background-color: #b2915b;
+  background-color: #B5946D;
   color: #ffffff;
   font-weight: 500;
   letter-spacing: 0.32px;
@@ -12828,7 +12828,7 @@ Default Btn Area CSS
   top: 0;
   height: 100%;
   width: 0%;
-  background-color: #9a784c;
+  background-color: #896842;
   z-index: -1;
   transition: 0.6s;
 }
@@ -12837,12 +12837,12 @@ Default Btn Area CSS
 }
 .default-btn-outline {
   background-color: #ffffff !important;
-  color: #b2915b;
-  border: 2px solid #b2915b;
+  color: #B5946D;
+  border: 2px solid #B5946D;
 }
 
 .default-btn-outline::before {
-  background-color: #b2915b; /* fill color on hover */
+  background-color: #B5946D; /* fill color on hover */
 }
 
 .default-btn-outline:hover {
@@ -12920,7 +12920,7 @@ Top Header Area CSS
 .top-header-left li svg {
   width: 18px;
   height: 18px;
-  stroke: #b2915b;
+  stroke: #B5946D;
   margin-right: 8px;
 }
 .top-header-left li:last-child {
@@ -13013,7 +13013,7 @@ Top Header Area CSS
   border-radius: 50px;
 }
 .top-header-left .dropdown .dropdown-menu::-webkit-scrollbar-thumb:hover {
-  background: #9a784c;
+  background: #896842;
   border-radius: 50px;
 }
 
@@ -13037,14 +13037,14 @@ Top Header Area CSS
 .top-header-info li svg {
   width: 18px;
   height: 18px;
-  stroke: #b2915b;
+  stroke: #B5946D;
   margin-right: 8px;
 }
 .top-header-info li a {
   color: #ffffff;
 }
 .top-header-info li a:hover {
-  color: #9a784c;
+  color: #896842;
 }
 .top-header-info li:last-child {
   margin-right: 0;
@@ -13053,7 +13053,7 @@ Top Header Area CSS
   color: #ffffff;
 }
 .top-header-info.hover-color li a:hover {
-  color: #b2915b;
+  color: #B5946D;
 }
 
 .top-header-wrap-area {
@@ -13073,7 +13073,7 @@ Top Header Area CSS
   color: #66798C;
 }
 .top-header-with-border .top-header-left li svg {
-  stroke: #9a784c;
+  stroke: #896842;
 }
 .top-header-with-border .top-header-left .dropdown .dropdown-toggle {
   background-color: #002345;
@@ -13086,13 +13086,13 @@ Top Header Area CSS
   color: #66798C;
 }
 .top-header-with-border .top-header-info li svg {
-  stroke: #9a784c;
+  stroke: #896842;
 }
 .top-header-with-border .top-header-info li a {
   color: #66798C;
 }
 .top-header-with-border .top-header-info li a:hover {
-  color: #9a784c;
+  color: #896842;
 }
 
 /*================================================
@@ -13156,7 +13156,7 @@ Navbar Area CSS
   width: 170px;
 }
 .navbar .navbar-toggler {
-  color: #9a784c;
+  color: #896842;
   font-size: inherit;
   box-shadow: unset;
   border: none;
@@ -13170,7 +13170,7 @@ Navbar Area CSS
   width: 30px;
   margin: 5px 0;
   display: block;
-  background: #9a784c;
+  background: #896842;
 }
 .navbar ul {
   padding-left: 0;
@@ -13202,7 +13202,7 @@ Navbar Area CSS
   content: "";
   left: 0;
   bottom: 0;
-  background-color: #9a784c;
+  background-color: #896842;
   width: 0%;
   height: 2.5px;
   border-radius: 0;
@@ -13285,13 +13285,13 @@ Navbar Area CSS
   display: none;
 }
 .navbar .navbar-nav .nav-item .dropdown-menu .nav-item .nav-link.active, .navbar .navbar-nav .nav-item .dropdown-menu .nav-item .nav-link:hover {
-  color: #9a784c;
+  color: #896842;
 }
 .navbar .navbar-nav .nav-item .dropdown-menu .nav-item .nav-link.dropdown-toggle::before {
   top: 50%;
   right: 20px;
   transform: translateY(-50%);
-  color: #9a784c;
+  color: #896842;
 }
 .navbar .navbar-nav .nav-item .dropdown-menu .nav-item .dropdown-menu {
   top: -5px;
@@ -13310,7 +13310,7 @@ Navbar Area CSS
   padding-bottom: 15px;
 }
 .navbar .navbar-nav .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .nav-link.active, .navbar .navbar-nav .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .nav-link:hover {
-  color: #9a784c;
+  color: #896842;
 }
 .navbar .navbar-nav .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .dropdown-menu {
   top: -5px;
@@ -13324,7 +13324,7 @@ Navbar Area CSS
   color: #66798C;
 }
 .navbar .navbar-nav .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .nav-link.active, .navbar .navbar-nav .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .nav-link:hover {
-  color: #9a784c;
+  color: #896842;
 }
 .navbar .navbar-nav .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .dropdown-menu {
   top: -5px;
@@ -13338,17 +13338,17 @@ Navbar Area CSS
   color: #66798C;
 }
 .navbar .navbar-nav .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .nav-link.active, .navbar .navbar-nav .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .nav-link:hover {
-  color: #9a784c;
+  color: #896842;
 }
 .navbar .navbar-nav .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item.active .nav-link {
-  color: #9a784c;
+  color: #896842;
 }
 .navbar .navbar-nav .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item:hover .dropdown-menu {
   opacity: 1;
   visibility: visible;
 }
 .navbar .navbar-nav .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item.active .nav-link {
-  color: #9a784c;
+  color: #896842;
 }
 .navbar .navbar-nav .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item:hover .dropdown-menu {
   opacity: 1;
@@ -13356,7 +13356,7 @@ Navbar Area CSS
   transform: translate3d(0, 0, 0);
 }
 .navbar .navbar-nav .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item.active .nav-link {
-  color: #9a784c;
+  color: #896842;
 }
 .navbar .navbar-nav .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item:hover .dropdown-menu {
   opacity: 1;
@@ -13370,7 +13370,7 @@ Navbar Area CSS
   padding-bottom: 0;
 }
 .navbar .navbar-nav .nav-item .dropdown-menu .nav-item.active .nav-link {
-  color: #9a784c;
+  color: #896842;
 }
 .navbar .navbar-nav .nav-item .dropdown-menu .nav-item:hover .dropdown-menu {
   opacity: 1;
@@ -13409,13 +13409,13 @@ Navbar Area CSS
   cursor: pointer;
 }
 .navbar .others-option .option-item .search-bar svg:hover {
-  stroke: #9a784c;
+  stroke: #896842;
 }
     .navbar .others-option .option-item .default-btn {
-        background-color: #b2915b;
+        background-color: #B5946D;
     }
 .navbar .others-option .option-item .default-btn::before {
-  background-color: #9a784c;
+  background-color: #896842;
 }
 
 .navbar-style-two-area.sticky {
@@ -13429,10 +13429,10 @@ Navbar Area CSS
   color: #002345;
 }
 .navbar-style-two-area .navbar-nav .nav-item .nav-link::after {
-  background-color: #9a784c;
+  background-color: #896842;
 }
 .navbar-style-two-area .navbar-nav .nav-item .nav-link:hover, .navbar-style-two-area .navbar-nav .nav-item .nav-link.active {
-  color: #9a784c;
+  color: #896842;
 }
 .navbar-style-two-area .navbar-nav .nav-item .nav-link:hover::after, .navbar-style-two-area .navbar-nav .nav-item .nav-link.active::after {
   width: 100%;
@@ -13441,7 +13441,7 @@ Navbar Area CSS
   color: #002345;
 }
 .navbar-style-two-area .navbar-nav .nav-item:hover .nav-link, .navbar-style-two-area .navbar-nav .nav-item.active .nav-link {
-  color: #9a784c;
+  color: #896842;
 }
 .navbar-style-two-area .navbar-nav .nav-item:hover .nav-link::after, .navbar-style-two-area .navbar-nav .nav-item.active .nav-link::after {
   width: 100%;
@@ -13450,37 +13450,37 @@ Navbar Area CSS
   color: #66798C;
 }
 .navbar-style-two-area .navbar-nav .nav-item .dropdown-menu .nav-item .nav-link.active, .navbar-style-two-area .navbar-nav .nav-item .dropdown-menu .nav-item .nav-link:hover {
-  color: #9a784c;
+  color: #896842;
 }
 .navbar-style-two-area .navbar-nav .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .nav-link {
   color: #66798C;
 }
 .navbar-style-two-area .navbar-nav .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .nav-link.active, .navbar-style-two-area .navbar-nav .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .nav-link:hover {
-  color: #9a784c;
+  color: #896842;
 }
 .navbar-style-two-area .navbar-nav .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .nav-link {
   color: #66798C;
 }
 .navbar-style-two-area .navbar-nav .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .nav-link.active, .navbar-style-two-area .navbar-nav .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .nav-link:hover {
-  color: #9a784c;
+  color: #896842;
 }
 .navbar-style-two-area .navbar-nav .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .nav-link {
   color: #66798C;
 }
 .navbar-style-two-area .navbar-nav .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .nav-link.active, .navbar-style-two-area .navbar-nav .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .nav-link:hover {
-  color: #9a784c;
+  color: #896842;
 }
 .navbar-style-two-area .navbar-nav .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item.active .nav-link {
-  color: #9a784c;
+  color: #896842;
 }
 .navbar-style-two-area .navbar-nav .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item.active .nav-link {
-  color: #9a784c;
+  color: #896842;
 }
 .navbar-style-two-area .navbar-nav .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item.active .nav-link {
-  color: #9a784c;
+  color: #896842;
 }
 .navbar-style-two-area .navbar-nav .nav-item .dropdown-menu .nav-item.active .nav-link {
-  color: #9a784c;
+  color: #896842;
 }
 .navbar-style-two-area .navbar-nav.menu-hide {
   opacity: 0;
@@ -13495,7 +13495,7 @@ Navbar Area CSS
   transition: 0.6s;
 }
 .navbar-style-two-area .others-option .option-item .search-bar svg:hover {
-  stroke: #9a784c;
+  stroke: #896842;
 }
 .navbar-style-two-area .others-option .option-item .icon i {
   display: flex;
@@ -13505,7 +13505,7 @@ Navbar Area CSS
   transition: 0.6s;
 }
 .navbar-style-two-area .others-option .option-item .icon i:hover {
-  color: #9a784c;
+  color: #896842;
 }
 
 .navbar-style-three-area {
@@ -13535,19 +13535,19 @@ Navbar Area CSS
   padding-bottom: 20px;
 }
 .navbar-style-three-area .navbar-nav .nav-item .nav-link::after {
-  background-color: #9a784c;
+  background-color: #896842;
 }
 .navbar-style-three-area .navbar-nav .nav-item .nav-link:hover, .navbar-style-three-area .navbar-nav .nav-item .nav-link.active {
-  color: #9a784c;
+  color: #896842;
 }
 .navbar-style-three-area .navbar-nav .nav-item .nav-link:hover::after, .navbar-style-three-area .navbar-nav .nav-item .nav-link.active::after {
   width: 100%;
 }
 .navbar-style-three-area .navbar-nav .nav-item .dropdown-toggle::before {
-  color: #9a784c;
+  color: #896842;
 }
 .navbar-style-three-area .navbar-nav .nav-item:hover .nav-link, .navbar-style-three-area .navbar-nav .nav-item.active .nav-link {
-  color: #9a784c;
+  color: #896842;
 }
 .navbar-style-three-area .navbar-nav .nav-item:hover .nav-link::after, .navbar-style-three-area .navbar-nav .nav-item.active .nav-link::after {
   width: 100%;
@@ -13560,43 +13560,43 @@ Navbar Area CSS
   font-weight: 500;
 }
 .navbar-style-three-area .navbar-nav .nav-item .dropdown-menu .nav-item .nav-link.active, .navbar-style-three-area .navbar-nav .nav-item .dropdown-menu .nav-item .nav-link:hover {
-  color: #9a784c;
+  color: #896842;
 }
 .navbar-style-three-area .navbar-nav .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .nav-link {
   color: #66798C;
 }
 .navbar-style-three-area .navbar-nav .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .nav-link.active, .navbar-style-three-area .navbar-nav .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .nav-link:hover {
-  color: #9a784c;
+  color: #896842;
 }
 .navbar-style-three-area .navbar-nav .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .nav-link {
   color: #66798C;
 }
 .navbar-style-three-area .navbar-nav .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .nav-link.active, .navbar-style-three-area .navbar-nav .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .nav-link:hover {
-  color: #9a784c;
+  color: #896842;
 }
 .navbar-style-three-area .navbar-nav .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .nav-link {
   color: #66798C;
 }
 .navbar-style-three-area .navbar-nav .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .nav-link.active, .navbar-style-three-area .navbar-nav .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .nav-link:hover {
-  color: #9a784c;
+  color: #896842;
 }
 .navbar-style-three-area .navbar-nav .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item.active .nav-link {
-  color: #9a784c;
+  color: #896842;
 }
 .navbar-style-three-area .navbar-nav .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item.active .nav-link {
-  color: #9a784c;
+  color: #896842;
 }
 .navbar-style-three-area .navbar-nav .nav-item .dropdown-menu .nav-item .dropdown-menu .nav-item.active .nav-link {
-  color: #9a784c;
+  color: #896842;
 }
 .navbar-style-three-area .navbar-nav .nav-item .dropdown-menu .nav-item.active .nav-link {
-  color: #9a784c;
+  color: #896842;
 }
 .navbar-style-three-area .others-option .option-item .default-btn {
-  background-color: #9a784c;
+  background-color: #896842;
 }
 .navbar-style-three-area .others-option .option-item .default-btn::before {
-  background-color: #9a784c;
+  background-color: #896842;
 }
 
 .navbar-with-white-border .navbar-nav .nav-item .nav-link::after {
@@ -13606,7 +13606,7 @@ Navbar Area CSS
   stroke: #ffffff;
 }
 .navbar-with-white-border .others-option .option-item .search-bar svg:hover {
-  stroke: #b2915b;
+  stroke: #B5946D;
 }
 
 .main-header-area {
@@ -13719,7 +13719,7 @@ Search Popup CSS
   position: absolute;
   top: 0;
   bottom: 0;
-  background-color: #9a784c;
+  background-color: #896842;
   color: #002345;
   right: 0;
   border: none;
@@ -13729,7 +13729,7 @@ Search Popup CSS
 .search-popup .search-popup-content .search-popup-form button svg {
   width: 25px;
   height: 25px;
-  stroke: #b2915b;
+  stroke: #B5946D;
 }
 .search-popup .search-popup-content .search-popup-form button:focus {
   box-shadow: unset;
@@ -13758,7 +13758,7 @@ Responsive Navbar Area CSS
   line-height: 11px;
   text-align: center;
   border-radius: 50%;
-  background-color: #9a784c;
+  background-color: #896842;
   color: #ffffff;
   font-size: 20px;
   cursor: pointer;
@@ -13772,7 +13772,7 @@ Responsive Navbar Area CSS
   stroke: #ffffff;
 }
 .responsive-navbar .offcanvas-header .close-btn:hover {
-  background-color: #9a784c;
+  background-color: #896842;
 }
 .responsive-navbar .offcanvas-body {
   padding: 30px 15px 30px;
@@ -13797,7 +13797,7 @@ Responsive Navbar Area CSS
   font-weight: 500;
   border-radius: 30px;
   font-size: 15px;
-  border: 1px solid #9a784c;
+  border: 1px solid #896842;
 }
 .responsive-navbar .offcanvas-body .accordion .accordion-item .accordion-button::after {
   display: none;
@@ -13815,7 +13815,7 @@ Responsive Navbar Area CSS
   height: 25px;
   width: 25px;
   line-height: 25px;
-  background-color: #9a784c;
+  background-color: #896842;
   color: #ffffff;
   text-align: center;
   border-radius: 50px;
@@ -13825,16 +13825,16 @@ Responsive Navbar Area CSS
   display: none;
 }
 .responsive-navbar .offcanvas-body .accordion .accordion-item .accordion-button:hover, .responsive-navbar .offcanvas-body .accordion .accordion-item .accordion-button.active {
-  color: #9a784c;
+  color: #896842;
 }
 .responsive-navbar .offcanvas-body .accordion .accordion-item .accordion-button:hover::before, .responsive-navbar .offcanvas-body .accordion .accordion-item .accordion-button.active::before {
-  background-color: #b2915b;
+  background-color: #B5946D;
   color: #002345;
 }
 .responsive-navbar .offcanvas-body .accordion .accordion-item .accordion-collapse .accordion-body {
   padding: 25px;
   background-color: #ffffff;
-  border: 1px solid #9a784c;
+  border: 1px solid #896842;
   border-radius: 30px;
 }
 .responsive-navbar .offcanvas-body .accordion .accordion-item .accordion-collapse .accordion-body .accordion-item {
@@ -13852,7 +13852,7 @@ Responsive Navbar Area CSS
   font-weight: 500;
 }
 .responsive-navbar .offcanvas-body .accordion .accordion-item .accordion-collapse .accordion-body .accordion-item .accordion-link:hover, .responsive-navbar .offcanvas-body .accordion .accordion-item .accordion-collapse .accordion-body .accordion-item .accordion-link.active {
-  color: #9a784c;
+  color: #896842;
 }
 .responsive-navbar .offcanvas-body .accordion .accordion-item .accordion-collapse .accordion-body .accordion-item:last-child {
   margin-bottom: 0;
@@ -13878,10 +13878,10 @@ Responsive Navbar Area CSS
   cursor: pointer;
 }
 .responsive-navbar .offcanvas-body .others-option .option-item .default-btn {
-  background-color: #9a784c;
+  background-color: #896842;
 }
 .responsive-navbar .offcanvas-body .others-option .option-item .default-btn::before {
-  background-color: #9a784c;
+  background-color: #896842;
 }
 
 /* Home One CSS 👇🏻 */
@@ -13982,8 +13982,8 @@ Dental Clinic Slider Area CSS
 }
 .dental-clinic-slider-content .sub {
   border-radius: 15px;
-  border-right: 3px solid #b2915b;
-  border-left: 3px solid #b2915b;
+  border-right: 3px solid #B5946D;
+  border-left: 3px solid #B5946D;
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.16) 24%, rgba(255, 255, 255, 0.04) 100%);
   color: #ffffff;
   backdrop-filter: blur(15px);
@@ -14016,7 +14016,7 @@ Dental Clinic Slider Area CSS
   margin-right: 0;
 }
 .dental-clinic-slider-content .slider-btn li:last-child .default-btn {
-  background-color: #b2915b;
+  background-color: #B5946D;
   color: #002345;
 }
 .dental-clinic-slider-content .slider-btn li:last-child .default-btn:hover {
@@ -14041,7 +14041,7 @@ Dental Clinic Slider Area CSS
   margin: 0 7px !important;
 }
 .dental-clinic-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
-  background-color: #b2915b;
+  background-color: #B5946D;
   width: 35px;
 }
 
@@ -14080,7 +14080,7 @@ Dental Clinic Slider Area CSS
   transition: 0.6s;
 }
 .dental-clinic-video-wrap .video-btn i:hover {
-  background-color: #9a784c;
+  background-color: #896842;
   color: #ffffff;
 }
 
@@ -14205,14 +14205,14 @@ About Area CSS
   color: #002345;
   letter-spacing: 0.35px;
   border-radius: 15px;
-  border-left: 3px solid #b2915b;
+  border-left: 3px solid #B5946D;
   background: #ffffff;
   padding: 20px 25px;
   margin-bottom: 20px;
   transition: 0.6s;
 }
 .about-content .list li svg {
-  stroke: #9a784c;
+  stroke: #896842;
   width: 25px;
   height: 25px;
   margin-right: 15px;
@@ -14229,7 +14229,7 @@ About Area CSS
   left: 100px;
 }
 .about-content .list li:hover {
-  border-left: 3px solid #9a784c;
+  border-left: 3px solid #896842;
 }
 .about-content .info {
   display: flex;
@@ -14250,7 +14250,7 @@ About Area CSS
   align-items: center;
 }
 .about-content .info li .writer .image img {
-  border: 3px solid #9a784c;
+  border: 3px solid #896842;
   border-radius: 100px;
 }
 .about-content .info li .writer .title {
@@ -14266,7 +14266,7 @@ About Area CSS
   letter-spacing: 0.28px;
   display: block;
   margin-top: 10px;
-  color: #9a784c;
+  color: #896842;
 }
 .about-content .info li:last-child {
   margin-right: 0;
@@ -14360,7 +14360,7 @@ About Area CSS
   font-weight: 700;
   letter-spacing: 0.5px;
   font-size: 20px;
-  color: #9a784c;
+  color: #896842;
   display: block;
   margin-bottom: 20px;
 }
@@ -14387,7 +14387,7 @@ About Area CSS
   margin-bottom: 20px;
 }
 .about-wrap-content .list li svg {
-  stroke: #b2915b;
+  stroke: #B5946D;
   width: 22px;
   height: 22px;
   margin-right: 8px;
@@ -14415,7 +14415,7 @@ Services Area CSS
 .services-item {
   border-radius: 20px;
   border-bottom: 3px solid #ffffff;
-  background: #F8F8F5;
+  background: #fff;
   transition: 0.6s;
   padding: 50px 35px;
   margin-bottom: 25px;
@@ -14462,7 +14462,7 @@ Services Area CSS
   align-items: center;
   letter-spacing: 0.32px;
   font-weight: 500;
-  color: #9a784c;
+  color: #896842;
 }
 .services-item .service-content .service-btn i {
   display: inline-flex;
@@ -14472,14 +14472,14 @@ Services Area CSS
   width: 55px;
   line-height: 55px;
   background-color: #ffffff;
-  color: #9a784c;
+  color: #896842;
   font-size: 18px;
   border-radius: 50px;
   transition: 0.6s;
   margin-left: 20px;
 }
 .services-item .service-content .service-btn:hover i {
-  background-color: #9a784c;
+  background-color: #896842;
   color: #ffffff;
 }
 .services-item:hover .service-image .icon {
@@ -14487,11 +14487,11 @@ Services Area CSS
   top: 0;
 }
 .services-item:hover .service-image .icon i {
-  background-color: #9a784c;
+  background-color: #896842;
   color: #ffffff;
 }
 .services-item:hover .service-content h3 a, .services-item:hover .service-content .h3 a {
-  color: #9a784c;
+  color: #896842;
   text-decoration-line: underline;
 }
 
@@ -14500,15 +14500,15 @@ Services Area CSS
   margin-top: 25px;
 }
 .view-all-services-btn .default-btn {
-  background-color: #b2915b;
+  background-color: #B5946D;
 }
 .view-all-services-btn .default-btn::before {
-  background-color: #9a784c;
+  background-color: #896842;
 }
 
 .services-wrap-area {
   overflow: hidden;
-  background-color: #F2F1EC;
+  background-color: #FAF6ED;
 }
 .services-wrap-area .view-all-services-btn {
   margin-top: 50px;
@@ -14517,10 +14517,10 @@ Services Area CSS
   margin-top: 25px;
 }
 .services-wrap-area .view-all-services-btn.little-gap .default-btn {
-  background-color: #9a784c;
+  background-color: #896842;
 }
 .services-wrap-area .view-all-services-btn.little-gap .default-btn::before {
-  background-color: #9a784c;
+  background-color: #896842;
 }
 .services-wrap-area .container-fluid, .services-wrap-area .container-sm, .services-wrap-area .container-md, .services-wrap-area .container-lg, .services-wrap-area .container-xl, .services-wrap-area .container-xxl {
   padding-left: 30px;
@@ -14589,14 +14589,14 @@ Services Area CSS
   height: 55px;
   width: 55px;
   line-height: 55px;
-  background-color: #9a784c;
+  background-color: #896842;
   color: #ffffff;
   font-size: 18px;
   border-radius: 50px;
   transition: 0.6s;
 }
 .services-wrap-item .services-left .arrow-btn a i:hover {
-  background-color: #9a784c;
+  background-color: #896842;
 }
 .services-wrap-item .services-middle p {
   font-weight: 600;
@@ -14624,8 +14624,9 @@ Services Area CSS
   width: 55px;
   line-height: 55px;
   background-color: #ffffff;
-  color: #9a784c;
+  color: #896842;
   font-size: 18px;
+  box-shadow: none !important;
   border-radius: 50px;
   transition: 0.6s;
 }
@@ -14641,16 +14642,17 @@ Services Area CSS
 .services-wrap-item .services-right .services-image a img {
   border-radius: 150px;
   max-width: 200px;
+    background-color: #fff;
 }
 .services-wrap-item:hover, .services-wrap-item.active {
   padding: 55px 30px;
   border-radius: 10px;
-  background-color: #F8F8F5;
+  background-color: #fff;
   border-top: 1px solid #F8F8F5;
   border-bottom: 1px solid #F8F8F5;
 }
 .services-wrap-item:hover .services-left h3 a, .services-wrap-item:hover .services-left .h3 a, .services-wrap-item.active .services-left h3 a, .services-wrap-item.active .services-left .h3 a {
-  color: #9a784c;
+  color: #896842;
 }
 .services-wrap-item:hover .services-left .arrow-btn, .services-wrap-item.active .services-left .arrow-btn {
   opacity: 1;
@@ -14681,7 +14683,7 @@ Services Area CSS
   height: 95px;
   width: 95px;
   line-height: 95px;
-  background-color: #9a784c;
+  background-color: #896842;
   color: #ffffff;
   border-radius: 50px;
   font-size: 52px;
@@ -14709,7 +14711,7 @@ Services Area CSS
   font-size: 14px;
   letter-spacing: 0.2px;
   font-weight: 600;
-  color: #9a784c;
+  color: #896842;
   margin-bottom: 30px;
   line-height: 1;
 }
@@ -14725,15 +14727,15 @@ Services Area CSS
 .services-wrap-card .services-btn .default-btn {
   width: 100%;
   background-color: transparent;
-  border: 1px solid #b2915b;
-  color: #9a784c;
+  border: 1px solid #B5946D;
+  color: #896842;
 }
 .services-wrap-card .services-btn .default-btn::before {
-  background-color: #b2915b;
+  background-color: #B5946D;
 }
 .services-wrap-card:hover .icon i {
   animation: jackInTheBox 1s;
-  background-color: #9a784c;
+  background-color: #896842;
 }
 
 /*================================================
@@ -14798,7 +14800,7 @@ Appointment Area CSS
   transition: 0.6s;
 }
 .appointment-form form .form-group .form-control:focus {
-  border: 1px solid #9a784c;
+  border: 1px solid #896842;
 }
 .appointment-form form .form-group .form-control:focus::placeholder {
   color: transparent;
@@ -14849,16 +14851,16 @@ Appointment Area CSS
 .appointment-wrap-box .box a {
   display: block;
   border-radius: 5px;
-  border-bottom: 3px solid #9a784c;
+  border-bottom: 3px solid #896842;
   background: #F7F8F9;
   padding: 20px;
   font-weight: 700;
   letter-spacing: 0.32px;
-  color: #9a784c;
+  color: #896842;
 }
 .appointment-wrap-box .box a:hover {
-  border-bottom: 3px solid #9a784c;
-  color: #9a784c;
+  border-bottom: 3px solid #896842;
+  color: #896842;
 }
 
 .appointment-wrap-inner {
@@ -14900,7 +14902,7 @@ Appointment Area CSS
   transition: 0.6s;
 }
 .appointment-wrap-inner .form-group .form-control:focus {
-  border: 1px solid #9a784c;
+  border: 1px solid #896842;
 }
 .appointment-wrap-inner .form-group .form-control:focus::placeholder {
   color: transparent;
@@ -14925,12 +14927,12 @@ Features Area CSS
 }
 
 .features-content {
-  background-color: #9a784c;
+  background-color: #896842;
   border-radius: 10px;
   padding: 72px 55px;
 }
 .features-content h3, .features-content .h3 {
-  color: #b2915b;
+  color: #B5946D;
   font-size: 40px;
   margin-bottom: 25px;
 }
@@ -14999,7 +15001,7 @@ Features Area CSS
 
 .features-wrap-card {
   border-radius: 30px;
-  background-color: #FEFDF9;
+  background-color: #FAF6ED;
   padding: 50px 35px;
   text-align: center;
   position: relative;
@@ -15023,7 +15025,7 @@ Features Area CSS
   align-items: center;
   letter-spacing: 0.32px;
   font-weight: 500;
-  color: #9a784c;
+  color: #896842;
   justify-content: center;
 }
 .features-wrap-card .service-btn i {
@@ -15034,14 +15036,14 @@ Features Area CSS
   width: 55px;
   line-height: 55px;
   background-color: #F2F1EC;
-  color: #9a784c;
+  color: #896842;
   font-size: 18px;
   border-radius: 50px;
   transition: 0.6s;
   margin-left: 20px;
 }
 .features-wrap-card .service-btn:hover i {
-  background-color: #9a784c;
+  background-color: #896842;
   color: #ffffff;
 }
 
@@ -15052,7 +15054,7 @@ Features Area CSS
   top: 0;
   height: 10px;
   width: 10px;
-  background-color: #b2915b;
+  background-color: #B5946D;
   transition: 0.6s;
 
   opacity: 0;
@@ -15074,7 +15076,7 @@ Features Area CSS
 
 .features-wrap-card:hover .service-btn i {
   background-color: #ffffff;
-  color: #9a784c;
+  color: #896842;
 }
 
 .features-wrap-bottom-shape {
@@ -15237,7 +15239,7 @@ Insurance Area CSS
 }
 .insurance-wrap-content h3, .insurance-wrap-content .h3 {
   font-size: 40px;
-  color: #9a784c;
+  color: #896842;
   margin-bottom: 20px;
 }
 .insurance-wrap-content p {
@@ -15263,7 +15265,7 @@ Insurance Area CSS
   letter-spacing: 0.32px;
 }
 .insurance-wrap-content .list li svg {
-  stroke: #b2915b;
+  stroke: #B5946D;
   width: 22px;
   height: 22px;
   margin-right: 8px;
@@ -15318,7 +15320,7 @@ Doctors Area CSS
   height: 45px;
   width: 45px;
   line-height: 45px;
-  background-color: #9a784c;
+  background-color: #896842;
   border-radius: 50px;
   text-align: center;
 } */
@@ -15328,7 +15330,7 @@ Doctors Area CSS
   align-items: center;
   height: 45px;
   width: 45px;
-  background-color: #9a784c;
+  background-color: #896842;
   border-radius: 50%;
   text-align: center;
 }
@@ -15339,7 +15341,7 @@ Doctors Area CSS
   stroke: #ffffff;
 }
 .doctors-card .doctor-image .social li a:hover {
-  background-color: #9a784c;
+  background-color: #896842;
 }
 .doctors-card .doctor-image .social li:last-child {
   margin-right: 0;
@@ -15359,7 +15361,7 @@ Doctors Area CSS
 }
 .doctors-card .doctor-content span {
   font-size: 15px;
-  color: #9a784c;
+  color: #896842;
   letter-spacing: 0.3px;
   display: block;
   margin-top: 12px;
@@ -15381,14 +15383,14 @@ Doctors Area CSS
   justify-content: center;
   align-items: center;
   border-radius: 30px;
-  border: 1px solid #b2915b;
+  border: 1px solid #B5946D;
   letter-spacing: 0.32px;
   font-size: 15px;
   transition: 0.6s;
   color: #002345;
 }
 .doctors-card .doctor-content .list li a:hover {
-  background-color: #b2915b;
+  background-color: #B5946D;
 }
 .doctors-card .doctor-content .list li:last-child {
   margin-right: 0;
@@ -15413,7 +15415,7 @@ Doctors Area CSS
   margin: 0 7px !important;
 }
 .doctors-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
-  background-color: #9a784c;
+  background-color: #896842;
   width: 35px;
 }
 
@@ -15458,7 +15460,7 @@ Doctors Area CSS
   height: 40px;
   width: 40px;
   line-height: 40px;
-  background-color: #9a784c;
+  background-color: #896842;
   border-radius: 50px;
   text-align: center;
   position: relative;
@@ -15475,7 +15477,7 @@ Doctors Area CSS
   transform: translateY(-50%);
 }
 .doctors-circle-card .doctor-image .social li a:hover {
-  background-color: #9a784c;
+  background-color: #896842;
 }
 .doctors-circle-card .doctor-image .social li:last-child {
   margin-right: 0;
@@ -15491,11 +15493,11 @@ Doctors Area CSS
   color: #002345;
 }
 .doctors-circle-card .doctor-content h3 a:hover, .doctors-circle-card .doctor-content .h3 a:hover {
-  color: #9a784c;
+  color: #896842;
 }
 .doctors-circle-card .doctor-content span {
   font-size: 15px;
-  color: #9a784c;
+  color: #896842;
   letter-spacing: 0.3px;
   display: block;
   margin-top: 12px;
@@ -15581,7 +15583,7 @@ Doctors Area CSS
   stroke: #66798C;
 }
 .doctors-faq-content .doctors-accordion .accordion-item .accordion-button:not(.collapsed) {
-  color: #9a784c;
+  color: #896842;
 }
 .doctors-faq-content .doctors-accordion .accordion-item .accordion-button:not(.collapsed) .plus {
   opacity: 0;
@@ -15664,7 +15666,7 @@ Review Area CSS
 }
 .review-inner .ratings-box .content .list li i {
   font-size: 25px;
-  color: #b2915b;
+  color: #B5946D;
 }
 .review-inner .ratings-box .content .list li span {
   font-size: 15px;
@@ -15697,7 +15699,7 @@ Review Area CSS
 }
 .review-card .rating li i {
   font-size: 25px;
-  color: #b2915b;
+  color: #B5946D;
 }
 .review-card .rating li:last-child {
   margin-right: 0;
@@ -15711,7 +15713,7 @@ Review Area CSS
   font-size: 18px;
 }
 .review-card:hover {
-  border: 1px solid #9a784c;
+  border: 1px solid #896842;
 }
 
 .review-arrow-shape {
@@ -15726,7 +15728,7 @@ Review Area CSS
   padding-right: 30px;
 }
 .review-wrap-area.bg-with-primary-color {
-  background-color: #9a784c;
+  background-color: #896842;
   position: relative;
   z-index: 1;
   overflow: hidden;
@@ -15765,7 +15767,7 @@ Review Area CSS
 }
 .review-wrap-card .rating li i {
   font-size: 25px;
-  color: #b2915b;
+  color: #B5946D;
 }
 .review-wrap-card .rating li:last-child {
   margin-right: 0;
@@ -15787,7 +15789,7 @@ Review Area CSS
 .review-wrap-card .info .title img {
   max-width: 50px;
   border-radius: 50px;
-  border: 2px solid #9a784c;
+  border: 2px solid #896842;
   margin-right: 15px;
 }
 .review-wrap-card .info .title h5, .review-wrap-card .info .title .h5 {
@@ -15796,18 +15798,18 @@ Review Area CSS
 }
 .review-wrap-card .info .quote i {
   display: flex;
-  color: #9a784c;
+  color: #896842;
   font-size: 32px;
 }
 .review-wrap-card:hover {
-  border: 1px solid #9a784c;
+  border: 1px solid #896842;
 }
 .review-wrap-card.with-white-wrap {
   background-color: #ffffff;
   border: 1px solid #ffffff;
 }
 .review-wrap-card.with-white-wrap:hover {
-  border: 1px solid #9a784c;
+  border: 1px solid #896842;
 }
 
 .review-wrap-content {
@@ -15859,10 +15861,10 @@ Review Area CSS
   margin-top: 40px;
 }
 .review-wrap-content .review-btn .default-btn {
-  background-color: #b2915b;
+  background-color: #B5946D;
 }
 .review-wrap-content .review-btn .default-btn::before {
-  background-color: #b2915b;
+  background-color: #B5946D;
 }
 
 .review-wrap-pagination {
@@ -15879,7 +15881,7 @@ Review Area CSS
   margin: 0 7px !important;
 }
 .review-wrap-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
-  background-color: #9a784c;
+  background-color: #896842;
   width: 35px;
 }
 
@@ -15916,7 +15918,7 @@ Review Area CSS
 }
 .ratings-wrap-box .content .list li i {
   font-size: 25px;
-  color: #b2915b;
+  color: #B5946D;
 }
 .ratings-wrap-box .content .list li span {
   font-size: 15px;
@@ -15970,7 +15972,7 @@ Real Results Area CSS
   bottom: 10px;
 }
 .real-results-card .real-image .before:hover {
-  background-color: #9a784c;
+  background-color: #896842;
   color: #ffffff;
 }
 .real-results-card .real-image .after {
@@ -15989,7 +15991,7 @@ Real Results Area CSS
   bottom: 10px;
 }
 .real-results-card .real-image .after:hover {
-  background-color: #9a784c;
+  background-color: #896842;
   color: #ffffff;
 }
 .real-results-card .real-content {
@@ -16011,7 +16013,7 @@ Real Results Area CSS
   font-size: 15px;
   font-weight: 600;
   letter-spacing: 2.25px;
-  color: #9a784c;
+  color: #896842;
   width: 145px;
 }
 .real-results-card .real-content .list li h3, .real-results-card .real-content .list li .h3 {
@@ -16039,7 +16041,7 @@ Real Results Area CSS
   margin: 0 7px !important;
 }
 .real-results-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
-  background-color: #9a784c;
+  background-color: #896842;
   width: 35px;
 }
 
@@ -16097,7 +16099,7 @@ Real Results Area CSS
   white-space: nowrap;
   font-size: 72px;
   margin-bottom: 0;
-  color: #b2915b;
+  color: #B5946D;
   animation: marquee 5s linear infinite forwards;
 }
 .real-results-view-content h1:hover, .real-results-view-content .h1:hover {
@@ -16149,7 +16151,7 @@ Real Results Area CSS
   width: 88px;
   line-height: 88px;
   background-color: #ffffff;
-  color: #9a784c;
+  color: #896842;
   font-size: 25px;
   border-radius: 50px;
   transition: 0.6s;
@@ -16182,11 +16184,11 @@ Real Results Area CSS
   visibility: visible;
 }
 .real-results-card-slider .swiper-slide.swiper-slide-active .real-results-wrap-card .real-result-btn i {
-  background-color: #9a784c;
+  background-color: #896842;
   color: #ffffff;
 }
 .real-results-card-slider .swiper-slide.swiper-slide-active .real-results-wrap-card .real-result-btn i:hover {
-  background-color: #9a784c;
+  background-color: #896842;
 }
 .real-results-card-slider .swiper-slide.swiper-slide-active .real-results-wrap-card::before {
   opacity: 1;
@@ -16210,7 +16212,7 @@ Blog Area CSS
 .blog-card .blog-image .user a img {
   max-width: 37px;
   border-radius: 50%;
-  border: 2px solid #9a784c;
+  border: 2px solid #896842;
   transition: 0.6s;
 }
 .blog-card .blog-content {
@@ -16223,7 +16225,7 @@ Blog Area CSS
   padding: 5px 10px;
   justify-content: center;
   align-items: center;
-  background-color: #b2915b;
+  background-color: #B5946D;
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 0.7px;
@@ -16233,7 +16235,7 @@ Blog Area CSS
   margin-bottom: 20px;
 }
 .blog-card .blog-content .tag-btn:hover {
-  background-color: #9a784c;
+  background-color: #896842;
   color: #ffffff;
 }
 .blog-card .blog-content h3, .blog-card .blog-content .h3 {
@@ -16246,7 +16248,7 @@ Blog Area CSS
   letter-spacing: 0.2px;
 }
 .blog-card:hover .blog-image .user a img {
-  border: 2px solid #9a784c;
+  border: 2px solid #896842;
 }
 .blog-card.extra-gap {
   margin-bottom: 25px;
@@ -16330,7 +16332,7 @@ Blog Area CSS
   padding: 2px 7px;
   justify-content: center;
   align-items: center;
-  background-color: #b2915b;
+  background-color: #B5946D;
   color: #002345;
   font-size: 14px;
   font-weight: 500;
@@ -16338,7 +16340,7 @@ Blog Area CSS
   border-radius: 5px;
 }
 .blog-item .content .meta li a:hover {
-  background-color: #9a784c;
+  background-color: #896842;
   color: #ffffff;
 }
 .blog-item .content .meta li:last-child {
@@ -16355,7 +16357,7 @@ Blog Area CSS
   padding: 2px 7px;
   justify-content: center;
   align-items: center;
-  background-color: #b2915b;
+  background-color: #B5946D;
   color: #002345;
   font-size: 14px;
   font-weight: 500;
@@ -16366,11 +16368,11 @@ Blog Area CSS
   left: 25px;
 }
 .blog-item .content.little-wrap .tag-btn:hover {
-  background-color: #9a784c;
+  background-color: #896842;
   color: #ffffff;
 }
 .blog-item:hover .content {
-  border-bottom: 3px solid #9a784c;
+  border-bottom: 3px solid #896842;
 }
 
 /* Home Two CSS 👇🏻 */
@@ -16451,7 +16453,7 @@ Pediatric Dentist Banner Area CSS
   display: inline-block;
   height: 70px;
   width: 70px;
-  background-color: #b2915b;
+  background-color: #B5946D;
   text-align: center;
   border-radius: 50px;
   position: relative;
@@ -16478,7 +16480,7 @@ Pediatric Dentist Banner Area CSS
   color: #002345;
 }
 .pediatric-dentist-banner-content .bottom-content .info span a:hover {
-  color: #9a784c;
+  color: #896842;
 }
 
 /* .pediatric-dentist-banner-image {
@@ -16588,7 +16590,7 @@ Pediatric Dentist Banner Area CSS
   transition: 0.6s;
 }
 .pediatric-dentist-banner-image .video-wrap .video-btn i:hover {
-  background-color: #9a784c;
+  background-color: #896842;
   color: #ffffff;
 }
 
@@ -16634,7 +16636,7 @@ Why Choose Us Area CSS
   align-items: center;
   letter-spacing: 0.32px;
   font-weight: 500;
-  color: #9a784c;
+  color: #896842;
 }
 .why-choose-us-card .choose-content .choose-btn i {
   display: inline-flex;
@@ -16644,18 +16646,18 @@ Why Choose Us Area CSS
   width: 55px;
   line-height: 55px;
   background-color: #ffffff;
-  color: #9a784c;
+  color: #896842;
   font-size: 18px;
   border-radius: 50px;
   transition: 0.6s;
   margin-left: 20px;
 }
 .why-choose-us-card .choose-content .choose-btn:hover i {
-  background-color: #9a784c;
+  background-color: #896842;
   color: #ffffff;
 }
 .why-choose-us-card:hover .choose-content {
-  border-bottom: 2px solid #9a784c;
+  border-bottom: 2px solid #896842;
 }
 
 /*================================================
@@ -16718,13 +16720,13 @@ Video Area CSS
   width: 100px;
   line-height: 100px;
   background-color: #ffffff;
-  color: #9a784c;
+  color: #896842;
   font-size: 25px;
   transition: 0.6s;
   border-radius: 50px;
 }
 .video-content .video-btn a i:hover {
-  background-color: #9a784c;
+  background-color: #896842;
   color: #ffffff;
 }
 .video-content .sub {
@@ -16745,7 +16747,7 @@ Video Area CSS
 Fun Fact Area CSS
 =================================================*/
 .fun-fact-area {
-  background-color: #b2915b;
+  background-color: #B5946D;
   padding-top: 100px;
   padding-bottom: 75px;
 }
@@ -16757,7 +16759,7 @@ Fun Fact Area CSS
 }
 .fun-fact-card h3, .fun-fact-card .h3 {
   font-size: 50px;
-  color: #9a784c;
+  color: #896842;
   font-weight: 700;
   margin-bottom: 0;
 }
@@ -16859,7 +16861,7 @@ Dental Treatment Banner Area CSS
   background-color: #002345;
 }
 .dental-treatment-banner-content .banner-btn .default-btn::before {
-  background-color: #9a784c;
+  background-color: #896842;
 }
 
 .dental-treatment-review-slider {
@@ -16914,7 +16916,7 @@ Dental Treatment Banner Area CSS
 .dental-treatment-review-card .content .quote i {
   display: flex;
   font-size: 32px;
-  color: #9a784c;
+  color: #896842;
 }
 .dental-treatment-review-card .content::before {
   position: absolute;
@@ -16946,7 +16948,7 @@ Dental Treatment Banner Area CSS
   background-color: #FBF692;
 }
 .dental-treatment-review-card .content.wrap3::before {
-  background-color: #b2915b;
+  background-color: #B5946D;
 }
 
 .dental-treatment-review-pagination {
@@ -16963,7 +16965,7 @@ Dental Treatment Banner Area CSS
   margin: 0 7px !important;
 }
 .dental-treatment-review-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
-  background-color: #9a784c;
+  background-color: #896842;
   width: 35px;
 }
 
@@ -16992,7 +16994,7 @@ Dental Treatment Banner Area CSS
   display: inline-block;
   height: 22px;
   width: 22px;
-  background-color: #b2915b;
+  background-color: #B5946D;
   border-radius: 50px;
   border: 5px solid #ffffff;
   position: absolute;
@@ -17018,7 +17020,7 @@ Boxes Area CSS
   width: 75px;
   height: 80px;
   border-radius: 5px;
-  background-color: #9a784c;
+  background-color: #896842;
   position: relative;
   transition: 0.6s;
   margin-top: -50px;
@@ -17042,7 +17044,7 @@ Boxes Area CSS
   line-height: 1.7;
 }
 .boxes-card:hover .icon {
-  background-color: #9a784c;
+  background-color: #896842;
 }
 
 /*================================================
@@ -17119,7 +17121,7 @@ Category Area CSS
   width: 55px;
   line-height: 55px;
   background-color: #ffffff;
-  color: #9a784c;
+  color: #896842;
   font-size: 18px;
   border-radius: 50px;
   transition: 0.6s;
@@ -17130,7 +17132,7 @@ Category Area CSS
   transform: scale(1.1);
 }
 .category-card:hover .content .category-btn i {
-  background-color: #9a784c;
+  background-color: #896842;
   color: #ffffff;
 }
 
@@ -17174,7 +17176,7 @@ Overview Area CSS
 }
 
 .overview-content {
-  background-color: #9a784c;
+  background-color: #896842;
   border-radius: 10px;
   padding: 70px 50px;
   position: relative;
@@ -17323,7 +17325,7 @@ Page Banner Area CSS
   color: #A0B1C1;
 }
 .page-banner-content .list li a:hover {
-  color: #b2915b;
+  color: #B5946D;
 }
 .page-banner-content .list li::before {
   position: absolute;
@@ -17365,7 +17367,7 @@ Membership Plan Area CSS
 }
 .membership-plan-card .price h2, .membership-plan-card .price .h2 {
   font-size: 32px;
-  color: #9a784c;
+  color: #896842;
   margin-bottom: 12px;
 }
 .membership-plan-card .price span {
@@ -17393,7 +17395,7 @@ Membership Plan Area CSS
   margin-bottom: 22px;
 }
 .membership-plan-card .list li svg {
-  color: #9a784c;
+  color: #896842;
   width: 25px;
   height: 25px;
   margin-right: 10px;
@@ -17407,17 +17409,17 @@ Membership Plan Area CSS
 .membership-plan-card .price-btn .default-btn {
   width: 100%;
   background-color: transparent;
-  border: 1px solid #b2915b;
-  color: #9a784c;
+  border: 1px solid #B5946D;
+  color: #896842;
 }
 .membership-plan-card .price-btn .default-btn::before {
   display: none;
 }
 .membership-plan-card:hover {
-  border: 1px solid #9a784c;
+  border: 1px solid #896842;
 }
 .membership-plan-card:hover .price-btn .default-btn {
-  background-color: #b2915b;
+  background-color: #B5946D;
 }
 
 /*================================================
@@ -17489,7 +17491,7 @@ FAQ Area CSS
   stroke: #66798C;
 }
 .faq-accordion .accordion-item .accordion-button:not(.collapsed) {
-  color: #9a784c;
+  color: #896842;
 }
 .faq-accordion .accordion-item .accordion-button:not(.collapsed) .plus {
   opacity: 0;
@@ -17532,7 +17534,7 @@ Testimonials Area CSS
 .testimonials-content .info img {
   max-width: 40px;
   border-radius: 50px;
-  border: 2px solid #9a784c;
+  border: 2px solid #896842;
   margin-right: 15px;
 }
 .testimonials-content .info h3, .testimonials-content .info .h3 {
@@ -17557,7 +17559,7 @@ Testimonials Area CSS
   margin: 0 7px !important;
 }
 .testimonials-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
-  background-color: #9a784c;
+  background-color: #896842;
   width: 35px;
 }
 
@@ -17594,7 +17596,7 @@ Dentist Profile Area CSS
   list-style-type: none;
   margin-bottom: 20px;
   font-weight: 700;
-  color: #9a784c;
+  color: #896842;
 }
 .dentist-profile-sidebar .profile-info .list li:last-child {
   margin-bottom: 0;
@@ -17687,7 +17689,7 @@ Services Details Area CSS
   transition: 0.6s;
 }
 .services-details-sidebar .search-form .form-control:focus {
-  border: 1px solid #9a784c;
+  border: 1px solid #896842;
 }
 .services-details-sidebar .search-form .form-control:focus::placeholder {
   color: transparent;
@@ -17703,7 +17705,7 @@ Services Details Area CSS
   height: 55px;
   width: 55px;
   line-height: 55px;
-  background-color: #9a784c;
+  background-color: #896842;
   border-radius: 50px;
   color: #ffffff;
   transition: 0.6s;
@@ -17713,7 +17715,7 @@ Services Details Area CSS
   height: 25px;
 }
 .services-details-sidebar .search-form button:hover {
-  background-color: #9a784c;
+  background-color: #896842;
 }
 .services-details-sidebar .services-box {
   border-radius: 7px;
@@ -17749,11 +17751,11 @@ Services Details Area CSS
 .services-details-sidebar .services-box .list li a svg {
   width: 20px;
   height: 20px;
-  stroke: #9a784c;
+  stroke: #896842;
   margin-right: 15px;
 }
 .services-details-sidebar .services-box .list li a:hover {
-  border-bottom: 2px solid #9a784c;
+  border-bottom: 2px solid #896842;
 }
 .services-details-sidebar .services-box .list li:last-child {
   margin-bottom: 0;
@@ -17814,7 +17816,7 @@ Services Details Area CSS
   height: 90px;
   width: 90px;
   line-height: 90px;
-  background-color: #9a784c;
+  background-color: #896842;
   color: #ffffff;
   text-align: center;
   border-radius: 50px;
@@ -17822,7 +17824,7 @@ Services Details Area CSS
   transition: 0.6s;
 }
 .services-details-desc .block-image .icon i:hover {
-  background-color: #9a784c;
+  background-color: #896842;
 }
 .services-details-desc .desc-inner {
   padding: 40px;
@@ -17848,10 +17850,10 @@ Services Details Area CSS
   font-size: 18px;
   font-weight: 800;
   letter-spacing: 0.35px;
-  color: #9a784c;
+  color: #896842;
 }
 .services-details-desc .desc-inner p a:hover {
-  color: #9a784c;
+  color: #896842;
 }
 .services-details-desc .desc-inner .list {
   margin-top: 30px;
@@ -17867,7 +17869,7 @@ Services Details Area CSS
   color: #002345;
   letter-spacing: 0.35px;
   border-radius: 15px;
-  border-left: 3px solid #b2915b;
+  border-left: 3px solid #B5946D;
   background: #F8F8F5;
   padding: 20px 25px;
   margin-bottom: 20px;
@@ -17875,7 +17877,7 @@ Services Details Area CSS
   margin-left: 50px;
 }
 .services-details-desc .desc-inner .list li svg {
-  stroke: #9a784c;
+  stroke: #896842;
   width: 25px;
   height: 25px;
   margin-right: 15px;
@@ -17890,7 +17892,7 @@ Services Details Area CSS
   margin-left: 150px;
 }
 .services-details-desc .desc-inner .list li:hover {
-  border-left: 3px solid #9a784c;
+  border-left: 3px solid #896842;
 }
 .services-details-desc .desc-inner .number-list {
   display: flex;
@@ -17931,7 +17933,7 @@ Services Details Area CSS
 .services-details-desc .desc-inner .bottom-list li svg {
   width: 20px;
   height: 20px;
-  stroke: #9a784c;
+  stroke: #896842;
   margin-right: 12px;
 }
 .services-details-desc .desc-inner .bottom-list li:last-child {
@@ -17994,7 +17996,7 @@ Find Location Area CSS
   margin-bottom: 15px;
 }
 .find-location-card .location-left h3 a, .find-location-card .location-left .h3 a {
-  color: #9a784c;
+  color: #896842;
 }
 .find-location-card .location-left p {
   font-weight: 600;
@@ -18031,7 +18033,7 @@ Find Location Area CSS
   color: #66798C;
 }
 .find-location-card .location-right .list li a:hover {
-  color: #9a784c;
+  color: #896842;
 }
 .find-location-card .location-right .list li:last-child {
   margin-bottom: 0;
@@ -18078,7 +18080,7 @@ Gallery Area CSS
   height: 35px;
 }
 .gallery-item .icon a:hover {
-  background-color: #9a784c;
+  background-color: #896842;
 }
 .gallery-item:hover img {
   transform: scale(1.1);
@@ -18108,7 +18110,7 @@ Instructions Area CSS
   width: 90px;
   line-height: 90px;
   background-color: #F2F1EC;
-  color: #9a784c;
+  color: #896842;
   font-size: 40px;
   font-weight: 700;
   border-radius: 50px;
@@ -18120,10 +18122,10 @@ Instructions Area CSS
   margin-bottom: 15px;
 }
 .instructions-card:hover {
-  border-bottom: 2px solid #9a784c;
+  border-bottom: 2px solid #896842;
 }
 .instructions-card:hover .number {
-  background-color: #9a784c;
+  background-color: #896842;
   color: #ffffff;
 }
 
@@ -18154,14 +18156,14 @@ Compassionate Area CSS
   color: #002345;
   letter-spacing: 0.35px;
   border-radius: 15px;
-  border-left: 3px solid #b2915b;
+  border-left: 3px solid #B5946D;
   background: #ffffff;
   padding: 20px 25px;
   margin-bottom: 20px;
   transition: 0.6s;
 }
 .compassionate-list li svg {
-  stroke: #9a784c;
+  stroke: #896842;
   width: 25px;
   height: 25px;
   margin-right: 15px;
@@ -18176,14 +18178,14 @@ Compassionate Area CSS
   margin-left: 100px;
 }
 .compassionate-list li:hover {
-  border-left: 3px solid #9a784c;
+  border-left: 3px solid #896842;
 }
 
 /*================================================
 New Patients Area CSS
 =================================================*/
 .new-patients-area {
-  background-color: #9a784c;
+  background-color: #896842;
 }
 
 .new-patients-content {
@@ -18218,10 +18220,10 @@ New Patients Area CSS
 }
 .new-patients-item .item .default-btn {
   border: none;
-  background-color: #9a784c;
+  background-color: #896842;
 }
 .new-patients-item .item .default-btn::before {
-  background-color: #b2915b;
+  background-color: #B5946D;
 }
 .new-patients-item .item:last-child {
   margin-bottom: 0;
@@ -18242,14 +18244,14 @@ Privacy Policy Area CSS
   margin-top: 30px;
 }
 .privacy-policy-content strong {
-  color: #9a784c;
+  color: #896842;
   font-weight: 500;
 }
 .privacy-policy-content p {
   letter-spacing: 0.28px;
 }
 .privacy-policy-content p a {
-  color: #9a784c;
+  color: #896842;
 }
 .privacy-policy-content p a:hover {
   text-decoration: underline;
@@ -18259,7 +18261,7 @@ Privacy Policy Area CSS
   margin-bottom: 20px;
 }
 .privacy-policy-content ul li a, .privacy-policy-content ol li a {
-  color: #9a784c;
+  color: #896842;
 }
 .privacy-policy-content ul li a:hover, .privacy-policy-content ol li a:hover {
   text-decoration: underline;
@@ -18283,14 +18285,14 @@ Terms & Conditions Area CSS
   margin-top: 30px;
 }
 .terms-conditions-content strong {
-  color: #9a784c;
+  color: #896842;
   font-weight: 500;
 }
 .terms-conditions-content p {
   letter-spacing: 0.28px;
 }
 .terms-conditions-content p a {
-  color: #9a784c;
+  color: #896842;
 }
 .terms-conditions-content p a:hover {
   text-decoration: underline;
@@ -18300,7 +18302,7 @@ Terms & Conditions Area CSS
   margin-bottom: 20px;
 }
 .terms-conditions-content ul li a, .terms-conditions-content ol li a {
-  color: #9a784c;
+  color: #896842;
 }
 .terms-conditions-content ul li a:hover, .terms-conditions-content ol li a:hover {
   text-decoration: underline;
@@ -18359,7 +18361,7 @@ Contact Info Area CSS
   background-color: #FBF692;
 }
 .contact-info-card .icon.bg3 {
-  background-color: #b2915b;
+  background-color: #B5946D;
 }
 .contact-info-card .icon.bg4 {
   background-color: #95D9FF;
@@ -18376,10 +18378,10 @@ Contact Info Area CSS
   display: block;
 }
 .contact-info-card p a:hover {
-  color: #9a784c;
+  color: #896842;
 }
 .contact-info-card:hover {
-  border-bottom: 2px solid #9a784c;
+  border-bottom: 2px solid #896842;
 }
 .contact-info-card:hover .icon {
   animation: jackInTheBox 1s;
@@ -18438,7 +18440,7 @@ Contact Us Area CSS
   transition: 0.6s;
 }
 .contact-us-form .form-group .form-control:focus {
-  border: 1px solid #9a784c;
+  border: 1px solid #896842;
 }
 .contact-us-form .form-group .form-control:focus::placeholder {
   color: transparent;
@@ -18491,7 +18493,7 @@ Blog Details Area CSS
   padding: 5px 10px;
   border-radius: 5px;
   display: inline-block;
-  background-color: #b2915b;
+  background-color: #B5946D;
   color: #002345;
   letter-spacing: 0.7px;
   font-size: 14.5px;
@@ -18499,7 +18501,7 @@ Blog Details Area CSS
 }
 .blog-details-desc .article-content .inner .meta li a:hover {
   color: #ffffff;
-  background-color: #9a784c;
+  background-color: #896842;
 }
 .blog-details-desc .article-content .inner .meta li::before {
   position: absolute;
@@ -18510,7 +18512,7 @@ Blog Details Area CSS
   display: inline-block;
   height: 5px;
   width: 5px;
-  background-color: #9a784c;
+  background-color: #896842;
   border-radius: 50%;
 }
 .blog-details-desc .article-content .inner .meta li:last-child {
@@ -18545,7 +18547,7 @@ Blog Details Area CSS
 }
 .blog-details-desc .article-content .inner .quote .info img {
   border-radius: 50px;
-  border: 2px solid #9a784c;
+  border: 2px solid #896842;
   max-width: 40px;
   margin-right: 15px;
 }
@@ -18585,7 +18587,7 @@ Blog Details Area CSS
   padding: 5px 10px;
   border-radius: 5px;
   display: inline-block;
-  background-color: #b2915b;
+  background-color: #B5946D;
   color: #002345;
   letter-spacing: 0.7px;
   font-size: 14.5px;
@@ -18593,7 +18595,7 @@ Blog Details Area CSS
 }
 .blog-details-desc .article-footer .tags li a:hover {
   color: #ffffff;
-  background-color: #9a784c;
+  background-color: #896842;
 }
 .blog-details-desc .article-footer .tags li:last-child {
   margin-right: 0;
@@ -18622,10 +18624,10 @@ Blog Details Area CSS
   width: 17px;
   height: 17px;
   transition: 0.6s;
-  stroke: #9a784c;
+  stroke: #896842;
 }
 .blog-details-desc .article-footer .social li a svg:hover {
-  stroke: #9a784c;
+  stroke: #896842;
 }
 .blog-details-desc .article-footer .social li a:last-child {
   margin-right: 0;
@@ -18661,7 +18663,7 @@ Blog Details Area CSS
 }
 .blog-details-desc .article-comment .comment-list img {
   border-radius: 52px;
-  border: 2px solid #9a784c;
+  border: 2px solid #896842;
   max-width: 50px;
   position: absolute;
   left: 0;
@@ -18693,7 +18695,7 @@ Blog Details Area CSS
 }
 .blog-details-desc .article-comment .comment-list .rating li i {
   font-size: 25px;
-  color: #b2915b;
+  color: #B5946D;
 }
 .blog-details-desc .article-comment .comment-list .rating li:last-child {
   margin-right: 0;
@@ -18706,7 +18708,7 @@ Blog Details Area CSS
   padding: 2px 10px;
   border-radius: 10px;
   display: inline-block;
-  background-color: #b2915b;
+  background-color: #B5946D;
   color: #002345;
   letter-spacing: 0.7px;
   transition: 0.6s;
@@ -18719,7 +18721,7 @@ Blog Details Area CSS
 }
 .blog-details-desc .article-comment .comment-list .reply-btn:hover {
   color: #ffffff;
-  background-color: #9a784c;
+  background-color: #896842;
 }
 .blog-details-desc .article-reply {
   border-radius: 15px;
@@ -18760,7 +18762,7 @@ Blog Details Area CSS
   transition: 0.6s;
 }
 .blog-details-desc .article-reply .form-group .form-control:focus {
-  border: 1px solid #9a784c;
+  border: 1px solid #896842;
 }
 .blog-details-desc .article-reply .form-group .form-control:focus::placeholder {
   color: transparent;
@@ -18846,7 +18848,7 @@ Products Area CSS
 .products-card .products-image .add-to-cart-btn .default-btn svg {
   width: 18px;
   height: 18px;
-  stroke: #b2915b;
+  stroke: #B5946D;
   margin-left: 7px;
 }
 .products-card .products-content {
@@ -18860,7 +18862,7 @@ Products Area CSS
   display: block;
   font-size: 18px;
   font-weight: 600;
-  color: #9a784c;
+  color: #896842;
   margin-top: 12px;
 }
 .products-card .heart-btn {
@@ -18884,7 +18886,7 @@ Products Area CSS
 .products-card .heart-btn a svg {
   width: 18px;
   height: 18px;
-  stroke: #9a784c;
+  stroke: #896842;
   position: absolute;
   left: 0;
   right: 0;
@@ -18894,7 +18896,7 @@ Products Area CSS
   transition: 0.6s;
 }
 .products-card .heart-btn a:hover {
-  background-color: #9a784c;
+  background-color: #896842;
 }
 .products-card .heart-btn a:hover svg {
   stroke: #ffffff;
@@ -18903,7 +18905,7 @@ Products Area CSS
   padding: 2px 10px;
   border-radius: 5px;
   display: inline-block;
-  background-color: #9a784c;
+  background-color: #896842;
   color: #ffffff;
   letter-spacing: 0.7px;
   transition: 0.6s;
@@ -18915,7 +18917,7 @@ Products Area CSS
 }
 .products-card .sale-btn:hover {
   color: #002345;
-  background-color: #b2915b;
+  background-color: #B5946D;
 }
 .products-card:hover .products-image .add-to-cart-btn {
   bottom: 0;
@@ -18975,7 +18977,7 @@ Shopping Cart Area CSS
   text-align: end;
 }
 .shopping-cart-table .table tbody tr td.number {
-  color: #9a784c;
+  color: #896842;
 }
 .shopping-cart-table .table tbody tr td.product-thumbnail {
   display: flex;
@@ -18999,7 +19001,7 @@ Shopping Cart Area CSS
   font-weight: 700;
 }
 .shopping-cart-table .table tbody tr td.product-price .unit-amount {
-  color: #9a784c;
+  color: #896842;
   font-weight: 500;
 }
 .shopping-cart-table .table tbody tr td.product-quantity .add-to-cart-counter {
@@ -19019,12 +19021,12 @@ Shopping Cart Area CSS
   font-weight: 700;
 }
 .shopping-cart-table .table tbody tr td.product-subtotal .subtotal-amount {
-  color: #9a784c;
+  color: #896842;
 }
 .shopping-cart-table .table tbody tr td.remove svg {
   width: 20px;
   height: 20px;
-  stroke: #9a784c;
+  stroke: #896842;
   cursor: pointer;
 }
 
@@ -19071,14 +19073,14 @@ Shopping Cart Area CSS
   background-color: #002345;
 }
 .shopping-cart-buttons .shopping-coupon-code button:hover {
-  background-color: #9a784c;
+  background-color: #896842;
 }
 .shopping-cart-buttons .default-btn {
   background-color: #002345;
   border: none;
 }
 .shopping-cart-buttons .default-btn:hover {
-  background-color: #9a784c;
+  background-color: #896842;
 }
 
 .shopping-cart-totals {
@@ -19102,7 +19104,7 @@ Shopping Cart Area CSS
   font-weight: 500;
 }
 .shopping-cart-totals ul li span {
-  color: #9a784c;
+  color: #896842;
 }
 .shopping-cart-totals ul li:last-child {
   margin-bottom: 0;
@@ -19159,7 +19161,7 @@ Checkout Area CSS
   transition: 0.6s;
 }
 .checkout-info-form .form-group .form-control:focus {
-  border: 1px solid #9a784c;
+  border: 1px solid #896842;
 }
 .checkout-info-form .form-group .form-control:focus::placeholder {
   color: transparent;
@@ -19191,8 +19193,8 @@ Checkout Area CSS
   background-color: transparent;
 }
 .checkout-info-form .checkbox-list li .form-check .form-check-input:checked {
-  background-color: #9a784c;
-  border-color: #9a784c;
+  background-color: #896842;
+  border-color: #896842;
 }
 .checkout-info-form .checkbox-list li .form-check .form-check-label {
   font-size: 15px;
@@ -19229,7 +19231,7 @@ Checkout Area CSS
   margin-top: 15px;
 }
 .checkout-info-sidebar .product-box .item .price {
-  color: #9a784c;
+  color: #896842;
   font-weight: 500;
 }
 .checkout-info-sidebar .product-box .item:last-child {
@@ -19250,7 +19252,7 @@ Checkout Area CSS
   font-weight: 500;
 }
 .checkout-info-sidebar .product-box .cart-totals li span {
-  color: #9a784c;
+  color: #896842;
 }
 .checkout-info-sidebar .product-box .cart-totals li:last-child {
   margin-bottom: 0;
@@ -19312,7 +19314,7 @@ Checkout Area CSS
   content: "";
   width: 15px;
   height: 15px;
-  background-color: #b2915b;
+  background-color: #B5946D;
   position: absolute;
   top: 50%;
   transform: translateY(-50%) !important;
@@ -19390,7 +19392,7 @@ Wishlist Area CSS
   text-align: end;
 }
 .wishlist-table .table tbody tr td.number {
-  color: #9a784c;
+  color: #896842;
 }
 .wishlist-table .table tbody tr td.product-thumbnail {
   display: flex;
@@ -19414,7 +19416,7 @@ Wishlist Area CSS
   font-weight: 700;
 }
 .wishlist-table .table tbody tr td.product-price .unit-amount {
-  color: #9a784c;
+  color: #896842;
   font-weight: 500;
 }
 .wishlist-table .table tbody tr td.product-quantity .add-to-cart-counter {
@@ -19439,13 +19441,13 @@ Wishlist Area CSS
 .wishlist-table .table tbody tr td.add-to-cart-btn .default-btn svg {
   width: 18px;
   height: 18px;
-  stroke: #b2915b;
+  stroke: #B5946D;
   margin-left: 10px;
 }
 .wishlist-table .table tbody tr td.remove svg {
   width: 20px;
   height: 20px;
-  stroke: #9a784c;
+  stroke: #896842;
   cursor: pointer;
 }
 
@@ -19474,11 +19476,11 @@ Profile Authentication Area CSS
   font-weight: 500;
 }
 .profile-authentication-box .content p a {
-  color: #9a784c;
+  color: #896842;
   font-weight: 600;
 }
 .profile-authentication-box .content p a:hover {
-  color: #9a784c;
+  color: #896842;
 }
 .profile-authentication-box .authentication-form .google-btn {
   margin-bottom: 25px;
@@ -19501,7 +19503,7 @@ Profile Authentication Area CSS
   margin-right: 10px;
 }
 .profile-authentication-box .authentication-form .google-btn button:hover {
-  border: 1px solid #9a784c;
+  border: 1px solid #896842;
 }
 .profile-authentication-box .authentication-form .or {
   text-align: center;
@@ -19558,7 +19560,7 @@ Profile Authentication Area CSS
   letter-spacing: 0.28px;
 }
 .profile-authentication-box .authentication-form .form-group .form-control:focus {
-  border: 1px solid #9a784c;
+  border: 1px solid #896842;
 }
 .profile-authentication-box .authentication-form .form-group .form-control:focus::placeholder {
   color: transparent;
@@ -19582,8 +19584,8 @@ Profile Authentication Area CSS
   border-radius: 0;
 }
 .profile-authentication-box .authentication-form .form-bottom .form-check .form-check-input:checked {
-  background-color: #9a784c;
-  border-color: #9a784c;
+  background-color: #896842;
+  border-color: #896842;
 }
 .profile-authentication-box .authentication-form .form-bottom .form-check .form-check-label {
   font-size: 15px;
@@ -19595,7 +19597,7 @@ Profile Authentication Area CSS
   font-weight: 500;
 }
 .profile-authentication-box .authentication-form .form-bottom .form-check .form-check-label a:hover {
-  color: #9a784c;
+  color: #896842;
 }
 .profile-authentication-box .authentication-form .form-bottom .forgot-password {
   font-size: 15px;
@@ -19604,7 +19606,7 @@ Profile Authentication Area CSS
   font-weight: 500;
 }
 .profile-authentication-box .authentication-form .form-bottom .forgot-password:hover {
-  color: #9a784c;
+  color: #896842;
 }
 .profile-authentication-box .authentication-form .default-btn {
   border: none;
@@ -19647,7 +19649,7 @@ Profile Authentication Area CSS
   transition: 0.6s;
 }
 .forgot-password-box .form-control:focus {
-  border-color: #9a784c;
+  border-color: #896842;
   background-color: transparent;
 }
 .forgot-password-box .form-control:focus::placeholder {
@@ -19681,7 +19683,7 @@ Product Details Area CSS
 .product-details-content .price {
   font-weight: 800;
   font-size: 25px;
-  color: #9a784c;
+  color: #896842;
   margin-top: 20px;
 }
 .product-details-content .rating {
@@ -19699,7 +19701,7 @@ Product Details Area CSS
 }
 .product-details-content .rating li i {
   font-size: 25px;
-  color: #b2915b;
+  color: #B5946D;
 }
 .product-details-content .rating li:last-child {
   margin-right: 0;
@@ -19754,7 +19756,7 @@ Product Details Area CSS
 .product-details-content .quantity-and-add-to-cart li .default-btn svg {
   width: 18px;
   height: 18px;
-  stroke: #b2915b;
+  stroke: #B5946D;
   margin-left: 10px;
 }
 .product-details-content .quantity-and-add-to-cart li:last-child {
@@ -19784,7 +19786,7 @@ Product Details Area CSS
   border-radius: 5px;
   display: inline-block;
   background-color: #F2F1EC;
-  color: #9a784c;
+  color: #896842;
   letter-spacing: 0.7px;
   margin-right: 10px;
   font-size: 14.5px;
@@ -19792,7 +19794,7 @@ Product Details Area CSS
 }
 .product-details-content .list li a:hover {
   color: #ffffff;
-  background-color: #9a784c;
+  background-color: #896842;
 }
 .product-details-content .list li a:last-child {
   margin-right: 0;
@@ -19838,13 +19840,13 @@ Product Details Area CSS
   bottom: 0;
   width: 100%;
   height: 2px;
-  background-color: #9a784c;
+  background-color: #896842;
   transition: 0.6s;
   opacity: 0;
   visibility: hidden;
 }
 .product-details-information-tabs .nav .nav-item .nav-link:hover, .product-details-information-tabs .nav .nav-item .nav-link.active {
-  color: #9a784c;
+  color: #896842;
 }
 .product-details-information-tabs .nav .nav-item .nav-link:hover::before, .product-details-information-tabs .nav .nav-item .nav-link.active::before {
   opacity: 1;
@@ -19864,7 +19866,7 @@ Product Details Area CSS
 }
 .product-details-information-tabs .comment-area .comment-list img {
   border-radius: 52px;
-  border: 2px solid #9a784c;
+  border: 2px solid #896842;
   max-width: 50px;
   position: absolute;
   left: 0;
@@ -19896,7 +19898,7 @@ Product Details Area CSS
 }
 .product-details-information-tabs .comment-area .comment-list .rating li i {
   font-size: 25px;
-  color: #b2915b;
+  color: #B5946D;
 }
 .product-details-information-tabs .comment-area .comment-list .rating li:last-child {
   margin-right: 0;
@@ -19974,7 +19976,7 @@ Product Details Area CSS
   transition: 0.6s;
 }
 .product-details-information-tabs .comments-form .form-group .form-control:focus {
-  border: 1px solid #9a784c;
+  border: 1px solid #896842;
 }
 .product-details-information-tabs .comments-form .form-group .form-control:focus::placeholder {
   color: transparent;
@@ -19989,7 +19991,7 @@ Product Details Area CSS
 }
 .product-details-information-tabs .comments-form .form-group .form-check .form-check-input {
   border-radius: 50px;
-  border: 1px solid #9a784c;
+  border: 1px solid #896842;
   height: 20px;
   width: 20px;
   margin-top: -2px;
@@ -20008,7 +20010,7 @@ Product Details Area CSS
   background-color: #002345;
 }
 .product-details-information-tabs .comments-form .default-btn:hover {
-  background-color: #9a784c;
+  background-color: #896842;
 }
 
 /*================================================
@@ -20051,7 +20053,7 @@ Blog Sidebar Widget Area CSS
   transition: 0.6s;
 }
 .widget-area .widget_search .search-form .form-control:focus {
-  border: 1px solid #9a784c;
+  border: 1px solid #896842;
 }
 .widget-area .widget_search .search-form .form-control:focus::placeholder {
   color: transparent;
@@ -20067,7 +20069,7 @@ Blog Sidebar Widget Area CSS
   height: 55px;
   width: 55px;
   line-height: 55px;
-  background-color: #9a784c;
+  background-color: #896842;
   border-radius: 50px;
   color: #ffffff;
   transition: 0.6s;
@@ -20077,7 +20079,7 @@ Blog Sidebar Widget Area CSS
   height: 25px;
 }
 .widget-area .widget_search .search-form button:hover {
-  background-color: #9a784c;
+  background-color: #896842;
 }
 .widget-area .widget_blogger {
   border-radius: 7px;
@@ -20087,7 +20089,7 @@ Blog Sidebar Widget Area CSS
 }
 .widget-area .widget_blogger img {
   border-radius: 50%;
-  border: 2px solid #9a784c;
+  border: 2px solid #896842;
 }
 .widget-area .widget_blogger h3, .widget-area .widget_blogger .h3 {
   font-size: 20px;
@@ -20096,7 +20098,7 @@ Blog Sidebar Widget Area CSS
 }
 .widget-area .widget_blogger span {
   font-size: 15px;
-  color: #9a784c;
+  color: #896842;
 }
 .widget-area .widget_blogger .social {
   display: flex;
@@ -20115,7 +20117,7 @@ Blog Sidebar Widget Area CSS
   height: 40px;
   width: 40px;
   line-height: 40px;
-  background-color: #9a784c;
+  background-color: #896842;
   border-radius: 50px;
   text-align: center;
   position: relative;
@@ -20132,7 +20134,7 @@ Blog Sidebar Widget Area CSS
   transform: translateY(-50%);
 }
 .widget-area .widget_blogger .social li a:hover {
-  background-color: #9a784c;
+  background-color: #896842;
 }
 .widget-area .widget_blogger .social li:last-child {
   margin-right: 0;
@@ -20165,7 +20167,7 @@ Blog Sidebar Widget Area CSS
   font-weight: 500;
 }
 .widget-area .widget_categories .list li a:hover {
-  color: #9a784c;
+  color: #896842;
 }
 .widget-area .widget_categories .list li span {
   display: inline-block;
@@ -20228,7 +20230,7 @@ Blog Sidebar Widget Area CSS
   border-radius: 5px;
   display: inline-block;
   background-color: #F2F1EC;
-  color: #9a784c;
+  color: #896842;
   letter-spacing: 0.7px;
   margin-top: 8px;
   margin-right: 8px;
@@ -20237,7 +20239,7 @@ Blog Sidebar Widget Area CSS
 }
 .widget-area .widget_tag_cloud .tagcloud a:hover {
   color: #002345;
-  background-color: #b2915b;
+  background-color: #B5946D;
 }
 
 /*================================================
@@ -20245,7 +20247,7 @@ CTA Area CSS
 =================================================*/
 .cta-inner-area {
   border-radius: 20px;
-  background-color: #9a784c;
+  background-color: #896842;
   padding: 100px 80px;
   position: relative;
   z-index: 1;
@@ -20272,7 +20274,7 @@ CTA Area CSS
   display: inline-block;
   height: 70px;
   width: 70px;
-  background-color: #b2915b;
+  background-color: #B5946D;
   text-align: center;
   border-radius: 50px;
   position: relative;
@@ -20299,7 +20301,7 @@ CTA Area CSS
   color: #ffffff;
 }
 .cta-info span a:hover {
-  color: #b2915b;
+  color: #B5946D;
 }
 
 /*================================================
@@ -20316,8 +20318,8 @@ Subscribe Area CSS
 
 .subscribe-content .sub {
   border-radius: 15px;
-  border-right: 3px solid #b2915b;
-  border-left: 3px solid #b2915b;
+  border-right: 3px solid #B5946D;
+  border-left: 3px solid #B5946D;
   background: linear-gradient(0deg, rgba(0, 35, 69, 0.05) 24%, rgba(255, 255, 255, 0.04) 100%);
   color: #002345;
   backdrop-filter: blur(15px);
@@ -20356,7 +20358,7 @@ Subscribe Area CSS
   transition: 0.6s;
 }
 .subscribe-form .form-control:focus {
-  border: 1px solid #9a784c;
+  border: 1px solid #896842;
 }
 .subscribe-form .form-control:focus::placeholder {
   color: transparent;
@@ -20400,14 +20402,14 @@ Footer Area CSS
   margin-bottom: 20px;
 }
 .single-footer-widget .info-list li span {
-  color: #b2915b;
+  color: #B5946D;
   font-weight: 800;
 }
 .single-footer-widget .info-list li a {
   color: #ffffff;
 }
 .single-footer-widget .info-list li a:hover {
-  color: #9a784c;
+  color: #896842;
 }
 .single-footer-widget .info-list li:last-child {
   margin-bottom: 0;
@@ -20432,7 +20434,7 @@ Footer Area CSS
   color: #ffffff;
 }
 .single-footer-widget .custom-links li a:hover {
-  color: #9a784c;
+  color: #896842;
   letter-spacing: 1px;
 }
 .single-footer-widget .custom-links li:last-child {
@@ -20453,15 +20455,15 @@ Footer Area CSS
   letter-spacing: 0.75px;
 }
 .copyright-area p span {
-  color: #b2915b;
+  color: #B5946D;
   font-weight: 700;
 }
 .copyright-area p a {
-  color: #b2915b;
+  color: #B5946D;
   font-weight: 700;
 }
 .copyright-area p a:hover {
-  color: #9a784c;
+  color: #896842;
 }
 
 /*================================================
@@ -20495,7 +20497,7 @@ Back to Top CSS
 }
 #back-to-top:hover {
   color: #ffffff;
-  background: #9a784c;
+  background: #896842;
 }
 
 /*================================================
@@ -20531,7 +20533,7 @@ Pagination Area CSS
 }
 .pagination-area .page-numbers:hover, .pagination-area .page-numbers.current {
   color: #ffffff;
-  background: #9a784c;
+  background: #896842;
 }
 
 /*# sourceMappingURL=style.css.map */
