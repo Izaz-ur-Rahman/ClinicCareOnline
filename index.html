@@ -88,16 +88,16 @@
             display: block;
             width: 100%;
             height: auto;
-            transition: transform 4s ease;
+            /* transition: transform 4s ease; */
         }
 
-        img.zoom-hover:hover {
+        /* img.zoom-hover:hover {
             transform: scale(1.1);
-        }
+        } */
 
         .zoom-container {
-            overflow: hidden;
-            border-radius: 10px;
+            overflow: visible;
+            border-radius: 0px;
             /* optional rounded corners */
         }
 
@@ -407,15 +407,15 @@
         } */
         /* Keep overall mega menu width reasonable */
         .mega-menu {
-            min-width: 100vw;
+            min-width: 100%;
             background-color: white;
             border: 1px solid #ddd;
-            margin-left: -250px;
+            margin-left: -215px;
             /* box-shadow: 0 8px 16px rgba(0,0,0,0.1); */
         }
 
         #exclusive_menu {
-            margin-left: -420px;
+            margin-left: -380px;
         }
 
         /* Flex container inside mega menu */
@@ -711,7 +711,7 @@
 } */
         /* 1. Wider mega menu */
         .mega-menu {
-            min-width: 100vw;
+            min-width: 100%;
 
             border: 1px solid #ddd;
             /* box-shadow: 0 8px 16px rgba(0,0,0,0.1); */
@@ -804,7 +804,7 @@
 
         /* Keep overall mega menu width reasonable */
         .mega-menu {
-            min-width: 100vw;
+            min-width: 95vw;
             background-color: white;
             border: 1px solid #ddd;
             /* border-radius: 10px; */
@@ -2811,7 +2811,10 @@
                 <div class="col-xl-6 col-md-12">
                     <div class="about-wrap-image">
                         <div class="row justify-content-center">
-                            <div class="col-lg-6 col-sm-6">
+                             <div class="image-one zoom-container">
+                                    <img class="zoom-hover" src="assets/images/about/Transform-Your-Future-Self.png" alt="Transform-Your-Future-Self img">
+                                </div>
+                            <!-- <div class="col-lg-6 col-sm-6">
                                 <div class="image-one zoom-container">
                                     <img class="zoom-hover" src="assets/images/about/about2.jpg" alt="about 2 img">
                                 </div>
@@ -2843,7 +2846,7 @@
                                 <div class="image-four">
                                     <img src="assets/images/about/about5.jpg" alt="about 5 image">
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -4130,75 +4133,72 @@
 
     <!-- Start Footer Area -->
     <footer class="footer-area">
-        <div class="container">
-            <div class="row justify-content-center align-items-center" data-cue="slideInUp">
-                <div class="col-xl-5 col-md-12">
-                    <div class="single-footer-widget pe-5">
-                        <ul class="info-list">
-                            <li>
-                                <span>Location:</span> Dubai Healthcare City
-                                Ibn Sina Medical Complex, (Building 27), Block B – 1ST Floor.
-                            </li>
-                            <li>
-                                <span>Phone:</span> <a href="tel:+971 4 513 6154
+    <div class="container">
+        <div class="row align-items-start" data-cue="slideInUp">
 
-">+971 4 513 6154
+            <!-- Contact Info + Logo in same column -->
+            <div class="col-xl-5 col-md-12 text-center text-xl-start mb-4 mb-xl-0">
+                <!-- Logo above location -->
+                <a href="index-2.html" class="d-inline-block  mx-10">
+                    <img src="assets/images/3d proto logo with tagline (Wellness inside out).png" alt="Logo" style="height: 145px;">
+                </a>
 
-                                </a>
-                            </li>
-                            <li>
-                                <span>Email:</span> <a href="tel:
-info@protoclinic.com
-
-"><span class="__cf_email__" data-cfemail="096a66677d686a7d60676f66496d6c6466276a6664">
-                                        info@protoclinic.com
-
-                                    </span></a>
-                            </li>
-                        </ul>
-                    </div>
+                <div class="single-footer-widget pe-xl-5 mx-10">
+                    <ul class="info-list">
+                        <li>
+                            <span>Location:</span> Dubai Healthcare City<br>
+                            Ibn Sina Medical Complex, (Building 27), Block B – 1ST Floor.
+                        </li>
+                        <li>
+                            <span>Phone:</span> <a href="tel:+97145136154">+971 4 513 6154</a>
+                        </li>
+                        <li>
+                            <span>Email:</span> <a href="mailto:info@protoclinic.com">info@protoclinic.com</a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="col-xl-7 col-md-12">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-4 col-sm-4">
-                            <div class="single-footer-widget ps-5">
-                                <h3>Quick Link</h3>
-                                <ul class="custom-links">
-                                    <li><a href="#">About Us</a></li>
-                                    <li><a href="#">Our Services</a></li>
-                                    <li><a href="#">Contact Us</a></li>
-                                </ul>
-                            </div>
+            </div>
+
+            <!-- Links Section -->
+            <div class="col-xl-7 col-md-12">
+                <div class="row justify-content-center">
+                    <div class="col-lg-4 col-sm-4">
+                        <div class="single-footer-widget ps-xl-5">
+                            <h3>Quick Link</h3>
+                            <ul class="custom-links">
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Our Services</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                            </ul>
                         </div>
-                        <div class="col-lg-4 col-sm-4">
-                            <div class="single-footer-widget ps-5">
-                                <h3>Legal</h3>
-                                <ul class="custom-links">
-                                    <li><a href="#">Terms & Conditions</a></li>
-                                    <li><a href="#">Privacy Policy</a></li>
-                                    <li><a href="#">Help Center</a></li>
-                                </ul>
-                            </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-4">
+                        <div class="single-footer-widget ps-xl-5">
+                            <h3>Legal</h3>
+                            <ul class="custom-links">
+                                <li><a href="#">Terms & Conditions</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Help Center</a></li>
+                            </ul>
                         </div>
-                        <div class="col-lg-4 col-sm-4">
-                            <div class="single-footer-widget ps-5">
-                                <h3>Follow Us</h3>
-                                <ul class="custom-links">
-                                    <li><a href="#" target="_blank">Facebook</a></li>
-                                    <li><a href="#" target="_blank">Twitter</a></li>
-                                    <li><a href="https://www.instagram.com/drwissamadada/" target="_blank">Instagram</a>
-                                    </li>
-                                    <li><a href="#" target="_blank">Linkedin</a></li>
-                                </ul>
-                            </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-4">
+                        <div class="single-footer-widget ps-xl-5">
+                            <h3>Follow Us</h3>
+                            <ul class="custom-links">
+                                <li><a href="#" target="_blank">Facebook</a></li>
+                                <li><a href="#" target="_blank">Twitter</a></li>
+                                <li><a href="https://www.instagram.com/drwissamadada/" target="_blank">Instagram</a></li>
+                                <li><a href="#" target="_blank">LinkedIn</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
 
         </div>
-    </footer>
-    <!-- End Footer Area -->
+    </div>
+</footer>
 
     <!-- Back to Top -->
     <button type="button" id="back-to-top" class="position-fixed text-center border-0 p-0">
