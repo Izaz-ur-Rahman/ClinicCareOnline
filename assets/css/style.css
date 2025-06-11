@@ -13107,7 +13107,7 @@ Navbar Area CSS
   z-index: 999;
   padding-left: 0;
   padding-right: 0;
-  padding-top: 10px;
+  padding-top: 0px;
 
   padding-bottom: 0;
 }
@@ -14378,7 +14378,7 @@ About Area CSS
   display: flex;
   align-items: center;
   border-radius: 10px;
-  background-color: #F2F1EC;
+  background-color: #FAF6ED;
   padding: 10px 20px;
   color: #002345;
   font-weight: 600;
@@ -15256,7 +15256,7 @@ Insurance Area CSS
   display: flex;
   align-items: center;
   border-radius: 10px;
-  background-color: #F2F1EC;
+  background-color: #FAF6ED;
   font-size: 17px;
   font-weight: 600;
   padding: 10px 20px;
