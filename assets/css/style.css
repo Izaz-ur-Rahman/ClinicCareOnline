@@ -14168,7 +14168,7 @@ About Area CSS
 }
 
 .about-image {
-  background-image: url(../images/about/about1.jpg);
+  background-image: url(../images/about/doctor_pic.jpg);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -20375,7 +20375,8 @@ Subscribe Area CSS
 Footer Area CSS
 =================================================*/
 .footer-area {
-  background-image: url(../images/footer/footer-bg.jpg);
+  /* background-image: url(../images/footer/footer-bg.jpg); */
+  background-color: #06543C;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
