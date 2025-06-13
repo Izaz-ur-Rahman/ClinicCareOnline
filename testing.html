@@ -1,113 +1,71 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Horizontal Tabs with 3 Columns</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-    }
+<a href="#" class="dropdown-item flex items-center gap-3">
+                                                <span
+                                                    class="icon inline-flex items-center justify-center w-10 h-10 rounded-full shadow-md bg-white">
+                                                    <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                                </span>
+                                                <span class="text">Biologicial Integrative Medicine</span>
+                                            </a>
+                                            <a href="#" class="dropdown-item flex items-center gap-3">
+                                                <span
+                                                    class="icon inline-flex items-center justify-center w-10 h-10 rounded-full shadow-md bg-white">
+                                                    <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                                </span>
+                                                <span class="text">Exosome Therapy in Dubai</span>
+                                            </a>
+                                            <a href="#" class="dropdown-item flex items-center gap-3">
+                                                <span
+                                                    class="icon inline-flex items-center justify-center w-10 h-10 rounded-full shadow-md bg-white">
+                                                    <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                                </span>
+                                                <span class="text">Functional Medicine in Dubai</span>
+                                            </a>
+                                            <a href="#" class="dropdown-item flex items-center gap-3">
+                                                <span
+                                                    class="icon inline-flex items-center justify-center w-10 h-10 rounded-full shadow-md bg-white">
+                                                    <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                                </span>
+                                                <span class="text">Genomics Medicine</span>
+                                            </a>
+                                            <a href="#" class="dropdown-item flex items-center gap-3">
+                                                <span
+                                                    class="icon inline-flex items-center justify-center w-10 h-10 rounded-full shadow-md bg-white">
+                                                    <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                                </span>
+                                                <span class="text">Naturopathic Medicine Treatment</span>
+                                            </a>
+                                            <a href="#" class="dropdown-item flex items-center gap-3">
+                                                <span
+                                                    class="icon inline-flex items-center justify-center w-10 h-10 rounded-full shadow-md bg-white">
+                                                    <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                                </span>
+                                                <span class="text">Ozone Therapy in Dubai</span>
+                                            </a>
+                                            <a href="#" class="dropdown-item flex items-center gap-3">
+                                                <span
+                                                    class="icon inline-flex items-center justify-center w-10 h-10 rounded-full shadow-md bg-white">
+                                                    <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                                </span>
+                                                <span class="text">Physiotherapy in Dubai</span>
+                                            </a>
+                                            <a href="#" class="dropdown-item flex items-center gap-3">
+                                                <span
+                                                    class="icon inline-flex items-center justify-center w-10 h-10 rounded-full shadow-md bg-white">
+                                                    <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                                </span>
+                                                <span class="text">Sports Medicine in Dubai</span>
+                                            </a>
+                                            <a href="#" class="dropdown-item flex items-center gap-3">
+                                                <span
+                                                    class="icon inline-flex items-center justify-center w-10 h-10 rounded-full shadow-md bg-white">
+                                                    <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                                </span>
+                                                <span class="text">Stem Cell Therapy in Dubai at AEON Clinic</span>
+                                            </a>
+                                            <a href="#" class="dropdown-item flex items-center gap-3">
+                                                <span
+                                                    class="icon inline-flex items-center justify-center w-10 h-10 rounded-full shadow-md bg-white">
+                                                    <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                                </span>
+                                                <span class="text">IV Therapy Drips</span>
+                                            </a>
 
-    /* Mega Menu Container */
-    .mega-menu {
-      position: relative;
-      width: 100%;
-      max-width: 1000px;
-      margin: 50px auto;
-      border: 1px solid #ccc;
-      padding: 20px;
-      background: #fff;
-    }
-
-    /* Tabs */
-    .tab-nav {
-      display: flex;
-      gap: 10px;
-      margin-bottom: 20px;
-      border-bottom: 2px solid #eee;
-    }
-
-    .tab-btn {
-      background: none;
-      border: none;
-      padding: 10px 15px;
-      cursor: pointer;
-      font-size: 16px;
-      border-bottom: 2px solid transparent;
-    }
-
-    .tab-btn.active {
-      border-bottom: 2px solid #007bff;
-      color: #007bff;
-      font-weight: bold;
-    }
-
-    /* Tab Content Layout */
-    .tab-content {
-      display: none;
-    }
-
-    .tab-content.active {
-      display: flex;
-      gap: 20px;
-    }
-
-    .column {
-      flex: 1;
-      background: #f9f9f9;
-      padding: 15px;
-      border: 1px solid #ddd;
-    }
-  </style>
-</head>
-<body>
-
-<div class="mega-menu">
-  <!-- Horizontal Tab Navigation -->
-  <div class="tab-nav">
-    <button class="tab-btn active" data-tab="tab1">Wellness Programs</button>
-    <button class="tab-btn" data-tab="tab2">Diagnostic Testing</button>
-    <button class="tab-btn" data-tab="tab3">Medical Treatments</button>
-  </div>
-
-  <!-- Tab Contents -->
-  <div class="tab-content active" id="tab1">
-    <div class="column">Wellness 1</div>
-    <div class="column">Wellness 2</div>
-    <div class="column">Wellness 3</div>
-  </div>
-  <div class="tab-content" id="tab2">
-    <div class="column">Diagnostic 1</div>
-    <div class="column">Diagnostic 2</div>
-    <div class="column">Diagnostic 3</div>
-  </div>
-  <div class="tab-content" id="tab3">
-    <div class="column">Treatment 1</div>
-    <div class="column">Treatment 2</div>
-    <div class="column">Treatment 3</div>
-  </div>
-</div>
-
-<script>
-  // JS for tab switching
-  const tabButtons = document.querySelectorAll('.tab-btn');
-  const tabContents = document.querySelectorAll('.tab-content');
-
-  tabButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const tab = button.getAttribute('data-tab');
-
-      tabButtons.forEach(btn => btn.classList.remove('active'));
-      button.classList.add('active');
-
-      tabContents.forEach(content => {
-        content.classList.remove('active');
-        if (content.id === tab) content.classList.add('active');
-      });
-    });
-  });
-</script>
-
-</body>
-</html>

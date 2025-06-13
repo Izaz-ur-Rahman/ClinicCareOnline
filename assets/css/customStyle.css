@@ -889,7 +889,10 @@
             body {
                 padding-top: 60px;
             }
-
+  .dropdown-item .icon img {
+            width: 24px;
+            height: 24px;
+        }
             .mobile-top-nav {
                 display: flex;
                 justify-content: space-between;
