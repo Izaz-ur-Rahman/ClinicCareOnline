@@ -16034,14 +16034,14 @@ Real Results Area CSS
 }
 .real-results-pagination .swiper-pagination-bullet {
   border-radius: 10px;
-  background-color: #A0B1C1;
+  background-color: #E4ECEA;
   opacity: 100%;
   width: 12px;
   height: 5px;
   margin: 0 7px !important;
 }
 .real-results-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
-  background-color: #896842;
+  background-color: #06543C;
   width: 35px;
 }
 

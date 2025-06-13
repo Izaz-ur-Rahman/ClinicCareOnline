@@ -151,6 +151,7 @@ i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
 }
 .flaticon-star:before {
     content: "\f129";
+    color:#06543C;
 }
 .flaticon-tick:before {
     content: "\f12a";
@@ -316,4 +317,5 @@ i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
 }
 .flaticon-quote:before {
     content: "\f160";
+    color:#06543C;
 }
