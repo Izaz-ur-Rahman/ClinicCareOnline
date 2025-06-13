@@ -13202,7 +13202,7 @@ Navbar Area CSS
   content: "";
   left: 0;
   bottom: 0;
-  background-color: #896842;
+  background-color: #06543C !important;
   width: 0%;
   height: 2.5px;
   border-radius: 0;
@@ -14378,9 +14378,9 @@ About Area CSS
   display: flex;
   align-items: center;
   border-radius: 10px;
-  background-color: #FAF6ED;
+  background-color: #06543c1c;
   padding: 10px 20px;
-  color: #002345;
+  color: #06543C;
   font-weight: 600;
   letter-spacing: 0.32px;
   font-size: 17px;
@@ -15256,11 +15256,11 @@ Insurance Area CSS
   display: flex;
   align-items: center;
   border-radius: 10px;
-  background-color: #FAF6ED;
+  background-color: #06543c1c;
   font-size: 17px;
   font-weight: 600;
   padding: 10px 20px;
-  color: #66798C;
+  color: #06543C;
   margin-bottom: 20px;
   letter-spacing: 0.32px;
 }
@@ -16657,7 +16657,7 @@ Why Choose Us Area CSS
   color: #ffffff;
 }
 .why-choose-us-card:hover .choose-content {
-  border-bottom: 2px solid #896842;
+  border-bottom: 2px solid #06543C;
 }
 
 /*================================================

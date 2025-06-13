@@ -501,7 +501,7 @@
         }
 
         .dropdown-item:hover {
-            background-color: #B5946D;
+            /* background-color: #B5946D; */
             color: white;
             text-decoration: none;
         }
@@ -557,12 +557,13 @@
             margin-left: 8px;
             /* Space between text and arrow */
             font-size: 14px;
-            color: #B5946D;
+            color: #fff;
             transition: transform 0.3s ease, color 0.3s ease;
         }
 
         .tab-btn:hover .arrow-icon {
             color: #fff;
+            /* background-color: #896842; */
         }
 
         .tab-btn:hover::after {
@@ -621,17 +622,23 @@
         }
 
         .dropdown-item:hover {
-            background: #e6f7ff;
+            /* background: #e6f7ff; */
             color: #B5946D;
+            
             border-color: #B5946D33;
             transform: translateX(5px);
         }
 
         /* Mobile responsive (optional) */
         @media (max-width: 768px) {
+            html, body {
+  overflow-x: hidden !important;
+}
             .mega-menu {
                 min-width: 100%;
                 flex-direction: column;
+                overflow-x: hidden !important;
+                
             }
 
             .mega-menu-tabs {
@@ -644,8 +651,10 @@
             }
 
             .tab-btn {
-                min-width: 200px;
+                min-width: 100%;
                 margin-right: 10px;
+                background-color: #B5946D;
+                color:#fff;
             }
         }
 
@@ -664,8 +673,9 @@
         }
 
         .accordion-link:hover {
-            color: #0d6efd;
+            /* color: #0d6efd; */
             /* Bootstrap primary color */
+            
         }
 
         .custom-toggle::after {
