@@ -1,0 +1,1100 @@
+ html[lang="ar"] body {
+            font-family: 'IBM Plex Sans Arabic', sans-serif;
+            font-weight: 400;
+            line-height: 1.6;
+            direction: rtl;
+            /* Arabic is right-to-left */
+            text-align: right;
+
+        }
+
+        html,
+        body {
+            overflow-x: hidden !important;
+        }
+
+        .mobile-bottom-nav {
+            display: none;
+        }
+
+        .second_btn_color {
+            display: inline-flex;
+            padding: 15.5px 20px;
+            justify-content: center;
+            align-items: center;
+            background-color: #B5946D;
+            color: #ffffff;
+            font-weight: 500;
+            letter-spacing: 0.32px;
+            border-radius: 30px;
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+            transition: 0.6s;
+            /* 
+            border: 2px solid #B5946D; */
+        }
+
+        .second_btn_color::before {
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 0%;
+            background-color: #896842;
+            z-index: -1;
+            transition: 0.6s;
+        }
+
+        .icon-wrapper {
+            display: none;
+            /* Hide menu icon on desktop */
+        }
+
+        img.zoom-hover {
+            display: block;
+            width: 100%;
+            height: auto;
+            /* transition: transform 4s ease; */
+        }
+
+        /* img.zoom-hover:hover {
+            transform: scale(1.1);
+        } */
+
+        .zoom-container {
+            overflow: visible;
+            border-radius: 0px;
+            /* optional rounded corners */
+        }
+
+        .custo {
+            padding-top: 200px;
+        }
+
+        @media (max-width: 768px) {
+            .custo {
+                padding-top: 300px;
+            }
+
+            .mobile-bottom-nav {
+                display: flex;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                background-color: #f4f0ec;
+                border-top: 1px solid #ccc;
+                justify-content: space-around;
+                align-items: center;
+                padding: 10px 0;
+                z-index: 9999;
+
+                border-radius: 25px 25px 0 0;
+            }
+
+            .mobile-bottom-nav a {
+                text-decoration: none;
+                color: #333;
+                font-size: 12px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .mobile-bottom-nav i {
+                font-size: 18px;
+                margin-bottom: 4px;
+            }
+
+            .bottom-menu-drawer {
+                position: fixed;
+                bottom: -100%;
+                left: 0;
+                width: 100%;
+                background: #fff;
+                transition: bottom 2s ease;
+                z-index: 10000;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.15);
+                padding: 20px;
+            }
+
+            .bottom-menu-drawer.active {
+                bottom: 60px;
+            }
+
+            .drawer-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 20px;
+            }
+
+            .drawer-header h3 {
+                margin: 0;
+                font-size: 18px;
+            }
+
+            .drawer-close {
+                font-size: 22px;
+                cursor: pointer;
+            }
+
+            .drawer-menu {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .accordion-item {
+                border-bottom: 1px solid #eee;
+            }
+
+            .accordion-button {
+                width: 100%;
+                text-align: left;
+                background: none;
+                border: none;
+                font-size: 16px;
+                padding: 12px 0;
+                cursor: pointer;
+                font-weight: bold;
+                color: #231F20;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-radius: 20px;
+                padding: 12px;
+                margin-bottom: 20px;
+            }
+
+            .accordion-content {
+                display: none;
+                padding-left: 10px;
+                padding-bottom: 10px;
+            }
+
+            .accordion-content a {
+                display: block;
+                padding: 6px 0;
+                font-size: 14px;
+                color: #555;
+                text-decoration: none;
+            }
+
+            .accordion-item.open .accordion-content {
+                display: block;
+            }
+
+            .accordion-button i {
+                transition: transform 0.5s ease;
+            }
+
+            .accordion-item.open .accordion-button i {
+                transform: rotate(180deg);
+            }
+
+        }
+
+        @media (min-width: 769px) {
+
+            .mobile-bottom-nav,
+            .bottom-menu-drawer {
+                display: none !important;
+            }
+        }
+
+        .review-wrap-card {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            margin: 10px;
+        }
+
+        .review-wrap-card .info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            /* Ensures it doesn't overflow */
+            margin-top: 20px;
+        }
+
+        .review-wrap-card .info .title {
+            display: flex;
+            align-items: center;
+            flex: 1;
+            gap: 10px;
+        }
+
+        .review-wrap-card .info .title img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .review-wrap-card .info .title h5 {
+            font-size: 16px;
+            margin: 0;
+        }
+
+        .review-wrap-card .info .title span {
+            font-size: 12px;
+            color: #666;
+        }
+
+        .review-wrap-card .info .quote {
+            margin-left: auto;
+            font-size: 24px;
+            color: #999;
+        }
+
+        /* MOBILE FIXES */
+        @media (max-width: 576px) {
+            .review-wrap-card .info {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .review-wrap-card .info .quote {
+                margin-top: 10px;
+                margin-left: 0;
+                align-self: flex-end;
+            }
+
+            .review-wrap-card .info .title {
+                flex-direction: row;
+                gap: 10px;
+                align-items: center;
+                margin-bottom: 10px;
+            }
+
+            .review-wrap-card .info .title h5,
+            .review-wrap-card .info .title span {
+                font-size: 14px;
+            }
+        }
+
+        .navbar-default .nav-link {
+            color: white !important;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-scrolled .nav-link {
+            color: black !important;
+        }
+
+
+        .default-btn:hover {
+            background-color: white;
+            /* color: black !important; */
+        }
+
+        /* Dropdown container */
+        .navbar-nav .dropdown-menu {
+            background: #fff;
+            border-radius: 10px !important;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            padding: 12px 0;
+            min-width: 320px;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            opacity: 0;
+            transform: translateY(10px);
+            visibility: hidden;
+            pointer-events: none;
+
+
+        }
+
+        /* Show dropdown on hover */
+        .nav-item.dropdown:hover>.dropdown-menu,
+        .nav-item.dropdown:focus-within>.dropdown-menu {
+            opacity: 1;
+            transform: translateY(0);
+            visibility: visible;
+            pointer-events: auto;
+        }
+
+        /* Dropdown items */
+        .navbar-nav .dropdown-menu .nav-link {
+            color: #333;
+            padding: 10px 20px;
+            font-weight: 500;
+            display: block;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            border-radius: 4px;
+
+
+        }
+
+        /* Hover/focus states */
+        .navbar-nav .dropdown-menu .nav-link:hover,
+        .navbar-nav .dropdown-menu .nav-link:focus {
+            background-color: #B5946D;
+            /* your preferred accent color */
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Add subtle icon arrow to dropdown toggles */
+        .navbar-nav .dropdown-toggle::after {
+            content: "▾";
+            margin-left: 6px;
+            font-size: 0.7rem;
+            transition: transform 0.3s ease;
+        }
+
+        /* Rotate arrow on open */
+        .nav-item.dropdown.show>.dropdown-toggle::after {
+            transform: rotate(180deg);
+        }
+
+        /* Optional: add slight shadow on dropdown toggle hover */
+        .navbar-nav .dropdown-toggle:hover {
+            color: #B5946D;
+        }
+
+        /* Smooth fade-in for dropdown on mobile toggle */
+        .collapse.navbar-collapse.show .dropdown-menu {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+            visibility: visible !important;
+            pointer-events: auto !important;
+        }
+
+        /* Mega menu container */
+       
+        /* Keep overall mega menu width reasonable */
+        .mega-menu {
+            min-width: 100%;
+            background-color: white;
+            border: 1px solid #ddd;
+            margin-left: -230px;
+        }
+
+        #exclusive_menu {
+            margin-left: -395px;
+        }
+
+        /* Default (min-width: 1024px) */
+        #exclusive_menu {
+            margin-left: -230px;
+        }
+
+        /* Smaller than 1280px (e.g. 1024px, 1152px) */
+        @media screen and (max-width: 1279px) {
+            .mega-menu {
+                margin-left: -200px;
+            }
+
+            #exclusive_menu {
+                margin-left: -360px;
+            }
+        }
+
+        /* Medium Large Screens (1280px to 1439px) */
+        @media screen and (min-width: 1280px) and (max-width: 1439px) {
+            .mega-menu {
+                margin-left: -230px;
+            }
+
+            #exclusive_menu {
+                margin-left: -395px;
+            }
+        }
+
+        /* Larger Desktops (1440px to 1599px) */
+        @media screen and (min-width: 1440px) and (max-width: 1599px) {
+            .mega-menu {
+                margin-left: -260px;
+            }
+
+            #exclusive_menu {
+                margin-left: -420px;
+            }
+        }
+
+        /* Very Large Desktops (1600px and up) */
+        @media screen and (min-width: 1600px) {
+            .mega-menu {
+                margin-left: -290px;
+            }
+
+            #exclusive_menu {
+                margin-left: -450px;
+            }
+        }
+
+        /* Flex container inside mega menu */
+        .mega-menu-container {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        /* Left side tabs */
+        .mega-menu-tabs {
+            display: flex;
+            flex-direction: column;
+            min-width: 140px;
+        }
+
+        .tab-btn {
+            width: 20% !important;
+        }
+
+        .tab-btn2 {
+            width: 25% !important;
+        }
+
+        /* Tab buttons */
+        .mega-menu-tabs .tab-btn {
+            background: none;
+            border: none;
+            /* padding: 10px 15px; */
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            color: #333;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            border-radius: 6px;
+            margin-bottom: 16px !important;
+            /* Increased space between tabs */
+        }
+
+        /* Active tab style */
+        .mega-menu-tabs .tab-btn.active,
+        .mega-menu-tabs .tab-btn:hover {
+            background-color: #B5946D;
+            color: white;
+        }
+
+        /* Right side content */
+        .mega-menu-content {
+            flex-grow: 1;
+        }
+
+        /* Hide inactive tab content */
+        .tab-content {
+            display: none;
+        }
+
+        /* Show active tab content */
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Dropdown item styling */
+        .dropdown-item {
+            display: block;
+            padding: 8px 15px;
+            color: #333;
+            width: 300px;
+            font-size: 12px;
+            font-weight: 500;
+            /* border-radius: 6px; */
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            margin-bottom: 5px;
+        }
+
+        .dropdown-item:hover {
+            background-color: #B5946D;
+            color: white;
+            text-decoration: none;
+        }
+
+        .mega-menu {
+            display: none;
+            position: absolute;
+            background: white;
+            /* z-index: 1000; */
+            opacity: 0;
+            visibility: hidden;
+            /* transform: translateY(10px); */
+            transition: all 0.3s ease;
+          
+            border: 2px solid #B5946D1c;
+        }
+
+        /* Show menu when open */
+        .nav-item.dropdown.open>.mega-menu {
+            display: block;
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        /* Tabs section */
+        .mega-menu-tabs {
+            display: flex;
+            flex-direction: column;
+          
+        }
+
+        
+        .tab-btn {
+
+            display: inline-flex;
+            align-items: center;
+            background: #fff;
+            /* border: 1px solid #e0e0e0; */
+            border-radius: 8px;
+            padding: 12px 18px;
+            margin-bottom: 10px;
+            font-weight: 500;
+            font-size: 15px;
+            color: #B5946D;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            /* box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04); */
+            position: relative;
+        }
+
+        .arrow-icon {
+            margin-left: 8px;
+            /* Space between text and arrow */
+            font-size: 14px;
+            color: #B5946D;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .tab-btn:hover .arrow-icon {
+            color: #fff;
+        }
+
+        .tab-btn:hover::after {
+            transform: translateX(5px);
+            color: #fff;
+            /* Hover color */
+        }
+
+        .tab-btn.active::after {
+            color: #fff;
+            /* Arrow turns white when active */
+        }
+
+        /* Tab content right area */
+        .mega-menu-content {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            flex-grow: 1;
+            /* min-width: 400px; */
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.4s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(5px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Dropdown links style */
+        .dropdown-item {
+            display: block;
+            padding: 10px 15px;
+    
+            color: #333;
+            border-bottom: 1px solid #ccc;
+         
+            text-decoration: none;
+        
+            transition: all 0.25s ease;
+        
+        }
+
+        .dropdown-item:hover {
+            background: #e6f7ff;
+            color: #B5946D;
+            border-color: #B5946D33;
+            transform: translateX(5px);
+        }
+
+        /* Mobile responsive (optional) */
+        @media (max-width: 768px) {
+            .mega-menu {
+                min-width: 100%;
+                flex-direction: column;
+            }
+
+            .mega-menu-tabs {
+                flex-direction: row;
+                border-right: none;
+                border-bottom: 2px solid #eee;
+                margin-bottom: 20px;
+                overflow-x: auto;
+                padding-right: 0;
+            }
+
+            .tab-btn {
+                min-width: 200px;
+                margin-right: 10px;
+            }
+        }
+
+        .accordion-body h6 {
+            font-weight: 600;
+            font-size: 1rem;
+            margin-top: 1rem;
+        }
+
+        .accordion-link {
+            display: block;
+            padding: 6px 0;
+            text-decoration: none;
+            color: #333;
+            transition: color 0.2s ease;
+        }
+
+        .accordion-link:hover {
+            color: #0d6efd;
+            /* Bootstrap primary color */
+        }
+
+        .custom-toggle::after {
+            display: none !important;
+            /* Hide Bootstrap default arrow */
+        }
+
+        .dropdown-arrow {
+            transition: transform 0.3s ease;
+        }
+
+        .custom-toggle.show .dropdown-arrow {
+            transform: rotate(180deg);
+        }
+
+        /* 1. Wider mega menu */
+        .mega-menu {
+            min-width: 100%;
+
+            border: 1px solid #ddd;
+        }
+
+        /* 2. Style each tab button */
+        .mega-menu-tabs .tab-btn {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            border: none;
+            padding: 12px 16px;
+
+
+            font-weight: 500;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        /* 3. On hover - darker brown and text shift */
+        .mega-menu-tabs .tab-btn:hover {
+            background-color: #896842;
+        
+            color: #fff;
+            padding-left: 20px;
+        }
+
+        /* 4. Move arrow to far right */
+        .mega-menu-tabs .arrow-icon {
+            margin-left: auto;
+            color: white;
+        }
+
+        /* Base style: look like text, not button */
+        .mega-menu-content .dropdown-item {
+            display: block;
+            /* change from flex to block */
+            padding: 8px 0;
+            color: black;
+            font-weight: 400;
+            text-decoration: none;
+            background: none;
+            border: none;
+            border-bottom: 1px solid #ccc;
+            transition: all 0.3s ease;
+        }
+
+        /* On hover: only text changes color and shifts slightly */
+        .mega-menu-content .dropdown-item:hover {
+            color: #8B4513;
+            background-color: transparent;
+            padding-left: 8px;
+            /* just enough shift, not too much */
+        }
+
+        /* 7. Main nav link styling */
+        .navbar-nav .nav-link {
+            color: black;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        /* 8. Nav link on hover */
+        .navbar-nav .nav-link:hover {
+            color: #8B4513;
+            padding-left: 4px;
+            background-color: transparent !important;
+        }
+
+        /* 9. Remove background color from dropdown items on hover */
+        .dropdown-menu .dropdown-item:hover {
+            background-color: transparent !important;
+            color: #8B4513 !important;
+            padding-left: 20px;
+            transition: all 0.3s ease;
+        }
+
+        /* Optional: Arrow icon rotation */
+        .navbar-nav .nav-link .dropdown-arrow {
+            transition: transform 0.3s ease;
+        }
+
+        .navbar-nav .nav-link[aria-expanded="true"] .dropdown-arrow {
+            transform: rotate(180deg);
+        }
+
+        /* Keep overall mega menu width reasonable */
+        .mega-menu {
+            min-width: 95vw;
+            background-color: white;
+            border: 1px solid #ddd;
+         
+        }
+
+        /* Increase only the width of the tabs container */
+        .mega-menu-tabs {
+            width: 150px;
+            padding: 20px;
+            /* Adjust as needed */
+            padding-right: 10px;
+            /* border-right: 1px solid #ccc; */
+        }
+
+        /* Tab buttons */
+        .mega-menu-tabs .tab-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            /* background-color: #896842; */
+            /* Default brown */
+            /* color: #fff; */
+            border: none;
+            padding: 12px 16px;
+            margin-bottom: 2px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            cursor: pointer;
+
+        }
+
+        /* Light gray for 2nd tab */
+        .mega-menu-tabs .tab-btn.gray-tab {
+            background-color: #FFF;
+            /* border: 1px solid #896842 ; */
+            color: #896842;
+        }
+
+        /* Hover effect applies to all */
+        .mega-menu-tabs .tab-btn:hover {
+            background-color: #896842;
+            /* Darker brown */
+            color: #fff;
+            padding-left: 20px;
+        }
+
+
+        /* Align arrow at end */
+        .mega-menu-tabs .arrow-icon {
+            margin-left: auto;
+            color: white;
+        }
+
+        .mega-menu-content .dropdown-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 0;
+            color: black;
+            font-weight: 400;
+            text-decoration: none;
+            background: none;
+            border: none;
+            border-bottom: 1px solid #ccc;
+            transition: all 0.3s ease;
+        }
+
+        .mega-menu-content .dropdown-item .icon {
+            flex-shrink: 0;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mega-menu-content .dropdown-item .icon img {
+            width: 70%;
+            height: auto;
+            display: block;
+        }
+
+        .mega-menu-content .dropdown-item .text {
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        /* On hover: only move text and change color */
+        .mega-menu-content .dropdown-item:hover .text {
+            transform: translateX(6px);
+            color: #8B4513;
+        }
+
+        .mega-menu-content .dropdown-item:hover {
+            background-color: transparent;
+        }
+
+        .dropdown-item .icon img {
+            width: 30px;
+            height: 30px;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding-top: 60px;
+            }
+
+            .mobile-top-nav {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                background-color: #f4f0ec;
+                padding: 10px 20px;
+                z-index: 9999;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
+
+            .mobile-top-nav .logo img {
+                height: 40px;
+            }
+
+            .hamburger {
+                background: none;
+                border: none;
+                font-size: 24px;
+                color: #333;
+                cursor: pointer;
+            }
+
+            .left-drawer-menu {
+                position: fixed;
+                top: 0;
+                left: -100%;
+                width: 80%;
+                max-width: 100%;
+                height: 100%;
+                background: #fff;
+                transition: left 0.3s ease;
+                z-index: 10000;
+                box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+                padding: 20px;
+            }
+
+            .left-drawer-menu.active {
+                left: 0;
+            }
+
+            .drawer-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 20px;
+            }
+
+            .drawer-header h3 {
+                margin: 0;
+                font-size: 18px;
+            }
+
+            .drawer-close {
+                font-size: 24px;
+                cursor: pointer;
+            }
+
+            .drawer-menu {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .accordion-item {
+                border-bottom: 1px solid #eee;
+            }
+
+            .accordion-button {
+                width: 100%;
+                background: none;
+                border-radius: 20px;
+                font-size: 16px;
+                padding: 12px;
+                font-weight: bold;
+                margin-bottom: 15px;
+                text-align: left;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .accordion-content {
+                display: none;
+                padding: 0 10px 10px;
+            }
+
+            .accordion-item.open .accordion-content {
+                display: block;
+            }
+
+            .accordion-button i {
+                transition: transform 0.4s ease;
+            }
+
+            .accordion-item.open .accordion-button i {
+                transform: rotate(180deg);
+            }
+        }
+
+        @media (min-width: 769px) {
+
+            .mobile-top-nav,
+            .left-drawer-menu {
+                display: none !important;
+            }
+        }
+
+        .drawer-menu .accordion-item {
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom-width: 1px;
+        }
+
+        .drawer-menu a {
+            display: block;
+            padding: 6px 0;
+            color: #333;
+        }
+
+        .drawer-menu .accordion-content {
+            display: none;
+            flex-direction: column;
+        }
+
+        .accordion-item.open .accordion-content {
+            display: flex;
+        }
+
+        /* Sidebar container fixed and full height */
+        .left-drawer-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            /* Adjust width as needed */
+            height: 120vh;
+            background: white;
+            box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
+            /* Scrollable sidebar */
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+            z-index: 9999999;
+        }
+
+        /* Show sidebar */
+        .left-drawer-menu.active {
+            transform: translateX(0);
+        }
+
+        /* Prevent body scroll when sidebar open */
+        .body-no-scroll {
+            overflow: hidden;
+            height: 100vh;
+        }
+
+        /* Accordion content styling */
+        .accordion-content {
+            padding-left: 1.5rem;
+            margin-top: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Links inside dropdown submenu: flex row with icon and text aligned */
+        .accordion-content a.flex {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.25rem 0;
+            color: #333;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .accordion-content a.flex img {
+            flex-shrink: 0;
+        }
+
+        /* Optional: style accordion open state for better UX */
+        .accordion-item.open>.accordion-content {
+            display: block;
+        }
+
+        .accordion-content {
+            display: none;
+        }
+
+        .mega-menu-content .tab-content {
+            display: none;
+        }
+
+        .mega-menu-content .tab-content.active {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .mega-menu-content .dropdown-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px;
+            color: black;
+            font-weight: 400;
+            text-decoration: none;
+            /* border: 1px solid #ccc; */
+            /* border-radius: 6px; */
+            transition: background 0.3s ease;
+            background-color: #fff;
+        }
+
+        .mega-menu-content .dropdown-item:hover {
+            /* background-color: #f0f0f0; */
+        }

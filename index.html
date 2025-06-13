@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="assets/css/flaticon_doral.css">
     <link rel="stylesheet" href="assets/css/scrollCue.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/customStyle.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <!-- Swiper CSS -->
@@ -29,1164 +30,12 @@
     <!-- <link rel="icon" type="image/png" href="assets/images/favicon.png"> -->
     <link rel="icon" type="image/png" href="assets/images/favicon.png?v=2">
 
-    <style>
-        html[lang="ar"] body {
-            font-family: 'IBM Plex Sans Arabic', sans-serif;
-            font-weight: 400;
-            line-height: 1.6;
-            direction: rtl;
-            /* Arabic is right-to-left */
-            text-align: right;
-
-        }
-
-        html,
-        body {
-            overflow-x: hidden !important;
-        }
-
-        .mobile-bottom-nav {
-            display: none;
-        }
-
-        .second_btn_color {
-            display: inline-flex;
-            padding: 15.5px 20px;
-            justify-content: center;
-            align-items: center;
-            background-color: #B5946D;
-            color: #ffffff;
-            font-weight: 500;
-            letter-spacing: 0.32px;
-            border-radius: 30px;
-            overflow: hidden;
-            position: relative;
-            z-index: 1;
-            transition: 0.6s;
-            /* 
-            border: 2px solid #B5946D; */
-        }
-
-        .second_btn_color::before {
-            position: absolute;
-            content: "";
-            left: 0;
-            top: 0;
-            height: 100%;
-            width: 0%;
-            background-color: #896842;
-            z-index: -1;
-            transition: 0.6s;
-        }
-
-        .icon-wrapper {
-            display: none;
-            /* Hide menu icon on desktop */
-        }
-
-        img.zoom-hover {
-            display: block;
-            width: 100%;
-            height: auto;
-            /* transition: transform 4s ease; */
-        }
-
-        /* img.zoom-hover:hover {
-            transform: scale(1.1);
-        } */
-
-        .zoom-container {
-            overflow: visible;
-            border-radius: 0px;
-            /* optional rounded corners */
-        }
-
-        .custo {
-            padding-top: 200px;
-        }
-
-        @media (max-width: 768px) {
-            .custo {
-                padding-top: 300px;
-            }
-
-            .mobile-bottom-nav {
-                display: flex;
-                position: fixed;
-                bottom: 0;
-                left: 0;
-                width: 100%;
-                background-color: #f4f0ec;
-                border-top: 1px solid #ccc;
-                justify-content: space-around;
-                align-items: center;
-                padding: 10px 0;
-                z-index: 9999;
-
-                border-radius: 25px 25px 0 0;
-            }
-
-            .mobile-bottom-nav a {
-                text-decoration: none;
-                color: #333;
-                font-size: 12px;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .mobile-bottom-nav i {
-                font-size: 18px;
-                margin-bottom: 4px;
-            }
-
-            .bottom-menu-drawer {
-                position: fixed;
-                bottom: -100%;
-                left: 0;
-                width: 100%;
-                background: #fff;
-                transition: bottom 2s ease;
-                z-index: 10000;
-                border-top-left-radius: 20px;
-                border-top-right-radius: 20px;
-                box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.15);
-                padding: 20px;
-            }
-
-            .bottom-menu-drawer.active {
-                bottom: 60px;
-            }
-
-            .drawer-header {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                margin-bottom: 20px;
-            }
-
-            .drawer-header h3 {
-                margin: 0;
-                font-size: 18px;
-            }
-
-            .drawer-close {
-                font-size: 22px;
-                cursor: pointer;
-            }
-
-            .drawer-menu {
-                display: flex;
-                flex-direction: column;
-            }
-
-            .accordion-item {
-                border-bottom: 1px solid #eee;
-            }
-
-            .accordion-button {
-                width: 100%;
-                text-align: left;
-                background: none;
-                border: none;
-                font-size: 16px;
-                padding: 12px 0;
-                cursor: pointer;
-                font-weight: bold;
-                color: #231F20;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                border-radius: 20px;
-                padding: 12px;
-                margin-bottom: 20px;
-            }
-
-            .accordion-content {
-                display: none;
-                padding-left: 10px;
-                padding-bottom: 10px;
-            }
-
-            .accordion-content a {
-                display: block;
-                padding: 6px 0;
-                font-size: 14px;
-                color: #555;
-                text-decoration: none;
-            }
-
-            .accordion-item.open .accordion-content {
-                display: block;
-            }
-
-            .accordion-button i {
-                transition: transform 0.5s ease;
-            }
-
-            .accordion-item.open .accordion-button i {
-                transform: rotate(180deg);
-            }
-
-        }
-
-        @media (min-width: 769px) {
-
-            .mobile-bottom-nav,
-            .bottom-menu-drawer {
-                display: none !important;
-            }
-        }
-
-        .review-wrap-card {
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            margin: 10px;
-        }
-
-        .review-wrap-card .info {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            /* Ensures it doesn't overflow */
-            margin-top: 20px;
-        }
-
-        .review-wrap-card .info .title {
-            display: flex;
-            align-items: center;
-            flex: 1;
-            gap: 10px;
-        }
-
-        .review-wrap-card .info .title img {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-
-        .review-wrap-card .info .title h5 {
-            font-size: 16px;
-            margin: 0;
-        }
-
-        .review-wrap-card .info .title span {
-            font-size: 12px;
-            color: #666;
-        }
-
-        .review-wrap-card .info .quote {
-            margin-left: auto;
-            font-size: 24px;
-            color: #999;
-        }
-
-        /* MOBILE FIXES */
-        @media (max-width: 576px) {
-            .review-wrap-card .info {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .review-wrap-card .info .quote {
-                margin-top: 10px;
-                margin-left: 0;
-                align-self: flex-end;
-            }
-
-            .review-wrap-card .info .title {
-                flex-direction: row;
-                gap: 10px;
-                align-items: center;
-                margin-bottom: 10px;
-            }
-
-            .review-wrap-card .info .title h5,
-            .review-wrap-card .info .title span {
-                font-size: 14px;
-            }
-        }
-
-        .navbar-default .nav-link {
-            color: white !important;
-            transition: color 0.3s ease;
-        }
-
-        .navbar-scrolled .nav-link {
-            color: black !important;
-        }
-
-
-        .default-btn:hover {
-            background-color: white;
-            /* color: black !important; */
-        }
-        /* Dropdown container */
-        .navbar-nav .dropdown-menu {
-            background: #fff;
-            border-radius: 10px !important;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-            padding: 12px 0;
-            min-width: 320px;
-            transition: opacity 0.3s ease, transform 0.3s ease;
-            opacity: 0;
-            transform: translateY(10px);
-            visibility: hidden;
-            pointer-events: none;
-
-
-        }
-
-        /* Show dropdown on hover */
-        .nav-item.dropdown:hover>.dropdown-menu,
-        .nav-item.dropdown:focus-within>.dropdown-menu {
-            opacity: 1;
-            transform: translateY(0);
-            visibility: visible;
-            pointer-events: auto;
-        }
-
-        /* Dropdown items */
-        .navbar-nav .dropdown-menu .nav-link {
-            color: #333;
-            padding: 10px 20px;
-            font-weight: 500;
-            display: block;
-            transition: background-color 0.3s ease, color 0.3s ease;
-            border-radius: 4px;
-
-
-        }
-
-        /* Hover/focus states */
-        .navbar-nav .dropdown-menu .nav-link:hover,
-        .navbar-nav .dropdown-menu .nav-link:focus {
-            background-color: #B5946D;
-            /* your preferred accent color */
-            color: white;
-            text-decoration: none;
-        }
-
-        /* Add subtle icon arrow to dropdown toggles */
-        .navbar-nav .dropdown-toggle::after {
-            content: "▾";
-            margin-left: 6px;
-            font-size: 0.7rem;
-            transition: transform 0.3s ease;
-        }
-
-        /* Rotate arrow on open */
-        .nav-item.dropdown.show>.dropdown-toggle::after {
-            transform: rotate(180deg);
-        }
-
-        /* Optional: add slight shadow on dropdown toggle hover */
-        .navbar-nav .dropdown-toggle:hover {
-            color: #B5946D;
-        }
-
-        /* Smooth fade-in for dropdown on mobile toggle */
-        .collapse.navbar-collapse.show .dropdown-menu {
-            opacity: 1 !important;
-            transform: translateY(0) !important;
-            visibility: visible !important;
-            pointer-events: auto !important;
-        }
-
-        /* Mega menu container */
-        /* .mega-menu {
-            width: 600px;
-          
-            border-radius: 10px;
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-            background: #fff;
-            padding: 1rem;
-        } */
-        /* Keep overall mega menu width reasonable */
-        .mega-menu {
-            min-width: 100%;
-            background-color: white;
-            border: 1px solid #ddd;
-            margin-left: -230px;
-            /* box-shadow: 0 8px 16px rgba(0,0,0,0.1); */
-        }
-
-        #exclusive_menu {
-            margin-left: -395px;
-        }
-/* Default (min-width: 1024px) */
-#exclusive_menu {
-    margin-left: -230px;
-}
-/* Smaller than 1280px (e.g. 1024px, 1152px) */
-@media screen and (max-width: 1279px) {
-  .mega-menu {
-    margin-left: -200px;
-  }
-
-  #exclusive_menu {
-    margin-left: -360px;
-  }
-}
-
-/* Medium Large Screens (1280px to 1439px) */
-@media screen and (min-width: 1280px) and (max-width: 1439px) {
-  .mega-menu {
-    margin-left: -230px;
-  }
-
-  #exclusive_menu {
-    margin-left: -395px;
-  }
-}
-
-/* Larger Desktops (1440px to 1599px) */
-@media screen and (min-width: 1440px) and (max-width: 1599px) {
-  .mega-menu {
-    margin-left: -260px;
-  }
-
-  #exclusive_menu {
-    margin-left: -420px;
-  }
-}
-
-/* Very Large Desktops (1600px and up) */
-@media screen and (min-width: 1600px) {
-  .mega-menu {
-    margin-left: -290px;
-  }
-
-  #exclusive_menu {
-    margin-left: -450px;
-  }
-}
-
-        /* Flex container inside mega menu */
-        .mega-menu-container {
-            display: flex;
-            gap: 0.5rem;
-        }
-
-        /* Left side tabs */
-        .mega-menu-tabs {
-            display: flex;
-            flex-direction: column;
-            min-width: 140px;
-        }
-
-        .tab-btn {
-            width: 20% !important;
-        }
-
-        .tab-btn2 {
-            width: 25% !important;
-        }
-
-        /* Tab buttons */
-        .mega-menu-tabs .tab-btn {
-            background: none;
-            border: none;
-            /* padding: 10px 15px; */
-            font-weight: 600;
-            text-align: center;
-            cursor: pointer;
-            color: #333;
-            transition: background-color 0.3s ease, color 0.3s ease;
-            border-radius: 6px;
-            margin-bottom: 16px !important;
-            /* Increased space between tabs */
-        }
-
-        /* Active tab style */
-        .mega-menu-tabs .tab-btn.active,
-        .mega-menu-tabs .tab-btn:hover {
-            background-color: #B5946D;
-            color: white;
-        }
-
-        /* Right side content */
-        .mega-menu-content {
-            flex-grow: 1;
-        }
-
-        /* Hide inactive tab content */
-        .tab-content {
-            display: none;
-        }
-
-        /* Show active tab content */
-        .tab-content.active {
-            display: block;
-        }
-
-        /* Dropdown item styling */
-        .dropdown-item {
-            display: block;
-            padding: 8px 15px;
-            color: #333;
-            width: 300px;
-            font-size: 12px;
-            font-weight: 500;
-            /* border-radius: 6px; */
-            transition: background-color 0.3s ease;
-            text-decoration: none;
-            margin-bottom: 5px;
-        }
-
-        .dropdown-item:hover {
-            background-color: #B5946D;
-            color: white;
-            text-decoration: none;
-        }
-
-        .mega-menu {
-            display: none;
-            position: absolute;
-            background: white;
-            /* z-index: 1000; */
-            opacity: 0;
-            visibility: hidden;
-            /* transform: translateY(10px); */
-            transition: all 0.3s ease;
-            /* border-radius: 12px; */
-            /* box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12); */
-            /* padding: 25px; */
-            /* min-width: 500px; */
-            border: 2px solid #B5946D1c;
-        }
-
-        /* Show menu when open */
-        .nav-item.dropdown.open>.mega-menu {
-            display: block;
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-
-        /* Tabs section */
-        .mega-menu-tabs {
-            display: flex;
-            flex-direction: column;
-            /* border-right: 2px solid #eee; */
-            /* padding-right: 20px;
-            margin-right: 25px; */
-            /* min-width: 200px; */
-        }
-
-        /* Tab button style */
-        /* .tab-btn {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #fff;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  padding: 12px 18px;
-  margin-bottom: 10px;
-  font-weight: 500;
-  font-size: 15px;
-  color: #333;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
-  position: relative;
-} */
-
-        /* .tab-btn::after {
-  content: "➜";
-  font-size: 14px;
-  color: #B5946D; 
-  transition: transform 0.3s ease, color 0.3s ease;
-} */
-        .tab-btn {
-
-            display: inline-flex;
-            align-items: center;
-            background: #fff;
-            /* border: 1px solid #e0e0e0; */
-            border-radius: 8px;
-            padding: 12px 18px;
-            margin-bottom: 10px;
-            font-weight: 500;
-            font-size: 15px;
-            color: #B5946D;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            /* box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04); */
-            position: relative;
-        }
-
-        .arrow-icon {
-            margin-left: 8px;
-            /* Space between text and arrow */
-            font-size: 14px;
-            color: #B5946D;
-            transition: transform 0.3s ease, color 0.3s ease;
-        }
-
-        .tab-btn:hover .arrow-icon {
-            color: #fff;
-        }
-
-        .tab-btn:hover::after {
-            transform: translateX(5px);
-            color: #fff;
-            /* Hover color */
-        }
-
-        .tab-btn.active::after {
-            color: #fff;
-            /* Arrow turns white when active */
-        }
-
-        /* Tab content right area */
-        .mega-menu-content {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            flex-grow: 1;
-            /* min-width: 400px; */
-        }
-
-        .tab-content {
-            display: none;
-        }
-
-        .tab-content.active {
-            display: block;
-            animation: fadeIn 0.4s ease;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(5px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Dropdown links style */
-        .dropdown-item {
-            display: block;
-            padding: 10px 15px;
-            /* background: #fff; */
-            color: #333;
-            border-bottom: 1px solid #ccc;
-            /* or use 'gray' */
-            text-decoration: none;
-            /* border-radius: 6px; */
-            transition: all 0.25s ease;
-            /* border: 1px solid transparent; */
-        }
-
-        .dropdown-item:hover {
-            background: #e6f7ff;
-            color: #B5946D;
-            border-color: #B5946D33;
-            transform: translateX(5px);
-            /* box-shadow: 0 2px 6px rgba(59, 199, 237, 0.15); */
-        }
-
-        /* Mobile responsive (optional) */
-        @media (max-width: 768px) {
-            .mega-menu {
-                min-width: 100%;
-                flex-direction: column;
-            }
-
-            .mega-menu-tabs {
-                flex-direction: row;
-                border-right: none;
-                border-bottom: 2px solid #eee;
-                margin-bottom: 20px;
-                overflow-x: auto;
-                padding-right: 0;
-            }
-
-            .tab-btn {
-                min-width: 200px;
-                margin-right: 10px;
-            }
-        }
-
-        .accordion-body h6 {
-            font-weight: 600;
-            font-size: 1rem;
-            margin-top: 1rem;
-        }
-
-        .accordion-link {
-            display: block;
-            padding: 6px 0;
-            text-decoration: none;
-            color: #333;
-            transition: color 0.2s ease;
-        }
-
-        .accordion-link:hover {
-            color: #0d6efd;
-            /* Bootstrap primary color */
-        }
-
-        .custom-toggle::after {
-            display: none !important;
-            /* Hide Bootstrap default arrow */
-        }
-
-        .dropdown-arrow {
-            transition: transform 0.3s ease;
-        }
-
-        .custom-toggle.show .dropdown-arrow {
-            transform: rotate(180deg);
-            /* Rotate arrow when dropdown is open */
-        }
-
-        /* .default-btn.nav-link {
-  display: flex;
-  align-items: center;
-  padding: 5px 20px !important;
-  height: 80%;
-} */
-        /* 1. Wider mega menu */
-        .mega-menu {
-            min-width: 100%;
-
-            border: 1px solid #ddd;
-            /* box-shadow: 0 8px 16px rgba(0,0,0,0.1); */
-        }
-
-        /* 2. Style each tab button */
-        .mega-menu-tabs .tab-btn {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            /* background-color: #896842; */
-            /* Default brown */
-            /* color: #fff; */
-            border: none;
-            padding: 12px 16px;
-
-
-            font-weight: 500;
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        /* 3. On hover - darker brown and text shift */
-        .mega-menu-tabs .tab-btn:hover {
-            background-color: #896842;
-            /* Darker brown */
-            color: #fff;
-            padding-left: 20px;
-        }
-
-        /* 4. Move arrow to far right */
-        .mega-menu-tabs .arrow-icon {
-            margin-left: auto;
-            color: white;
-        }
-
-        /* Base style: look like text, not button */
-        .mega-menu-content .dropdown-item {
-            display: block;
-            /* change from flex to block */
-            padding: 8px 0;
-            color: black;
-            font-weight: 400;
-            text-decoration: none;
-            background: none;
-            border: none;
-            border-bottom: 1px solid #ccc;
-            transition: all 0.3s ease;
-        }
-
-        /* On hover: only text changes color and shifts slightly */
-        .mega-menu-content .dropdown-item:hover {
-            color: #8B4513;
-            background-color: transparent;
-            padding-left: 8px;
-            /* just enough shift, not too much */
-        }
-
-        /* 7. Main nav link styling */
-        .navbar-nav .nav-link {
-            color: black;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        /* 8. Nav link on hover */
-        .navbar-nav .nav-link:hover {
-            color: #8B4513;
-            padding-left: 4px;
-            background-color: transparent !important;
-        }
-
-        /* 9. Remove background color from dropdown items on hover */
-        .dropdown-menu .dropdown-item:hover {
-            background-color: transparent !important;
-            color: #8B4513 !important;
-            padding-left: 20px;
-            transition: all 0.3s ease;
-        }
-
-        /* Optional: Arrow icon rotation */
-        .navbar-nav .nav-link .dropdown-arrow {
-            transition: transform 0.3s ease;
-        }
-
-        .navbar-nav .nav-link[aria-expanded="true"] .dropdown-arrow {
-            transform: rotate(180deg);
-        }
-
-        /* Keep overall mega menu width reasonable */
-        .mega-menu {
-            min-width: 95vw;
-            background-color: white;
-            border: 1px solid #ddd;
-            /* border-radius: 10px; */
-            /* box-shadow: 0 8px 16px rgba(0,0,0,0.1); */
-        }
-
-        /* Increase only the width of the tabs container */
-        .mega-menu-tabs {
-            width: 150px;
-            padding: 20px;
-            /* Adjust as needed */
-            padding-right: 10px;
-            /* border-right: 1px solid #ccc; */
-        }
-
-        /* Tab buttons */
-        .mega-menu-tabs .tab-btn {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            /* background-color: #896842; */
-            /* Default brown */
-            /* color: #fff; */
-            border: none;
-            padding: 12px 16px;
-            margin-bottom: 2px;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            cursor: pointer;
-
-        }
-
-        /* Light gray for 2nd tab */
-        .mega-menu-tabs .tab-btn.gray-tab {
-            background-color: #FFF;
-            /* border: 1px solid #896842 ; */
-            color: #896842;
-        }
-
-        /* Hover effect applies to all */
-        .mega-menu-tabs .tab-btn:hover {
-            background-color: #896842;
-            /* Darker brown */
-            color: #fff;
-            padding-left: 20px;
-        }
-
-
-        /* Align arrow at end */
-        .mega-menu-tabs .arrow-icon {
-            margin-left: auto;
-            color: white;
-        }
-
-        .mega-menu-content .dropdown-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 8px 0;
-            color: black;
-            font-weight: 400;
-            text-decoration: none;
-            background: none;
-            border: none;
-            border-bottom: 1px solid #ccc;
-            transition: all 0.3s ease;
-        }
-
-        .mega-menu-content .dropdown-item .icon {
-            flex-shrink: 0;
-            width: 30px;
-            height: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .mega-menu-content .dropdown-item .icon img {
-            width: 70%;
-            height: auto;
-            display: block;
-        }
-
-        .mega-menu-content .dropdown-item .text {
-            transition: transform 0.3s ease, color 0.3s ease;
-        }
-
-        /* On hover: only move text and change color */
-        .mega-menu-content .dropdown-item:hover .text {
-            transform: translateX(6px);
-            color: #8B4513;
-        }
-
-        .mega-menu-content .dropdown-item:hover {
-            background-color: transparent;
-        }
-
-        .dropdown-item .icon img {
-            width: 30px;
-            height: 30px;
-        }
-
-        @media (max-width: 768px) {
-            body {
-                padding-top: 60px;
-            }
-
-            .mobile-top-nav {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                background-color: #f4f0ec;
-                padding: 10px 20px;
-                z-index: 9999;
-                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            }
-
-            .mobile-top-nav .logo img {
-                height: 40px;
-            }
-
-            .hamburger {
-                background: none;
-                border: none;
-                font-size: 24px;
-                color: #333;
-                cursor: pointer;
-            }
-
-            .left-drawer-menu {
-                position: fixed;
-                top: 0;
-                left: -100%;
-                width: 80%;
-                max-width: 300px;
-                height: 100%;
-                background: #fff;
-                transition: left 0.3s ease;
-                z-index: 10000;
-                box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
-                padding: 20px;
-            }
-
-            .left-drawer-menu.active {
-                left: 0;
-            }
-
-            .drawer-header {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                margin-bottom: 20px;
-            }
-
-            .drawer-header h3 {
-                margin: 0;
-                font-size: 18px;
-            }
-
-            .drawer-close {
-                font-size: 24px;
-                cursor: pointer;
-            }
-
-            .drawer-menu {
-                display: flex;
-                flex-direction: column;
-            }
-
-            .accordion-item {
-                border-bottom: 1px solid #eee;
-            }
-
-            .accordion-button {
-                width: 100%;
-                background: none;
-                border-radius: 20px;
-                font-size: 16px;
-                padding: 12px;
-                font-weight: bold;
-                margin-bottom: 15px;
-                text-align: left;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-            }
-
-            .accordion-content {
-                display: none;
-                padding: 0 10px 10px;
-            }
-
-            .accordion-item.open .accordion-content {
-                display: block;
-            }
-
-            .accordion-button i {
-                transition: transform 0.4s ease;
-            }
-
-            .accordion-item.open .accordion-button i {
-                transform: rotate(180deg);
-            }
-        }
-
-        @media (min-width: 769px) {
-
-            .mobile-top-nav,
-            .left-drawer-menu {
-                display: none !important;
-            }
-        }
-
-        .drawer-menu .accordion-item {
-            border-top: none;
-            border-left: none;
-            border-right: none;
-            border-bottom-width: 1px;
-        }
-
-        .drawer-menu a {
-            display: block;
-            padding: 6px 0;
-            color: #333;
-        }
-
-        .drawer-menu .accordion-content {
-            display: none;
-            flex-direction: column;
-        }
-
-        .accordion-item.open .accordion-content {
-            display: flex;
-        }
-
-        /* Sidebar container fixed and full height */
-        .left-drawer-menu {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 280px;
-            /* Adjust width as needed */
-            height: 120vh;
-            background: white;
-            box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
-            overflow-y: auto;
-            /* Scrollable sidebar */
-            transform: translateX(-100%);
-            transition: transform 0.3s ease;
-            z-index: 9999999;
-        }
-
-        /* Show sidebar */
-        .left-drawer-menu.active {
-            transform: translateX(0);
-        }
-
-        /* Prevent body scroll when sidebar open */
-        .body-no-scroll {
-            overflow: hidden;
-            height: 100vh;
-        }
-
-        /* Accordion content styling */
-        .accordion-content {
-            padding-left: 1.5rem;
-            margin-top: 0.5rem;
-            margin-bottom: 1rem;
-        }
-
-        /* Links inside dropdown submenu: flex row with icon and text aligned */
-        .accordion-content a.flex {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.25rem 0;
-            color: #333;
-            text-decoration: none;
-            font-size: 0.9rem;
-        }
-
-        .accordion-content a.flex img {
-            flex-shrink: 0;
-        }
-
-        /* Optional: style accordion open state for better UX */
-        .accordion-item.open>.accordion-content {
-            display: block;
-        }
-
-        .accordion-content {
-            display: none;
-        }
-
-        .mega-menu-content .tab-content {
-            display: none;
-        }
-
-        .mega-menu-content .tab-content.active {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 16px;
-        }
-
-        .mega-menu-content .dropdown-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 8px;
-            color: black;
-            font-weight: 400;
-            text-decoration: none;
-            /* border: 1px solid #ccc; */
-            /* border-radius: 6px; */
-            transition: background 0.3s ease;
-            background-color: #fff;
-        }
-
-        .mega-menu-content .dropdown-item:hover {
-            /* background-color: #f0f0f0; */
-        }
-    </style>
-
-    <!-- Custom CSS -->
 
     <!-- Top Mobile Navigation -->
     <!-- Top Mobile Navigation -->
     <div class="mobile-top-nav">
         <div class="logo">
-            <img src="assets/images/ProtoUpdatedLogo.png" alt="Logo" />
+            <img src="assets/images/header-logo.png" alt="Logo" />
         </div>
         <button id="openDrawer" class="hamburger">
             <i class="fas fa-bars"></i>
@@ -1214,13 +63,105 @@
                 <button
                     class="accordion-button flex items-center gap-2 justify-between w-full hover:translate-x-2 transition-all duration-200 ease-in-out">
                     <span class="flex items-center gap-2">
-                        Longevity
+                      Treatments
                     </span>
                     <i class="fas fa-chevron-down"></i>
                 </button>
                 <div class="accordion-content pl-6">
                     <button class="tab-btn" data-tab="wellnessPrograms">
-                        Diagnostic Testing
+                       Regenerative Wellness
+                        <span class="arrow-icon">➜</span>
+                    </button>
+                    <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
+                                            <span class="text">Detox Therapy in Dubai</span>
+                                        </a>
+
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
+                                            <span class="text">NAD IV Therapy in Dubai</span>
+                                        </a>
+
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
+                                            <span class="text">Therapy in Dubai</span>
+                                        </a>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
+                                            <span class="text">Hyperbaric Oxygen Therapy (HBOT)</span>
+                                        </a>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
+                                            <span class="text">Nutrition and Weight Loss Program in Dubai</span>
+                                        </a>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
+                                            <span class="text">Shock Wave Therapy</span>
+                                        </a>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
+                                            <span class="text">IV Laser Therapy in Dubai</span>
+                                        </a>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
+                                            <span class="text">PEMF Therapy in Dubai</span>
+                                        </a>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
+                                            <span class="text">Women’s Wellness In Dubai</span>
+                                        </a>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
+                                            <span class="text">IV Therapy Drips</span>
+                                        </a>
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
+                                            <span class="text">Peptide Therapy</span>
+                                        </a>
+
+                                        <a href="#" class="dropdown-item flex items-center gap-3">
+                                            <span
+                                                class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                                <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                            </span>
+                                            <span class="text">Red Light</span>
+                                        </a>
+
+                    <button class="tab-btn gray-tab" data-tab="wellnessPrograms">
+                       Aesthetic Treatment
                         <span class="arrow-icon">➜</span>
                     </button>
                     <a href="#" class="flex items-center gap-2">
@@ -1235,7 +176,7 @@
                         Blood Tests
                     </a>
                     <button class="tab-btn gray-tab" data-tab="wellnessPrograms">
-                        Wellness Programs
+                       Regenerative Medicine
                         <span class="arrow-icon">➜</span>
                     </button>
                     <a href="#" class="flex items-center gap-2">
@@ -1429,11 +370,10 @@
 
 
     <!-- Arabic Button Row with Matching Alignment -->
-    <div class="container-xl d-none d-xl-flex align-items-center justify-content-center position-relative mb-6>
+    <div class="container-xl d-none d-xl-flex align-items-center justify-content-center position-relative mb-6">
         <!-- Centered Logo -->
-        <a href="index-2.html" class="mx-auto" style="margin-top: 20px; ">
-            <img src="assets/images/header-logo.png" alt="Logo"
-                style="height: 95px;">
+        <a href=" index-2.html" class="mx-auto" style="margin-top: 20px; ">
+        <img src="assets/images/header-logo.png" alt="Logo" style="height: 95px;">
         </a>
 
 
@@ -1476,17 +416,16 @@
                         <div class="mega-menu   ">
                             <div class="mega-menu-container  flex flex-col">
                                 <div class="mega-menu-tabs flex flex-row justify-center gap-2 w-full">
-                            <button
-    id="regenerativeTab"
-    class="tab-btn active flex items-center gap-2 px-2 py-3 hover:bg-gray-100 rounded"
-    data-tab="diagnosticTesting">
-    <div
-        class="w-8 h-8 rounded-full shadow-md overflow-hidden flex items-center justify-center bg-white">
-        <img src="assets/images/icons/New-Icon.png" alt="Diagnostic Icon"
-            class="w-5 h-5" />
-    </div>
-    <span class="tab-text">Regenerative Wellness</span>
-</button>
+                                    <button id="regenerativeTab"
+                                        class="tab-btn active flex items-center gap-2 px-2 py-3 hover:bg-gray-100 rounded"
+                                        data-tab="diagnosticTesting">
+                                        <div
+                                            class="w-8 h-8 rounded-full shadow-md overflow-hidden flex items-center justify-center bg-white">
+                                            <img src="assets/images/icons/New-Icon.png" alt="Diagnostic Icon"
+                                                class="w-5 h-5" />
+                                        </div>
+                                        <span class="tab-text">Regenerative Wellness</span>
+                                    </button>
 
 
                                     <button
@@ -1888,7 +827,7 @@
 
 
                                         </div>
-                                  
+
                                     </div>
                                 </div>
                             </div>
@@ -1907,28 +846,17 @@
                         <div class="mega-menu   " id="exclusive_menu">
                             <div class="mega-menu-container  flex flex-col">
                                 <div class="mega-menu-tabs flex flex-row gap-2 justify-center w-full">
-                                  <!-- <button
-    id="ourProgramsTab"
-    class="tab-btn active flex items-center gap-2 px-2 py-3 hover:bg-gray-100 rounded"
-    data-tab="OurPrograms">
+
+                                    <button id="ourProgramsTab"
+                                        class="tab-btn active flex items-center gap-2 px-2 py-3 hover:bg-gray-100 rounded"
+                                        data-tab="OurPrograms">
                                         <div
                                             class="w-8 h-8 rounded-full shadow-md overflow-hidden flex items-center justify-center bg-white">
                                             <img src="assets/images/icons/New-Icon.png" alt="Diagnostic Icon"
                                                 class="w-5 h-5" />
                                         </div>
-                                        <span>Our Programs</span>
-                                    </button> -->
-<button
-    id="ourProgramsTab"
-    class="tab-btn active flex items-center gap-2 px-2 py-3 hover:bg-gray-100 rounded"
-    data-tab="OurPrograms">
-     <div
-                                            class="w-8 h-8 rounded-full shadow-md overflow-hidden flex items-center justify-center bg-white">
-                                            <img src="assets/images/icons/New-Icon.png" alt="Diagnostic Icon"
-                                                class="w-5 h-5" />
-                                        </div>
-    <span class="tab-text">Our Programs</span>
-</button>
+                                        <span class="tab-text">Our Programs</span>
+                                    </button>
 
                                     <button
                                         class="tab-btn gray-tab flex items-center gap-2 px-2 py-3 hover:bg-gray-100 rounded"
@@ -2290,13 +1218,13 @@
 
 
                                         </div>
-                                  
+
                                     </div>
                                 </div>
                             </div>
                     </li>
-                  
-                    
+
+
                     <li class="nav-item">
                         <a href="#" class="nav-link" data-i18n="aboutUs">Specialist</a>
                     </li>
@@ -2316,31 +1244,31 @@
                         </a>
                         <ul class="dropdown-menu fade shadow">
                             <li>
-                                   <a href="#" class="dropdown-item flex items-center gap-3">
-                                                <span
-                                                    class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-                                                    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-                                                </span>
+                                <a href="#" class="dropdown-item flex items-center gap-3">
+                                    <span
+                                        class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                        <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                    </span>
                                     <span class="text" data-i18n="advancedTherapies">Press</span>
-                                            </a>
+                                </a>
 
-                                               <a href="#" class="dropdown-item flex items-center gap-3">
-                                                <span
-                                                    class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-                                                    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-                                                </span>
-                                                <span class="text" data-i18n="skinRejuvenation">Blogs</span>
-                                            </a>
-                                               <a href="#" class="dropdown-item flex items-center gap-3">
-                                                <span
-                                                    class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
-                                                    <img src="assets/images/icons/New-Icon.png" alt="icon" />
-                                                </span>
+                                <a href="#" class="dropdown-item flex items-center gap-3">
+                                    <span
+                                        class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                        <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                    </span>
+                                    <span class="text" data-i18n="skinRejuvenation">Blogs</span>
+                                </a>
+                                <a href="#" class="dropdown-item flex items-center gap-3">
+                                    <span
+                                        class="icon inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-white">
+                                        <img src="assets/images/icons/New-Icon.png" alt="icon" />
+                                    </span>
                                     <span class="text" data-i18n="specializedTreatments">News</span>
-                                            </a>
-                             
+                                </a>
+
                             </li>
-                    
+
                         </ul>
                     </li>
 
@@ -2820,9 +1748,10 @@
                 <div class="col-xl-6 col-md-12">
                     <div class="about-wrap-image">
                         <div class="row justify-content-center">
-                             <div class="image-one zoom-container">
-                                    <img class="zoom-hover" src="assets/images/about/Transform-Your-Future-Self.png" alt="Transform-Your-Future-Self img">
-                                </div>
+                            <div class="image-one zoom-container">
+                                <img class="zoom-hover" src="assets/images/about/Transform-Your-Future-Self.png"
+                                    alt="Transform-Your-Future-Self img">
+                            </div>
                             <!-- <div class="col-lg-6 col-sm-6">
                                 <div class="image-one zoom-container">
                                     <img class="zoom-hover" src="assets/images/about/about2.jpg" alt="about 2 img">
@@ -2899,8 +1828,8 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="about-btn" >
-                            <a href="#" class="default-btn"  data-i18n="about.button">About
+                        <div class="about-btn">
+                            <a href="#" class="default-btn" data-i18n="about.button">About
                                 ProtoClinic</a>
                         </div>
                     </div>
@@ -3110,9 +2039,9 @@
 
 
 
-<div class="view-all-services-btn">
-  <a href="#" class="default-btn">View All Services</a>
-</div>
+            <div class="view-all-services-btn">
+                <a href="#" class="default-btn">View All Services</a>
+            </div>
 
 
         </div>
@@ -3386,8 +2315,8 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="col-lg-12 col-md-12" >
-                            <button type="submit" class="default-btn" >Book Your
+                        <div class="col-lg-12 col-md-12">
+                            <button type="submit" class="default-btn">Book Your
                                 Consultation</button>
                         </div>
                     </div>
@@ -3585,34 +2514,37 @@
             </div>
         </div>
     </div> -->
-     <!-- Start About Area -->
-        <div class="about-area ptb-150">
-            <div class="container">
-                <div class="row justify-content-center" data-cues="slideInUp">
-                    <div class="col-xl-6 col-md-12">
-                        <div class="about-image"></div>
-                    </div>
-                    <div class="col-xl-6 col-md-12">
-                        <div class="about-content" data-cues="slideInUp">
-                              <span class="sub " style="font-weight: bold;">LED BY AN EXPERT</span>
-                            <div>
-                                  <span class="sub " style="font-weight: bold;">The clinic was established by
-                </span>
-                            </div>
-                            <h2> DR. WISSAM ADADA</h2>
-                            <p>           
-                                A hair transplant specialist with years of global experience in dermatological surgery and aesthetic
-                                medicine.
+    <!-- Start About Area -->
+    <div class="about-area ptb-150">
+        <div class="container">
+            <div class="row justify-content-center" data-cues="slideInUp">
+                <div class="col-xl-6 col-md-12">
+                    <div class="about-image"></div>
+                </div>
+                <div class="col-xl-6 col-md-12">
+                    <div class="about-content" data-cues="slideInUp">
+                        <span class="sub " style="font-weight: bold;">LED BY AN EXPERT</span>
+                        <div>
+                            <span class="sub " style="font-weight: bold;">The clinic was established by
+                            </span>
+                        </div>
+                        <h2> DR. WISSAM ADADA</h2>
+                        <p>
+                            A hair transplant specialist with years of global experience in dermatological surgery and
+                            aesthetic
+                            medicine.
 
-                    He specialises in his ﬁeld and hair loss therapy, utilizing only the most cutting-edge treatments.
+                            He specialises in his ﬁeld and hair loss therapy, utilizing only the most cutting-edge
+                            treatments.
 
-                    His success is due to the passion he instils in his work. To him, beauty and wellness give
-                    individuals the conﬁdence, motivation and energy to excel in their lives.
+                            His success is due to the passion he instils in his work. To him, beauty and wellness give
+                            individuals the conﬁdence, motivation and energy to excel in their lives.
 
-                    He prioritises helping patients regain their self-esteem by providing them with a personalised
-                    treatment that matches their needs.
-                </p>
-                            <!-- <ul class="list">
+                            He prioritises helping patients regain their self-esteem by providing them with a
+                            personalised
+                            treatment that matches their needs.
+                        </p>
+                        <!-- <ul class="list">
                                 <li>
                                     <i data-feather="check-circle"></i>
                                     Night and weekend appointment
@@ -3626,11 +2558,11 @@
                                     Short time wait and Luxury amenities
                                 </li>
                             </ul> -->
-                            <ul class="info">
-                                <li>
-                                    <a href="#" class="default-btn">Meet our Doctors</a>
-                                </li>
-                                <!-- <li>
+                        <ul class="info">
+                            <li>
+                                <a href="#" class="default-btn">Meet our Doctors</a>
+                            </li>
+                            <!-- <li>
                                     <div class="writer">
                                         <div class="image">
                                             <img src="assets/images/about/writer.png" alt="writer">
@@ -3641,13 +2573,13 @@
                                         </div>
                                     </div>
                                 </li> -->
-                            </ul>
-                        </div>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- End About Area -->
+    </div>
+    <!-- End About Area -->
 
     <!-- End Video Area -->
 
@@ -4191,7 +3123,7 @@
                     <div class="col-lg-5 col-md-12">
                         <form class="subscribe-form">
                             <input type="text" class="form-control" placeholder="Enter your email">
-                            <button type="submit" class="default-btn" >Subscribe</button>
+                            <button type="submit" class="default-btn">Subscribe</button>
                         </form>
                     </div>
                 </div>
@@ -4202,72 +3134,74 @@
 
     <!-- Start Footer Area -->
     <footer class="footer-area">
-    <div class="container">
-        <div class="row align-items-start" data-cue="slideInUp">
+        <div class="container">
+            <div class="row align-items-start" data-cue="slideInUp">
 
-            <!-- Contact Info + Logo in same column -->
-            <div class="col-xl-5 col-md-12 text-center text-xl-start mb-4 mb-xl-0">
-                <!-- Logo above location -->
-                <a href="index-2.html" class="d-inline-block  mx-10 mb-6">
-                    <img src="assets/images/Footer-logo.png" alt="Logo" style="height: 95px;">
-                </a>
+                <!-- Contact Info + Logo in same column -->
+                <div class="col-xl-5 col-md-12 text-center text-xl-start mb-4 mb-xl-0">
+                    <!-- Logo above location -->
+                    <a href="index-2.html" class="d-inline-block  mx-10 mb-6">
+                        <img src="assets/images/Footer-logo.png" alt="Logo" style="height: 95px;">
+                    </a>
 
-                <div class="single-footer-widget pe-xl-5 mx-10">
-                    <ul class="info-list">
-                        <li>
-                            <span style="color: white;">Location:</span> Dubai Healthcare City<br>
-                            Ibn Sina Medical Complex, (Building 27), Block B – 1ST Floor.
-                        </li>
-                        <li>
-                            <span style="color: white;">Phone:</span> <a href="tel:+97145136154">+971 4 513 6154</a>
-                        </li>
-                        <li>
-                            <span style="color: white;">Email:</span> <a href="mailto:info@protoclinic.com">info@protoclinic.com</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Links Section -->
-            <div class="col-xl-7 col-md-12">
-                <div class="row justify-content-center">
-                    <div class="col-lg-4 col-sm-4">
-                        <div class="single-footer-widget ps-xl-5">
-                            <h3>Quick Link</h3>
-                            <ul class="custom-links">
-                                <li><a href="#">About Us</a></li>
-                                <li><a href="#">Our Services</a></li>
-                                <li><a href="#">Contact Us</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-4">
-                        <div class="single-footer-widget ps-xl-5">
-                            <h3>Legal</h3>
-                            <ul class="custom-links">
-                                <li><a href="#">Terms & Conditions</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
-                                <li><a href="#">Help Center</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-4">
-                        <div class="single-footer-widget ps-xl-5">
-                            <h3>Follow Us</h3>
-                            <ul class="custom-links">
-                                <li><a href="#" target="_blank">Facebook</a></li>
-                                <li><a href="#" target="_blank">Twitter</a></li>
-                                <li><a href="https://www.instagram.com/drwissamadada/" target="_blank">Instagram</a></li>
-                                <li><a href="#" target="_blank">LinkedIn</a></li>
-                            </ul>
-                        </div>
+                    <div class="single-footer-widget pe-xl-5 mx-10">
+                        <ul class="info-list">
+                            <li>
+                                <span style="color: white;">Location:</span> Dubai Healthcare City<br>
+                                Ibn Sina Medical Complex, (Building 27), Block B – 1ST Floor.
+                            </li>
+                            <li>
+                                <span style="color: white;">Phone:</span> <a href="tel:+97145136154">+971 4 513 6154</a>
+                            </li>
+                            <li>
+                                <span style="color: white;">Email:</span> <a
+                                    href="mailto:info@protoclinic.com">info@protoclinic.com</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-            </div>
 
+                <!-- Links Section -->
+                <div class="col-xl-7 col-md-12">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-4 col-sm-4">
+                            <div class="single-footer-widget ps-xl-5">
+                                <h3>Quick Link</h3>
+                                <ul class="custom-links">
+                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="#">Our Services</a></li>
+                                    <li><a href="#">Contact Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-4">
+                            <div class="single-footer-widget ps-xl-5">
+                                <h3>Legal</h3>
+                                <ul class="custom-links">
+                                    <li><a href="#">Terms & Conditions</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="#">Help Center</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-4">
+                            <div class="single-footer-widget ps-xl-5">
+                                <h3>Follow Us</h3>
+                                <ul class="custom-links">
+                                    <li><a href="#" target="_blank">Facebook</a></li>
+                                    <li><a href="#" target="_blank">Twitter</a></li>
+                                    <li><a href="https://www.instagram.com/drwissamadada/" target="_blank">Instagram</a>
+                                    </li>
+                                    <li><a href="#" target="_blank">LinkedIn</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
     <!-- Back to Top -->
     <button type="button" id="back-to-top" class="position-fixed text-center border-0 p-0">
@@ -4384,73 +3318,73 @@
 
             this.textContent = newLang === "en" ? "عربي" : "English";
         });
-  
+
 
 
     </script>
 
     <script>
-document.addEventListener('DOMContentLoaded', () => {
-    function setupMegaMenu(dropdownId) {
-        const dropdown = document.getElementById(dropdownId);
-        if (!dropdown) return;
+        document.addEventListener('DOMContentLoaded', () => {
+            function setupMegaMenu(dropdownId) {
+                const dropdown = document.getElementById(dropdownId);
+                if (!dropdown) return;
 
-        const tabs = dropdown.querySelectorAll('.tab-btn');
-        const contents = dropdown.querySelectorAll('.tab-content');
-        let hideTimeout;
+                const tabs = dropdown.querySelectorAll('.tab-btn');
+                const contents = dropdown.querySelectorAll('.tab-content');
+                let hideTimeout;
 
-        function activateFirstTab() {
-            tabs.forEach(t => t.classList.remove('active'));
-            contents.forEach(c => c.classList.remove('active'));
+                function activateFirstTab() {
+                    tabs.forEach(t => t.classList.remove('active'));
+                    contents.forEach(c => c.classList.remove('active'));
 
-            if (tabs.length > 0) {
-                tabs[0].classList.add('active');
-                const id = tabs[0].getAttribute('data-tab');
-                const contentToShow = dropdown.querySelector(`#${id}`);
-                if (contentToShow) contentToShow.classList.add('active');
+                    if (tabs.length > 0) {
+                        tabs[0].classList.add('active');
+                        const id = tabs[0].getAttribute('data-tab');
+                        const contentToShow = dropdown.querySelector(`#${id}`);
+                        if (contentToShow) contentToShow.classList.add('active');
+                    }
+                }
+
+                // Show on hover
+                dropdown.addEventListener('mouseenter', () => {
+                    clearTimeout(hideTimeout);
+                    dropdown.classList.add('open');
+                    activateFirstTab(); // 🔥 Reset active tab every time the menu opens
+                });
+
+                // Hide on mouse leave
+                dropdown.addEventListener('mouseleave', () => {
+                    hideTimeout = setTimeout(() => {
+                        dropdown.classList.remove('open');
+                    }, 150);
+                });
+
+                // Handle tab hover
+                tabs.forEach(tab => {
+                    tab.addEventListener('mouseenter', () => {
+                        tabs.forEach(t => t.classList.remove('active'));
+                        contents.forEach(c => c.classList.remove('active'));
+
+                        tab.classList.add('active');
+                        const id = tab.getAttribute('data-tab');
+                        const contentToShow = dropdown.querySelector(`#${id}`);
+                        if (contentToShow) contentToShow.classList.add('active');
+                    });
+                });
+
+                // Hide if clicked outside
+                document.addEventListener('click', e => {
+                    if (!dropdown.contains(e.target)) {
+                        dropdown.classList.remove('open');
+                    }
+                });
             }
-        }
 
-        // Show on hover
-        dropdown.addEventListener('mouseenter', () => {
-            clearTimeout(hideTimeout);
-            dropdown.classList.add('open');
-            activateFirstTab(); // 🔥 Reset active tab every time the menu opens
+            // Call the function for each mega menu
+            setupMegaMenu('longevityDropdownParent');
+            setupMegaMenu('exclusiveDropdownParent');
         });
-
-        // Hide on mouse leave
-        dropdown.addEventListener('mouseleave', () => {
-            hideTimeout = setTimeout(() => {
-                dropdown.classList.remove('open');
-            }, 150);
-        });
-
-        // Handle tab hover
-        tabs.forEach(tab => {
-            tab.addEventListener('mouseenter', () => {
-                tabs.forEach(t => t.classList.remove('active'));
-                contents.forEach(c => c.classList.remove('active'));
-
-                tab.classList.add('active');
-                const id = tab.getAttribute('data-tab');
-                const contentToShow = dropdown.querySelector(`#${id}`);
-                if (contentToShow) contentToShow.classList.add('active');
-            });
-        });
-
-        // Hide if clicked outside
-        document.addEventListener('click', e => {
-            if (!dropdown.contains(e.target)) {
-                dropdown.classList.remove('open');
-            }
-        });
-    }
-
-    // Call the function for each mega menu
-    setupMegaMenu('longevityDropdownParent');
-    setupMegaMenu('exclusiveDropdownParent');
-});
-</script>
+    </script>
 
     <script>
         function setupDropdown(id) {
@@ -4472,14 +3406,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 arrow.setAttribute("stroke", color);
             });
         }
-        
+
         // Initialize for all dropdowns
-   // Initialize for all dropdowns
-setupDropdown('longevityDropdown');
-setupDropdown('exclusiveDropdown'); // ✅ Add this line
-setupDropdown('aestheticDropdown');
-setupDropdown('regenerationDropdown');
-setupDropdown('servicesDropdown');
+        // Initialize for all dropdowns
+        setupDropdown('longevityDropdown');
+        setupDropdown('exclusiveDropdown'); // ✅ Add this line
+        setupDropdown('aestheticDropdown');
+        setupDropdown('regenerationDropdown');
+        setupDropdown('servicesDropdown');
 
 
         document.querySelectorAll('.dropdown-toggle').forEach(el => {
@@ -4519,53 +3453,42 @@ setupDropdown('servicesDropdown');
             });
         });
     </script>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    const ourProgramsText = document.querySelector('#ourProgramsTab .tab-text');
-    const regenerativeText = document.querySelector('#regenerativeTab .tab-text');
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const ourProgramsText = document.querySelector('#ourProgramsTab .tab-text');
+            const regenerativeText = document.querySelector('#regenerativeTab .tab-text');
 
-    const tabButtons = document.querySelectorAll('.tab-btn');
-
-    tabButtons.forEach(tab => {
-        tab.addEventListener('mouseenter', () => {
-            // Change Our Programs text color if hovering a different tab
-            if (tab.id !== 'ourProgramsTab' && ourProgramsText) {
-                ourProgramsText.style.color = '#896842';
-            }
-
-            // Change Regenerative Wellness text color if hovering a different tab
-            if (tab.id !== 'regenerativeTab' && regenerativeText) {
-                regenerativeText.style.color = '#896842';
-            }
-        });
-
-        tab.addEventListener('mouseleave', () => {
-            // Reset Our Programs text color
-            if (tab.id !== 'ourProgramsTab' && ourProgramsText) {
-                ourProgramsText.style.color = '';
-            }
-
-            // Reset Regenerative Wellness text color
-            if (tab.id !== 'regenerativeTab' && regenerativeText) {
-                regenerativeText.style.color = '';
-            }
-        });
-    });
-});
-</script>
-    <!-- <script>
-        document.addEventListener('DOMContentLoaded', function () {
             const tabButtons = document.querySelectorAll('.tab-btn');
 
-            tabButtons.forEach(btn => {
-                btn.addEventListener('mouseenter', () => {
-                    tabButtons.forEach(b => b.classList.remove('active'));
-                    btn.classList.add('active');
+            tabButtons.forEach(tab => {
+                tab.addEventListener('mouseenter', () => {
+                    // Change Our Programs text color if hovering a different tab
+                    if (tab.id !== 'ourProgramsTab' && ourProgramsText) {
+                        ourProgramsText.style.color = '#896842';
+                    }
+
+                    // Change Regenerative Wellness text color if hovering a different tab
+                    if (tab.id !== 'regenerativeTab' && regenerativeText) {
+                        regenerativeText.style.color = '#896842';
+                    }
+                });
+
+                tab.addEventListener('mouseleave', () => {
+                    // Reset Our Programs text color
+                    if (tab.id !== 'ourProgramsTab' && ourProgramsText) {
+                        ourProgramsText.style.color = '';
+                    }
+
+                    // Reset Regenerative Wellness text color
+                    if (tab.id !== 'regenerativeTab' && regenerativeText) {
+                        regenerativeText.style.color = '';
+                    }
                 });
             });
         });
-    </script> -->
-    
+    </script>
+
+
     </body>
 
 
