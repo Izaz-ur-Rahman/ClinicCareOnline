@@ -14589,7 +14589,7 @@ Services Area CSS
   height: 55px;
   width: 55px;
   line-height: 55px;
-  background-color: #896842;
+  background-color: #06543C;
   color: #ffffff;
   font-size: 18px;
   border-radius: 50px;
@@ -14652,7 +14652,7 @@ Services Area CSS
   border-bottom: 1px solid #F8F8F5;
 }
 .services-wrap-item:hover .services-left h3 a, .services-wrap-item:hover .services-left .h3 a, .services-wrap-item.active .services-left h3 a, .services-wrap-item.active .services-left .h3 a {
-  color: #896842;
+  color: #06543C;
 }
 .services-wrap-item:hover .services-left .arrow-btn, .services-wrap-item.active .services-left .arrow-btn {
   opacity: 1;
