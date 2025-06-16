@@ -10,6 +10,9 @@
     padding-top: 50px;
     padding-bottom: 50px;
   }
+  .single-footer-widget{
+    text-align: center;
+  }
   .pt-150 {
     padding-top: 50px;
   }
@@ -1212,7 +1215,9 @@
 
 /* Min width 576px to Max width 767px */
 @media only screen and (min-width: 576px) and (max-width: 767px) {
-
+.single-footer-widget{
+  text-align: center !important;
+}
   .page-banner-content .list {
     display: flex;
   }

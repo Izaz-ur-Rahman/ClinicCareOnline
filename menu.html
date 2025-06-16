@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mega Menu with Tabs</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: sans-serif;
+    }
+    .navbar {
+      background: #f7f3f0;
+      padding: 20px 0;
+      text-align: center;
+    }
+    .menu {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .menu-item > a {
+      text-decoration: none;
+      color: #444;
+      font-weight: 500;
+      font-size: 14px;
+    }
+    .dropdown {
+      position: relative;
+    }
+    .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #fff;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      padding: 20px;
+      min-width: 700px;
+      z-index: 100;
+    }
+    .dropdown:hover .submenu {
+      display: block;
+    }
+    .tabs {
+      display: flex;
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 20px;
+      gap: 20px;
+    }
+    .tab-button {
+      background: none;
+      border: none;
+      font-weight: bold;
+      color: #333;
+      cursor: pointer;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .tab-button.active {
+      color: #000;
+      border-bottom: 2px solid #000;
+    }
+    .tab-content {
+      display: none;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+    .tab-content.active {
+      display: flex;
+    }
+    .submenu-column {
+      flex: 1 1 30%;
+    }
+    .submenu-column h4 {
+      margin-bottom: 8px;
+      font-size: 14px;
+      font-weight: bold;
+      color: #5c4c42;
+    }
+    .submenu-column ul {
+      list-style: none;
+    }
+    .submenu-column li a {
+      display: block;
+      font-size: 13px;
+      color: #666;
+      padding: 5px 0;
+      text-align: left;
+      text-decoration: none;
+    }
+    @media (max-width: 768px) {
+      .submenu {
+        position: static;
+        transform: none;
+        min-width: 100%;
+        box-shadow: none;
+        padding: 10px;
+      }
+      .tab-content {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <ul class="menu">
+      <li class="menu-item"><a href="#">About</a></li>
+      <li class="menu-item dropdown">
+        <a href="#">Treatments <i class="fas fa-angle-down"></i></a>
+        <div class="submenu">
+          <div class="tabs">
+            <button class="tab-button active" data-tab="tab1"><i class="fas fa-heartbeat"></i> Wellness</button>
+            <button class="tab-button" data-tab="tab2"><i class="fas fa-apple-alt"></i> Nutrition</button>
+            <button class="tab-button" data-tab="tab3"><i class="fas fa-spa"></i> Aesthetics</button>
+          </div>
+          <div class="tab-content active" id="tab1">
+            <div class="submenu-column">
+        
+              <ul>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 2</a></li>
+                <li><a href="#">Item 3</a></li>
+              </ul>
+            </div>
+            <div class="submenu-column">
+          
+              <ul>
+                <li><a href="#">Item 4</a></li>
+                <li><a href="#">Item 5</a></li>
+                <li><a href="#">Item 6</a></li>
+              </ul>
+            </div>
+            <div class="submenu-column">
+            
+              <ul>
+                <li><a href="#">Item 7</a></li>
+                <li><a href="#">Item 8</a></li>
+                <li><a href="#">Item 9</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="tab-content" id="tab2">
+            <div class="submenu-column">
+          
+              <ul>
+                <li><a href="#">Item A1</a></li>
+                <li><a href="#">Item A2</a></li>
+                <li><a href="#">Item A3</a></li>
+              </ul>
+            </div>
+            <div class="submenu-column">
+             
+              <ul>
+                <li><a href="#">Item B1</a></li>
+                <li><a href="#">Item B2</a></li>
+                <li><a href="#">Item B3</a></li>
+              </ul>
+            </div>
+            <div class="submenu-column">
+              
+              <ul>
+                <li><a href="#">Item C1</a></li>
+                <li><a href="#">Item C2</a></li>
+                <li><a href="#">Item C3</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="tab-content" id="tab3">
+            <div class="submenu-column">
+          
+              <ul>
+                <li><a href="#">Item X1</a></li>
+                <li><a href="#">Item X2</a></li>
+                <li><a href="#">Item X3</a></li>
+              </ul>
+            </div>
+            <div class="submenu-column">
+           
+              <ul>
+                <li><a href="#">Item Y1</a></li>
+                <li><a href="#">Item Y2</a></li>
+                <li><a href="#">Item Y3</a></li>
+              </ul>
+            </div>
+            <div class="submenu-column">
+          
+              <ul>
+                <li><a href="#">Item Z1</a></li>
+                <li><a href="#">Item Z2</a></li>
+                <li><a href="#">Item Z3</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="menu-item dropdown">
+        <a href="#">Exclusives <i class="fas fa-angle-down"></i></a>
+        <div class="submenu">
+          <div class="tabs">
+            <button class="tab-button active" data-tab="tab1"><i class="fas fa-heartbeat"></i> Wellness</button>
+            <button class="tab-button" data-tab="tab2"><i class="fas fa-apple-alt"></i> Nutrition</button>
+            <button class="tab-button" data-tab="tab3"><i class="fas fa-spa"></i> Aesthetics</button>
+          </div>
+          <div class="tab-content active" id="tab1">
+            <div class="submenu-column">
+           
+              <ul>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 2</a></li>
+                <li><a href="#">Item 3</a></li>
+              </ul>
+            </div>
+            <div class="submenu-column">
+          
+              <ul>
+                <li><a href="#">Item 4</a></li>
+                <li><a href="#">Item 5</a></li>
+                <li><a href="#">Item 6</a></li>
+              </ul>
+            </div>
+            <div class="submenu-column">
+            
+              <ul>
+                <li><a href="#">Item 7</a></li>
+                <li><a href="#">Item 8</a></li>
+                <li><a href="#">Item 9</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="tab-content" id="tab2">
+            <div class="submenu-column">
+       
+              <ul>
+                <li><a href="#">Item A1</a></li>
+                <li><a href="#">Item A2</a></li>
+                <li><a href="#">Item A3</a></li>
+              </ul>
+            </div>
+            <div class="submenu-column">
+            
+              <ul>
+                <li><a href="#">Item B1</a></li>
+                <li><a href="#">Item B2</a></li>
+                <li><a href="#">Item B3</a></li>
+              </ul>
+            </div>
+            <div class="submenu-column">
+           
+              <ul>
+                <li><a href="#">Item C1</a></li>
+                <li><a href="#">Item C2</a></li>
+                <li><a href="#">Item C3</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="tab-content" id="tab3">
+            <div class="submenu-column">
+            
+              <ul>
+                <li><a href="#">Item X1</a></li>
+                <li><a href="#">Item X2</a></li>
+                <li><a href="#">Item X3</a></li>
+              </ul>
+            </div>
+            <div class="submenu-column">
+              
+              <ul>
+                <li><a href="#">Item Y1</a></li>
+                <li><a href="#">Item Y2</a></li>
+                <li><a href="#">Item Y3</a></li>
+              </ul>
+            </div>
+            <div class="submenu-column">
+             
+              <ul>
+                <li><a href="#">Item Z1</a></li>
+                <li><a href="#">Item Z2</a></li>
+                <li><a href="#">Item Z3</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </li>
+      
+      <li class="menu-item"><a href="#">Specialists</a></li>
+      <li class="menu-item"><a href="#">Concierge</a></li>
+      <li class="menu-item"><a href="#">Magazine</a></li>
+      <li class="menu-item"><a href="#">Book Now</a></li>
+    </ul>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab-button');
+    const contents = document.querySelectorAll('.tab-content');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('mouseenter', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        contents.forEach(content => {
+          content.classList.remove('active');
+          if (content.id === tab.dataset.tab) {
+            content.classList.add('active');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
