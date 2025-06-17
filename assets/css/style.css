@@ -14378,7 +14378,7 @@ About Area CSS
   display: flex;
   align-items: center;
   border-radius: 10px;
-  background-color: #06543c1c;
+  background-color: #09483514;
   padding: 10px 20px;
   color: #06543C;
   font-weight: 600;
@@ -15043,8 +15043,8 @@ Features Area CSS
   margin-left: 20px;
 }
 .features-wrap-card .service-btn:hover i {
-  background-color: #896842;
-  color: #ffffff;
+  background-color: transparent;
+  /* color: #ffffff; */
 }
 
 .features-wrap-card::before {
@@ -15054,7 +15054,7 @@ Features Area CSS
   top: 0;
   height: 10px;
   width: 10px;
-  background-color: #B5946D;
+  background-color:transparent;
   transition: 0.6s;
 
   opacity: 0;
@@ -15068,16 +15068,16 @@ Features Area CSS
   visibility: visible;
 
 }
-.features-wrap-card:hover p,
+/* .features-wrap-card:hover p,
 .features-wrap-card:hover h3 a,
 .features-wrap-card:hover .service-btn {
   color: #ffffff !important;
-}
+} */
 
-.features-wrap-card:hover .service-btn i {
+/* .features-wrap-card:hover .service-btn i {
   background-color: #ffffff;
   color: #896842;
-}
+} */
 
 .features-wrap-bottom-shape {
   position: absolute;
@@ -15090,12 +15090,12 @@ Features Area CSS
 .features-wrap-bottom-shape img {
   width: 100%;
 }
-.features-wrap-card:hover .icon img {
+/* .features-wrap-card:hover .icon img {
   filter: brightness(0) invert(1);
 }
 .features-wrap-card .icon img {
   transition: filter 0.4s ease;
-}
+} */
 
 /*================================================
 Insurance Area CSS
@@ -15256,7 +15256,7 @@ Insurance Area CSS
   display: flex;
   align-items: center;
   border-radius: 10px;
-  background-color: #06543c1c;
+  background-color: #09483514;
   font-size: 17px;
   font-weight: 600;
   padding: 10px 20px;
@@ -15608,7 +15608,7 @@ Doctors Area CSS
 Review Area CSS
 =================================================*/
 .review-area {
-  background-color: #DCE7E2;
+  background-color: #FAF6ED;
   position: relative;
   z-index: 1;
   overflow: hidden;

@@ -1953,94 +1953,160 @@
         </div>
     </div>
 
+<style>
+/* Common card layout */
+.features-wrap-card {
+  padding: 30px;
+  min-height: 400px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  transition: none;
+}
 
-    <!-- End Pediatric Dentist Banner Area -->
-    <!-- Start Features Wrap Area -->
-    <div class="features-wrap-area  pb-125 custo">
-        <div class="container-fluid">
-            <div class="row justify-content-center" data-cues="slideInUp">
-                <div class="col-xxl-3 col-md-6">
-                    <div class="features-wrap-card ">
-                        <div class="icon ">
-                            <img src="assets/images/features/Longevity-Assessment-Brown.png"
-                                alt="Longevity Assessment icon">
-                        </div>
-                        <h3>
-                            <a href="#" data-i18n="features.longevity.title">Longevity Assessment</a>
-                        </h3>
-                        <p data-i18n="features.longevity.desc">
-                            Comprehensive DNA testing and personalized health evaluations designed to optimize your
-                            biological age and extend your health span.
-                        </p>
-                        <a href="#" class="service-btn" style="pointer-events: none;" data-i18n="features.getStarted">
-                            Get Started
-                            <i class="flaticon-up-right-arrow" style="pointer-events: none;"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-xxl-3 col-md-6">
-                    <div class="features-wrap-card">
-                        <div class="icon">
-                            <img src="assets/images/features/Advance-aesthetics-Brown.png"
-                                alt="Advanced Aesthetics icon">
-                        </div>
-                        <h3>
-                            <a href="#" data-i18n="features.aesthetics.title">Advanced Aesthetics</a>
-                        </h3>
-                        <p data-i18n="features.aesthetics.desc">
-                            Non-invasive and minimally invasive treatments utilizing the latest technology for
-                            natural-looking rejuvenation and enhancement.
-                        </p>
-                        <a href="#" class="service-btn" style="pointer-events: none;" data-i18n="features.getStarted">
-                            Get Started
-                            <i class="flaticon-up-right-arrow" style="pointer-events: none;"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-xxl-3 col-md-6">
-                    <div class="features-wrap-card">
-                        <div class="icon">
-                            <img src="assets/images/features/Regenerative-Therapies-Brown.png"
-                                alt="Regenerative Therapies icon">
-                        </div>
-                        <h3>
-                            <a href="#" data-i18n="features.regenerative.title">Regenerative Therapies</a>
-                        </h3>
-                        <p data-i18n="features.regenerative.desc">
-                            Platelet-Rich Plasma and biostimulation treatments that harness your body's natural healing
-                            abilities to restore and revitalize.
-                        </p>
-                        <a href="#" class="service-btn" style="pointer-events: none;" data-i18n="features.getStarted">
-                            Get Started
-                            <i class="flaticon-up-right-arrow" style="pointer-events: none;"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-xxl-3 col-md-6">
-                    <div class="features-wrap-card">
-                        <div class="icon">
-                            <img src="assets/images/features/Hair-&-Scalp-Solutions-Brown.png"
-                                alt="Hair & Scalp Solutions icon">
-                        </div>
-                        <h3>
-                            <a href="#" data-i18n="features.hair.title">Hair & Scalp Solutions</a>
-                        </h3>
-                        <p data-i18n="features.hair.desc">
-                            Innovative approaches to hair restoration and scalp health through advanced therapeutic
-                            techniques and personalized treatment plans.
-                        </p>
-                        <a href="#" class="service-btn" style="pointer-events: none;" data-i18n="features.getStarted">
-                            Get Started
-                            <i class="flaticon-up-right-arrow" style="pointer-events: none;"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
+/* Backgrounds */
+.static-bg-1 {
+  background-image: url('assets/images/first_and_4th_bg.png');
+}
+.static-bg-2,
+.static-bg-3 {
+  background-image: url('assets/images/second_and_third_bg.png');
+}
+.static-bg-4 {
+  background-image: url('assets/images/first_and_4th_bg.png');
+}
+
+/* Text color white for all */
+.features-wrap-card h3,
+.features-wrap-card p,
+.features-wrap-card a {
+  color: #fff;
+}
+/* Target only Box 2 and Box 3 headings */
+.static-bg-2 h3 a,
+.static-bg-3 h3 a {
+  color: #896842 !important;
+}
+
+/* Target only Box 2 and Box 3 paragraphs */
+.static-bg-2 p,
+.static-bg-3 p {
+  color: #231F20 !important;
+}
+
+/* Icon: Keep white only for box 1 and 4 */
+.static-bg-1 .icon img,
+.static-bg-4 .icon img {
+  filter: brightness(0) invert(1);
+}
+
+/* Service button */
+/* Style the service button */
+.service-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff; /* or your preferred color */
+  text-decoration: none;
+  position: relative;
+}
+
+/* Style the arrow icon */
+.service-btn i {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: green; default bg color */
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  transition: background-color 0.3s ease;
+  color: #fff; /* arrow color */
+  font-size: 14px;
+}
+
+/* Hover effect: only arrow circle turns green */
+.service-btn:hover i {
+  background-color: #06543c !important; /* green circle on hover */
+  color: #fff !important;
+}
+.box-1 .service-btn,
+.box-4 .service-btn {
+  color: #fff !important;
+}
+</style>
+
+
+<div class="features-wrap-area pb-125 custo">
+  <div class="container-fluid">
+    <div class="row justify-content-center" data-cues="slideInUp">
+
+      <!-- Box 1 -->
+      <div class="col-xxl-3 col-md-6">
+        <div class="features-wrap-card static-bg-1 box-1">
+          <div class="icon">
+            <img src="assets/images/features/Longevity-Assessment-Brown.png" alt="Longevity Assessment icon">
+          </div>
+          <h3><a href="#">Longevity Assessment</a></h3>
+          <p>Comprehensive DNA testing and personalized health evaluations designed to optimize your biological age and extend your health span.</p>
+          <a href="#" class="service-btn">
+            Get Started <i class="flaticon-up-right-arrow"></i>
+          </a>
         </div>
-        <div class="features-wrap-bottom-shape">
-            <img src="assets/images/features/shape2.png" alt="image">
+      </div>
+
+      <!-- Box 2 -->
+      <div class="col-xxl-3 col-md-6">
+        <div class="features-wrap-card static-bg-2">
+          <div class="icon">
+            <img src="assets/images/features/Advance-aesthetics-Brown.png" alt="Advanced Aesthetics icon">
+          </div>
+          <h3><a href="#">Advanced Aesthetics</a></h3>
+          <p>Non-invasive and minimally invasive treatments utilizing the latest technology for natural-looking rejuvenation and enhancement.</p>
+          <a href="#" class="service-btn">
+            Get Started <i class="flaticon-up-right-arrow"></i>
+          </a>
         </div>
+      </div>
+
+      <!-- Box 3 -->
+      <div class="col-xxl-3 col-md-6">
+        <div class="features-wrap-card static-bg-3">
+          <div class="icon">
+            <img src="assets/images/features/Regenerative-Therapies-Brown.png" alt="Regenerative Therapies icon">
+          </div>
+          <h3><a href="#">Regenerative Therapies</a></h3>
+          <p>PRP and biostimulation treatments that harness your body's natural healing abilities to restore and revitalize.</p>
+          <a href="#" class="service-btn">
+            Get Started <i class="flaticon-up-right-arrow"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Box 4 -->
+      <div class="col-xxl-3 col-md-6">
+        <div class="features-wrap-card static-bg-4 box-4">
+          <div class="icon">
+            <img src="assets/images/features/Hair-&-Scalp-Solutions-Brown.png" alt="Hair & Scalp Solutions icon">
+          </div>
+          <h3><a href="#">Hair & Scalp Solutions</a></h3>
+          <p>Hair restoration and scalp health through advanced therapeutic techniques and personalized treatment plans.</p>
+          <a href="#" class="service-btn">
+            Get Started <i class="flaticon-up-right-arrow"></i>
+          </a>
+        </div>
+      </div>
+
     </div>
+  </div>
+  <div class="features-wrap-bottom-shape">
+    <img src="assets/images/features/shape2.png" alt="shape">
+  </div>
+</div>
+<!-- Styles -->
+
+
     <!-- End Features Wrap Area -->
 
     <!-- Start About Wrap Area -->
@@ -2476,7 +2542,7 @@
     <!-- End Real Results Wrap Area -->
 
     <!-- Start Review Wrap Area -->
-    <div class="review-wrap-area pb-125">
+    <!-- <div class="review-wrap-area pb-125">
         <div class="container-fluid">
             <div class="section-title" data-cues="slideInUp">
                 <h2>Our Clients Review</h2>
@@ -2609,7 +2675,184 @@
                 </div>
             </div>
         </div>
+    </div> -->
+    <style>
+    .review-card {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 25px;
+    position: relative;
+    /* min-height: 230px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: none !important;
+    transform: none !important;
+    box-sizing: border-box;
+}
+
+/* Properly align DP + Name + Designation */
+.review-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 5px;
+}
+
+/* Profile image (DP) */
+.review-dp {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    flex-shrink: 0;
+    position: static; /* remove absolute positioning */
+}
+
+/* Name + Designation container */
+.review-info h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.review-info span {
+    font-size: 14px;
+    color: #999;
+    display: block;
+}
+
+/* Review text */
+.review-card p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+    margin-top: 10px;
+}
+
+/* Rating badge top-right */
+.review-card::after {
+    content: '★ 4.5';
+    background-color: #f9f0e6;
+    color: #5b4b38;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 9999px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Remove hover effects */
+.review-card:hover {
+    border: none !important;
+    box-shadow: none !important;
+    transform: none !important;
+}
+
+/* Optional: Remove hover animations globally */
+.review-card, .review-card * {
+    transition: none !important;
+}
+
+    </style>
+    <div class="review-area ptb-150">
+            <div class="container">
+                <div class="review-inner" data-cues="slideInUp">
+                    <h2>Our Clients Review</h2>
+                    <div class="swiper review-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                             <div class="review-card">
+    <div class="review-header">
+        <img src="assets/images/user/img1.png" alt="User" class="review-dp">
+        <div class="review-info">
+            <h3>Taim Alfalasi</h3>
+            <span>Social Media Influencer</span>
+        </div>
+        <!-- <div class="review-rating">★ 4.5</div> -->
     </div>
+    <p>“Your hair hasn’t just doubled; what’s making me the happiest is the presence of baby hair! There are hair follicles on my scalp!”</p>
+</div>
+
+                            </div>
+                            <div class="swiper-slide">
+                                   <div class="review-card">
+    <div class="review-header">
+        <img src="assets/images/user/img2.png" alt="User" class="review-dp">
+        <div class="review-info">
+            <h3>Nour Aldin</h3>
+            <span>TV Host / Producer at MBC</span>
+        </div>
+        <!-- <div class="review-rating">★ 4.5</div> -->
+    </div>
+    <p>“There’s a history of balding in my family. The treatment starts professionally, by a
+                                blood test so the doctor can indicate the problem. Hair loss became less; I thought I’d
+                                get around 10/20 of the results, but I got much more!”</p>
+</div>
+                            </div>
+                            <div class="swiper-slide">
+                                 <div class="review-card">
+    <div class="review-header">
+        <img src="assets/images/user/img3.png" alt="User" class="review-dp">
+        <div class="review-info">
+            <h3>Roaa Al Sabban</h3>
+            <span>TV Host at Dubai TV</span>
+        </div>
+        <!-- <div class="review-rating">★ 4.5</div> -->
+    </div>
+    <p>“When I first came to Dr. Wissam, I thought, removing fat from my body? How can I do
+                                that? But now I’m doing the procedure for the second time!”</p>
+</div>
+                            </div>
+                            <div class="swiper-slide">
+                                 <div class="review-card">
+    <div class="review-header">
+        <img src="assets/images/user/Testimonial-Image-4.png" alt="User" class="review-dp">
+        <div class="review-info">
+            <h3>Ahmad Qassim</h3>
+            <span>TV Host / Producer at MBC</span>
+        </div>
+        <!-- <div class="review-rating">★ 4.5</div> -->
+    </div>
+    <p>“My hair used to fall so much. When I came to Dr. Wissam, I told him we have hair loss
+                                problems in the family. He gave me many solutions that we worked on. There’s no one like
+                                Dr. Wissam; believe me, I have gone to many clinics. He works on your well-being as
+                                well. That’s the most important factor for hair loss. When you’re satisfied, your hair
+                                won’t fall”</p>
+</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ratings-box">
+                        <div class="content">
+                            <h5>4.98 <span>Ratings</span></h5>
+                            <ul class="list">
+                                <li><i class="flaticon-star"></i></li>
+                                <li><i class="flaticon-star"></i></li>
+                                <li><i class="flaticon-star"></i></li>
+                                <li><i class="flaticon-star"></i></li>
+                                <li><i class="flaticon-star"></i></li>
+                                <li>
+                                    <span>Rated 4.9 stars based on 1200+ reviews</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="login.html" class="default-btn">Post A Review</a>
+                    </div>
+                </div>
+            </div>
+            <div class="review-arrow-shape">
+                <img src="assets/images/review/shape.png" alt="image">
+            </div>
+        </div>
+        <!-- End Review Area -->
+
     <!-- End Review Wrap Area -->
 
     <!-- Start Appointment Area -->
@@ -2793,7 +3036,7 @@
     <!-- End Insurance Wrap Area -->
 
     <!-- Start Why Choose Us Area -->
-    <div class="why-choose-us-area pb-125">
+    <!-- <div class="why-choose-us-area pb-125">
         <div class="container-fluid">
             <div class="section-title" data-cues="slideInUp">
                 <h2>20 Years of Excellence in Integrative Wellness</h2>
@@ -2850,8 +3093,110 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- End Why Choose Us Area -->
+<!-- Start Blog Area -->
+ <style>
+.tag-btn {
+    display: inline-block;
+    padding: 8px 20px;
+    color: #fff !important;
+    background: linear-gradient(to right, #06543c 50%, #896842 50%);
+    background-size: 200% 100%;
+    background-position: left bottom; /* start with green */
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-position 0.4s ease, color 0.4s ease;
+}
+
+.tag-btn:hover {
+    background-position: right bottom; /* move dark brown from left to right */
+    color: #fff !important;
+}
+
+
+ </style>
+        <div class="blog-area ptb-150">
+            <div class="container">
+                <div class="section-title" data-cues="slideInUp">
+                <h2>20 Years of Excellence in Integrative Wellness</h2>
+            </div>
+                <div class="row justify-content-center align-items-center" data-cues="slideInUp">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="blog-item">
+                            <a href="blog-details.html">
+                                <img src="assets/images/blog/large1.jpg" alt="image">
+                            </a>
+                            <div class="content">
+                                <h3>
+                                    <a href="blog-details.html">State-of-the-Art Wellness Facilities</a>
+                                </h3>
+                                <p>
+                                    <a href="#" class="text-white"> 
+                                        Our sanctuaries of healing feature cutting-edge diagnostic...
+                                    </a>
+                                </p>
+                                <ul class="meta">
+                                    <li>5 Feb, 2024</li>
+                                    <li>
+                                        <a href="blog-style-two.html" class="tag-btn">Hair</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6 col-md-6">
+                                <div class="blog-item">
+                                    <a href="blog-details.html">
+                                        <img src="assets/images/blog/large2.jpg" alt="image">
+                                    </a>
+                                    <div class="content little-wrap">
+                                        <h3>
+                                            <a href="blog-details.html">Evidence-Based Regenerative Protocols</a>
+                                        </h3>
+                                        <p>
+                                            <a href="#" class="text-white">
+                                                Every treatment recommendation emerges from...
+                                            </a>
+                                        </p>
+                                        <a href="blog-style-two.html" class="tag-btn">Eyebrows</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <div class="blog-item">
+                                    <a href="blog-details.html">
+                                        <img src="assets/images/blog/large3.jpg" alt="image">
+                                    </a>
+                                    <div class="content little-wrap">
+                                        <h3>
+                                            <a href="blog-details.html">Board-Certified Wellness Practitioners
+
+                                            </a>
+                                        </h3>
+                                        <p>
+                                            <a href="#" class="text-white">
+                                                Our elite team includes physicians, aesthetic specialists,....
+                                            </a>
+                                        </p>
+                                        <a href="blog-style-two.html" class="tag-btn">Beard</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                </div>
+            </div>
+        </div>
+        <!-- End Blog Area -->
 
     <!-- Start Video Area -->
     <!-- <div class="video-area bgImageParallax">
@@ -2939,7 +3284,7 @@
         </div>
         <p class="mb-0" style="color:#06543c;">Years Of<br>Experience</p>
       </div>
-      
+
       <div class="col-6 col-sm-4 col-lg-2 px-1">
         <div class="d-flex justify-content-center align-items-center">
           <h3 class="counter mb-0 fw-bold" style="color:#06543c; font-size: 2rem;">1000</h3>
