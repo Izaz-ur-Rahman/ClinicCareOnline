@@ -2035,6 +2035,37 @@
 .box-4 .service-btn {
   color: #fff !important;
 }
+/* Scoped to features section only */
+.features-wrap-area .row > [class*='col-'] {
+  display: flex;
+}
+
+.features-wrap-area .features-wrap-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Responsive min-heights only for this section */
+@media (min-width: 1200px) {
+  .features-wrap-area .features-wrap-card {
+    min-height: 480px;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .features-wrap-area .features-wrap-card {
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .features-wrap-area .features-wrap-card {
+    min-height: auto;
+  }
+}
+
 </style>
 
 
@@ -3119,7 +3150,7 @@
 
 
  </style>
-        <div class="blog-area ptb-150">
+        <div class="blog-area">
             <div class="container">
                 <div class="section-title" data-cues="slideInUp">
                 <h2>20 Years of Excellence in Integrative Wellness</h2>
@@ -3229,7 +3260,7 @@
         </div>
     </div> -->
     <!-- Start About Area -->
-    <div class="about-area ptb-150">
+    <div class="about-area ptb-150 ">
     <div class="container">
         <div class="row justify-content-center" data-cues="slideInUp">
             <!-- Content first on mobile, second on desktop -->
@@ -3274,7 +3305,7 @@
     <!-- End Video Area -->
 
     <!-- Start Fun Fact Area -->
-   <div class="fun-fact-area py-5" style="background: url('./assets/images/BG-For-Numerings.png') no-repeat center center / cover;">
+   <div class="fun-fact-area py-5 " style="background: url('./assets/images/BG-For-Numerings.png') no-repeat center center / cover;margin-top:100px;" >
   <div class="container px-2">
     <div class="row gx-0 justify-content-center text-center" style="gap: 0; --bs-gutter-x: 0;">
         <div class="col-6 col-sm-4 col-lg-2 px-1">
@@ -3329,7 +3360,7 @@
     <!-- Start Doctors Area -->
     <!-- Swiper CSS -->
     <!-- Swiper CSS in <head> -->
-    <div class="doctors-area pt-150 pb-125">
+    <div class="doctors-area pt-150">
         <div class="container">
             <div class="section-title">
                 <h2>Meet Our Wellness Architects</h2>
