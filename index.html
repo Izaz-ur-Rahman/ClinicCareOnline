@@ -263,8 +263,8 @@
 }
 @media (max-width: 1280px) {
     .dropdown-menu.ext-custom {
-        min-width: calc(100vw - 20vw);
-        transform: translateX(-25%) !important;
+        min-width: calc(100vw - 10vw);
+        transform: translateX(-27%) !important;
     }
 
     .dropdown-menu.ext-custom-exculisive {
@@ -1001,6 +1001,8 @@
 .dropdown-menu.ext-custom-exculisive {
   width: 100%;
   max-width: 1200px;
+  overflow: hidden !important;
+  height: auto;
   /* left: 50% !important; */
   /* transform: translateX(-50%) !important; */
   top: 100%;
@@ -1010,8 +1012,9 @@
 
 /* Tab content with overflow support */
 .tab-content {
-  max-height: 400px;
+  max-height: 80vh;
   overflow-y: auto;
+
 }
 
 /* Tab buttons styling */
@@ -1047,23 +1050,26 @@
             <div class="w-100 p-4 bg-white" style="border-radius: 12px;">
               <!-- TABS -->
               <div class="nav nav-pills justify-content-center mb-4" role="tablist">
-                <button class="nav-link active mx-2 d-flex align-items-center gap-2" id="tab1-tab" data-bs-toggle="pill" data-bs-target="#tab1" type="button" role="tab">
+                <button class="nav-link active mx-2 px-3 d-flex align-items-center gap-2" id="tab1-tab" data-bs-toggle="pill" data-bs-target="#tab1" type="button" role="tab">
                   <span class="icon d-flex align-items-center justify-content-center rounded-circle bg-white shadow" style="width: 40px; height: 40px;">
                     <img src="assets/images/icons/New-Icon.png" alt="icon" class="img-fluid" style="max-width: 24px;" />
                   </span>
                   <span>Regenerative Wellness</span>
+                  
                 </button>
-                <button class="nav-link mx-2 d-flex align-items-center gap-2" id="tab2-tab" data-bs-toggle="pill" data-bs-target="#tab2" type="button" role="tab">
+                <button class="nav-link mx-2 px-3 d-flex align-items-center gap-2" id="tab2-tab" data-bs-toggle="pill" data-bs-target="#tab2" type="button" role="tab">
                   <span class="icon d-flex align-items-center justify-content-center rounded-circle bg-white shadow" style="width: 40px; height: 40px;">
                     <img src="assets/images/icons/New-Icon.png" alt="icon" class="img-fluid" style="max-width: 24px;" />
                   </span>
-                  <span>Aesthetics</span>
+                  <span>Aesthetics Treatment</span>
+                   
                 </button>
-                <button class="nav-link mx-2 d-flex align-items-center gap-2" id="tab3-tab" data-bs-toggle="pill" data-bs-target="#tab3" type="button" role="tab">
+                <button class="nav-link mx-2 px-3 d-flex align-items-center gap-2" id="tab3-tab" data-bs-toggle="pill" data-bs-target="#tab3" type="button" role="tab">
                   <span class="icon d-flex align-items-center justify-content-center rounded-circle bg-white shadow" style="width: 40px; height: 40px;">
                     <img src="assets/images/icons/New-Icon.png" alt="icon" class="img-fluid" style="max-width: 24px;" />
                   </span>
-                  <span>Medicine</span>
+                  <span>Regenerative Medicine</span>
+                  
                 </button>
               </div>
 
@@ -1330,14 +1336,15 @@
             <span>Nose Filler in Dubai</span>
           </a>
         </li>
-        <li>
+              <li>
           <a href="#" class="dropdown-item d-flex align-items-center gap-2">
             <span class="icon d-flex align-items-center justify-content-center rounded-circle bg-white shadow" style="width: 40px; height: 40px;">
               <img src="assets/images/icons/New-Icon.png" alt="icon" style="max-width: 24px; height: auto;">
             </span>
-            <span>Profhilo in Dubai</span>
+            <span>Morpheus 8 Pro Microneedling in Dubai</span>
           </a>
         </li>
+     
                       </ul>
                     </div>
                           <div class="col-12 col-md-4">
@@ -1406,14 +1413,7 @@
             <span>Ultherapy in Dubai</span>
           </a>
         </li>
-              <li>
-          <a href="#" class="dropdown-item d-flex align-items-center gap-2">
-            <span class="icon d-flex align-items-center justify-content-center rounded-circle bg-white shadow" style="width: 40px; height: 40px;">
-              <img src="assets/images/icons/New-Icon.png" alt="icon" style="max-width: 24px; height: auto;">
-            </span>
-            <span>Ultimate Collagen Boost Facial</span>
-          </a>
-        </li>
+       
                       </ul>
                     </div>
                   </div>
@@ -1428,7 +1428,7 @@
             <span class="icon d-flex align-items-center justify-content-center rounded-circle bg-white shadow" style="width: 40px; height: 40px;">
               <img src="assets/images/icons/New-Icon.png" alt="icon" style="max-width: 24px; height: auto;">
             </span>
-            <span>Face Art in Dubai by Dr. Khan</span>
+            <span>Biologicial Integrative Medicine</span>
           </a>
         </li>
         <li>
@@ -1436,7 +1436,7 @@
             <span class="icon d-flex align-items-center justify-content-center rounded-circle bg-white shadow" style="width: 40px; height: 40px;">
               <img src="assets/images/icons/New-Icon.png" alt="icon" style="max-width: 24px; height: auto;">
             </span>
-            <span>Female Intimate Rejuvenation<br> and Vaginal Tightening</span>
+            <span>Exosome Therapy in Dubai</span>
           </a>
         </li>
         <li>
@@ -1444,7 +1444,7 @@
             <span class="icon d-flex align-items-center justify-content-center rounded-circle bg-white shadow" style="width: 40px; height: 40px;">
               <img src="assets/images/icons/New-Icon.png" alt="icon" style="max-width: 24px; height: auto;">
             </span>
-            <span>Peptide Therapy</span>
+            <span>Functional Medicine in <br> Dubai</span>
           </a>
         </li>
         <li>
@@ -1452,17 +1452,10 @@
             <span class="icon d-flex align-items-center justify-content-center rounded-circle bg-white shadow" style="width: 40px; height: 40px;">
               <img src="assets/images/icons/New-Icon.png" alt="icon" style="max-width: 24px; height: auto;">
             </span>
-            <span>Stress Management</span>
+            <span>Genomics Medicine</span>
           </a>
         </li>
-        <li>
-          <a href="#" class="dropdown-item d-flex align-items-center gap-2">
-            <span class="icon d-flex align-items-center justify-content-center rounded-circle bg-white shadow" style="width: 40px; height: 40px;">
-              <img src="assets/images/icons/New-Icon.png" alt="icon" style="max-width: 24px; height: auto;">
-            </span>
-            <span>Red Light Therapy</span>
-          </a>
-        </li>
+      
                       </ul>
                     </div>
                           <div class="col-12 col-md-4">
@@ -1472,7 +1465,7 @@
             <span class="icon d-flex align-items-center justify-content-center rounded-circle bg-white shadow" style="width: 40px; height: 40px;">
               <img src="assets/images/icons/New-Icon.png" alt="icon" style="max-width: 24px; height: auto;">
             </span>
-            <span>NAD IV Therapy in Dubai</span>
+            <span>Naturopathic Medicine <br> Treatment in Dubai</span>
           </a>
         </li>
         <li>
@@ -1480,7 +1473,7 @@
             <span class="icon d-flex align-items-center justify-content-center rounded-circle bg-white shadow" style="width: 40px; height: 40px;">
               <img src="assets/images/icons/New-Icon.png" alt="icon" style="max-width: 24px; height: auto;">
             </span>
-            <span>Nutrition and Weight Loss Program in Dubai</span>
+            <span>Ozone Therapy in Dubai</span>
           </a>
         </li>
         <li>
@@ -1488,7 +1481,7 @@
             <span class="icon d-flex align-items-center justify-content-center rounded-circle bg-white shadow" style="width: 40px; height: 40px;">
               <img src="assets/images/icons/New-Icon.png" alt="icon" style="max-width: 24px; height: auto;">
             </span>
-            <span>PEMF Therapy in Dubai</span>
+            <span>Physiotherapy in Dubai</span>
           </a>
         </li>
         <li>
@@ -1496,7 +1489,7 @@
             <span class="icon d-flex align-items-center justify-content-center rounded-circle bg-white shadow" style="width: 40px; height: 40px;">
               <img src="assets/images/icons/New-Icon.png" alt="icon" style="max-width: 24px; height: auto;">
             </span>
-            <span>Peptide Therapy</span>
+            <span>Sports Medicine in Dubai</span>
           </a>
         </li>
         <li>
@@ -1504,55 +1497,12 @@
             <span class="icon d-flex align-items-center justify-content-center rounded-circle bg-white shadow" style="width: 40px; height: 40px;">
               <img src="assets/images/icons/New-Icon.png" alt="icon" style="max-width: 24px; height: auto;">
             </span>
-            <span>Red Light Therapy in Dubai</span>
+            <span>Stem Cell Therapy in Dubai <br>at AEON Clinic</span>
           </a>
         </li>
                       </ul>
                     </div>
-                          <div class="col-12 col-md-4">
-                      <ul class="list-unstyled">
-                                     <li>
-          <a href="#" class="dropdown-item d-flex align-items-center gap-2">
-            <span class="icon d-flex align-items-center justify-content-center rounded-circle bg-white shadow" style="width: 40px; height: 40px;">
-              <img src="assets/images/icons/New-Icon.png" alt="icon" style="max-width: 24px; height: auto;">
-            </span>
-            <span>NAD IV Therapy in Dubai</span>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="dropdown-item d-flex align-items-center gap-2">
-            <span class="icon d-flex align-items-center justify-content-center rounded-circle bg-white shadow" style="width: 40px; height: 40px;">
-              <img src="assets/images/icons/New-Icon.png" alt="icon" style="max-width: 24px; height: auto;">
-            </span>
-            <span>Nutrition and Weight Loss Program in Dubai</span>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="dropdown-item d-flex align-items-center gap-2">
-            <span class="icon d-flex align-items-center justify-content-center rounded-circle bg-white shadow" style="width: 40px; height: 40px;">
-              <img src="assets/images/icons/New-Icon.png" alt="icon" style="max-width: 24px; height: auto;">
-            </span>
-            <span>PEMF Therapy in Dubai</span>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="dropdown-item d-flex align-items-center gap-2">
-            <span class="icon d-flex align-items-center justify-content-center rounded-circle bg-white shadow" style="width: 40px; height: 40px;">
-              <img src="assets/images/icons/New-Icon.png" alt="icon" style="max-width: 24px; height: auto;">
-            </span>
-            <span>Peptide Therapy</span>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="dropdown-item d-flex align-items-center gap-2">
-            <span class="icon d-flex align-items-center justify-content-center rounded-circle bg-white shadow" style="width: 40px; height: 40px;">
-              <img src="assets/images/icons/New-Icon.png" alt="icon" style="max-width: 24px; height: auto;">
-            </span>
-            <span>Red Light Therapy in Dubai</span>
-          </a>
-        </li>
-                      </ul>
-                    </div>
+                          
                   </div>
                 </div>
               </div>

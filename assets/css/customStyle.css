@@ -734,7 +734,7 @@ img.zoom-hover {
 
     /* 8. Nav link on hover */
     .navbar-nav .nav-link:hover {
-        color: #8B4513;
+        color: #8B4513 !important;
         padding-left: 4px;
         background-color: transparent !important;
     }
