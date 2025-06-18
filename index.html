@@ -147,7 +147,7 @@
 .dropdown-menu.ext-custom,
 .dropdown-menu.ext-custom-exculisive {
     max-height: 500px;
-    overflow: visible;
+    overflow-x: hidden !important;
     display: block;
     border-radius: 12px;
     padding: 0;
@@ -170,7 +170,7 @@
 
 /* Tab Styles */
 .nav-pills .nav-link {
-    color: #896842;
+    color: #896842 !important;
     background-color: #fff;
     border-radius: 20px;
     padding: 10px 20px;
@@ -182,11 +182,21 @@
     gap: 10px;
     font-size: 1rem;
     white-space: nowrap;
+      border: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
 }
 
 .nav-pills .nav-link.active {
     background-color: #896842 !important;
     color: #fff !important;
+     border: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+.nav-pills .nav-link::after {
+  display: none !important;
 }
 
 /* Icon inside tab */
@@ -211,6 +221,7 @@
 .tab-content {
     max-height: 400px;
     overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .tab-content > .tab-pane {
@@ -236,6 +247,22 @@
 /* Medium to large screens */
 @media (max-width: 1440px) {
     .dropdown-menu.ext-custom {
+        min-width: calc(100vw - 27vw);
+        transform: translateX(-17%) !important;
+    }
+
+    .dropdown-menu.ext-custom-exculisive {
+        min-width: calc(100vw - 32vw);
+        transform: translateX(-35%) !important;
+    }
+
+    .nav-pills .nav-link {
+        font-size: 0.95rem;
+        padding: 8px 18px;
+    }
+}
+@media (max-width: 1280px) {
+    .dropdown-menu.ext-custom {
         min-width: calc(100vw - 20vw);
         transform: translateX(-25%) !important;
     }
@@ -250,7 +277,6 @@
         padding: 8px 18px;
     }
 }
-
 /* Tablets (768px - 1024px) */
 @media (max-width: 1024px) {
     .dropdown-menu.ext-custom,
