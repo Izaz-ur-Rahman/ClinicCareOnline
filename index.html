@@ -1667,12 +1667,13 @@
 
         <li class="nav-item"><a href="#" class="nav-link" data-i18n="aboutUs">Specialist</a></li>
       <li class="nav-item position-relative">
-  <a href="#" class="nav-link dropdown-toggle custom-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-    Magazine
-    <svg class="ms-2 dropdown-arrow transition-transform duration-300 dropdown-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <polyline points="6 9 12 15 18 9" />
-    </svg>
-  </a>
+<a href="#" class="nav-link d-flex align-items-center justify-content-between custom-dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+  Magazine
+  <svg class="ms-2 dropdown-arrow transition-transform" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="6 9 12 15 18 9" />
+  </svg>
+</a>
+
 
   <div class="dropdown-menu px-4 py-3 shadow-lg rounded-4 position-absolute start-50 translate-middle-x mt-2" style="top: 100%; min-width: 320px;">
     <div class="d-flex flex-column">
@@ -4182,7 +4183,7 @@
         });
     </script>
 
-    <script>
+    <!-- <script>
         function setupDropdown(id) {
             const toggle = document.getElementById(id);
             const arrow = toggle.querySelector('.dropdown-arrow');
@@ -4218,7 +4219,32 @@
             });
         });
 
-    </script>
+    </script> -->
+    <script>
+  function updateArrowColors() {
+    const color = window.scrollY > 150 ? 'black' : 'white';
+    document.querySelectorAll('.dropdown-arrow').forEach(arrow => {
+      arrow.setAttribute('stroke', color);
+    });
+  }
+
+  window.addEventListener('scroll', updateArrowColors);
+  window.addEventListener('DOMContentLoaded', updateArrowColors); // run on load
+
+  // Optional: dropdown toggle show/hide styling
+  document.querySelectorAll('.nav-link.custom-dropdown').forEach(toggle => {
+    toggle.addEventListener('show.bs.dropdown', () => toggle.classList.add('show'));
+    toggle.addEventListener('hide.bs.dropdown', () => toggle.classList.remove('show'));
+  });
+
+  // Optional: prevent auto-close on hover dropdowns
+  document.querySelectorAll('.dropdown-toggle').forEach(el => {
+    el.addEventListener('hide.bs.dropdown', e => {
+      e.preventDefault();
+    });
+  });
+</script>
+
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const offcanvasEl = document.getElementById('navbarOffcanvas');
