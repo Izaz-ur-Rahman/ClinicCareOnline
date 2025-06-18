@@ -30,7 +30,7 @@
     <!-- <link rel="icon" type="image/png" href="assets/images/favicon.png"> -->
     <link rel="icon" type="image/png" href="assets/images/favicon.png?v=2">
 
-<style>
+<!-- <style>
 
     .dropdown-menu.ext-custom {
         max-height: 500px;
@@ -141,7 +141,166 @@
             min-width: calc(100vw - 22vw);
         }
     } 
+</style> -->
+<style>
+/* General Dropdown Menu Style */
+.dropdown-menu.ext-custom,
+.dropdown-menu.ext-custom-exculisive {
+    max-height: 500px;
+    overflow: visible;
+    display: block;
+    border-radius: 12px;
+    padding: 0;
+    position: absolute !important;
+    top: 100%;
+    z-index: 9999;
+    left: 0% !important;
+}
+
+/* Default Width and Positioning */
+.dropdown-menu.ext-custom {
+    min-width: calc(100vw - 43vw);
+    transform: translateX(-17%) !important;
+}
+
+.dropdown-menu.ext-custom-exculisive {
+    min-width: calc(100vw - 43vw);
+    transform: translateX(-34%) !important;
+}
+
+/* Tab Styles */
+.nav-pills .nav-link {
+    color: #896842;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 10px 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1rem;
+    white-space: nowrap;
+}
+
+.nav-pills .nav-link.active {
+    background-color: #896842 !important;
+    color: #fff !important;
+}
+
+/* Icon inside tab */
+.nav-pills .nav-link .icon {
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Icon image */
+.nav-pills .nav-link .icon img {
+    max-width: 24px;
+    height: auto;
+}
+
+/* Tab Content Styling */
+.tab-content {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.tab-content > .tab-pane {
+    display: none;
+    height: 100%;
+    margin: 0 !important;
+    padding-top: 0 !important;
+}
+
+.tab-content > .active {
+    display: block;
+}
+
+/* RESPONSIVENESS */
+
+/* Large desktops (1600px to 1920px) */
+@media (min-width: 1600px) {
+    .nav-pills .nav-link {
+        font-size: 1.05rem;
+    }
+}
+
+/* Medium to large screens */
+@media (max-width: 1440px) {
+    .dropdown-menu.ext-custom {
+        min-width: calc(100vw - 20vw);
+        transform: translateX(-25%) !important;
+    }
+
+    .dropdown-menu.ext-custom-exculisive {
+        min-width: calc(100vw - 20vw);
+        transform: translateX(-43%) !important;
+    }
+
+    .nav-pills .nav-link {
+        font-size: 0.95rem;
+        padding: 8px 18px;
+    }
+}
+
+/* Tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+    .dropdown-menu.ext-custom,
+    .dropdown-menu.ext-custom-exculisive {
+        min-width: 90vw;
+        transform: translateX(-5%) !important;
+    }
+
+    .nav-pills {
+        flex-wrap: wrap !important;
+    }
+
+    .nav-pills .nav-link {
+        width: 100%;
+        justify-content: flex-start;
+        font-size: 0.9rem;
+    }
+}
+
+/* Phones (max 767px) */
+@media (max-width: 767.98px) {
+    .nav-pills {
+        flex-direction: column !important;
+        align-items: stretch;
+    }
+
+    .nav-pills .nav-link {
+        width: 100%;
+        justify-content: flex-start;
+        font-size: 0.85rem;
+        padding: 10px 15px;
+    }
+
+    .dropdown-menu.ext-custom,
+    .dropdown-menu.ext-custom-exculisive {
+        min-width: 95vw;
+        transform: translateX(-2%) !important;
+    }
+
+    .nav-pills .nav-link .icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .nav-pills .nav-link .icon img {
+        max-width: 20px;
+    }
+}
 </style>
+
 </head>
     <!-- Top Mobile Navigation -->
     <!-- Top Mobile Navigation -->
@@ -794,177 +953,195 @@
 
 
     <!-- Navbar Section -->
-    <nav class="navbar navbar-expand-xl navbar-style-two-area navbar-default" id="navbar">
-    <div class="container-xl">
-        <div class="collapse navbar-collapse">
-            <ul id="toggleElement" class="navbar-nav flex-grow-1 justify-content-center">
-                <li class="nav-item">
-                    <a href="javascript:void(0)" class="nav-link active" data-i18n="home">About</a>
-                </li>
-                <li class="nav-item   dropdown" id="longevityDropdownParent">
-                    <a href="javascript:void(0)" class="nav-link custom-toggle d-flex align-items-center"
-                       id="longevityDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                        <span>Treatments</span>
-                        <svg class="ms-2 dropdown-arrow transition-transform duration-300" width="16" height="16"
-                             viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
-                             stroke-linejoin="round">
-                            <polyline points="6 9 12 15 18 9" />
-                        </svg>
-                    </a>
-                    <!--<ul class="dropdown-menu ext-custom fade shadow p-0 show" style="min-width: 800px; padding: 0; border-radius: 12px;"-->
-                    <ul class="dropdown-menu ext-custom fade shadow p-0 show">
-                        <div class="w-100 p-4 bg-white" style="min-height: 300px; border-radius: 12px;">
+    <style>
+/* Ensure dropdown stays centered and responsive */
+.dropdown-menu.ext-custom,
+.dropdown-menu.ext-custom-exculisive {
+  width: 100%;
+  max-width: 1200px;
+  left: 50% !important;
+  /* transform: translateX(-50%) !important; */
+  top: 100%;
+  z-index: 9999;
+  border-radius: 12px;
+}
 
-                            <!-- LEFT TABS -->
-                            <div class="nav nav-pills justify-content-center mb-4" id="pills-tab" role="tablist">
-    <button class="nav-link active mx-2 d-flex align-items-center gap-2" id="tab1-tab" data-bs-toggle="pill" data-bs-target="#tab1" type="button" role="tab">
-        <span class="icon d-flex align-items-center justify-content-center rounded-circle bg-white shadow" style="width: 40px; height: 40px;">
-            <img src="assets/images/icons/New-Icon.png" alt="icon" class="img-fluid" style="max-width: 24px;" />
-        </span>
-        <span>Regenerative Wellness</span>
-    </button>
-    <button class="nav-link mx-2 d-flex align-items-center gap-2" id="tab2-tab" data-bs-toggle="pill" data-bs-target="#tab2" type="button" role="tab">
-        <span class="icon d-flex align-items-center justify-content-center rounded-circle bg-white shadow" style="width: 40px; height: 40px;">
-            <img src="assets/images/icons/New-Icon.png" alt="icon" class="img-fluid" style="max-width: 24px;" />
-        </span>
-        <span>Aesthetics</span>
-    </button>
-    <button class="nav-link mx-2 d-flex align-items-center gap-2" id="tab3-tab" data-bs-toggle="pill" data-bs-target="#tab3" type="button" role="tab">
-        <span class="icon d-flex align-items-center justify-content-center rounded-circle bg-white shadow" style="width: 40px; height: 40px;">
-            <img src="assets/images/icons/New-Icon.png" alt="icon" class="img-fluid" style="max-width: 24px;" />
-        </span>
-        <span>Medicine</span>
-    </button>
-</div>
+/* Tab content with overflow support */
+.tab-content {
+  max-height: 400px;
+  overflow-y: auto;
+}
 
+/* Tab buttons styling */
+.nav-pills .nav-link {
+  padding: 10px 15px;
+  font-size: 14px;
+}
 
-                            <!-- RIGHT CONTENT -->
-                           
-                            <div class="tab-content" id="pills-tabContent">
-                                <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
-                                    <ul class="list-unstyled">
-                                        <li><a href="#" class="dropdown-item">Detox Therapy in Dubai</a></li>
-                                        <li><a href="#" class="dropdown-item">IV Therapy Drips</a></li>
-                                        <li><a href="#" class="dropdown-item">Peptide Therapy</a></li>
-                                        <li><a href="#" class="dropdown-item">Stress Management</a></li>
-                                        <li><a href="#" class="dropdown-item">Red Light Therapy</a></li>
-                                    </ul>
-                                    <ul class="list-unstyled">
-                                        <li><a href="#" class="dropdown-item">Detox Therapy in Dubai</a></li>
-                                        <li><a href="#" class="dropdown-item">IV Therapy Drips</a></li>
-                                        <li><a href="#" class="dropdown-item">Peptide Therapy</a></li>
-                                        <li><a href="#" class="dropdown-item">Stress Management</a></li>
-                                        <li><a href="#" class="dropdown-item">Red Light Therapy</a></li>
-                                    </ul>
-                                    <ul class="list-unstyled">
-                                        <li><a href="#" class="dropdown-item">Detox Therapy in Dubai</a></li>
-                                        <li><a href="#" class="dropdown-item">IV Therapy Drips</a></li>
-                                        <li><a href="#" class="dropdown-item">Peptide Therapy</a></li>
-                                        <li><a href="#" class="dropdown-item">Stress Management</a></li>
-                                        <li><a href="#" class="dropdown-item">Red Light Therapy</a></li>
-                                    </ul>
-                                </div>
-                                <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
-                                    <ul class="list-unstyled">
-                                        <li><a href="#" class="dropdown-item">Skin Tightening</a></li>
-                                        <li><a href="#" class="dropdown-item">Laser Resurfacing</a></li>
-                                    </ul>
-                                </div>
-                                <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
-                                    <ul class="list-unstyled">
-                                        <li><a href="#" class="dropdown-item">Stem Cell Therapy</a></li>
-                                        <li><a href="#" class="dropdown-item">NAD Therapy</a></li>
-                                    </ul>
-                                </div>
-                            </div>
+/* Grid column gutter fix */
+.row > [class*="col-"] {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+</style>
 
-                            </div>
-                    </ul>
+<nav class="navbar navbar-expand-xl navbar-style-two-area navbar-default" id="navbar">
+  <div class="container-xl">
+    <div class="collapse navbar-collapse">
+      <ul id="toggleElement" class="navbar-nav flex-grow-1 justify-content-center">
+        <li class="nav-item">
+          <a href="javascript:void(0)" class="nav-link active" data-i18n="home">About</a>
+        </li>
 
-                <li class="nav-item   dropdown" id="exclusiveDropdownParent">
-                    <a href="javascript:void(0)" class="nav-link custom-toggle d-flex align-items-center"
-                       id="exclusiveDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                        <span>Exclusives</span>
-                        <svg class="ms-2 dropdown-arrow transition-transform duration-300" width="16" height="16"
-                             viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
-                             stroke-linejoin="round">
-                            <polyline points="6 9 12 15 18 9" />
-                        </svg>
-                    </a>
-                    <ul class="dropdown-menu ext-custom-exculisive fade shadow p-0 show">
-                        <div class="w-100 p-4 bg-white" style="min-height: 300px; border-radius: 12px;">
+        <!-- Treatments Dropdown -->
+        <li class="nav-item dropdown" id="longevityDropdownParent">
+          <a href="javascript:void(0)" class="nav-link custom-toggle d-flex align-items-center" id="longevityDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            <span>Treatments</span>
+            <svg class="ms-2 dropdown-arrow transition-transform duration-300" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </a>
+          <ul class="dropdown-menu ext-custom fade shadow p-0 show">
+            <div class="w-100 p-4 bg-white" style="border-radius: 12px;">
+              <!-- TABS -->
+              <div class="nav nav-pills justify-content-center mb-4" role="tablist">
+                <button class="nav-link active mx-2 d-flex align-items-center gap-2" id="tab1-tab" data-bs-toggle="pill" data-bs-target="#tab1" type="button" role="tab">
+                  <span class="icon d-flex align-items-center justify-content-center rounded-circle bg-white shadow" style="width: 40px; height: 40px;">
+                    <img src="assets/images/icons/New-Icon.png" alt="icon" class="img-fluid" style="max-width: 24px;" />
+                  </span>
+                  <span>Regenerative Wellness</span>
+                </button>
+                <button class="nav-link mx-2 d-flex align-items-center gap-2" id="tab2-tab" data-bs-toggle="pill" data-bs-target="#tab2" type="button" role="tab">
+                  <span class="icon d-flex align-items-center justify-content-center rounded-circle bg-white shadow" style="width: 40px; height: 40px;">
+                    <img src="assets/images/icons/New-Icon.png" alt="icon" class="img-fluid" style="max-width: 24px;" />
+                  </span>
+                  <span>Aesthetics</span>
+                </button>
+                <button class="nav-link mx-2 d-flex align-items-center gap-2" id="tab3-tab" data-bs-toggle="pill" data-bs-target="#tab3" type="button" role="tab">
+                  <span class="icon d-flex align-items-center justify-content-center rounded-circle bg-white shadow" style="width: 40px; height: 40px;">
+                    <img src="assets/images/icons/New-Icon.png" alt="icon" class="img-fluid" style="max-width: 24px;" />
+                  </span>
+                  <span>Medicine</span>
+                </button>
+              </div>
 
-                            <!-- LEFT TABS -->
-                            <div class="nav nav-pills justify-content-center mb-4" id="pills-tab" role="tablist">
-                                <button class="nav-link active mx-2" id="tab1-tab" data-bs-toggle="pill" data-bs-target="#tab4" type="button" role="tab">
-                                    Regenerative Wellness
-                                </button>
-                                <button class="nav-link mx-2" id="tab2-tab" data-bs-toggle="pill" data-bs-target="#tab5" type="button" role="tab">
-                                    Aesthetics
-                                </button>
-                                <button class="nav-link mx-2" id="tab3-tab" data-bs-toggle="pill" data-bs-target="#tab6" type="button" role="tab">
-                                    Medicine
-                                </button>
-                            </div>
+              <!-- TAB CONTENT -->
+              <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="tab1" role="tabpanel">
+                  <div class="row">
+                    <div class="col-12 col-md-4">
+                      <ul class="list-unstyled">
+                        <li><a href="#" class="dropdown-item">Detox Therapy in Dubai</a></li>
+                        <li><a href="#" class="dropdown-item">IV Therapy Drips</a></li>
+                        <li><a href="#" class="dropdown-item">Peptide Therapy</a></li>
+                        <li><a href="#" class="dropdown-item">Stress Management</a></li>
+                        <li><a href="#" class="dropdown-item">Red Light Therapy</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-12 col-md-4">
+                      <ul class="list-unstyled">
+                        <li><a href="#" class="dropdown-item">NAD+ Therapy</a></li>
+                        <li><a href="#" class="dropdown-item">Chelation Therapy</a></li>
+                        <li><a href="#" class="dropdown-item">Anti-aging Protocols</a></li>
+                        <li><a href="#" class="dropdown-item">Hormone Balancing</a></li>
+                        <li><a href="#" class="dropdown-item">Sleep Optimization</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-12 col-md-4">
+                      <ul class="list-unstyled">
+                        <li><a href="#" class="dropdown-item">Chronic Fatigue Programs</a></li>
+                        <li><a href="#" class="dropdown-item">Heavy Metal Detox</a></li>
+                        <li><a href="#" class="dropdown-item">Cellular Repair</a></li>
+                        <li><a href="#" class="dropdown-item">Vitamin Infusion</a></li>
+                        <li><a href="#" class="dropdown-item">Mitochondrial Therapy</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
 
-                            <!-- RIGHT CONTENT -->
+                <div class="tab-pane fade" id="tab2" role="tabpanel">
+                  <div class="row">
+                    <div class="col-12 col-md-4">
+                      <ul class="list-unstyled">
+                        <li><a href="#" class="dropdown-item">Skin Tightening</a></li>
+                        <li><a href="#" class="dropdown-item">Laser Resurfacing</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
 
-                            <div class="tab-content" id="pills-tabContent">
-                                <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab4-tab">
-                                    <ul class="list-unstyled">
-                                        <li><a href="#" class="dropdown-item">Detox Therapy in Dubai</a></li>
-                                        <li><a href="#" class="dropdown-item">IV Therapy Drips</a></li>
-                                        <li><a href="#" class="dropdown-item">Peptide Therapy</a></li>
-                                        <li><a href="#" class="dropdown-item">Stress Management</a></li>
-                                        <li><a href="#" class="dropdown-item">Red Light Therapy</a></li>
-                                    </ul>
-                                    <ul class="list-unstyled">
-                                        <li><a href="#" class="dropdown-item">Detox Therapy in Dubai</a></li>
-                                        <li><a href="#" class="dropdown-item">IV Therapy Drips</a></li>
-                                        <li><a href="#" class="dropdown-item">Peptide Therapy</a></li>
-                                        <li><a href="#" class="dropdown-item">Stress Management</a></li>
-                                        <li><a href="#" class="dropdown-item">Red Light Therapy</a></li>
-                                    </ul>
-                                    <ul class="list-unstyled">
-                                        <li><a href="#" class="dropdown-item">Detox Therapy in Dubai</a></li>
-                                        <li><a href="#" class="dropdown-item">IV Therapy Drips</a></li>
-                                        <li><a href="#" class="dropdown-item">Peptide Therapy</a></li>
-                                        <li><a href="#" class="dropdown-item">Stress Management</a></li>
-                                        <li><a href="#" class="dropdown-item">Red Light Therapy</a></li>
-                                    </ul>
-                                </div>
-                                <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab5-tab">
-                                    <ul class="list-unstyled">
-                                        <li><a href="#" class="dropdown-item">Skin Tightening</a></li>
-                                        <li><a href="#" class="dropdown-item">Laser Resurfacing</a></li>
-                                    </ul>
-                                </div>
-                                <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab6-tab">
-                                    <ul class="list-unstyled">
-                                        <li><a href="#" class="dropdown-item">Stem Cell Therapy</a></li>
-                                        <li><a href="#" class="dropdown-item">NAD Therapy</a></li>
-                                    </ul>
-                                </div>
-                            </div>
+                <div class="tab-pane fade" id="tab3" role="tabpanel">
+                  <div class="row">
+                    <div class="col-12 col-md-4">
+                      <ul class="list-unstyled">
+                        <li><a href="#" class="dropdown-item">Stem Cell Therapy</a></li>
+                        <li><a href="#" class="dropdown-item">NAD Therapy</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ul>
+        </li>
 
-                        </div>
-                    </ul>
-                </li>
+        <!-- Exclusives Dropdown -->
+        <li class="nav-item dropdown" id="exclusiveDropdownParent">
+          <a href="javascript:void(0)" class="nav-link custom-toggle d-flex align-items-center" id="exclusiveDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            <span>Exclusives</span>
+            <svg class="ms-2 dropdown-arrow transition-transform duration-300" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </a>
+          <ul class="dropdown-menu ext-custom-exculisive fade shadow p-0 show">
+            <div class="w-100 p-4 bg-white" style="border-radius: 12px;">
+              <div class="nav nav-pills justify-content-center mb-4">
+                <button class="nav-link active mx-2" data-bs-toggle="pill" data-bs-target="#tab4">Regenerative Wellness</button>
+                <button class="nav-link mx-2" data-bs-toggle="pill" data-bs-target="#tab5">Aesthetics</button>
+                <button class="nav-link mx-2" data-bs-toggle="pill" data-bs-target="#tab6">Medicine</button>
+              </div>
+              <div class="tab-content">
+                <div class="tab-pane fade show active" id="tab4">
+                  <div class="row">
+                    <div class="col-12 col-md-4">
+                      <ul class="list-unstyled">
+                        <li><a href="#" class="dropdown-item">Exclusive Detox</a></li>
+                        <li><a href="#" class="dropdown-item">Premium IV Drips</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="tab5">
+                  <div class="row">
+                    <div class="col-12 col-md-4">
+                      <ul class="list-unstyled">
+                        <li><a href="#" class="dropdown-item">Signature Aesthetics</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="tab6">
+                  <div class="row">
+                    <div class="col-12 col-md-4">
+                      <ul class="list-unstyled">
+                        <li><a href="#" class="dropdown-item">Cell Therapy Elite</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ul>
+        </li>
 
-                <li class="nav-item">
-                    <a href="#" class="nav-link" data-i18n="aboutUs">Specialist</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link" data-i18n="aboutUs">Concierge</a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="#" class="nav-link" data-i18n="aboutUs">Book Now</a>
-                </li>
-            </ul>
-        </div>
+        <li class="nav-item"><a href="#" class="nav-link" data-i18n="aboutUs">Specialist</a></li>
+        <li class="nav-item"><a href="#" class="nav-link" data-i18n="aboutUs">Concierge</a></li>
+        <li class="nav-item"><a href="#" class="nav-link" data-i18n="aboutUs">Book Now</a></li>
+      </ul>
     </div>
+  </div>
 </nav>
+
 
     <!-- Start Search Popup -->
     <!-- <div class="search-popup">
