@@ -264,12 +264,12 @@
 @media (max-width: 1280px) {
     .dropdown-menu.ext-custom {
         min-width: calc(100vw - 10vw);
-        transform: translateX(-27%) !important;
+        transform: translateX(-21%) !important;
     }
 
     .dropdown-menu.ext-custom-exculisive {
         min-width: calc(100vw - 20vw);
-        transform: translateX(-43%) !important;
+        transform: translateX(-35%) !important;
     }
 
     .nav-pills .nav-link {
@@ -1028,6 +1028,37 @@
   padding-left: 10px;
   padding-right: 10px;
 }
+/* Show dropdown on hover */
+.nav-item:hover .dropdown-menu {
+  display: block;
+}
+
+/* Prevent gap issues */
+.nav-item .dropdown-menu {
+  pointer-events: auto;
+}
+
+/* Optional: smoother hover interaction */
+.dropdown-menu {
+  transition: all 0.15s ease;
+}
+/* Hide default Bootstrap arrow from .dropdown-toggle */
+.nav-link.dropdown-toggle::after {
+  display: none !important;
+
+}
+
+/* Optional: Rotate custom arrow on open (if desired) */
+.nav-link[aria-expanded="true"] .dropdown-arrow {
+  transform: rotate(180deg);
+}
+/* Completely remove Bootstrap default dropdown arrow */
+.custom-toggle::after,
+.nav-link.custom-toggle::after {
+  display: none !important;
+  content: none !important;
+}
+
 </style>
 
 <nav class="navbar navbar-expand-xl navbar-style-two-area navbar-default" id="navbar">
@@ -1131,12 +1162,13 @@
             <span>NAD IV Therapy in Dubai</span>
           </a>
         </li>
-        <li>
+     
+           <li>
           <a href="#" class="dropdown-item d-flex align-items-center gap-2">
             <span class="icon d-flex align-items-center justify-content-center rounded-circle bg-white shadow" style="width: 40px; height: 40px;">
               <img src="assets/images/icons/New-Icon.png" alt="icon" style="max-width: 24px; height: auto;">
             </span>
-            <span>Nutrition and Weight Loss Program in Dubai</span>
+            <span>Nutrition and Weight Loss<br> Program in Dubai</span>
           </a>
         </li>
         <li>
@@ -1492,17 +1524,21 @@
             <span>Sports Medicine in Dubai</span>
           </a>
         </li>
-        <li>
+      
+                      </ul>
+                    </div>
+                       <div class="col-12 col-md-4">
+                      <ul class="list-unstyled">
+                                     <li>
           <a href="#" class="dropdown-item d-flex align-items-center gap-2">
             <span class="icon d-flex align-items-center justify-content-center rounded-circle bg-white shadow" style="width: 40px; height: 40px;">
               <img src="assets/images/icons/New-Icon.png" alt="icon" style="max-width: 24px; height: auto;">
             </span>
-            <span>Stem Cell Therapy in Dubai <br>at AEON Clinic</span>
-          </a>
+     <span>Stem Cell Therapy in Dubai <br>at AEON Clinic</span>          </a>
         </li>
+        
                       </ul>
-                    </div>
-                          
+                    </div>   
                   </div>
                 </div>
               </div>
@@ -1520,10 +1556,33 @@
           </a>
           <ul class="dropdown-menu ext-custom-exculisive fade shadow p-0 show">
             <div class="w-100 p-4 bg-white" style="border-radius: 12px;">
-              <div class="nav nav-pills justify-content-center mb-4">
-                <button class="nav-link active mx-2" data-bs-toggle="pill" data-bs-target="#tab4">Regenerative Wellness</button>
+              <!-- <div class="nav nav-pills justify-content-center mb-4">
+                <button class="nav-link active mx-2" data-bs-toggle="pill" data-bs-target="#tab4">Regenerative</button>
                 <button class="nav-link mx-2" data-bs-toggle="pill" data-bs-target="#tab5">Aesthetics</button>
                 <button class="nav-link mx-2" data-bs-toggle="pill" data-bs-target="#tab6">Medicine</button>
+              </div> -->
+              <div class="nav nav-pills justify-content-center mb-4" role="tablist">
+                <button class="nav-link active mx-2 px-3 d-flex align-items-center gap-2" id="tab1-tab" data-bs-toggle="pill" data-bs-target="#tab4" type="button" role="tab">
+                  <span class="icon d-flex align-items-center justify-content-center rounded-circle bg-white shadow" style="width: 40px; height: 40px;">
+                    <img src="assets/images/icons/New-Icon.png" alt="icon" class="img-fluid" style="max-width: 24px;" />
+                  </span>
+                  <span>Our Program</span>
+                  
+                </button>
+                <button class="nav-link mx-2 px-3 d-flex align-items-center gap-2" id="tab2-tab" data-bs-toggle="pill" data-bs-target="#tab5" type="button" role="tab">
+                  <span class="icon d-flex align-items-center justify-content-center rounded-circle bg-white shadow" style="width: 40px; height: 40px;">
+                    <img src="assets/images/icons/New-Icon.png" alt="icon" class="img-fluid" style="max-width: 24px;" />
+                  </span>
+                  <span>Atlantis The Royal X Aeon</span>
+                   
+                </button>
+                <button class="nav-link mx-2 px-3 d-flex align-items-center gap-2" id="tab3-tab" data-bs-toggle="pill" data-bs-target="#tab6" type="button" role="tab">
+                  <span class="icon d-flex align-items-center justify-content-center rounded-circle bg-white shadow" style="width: 40px; height: 40px;">
+                    <img src="assets/images/icons/New-Icon.png" alt="icon" class="img-fluid" style="max-width: 24px;" />
+                  </span>
+                  <span>International Master</span>
+                  
+                </button>
               </div>
               <div class="tab-content">
                 <div class="tab-pane fade show active" id="tab4">
@@ -1535,7 +1594,7 @@
             <span class="icon d-flex align-items-center justify-content-center rounded-circle bg-white shadow" style="width: 40px; height: 40px;">
               <img src="assets/images/icons/New-Icon.png" alt="icon" style="max-width: 24px; height: auto;">
             </span>
-            <span>Detox Therapy in Dubai</span>
+            <span>Rejuvenescence</span>
           </a>
         </li>
         <li>
@@ -1543,7 +1602,8 @@
             <span class="icon d-flex align-items-center justify-content-center rounded-circle bg-white shadow" style="width: 40px; height: 40px;">
               <img src="assets/images/icons/New-Icon.png" alt="icon" style="max-width: 24px; height: auto;">
             </span>
-            <span>IV Therapy Drips</span>
+            <span>Pain Management
+</span>
           </a>
         </li>
         <li>
@@ -1551,7 +1611,7 @@
             <span class="icon d-flex align-items-center justify-content-center rounded-circle bg-white shadow" style="width: 40px; height: 40px;">
               <img src="assets/images/icons/New-Icon.png" alt="icon" style="max-width: 24px; height: auto;">
             </span>
-            <span>Peptide Therapy</span>
+            <span>Immune And Gut health</span>
           </a>
         </li>
         <li>
@@ -1559,31 +1619,28 @@
             <span class="icon d-flex align-items-center justify-content-center rounded-circle bg-white shadow" style="width: 40px; height: 40px;">
               <img src="assets/images/icons/New-Icon.png" alt="icon" style="max-width: 24px; height: auto;">
             </span>
-            <span>Stress Management</span>
+            <span>Performance Enhancement</span>
           </a>
         </li>
-        <li>
-          <a href="#" class="dropdown-item d-flex align-items-center gap-2">
-            <span class="icon d-flex align-items-center justify-content-center rounded-circle bg-white shadow" style="width: 40px; height: 40px;">
-              <img src="assets/images/icons/New-Icon.png" alt="icon" style="max-width: 24px; height: auto;">
-            </span>
-            <span>Red Light Therapy</span>
-          </a>
-        </li>
+      
                       </ul>
                     </div>
-                  </div>
-                </div>
-                <div class="tab-pane fade" id="tab5">
-                  <div class="row">
                     <div class="col-12 col-md-4">
                       <ul class="list-unstyled">
-             <li>
+                                     <li>
           <a href="#" class="dropdown-item d-flex align-items-center gap-2">
             <span class="icon d-flex align-items-center justify-content-center rounded-circle bg-white shadow" style="width: 40px; height: 40px;">
               <img src="assets/images/icons/New-Icon.png" alt="icon" style="max-width: 24px; height: auto;">
             </span>
-            <span>Detox Therapy in Dubai</span>
+ <span>Cardiovascular Health</span>          </a>
+        </li>
+        <li>
+          <a href="#" class="dropdown-item d-flex align-items-center gap-2">
+            <span class="icon d-flex align-items-center justify-content-center rounded-circle bg-white shadow" style="width: 40px; height: 40px;">
+              <img src="assets/images/icons/New-Icon.png" alt="icon" style="max-width: 24px; height: auto;">
+            </span>
+                       <span>Functional/Naturopathy</span>
+
           </a>
         </li>
         <li>
@@ -1591,90 +1648,62 @@
             <span class="icon d-flex align-items-center justify-content-center rounded-circle bg-white shadow" style="width: 40px; height: 40px;">
               <img src="assets/images/icons/New-Icon.png" alt="icon" style="max-width: 24px; height: auto;">
             </span>
-            <span>IV Therapy Drips</span>
+            <span>Longevity And Anti-Ageing</span>
           </a>
         </li>
-        <li>
-          <a href="#" class="dropdown-item d-flex align-items-center gap-2">
-            <span class="icon d-flex align-items-center justify-content-center rounded-circle bg-white shadow" style="width: 40px; height: 40px;">
-              <img src="assets/images/icons/New-Icon.png" alt="icon" style="max-width: 24px; height: auto;">
-            </span>
-            <span>Peptide Therapy</span>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="dropdown-item d-flex align-items-center gap-2">
-            <span class="icon d-flex align-items-center justify-content-center rounded-circle bg-white shadow" style="width: 40px; height: 40px;">
-              <img src="assets/images/icons/New-Icon.png" alt="icon" style="max-width: 24px; height: auto;">
-            </span>
-            <span>Stress Management</span>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="dropdown-item d-flex align-items-center gap-2">
-            <span class="icon d-flex align-items-center justify-content-center rounded-circle bg-white shadow" style="width: 40px; height: 40px;">
-              <img src="assets/images/icons/New-Icon.png" alt="icon" style="max-width: 24px; height: auto;">
-            </span>
-            <span>Red Light Therapy</span>
-          </a>
-        </li>                      </ul>
+    
+      
+                      </ul>
                     </div>
+       
                   </div>
                 </div>
-                <div class="tab-pane fade" id="tab6">
-                  <div class="row">
-                    <div class="col-12 col-md-4">
-                      <ul class="list-unstyled">
-             <li>
-          <a href="#" class="dropdown-item d-flex align-items-center gap-2">
-            <span class="icon d-flex align-items-center justify-content-center rounded-circle bg-white shadow" style="width: 40px; height: 40px;">
-              <img src="assets/images/icons/New-Icon.png" alt="icon" style="max-width: 24px; height: auto;">
-            </span>
-            <span>Detox Therapy in Dubai</span>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="dropdown-item d-flex align-items-center gap-2">
-            <span class="icon d-flex align-items-center justify-content-center rounded-circle bg-white shadow" style="width: 40px; height: 40px;">
-              <img src="assets/images/icons/New-Icon.png" alt="icon" style="max-width: 24px; height: auto;">
-            </span>
-            <span>IV Therapy Drips</span>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="dropdown-item d-flex align-items-center gap-2">
-            <span class="icon d-flex align-items-center justify-content-center rounded-circle bg-white shadow" style="width: 40px; height: 40px;">
-              <img src="assets/images/icons/New-Icon.png" alt="icon" style="max-width: 24px; height: auto;">
-            </span>
-            <span>Peptide Therapy</span>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="dropdown-item d-flex align-items-center gap-2">
-            <span class="icon d-flex align-items-center justify-content-center rounded-circle bg-white shadow" style="width: 40px; height: 40px;">
-              <img src="assets/images/icons/New-Icon.png" alt="icon" style="max-width: 24px; height: auto;">
-            </span>
-            <span>Stress Management</span>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="dropdown-item d-flex align-items-center gap-2">
-            <span class="icon d-flex align-items-center justify-content-center rounded-circle bg-white shadow" style="width: 40px; height: 40px;">
-              <img src="assets/images/icons/New-Icon.png" alt="icon" style="max-width: 24px; height: auto;">
-            </span>
-            <span>Red Light Therapy</span>
-          </a>
-        </li>                      </ul>
-                    </div>
-                  </div>
-                </div>
+              
+              
               </div>
             </div>
           </ul>
         </li>
 
         <li class="nav-item"><a href="#" class="nav-link" data-i18n="aboutUs">Specialist</a></li>
-   
+      <li class="nav-item position-relative">
+  <a href="#" class="nav-link dropdown-toggle custom-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    Magazine
+    <svg class="ms-2 dropdown-arrow transition-transform duration-300 dropdown-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="6 9 12 15 18 9" />
+    </svg>
+  </a>
+
+  <div class="dropdown-menu px-4 py-3 shadow-lg rounded-4 position-absolute start-50 translate-middle-x mt-2" style="top: 100%; min-width: 320px;">
+    <div class="d-flex flex-column">
+
+      <a href="#" class="d-flex align-items-center gap-3 text-decoration-none text-dark py-2 border-bottom">
+        <span class="icon bg-white shadow rounded-circle d-flex justify-content-center align-items-center" style="width: 40px; height: 40px;">
+          <img src="assets/images/icons/New-Icon.png" alt="Icon" style="max-width: 24px;">
+        </span>
+        <span>Press</span>
+      </a>
+
+      <a href="#" class="d-flex align-items-center gap-3 text-decoration-none text-dark py-2 border-bottom">
+        <span class="icon bg-white shadow rounded-circle d-flex justify-content-center align-items-center" style="width: 40px; height: 40px;">
+          <img src="assets/images/icons/New-Icon.png" alt="Icon" style="max-width: 24px;">
+        </span>
+        <span>Blog</span>
+      </a>
+
+      <a href="#" class="d-flex align-items-center gap-3 text-decoration-none text-dark py-2">
+        <span class="icon bg-white shadow rounded-circle d-flex justify-content-center align-items-center" style="width: 40px; height: 40px;">
+          <img src="assets/images/icons/New-Icon.png" alt="Icon" style="max-width: 24px;">
+        </span>
+        <span>News</span>
+      </a>
+
+    </div>
+  </div>
+</li>
+
+
+
         <li class="nav-item"><a href="#" class="nav-link" data-i18n="aboutUs">Book Now</a></li>
       </ul>
     </div>
