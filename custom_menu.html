@@ -1,192 +1,308 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Centered Mega Menu</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Clinic Bottom Drawer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
-    body {
-      margin: 0;
-      font-family: sans-serif;
+    body.clinic-no-scroll {
+      overflow: hidden;
     }
 
-    /* Logo Centered Above Menu */
-    .header-logo {
-      text-align: center;
-      padding: 1rem 0 0.5rem;
-    }
-    .header-logo img {
-      height: 60px;
-    }
-
-    nav.navbar {
-      justify-content: center;
-      padding-bottom: 1rem;
-    }
-
-    .navbar-nav .nav-link {
-      color: #444;
-      font-size: 1rem;
-      margin: 0 1rem;
-      font-weight: 500;
-    }
-    .navbar-nav .nav-link:hover {
-      color: #8a6b46;
-    }
-
-    .nav-item {
-      position: relative;
-    }
-
-    /* Mega Dropdown (Shared) */
-    .mega-dropdown-wrapper {
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 90vw;
-      max-width: 1200px;
+    .clinic-bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
       background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-      padding: 2rem;
-      display: none;
-      z-index: 9999;
+      border-top: 1px solid #ddd;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0;
+      z-index: 10001;
     }
-    .nav-item:hover .mega-dropdown-wrapper {
+
+    .clinic-bottom-nav a {
+      text-align: center;
+      font-size: 14px;
+      color: #000;
+      text-decoration: none;
+    }
+
+    .clinic-drawer {
+      position: fixed;
+      bottom: -100%;
+      left: 0;
+      width: 100%;
+      background: #fff;
+      transition: bottom 0.4s ease;
+      z-index: 10000;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.15);
+      padding: 20px;
+    }
+
+    .clinic-drawer.clinic-active {
+      bottom: 60px;
+    }
+
+    .clinic-drawer-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .clinic-drawer-close {
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+    .clinic-drawer-menu {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .clinic-accordion-item {
+      border-bottom: 1px solid #eee;
+    }
+
+    .clinic-accordion-button {
+      width: 100%;
+      text-align: left;
+      background: none;
+      border: none;
+      font-size: 16px;
+      padding: 12px;
+      cursor: pointer;
+      font-weight: bold;
+      color: #231F20;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      border-radius: 10px;
+    }
+
+    .clinic-accordion-content {
+      display: none;
+      padding-left: 10px;
+      padding-bottom: 10px;
+    }
+
+    .clinic-accordion-item.clinic-open .clinic-accordion-content {
       display: block;
     }
 
-    .tab-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-      margin-bottom: 1.5rem;
+    .clinic-accordion-button i {
+      transition: transform 0.3s ease;
     }
-    .tab-button {
-      padding: 0.75rem 1.2rem;
+
+    .clinic-accordion-item.clinic-open .clinic-accordion-button i {
+      transform: rotate(180deg);
+    }
+
+    /* Tabs inside Longevity */
+    .clinic-tabs {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .clinic-tab-button {
+      padding: 6px 12px;
+      background: #eee;
       border: none;
-      border-radius: 8px;
-      font-weight: 600;
-      background-color: #fff;
-      color: #8a6b46;
+      border-radius: 6px;
       cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      transition: background 0.3s, color 0.3s;
-    }
-    .tab-button.active {
-      background-color: #8a6b46;
-      color: #fff;
-    }
-    .tab-icon {
-      width: 30px;
-      height: 30px;
-      background: #8a6b46;
-      color: #fff;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 16px;
     }
 
-    .tab-content-box {
+    .clinic-tab-button.clinic-active {
+      background: #ccc;
+      font-weight: bold;
+    }
+
+    .clinic-tab-content {
       display: none;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 1rem;
-      margin-top: 1.5rem;
-    }
-    .tab-content-box.active {
-      display: grid;
-    }
-    .service-item {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      padding: 0.75rem 0;
-      border-bottom: 1px solid #eee;
-    }
-    .service-item span {
-      color: #444;
     }
 
-    @media (max-width: 768px) {
-      .mega-dropdown-wrapper {
-        width: 95vw;
-        padding: 1rem;
-      }
-      .tab-buttons {
-        flex-direction: column;
+    .clinic-tab-content.clinic-active {
+      display: block;
+    }
+
+    .clinic-tab-content ul {
+      padding-left: 16px;
+    }
+
+    .clinic-tab-content li {
+      margin-bottom: 6px;
+      font-size: 14px;
+    }
+
+    @media (min-width: 769px) {
+      .clinic-bottom-nav,
+      .clinic-drawer {
+        display: none !important;
       }
     }
   </style>
 </head>
 <body>
-  <!-- Centered Logo -->
-  <div class="header-logo">
-    <img src="path-to-your-logo.png" alt="Logo">
+
+  <!-- Bottom Navigation -->
+  <div class="clinic-bottom-nav">
+    <a href="#" id="clinicOpenDrawer"><i class="fas fa-bars"></i><br>Menu</a>
+    <a href="tel:+97145136154"><i class="fas fa-phone"></i><br>Call</a>
+    <a href="#"><i class="fas fa-calendar-check"></i><br>Book Now</a>
+    <a href="#"><i class="fas fa-user-md"></i><br>Specialists</a>
+    <a href="https://wa.me/+971528340712" target="_blank"><i class="fab fa-whatsapp"></i><br>WhatsApp</a>
   </div>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg bg-light">
-    <ul class="navbar-nav">
-      <li class="nav-item position-relative">
-        <a class="nav-link" href="#">Treatments</a>
-        <div class="mega-dropdown-wrapper text-center">
-          <div class="tab-buttons">
-            <button class="tab-button active" data-tab="treat-1"><span class="tab-icon">💧</span> Regenerative Wellness</button>
-            <button class="tab-button" data-tab="treat-2"><span class="tab-icon">💧</span> Aesthetics</button>
-            <button class="tab-button" data-tab="treat-3"><span class="tab-icon">💧</span> Regenerative Medicine</button>
-          </div>
-          <div class="tab-content-box active" id="treat-1">
-            <div class="service-item"><span class="tab-icon">💧</span><span>Detox Therapy</span></div>
-            <div class="service-item"><span class="tab-icon">💧</span><span>HBOT</span></div>
-          </div>
-          <div class="tab-content-box" id="treat-2">
-            <div class="service-item"><span class="tab-icon">💧</span><span>Peptide Therapy</span></div>
-          </div>
-          <div class="tab-content-box" id="treat-3">
-            <div class="service-item"><span class="tab-icon">💧</span><span>Shockwave Therapy</span></div>
-          </div>
-        </div>
-      </li>
-      <li class="nav-item position-relative">
-        <a class="nav-link" href="#">Exclusives</a>
-        <div class="mega-dropdown-wrapper text-center">
-          <div class="tab-buttons">
-            <button class="tab-button active" data-tab="ex-1"><span class="tab-icon">💧</span> VIP Access</button>
-            <button class="tab-button" data-tab="ex-2"><span class="tab-icon">💧</span> Private Events</button>
-            <button class="tab-button" data-tab="ex-3"><span class="tab-icon">💧</span> Elite Care</button>
-          </div>
-          <div class="tab-content-box active" id="ex-1">
-            <div class="service-item"><span class="tab-icon">💧</span><span>Luxury Lounge</span></div>
-          </div>
-          <div class="tab-content-box" id="ex-2">
-            <div class="service-item"><span class="tab-icon">💧</span><span>Private Seminars</span></div>
-          </div>
-          <div class="tab-content-box" id="ex-3">
-            <div class="service-item"><span class="tab-icon">💧</span><span>Concierge Health</span></div>
-          </div>
-        </div>
-      </li>
-    </ul>
-  </nav>
+  <!-- Bottom Drawer -->
+  <div class="clinic-drawer" id="clinicDrawer">
+    <div class="clinic-drawer-header">
+      <h3>Menu</h3>
+      <span class="clinic-drawer-close" id="clinicCloseDrawer">&times;</span>
+    </div>
+    <div class="clinic-drawer-menu">
 
+      <div class="clinic-accordion-item">
+        <button class="clinic-accordion-button">HOME</button>
+      </div>
+
+      <!-- Longevity with TABS -->
+      <div class="clinic-accordion-item">
+        <button class="clinic-accordion-button">Longevity <i class="fas fa-chevron-down"></i></button>
+        <div class="clinic-accordion-content">
+
+          <div class="clinic-tabs">
+            <button class="clinic-tab-button clinic-active" data-tab="clinic-tab1">Tab 1</button>
+            <button class="clinic-tab-button" data-tab="clinic-tab2">Tab 2</button>
+            <button class="clinic-tab-button" data-tab="clinic-tab3">Tab 3</button>
+          </div>
+
+          <div id="clinic-tab1" class="clinic-tab-content clinic-active">
+            <ul>
+              <li>Lorem Ipsum 1</li>
+              <li>Lorem Ipsum 2</li>
+              <li>Lorem Ipsum 3</li>
+            </ul>
+          </div>
+
+          <div id="clinic-tab2" class="clinic-tab-content">
+            <ul>
+              <li>Lorem Ipsum A</li>
+              <li>Lorem Ipsum B</li>
+              <li>Lorem Ipsum C</li>
+            </ul>
+          </div>
+
+          <div id="clinic-tab3" class="clinic-tab-content">
+            <ul>
+              <li>Lorem Ipsum X</li>
+              <li>Lorem Ipsum Y</li>
+              <li>Lorem Ipsum Z</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Other Accordions -->
+      <div class="clinic-accordion-item">
+        <button class="clinic-accordion-button">Aesthetic <i class="fas fa-chevron-down"></i></button>
+        <div class="clinic-accordion-content">
+          <a href="#">Facial Aesthetics</a>
+          <a href="#">Body Aesthetics</a>
+          <a href="#">Hair & Scalp</a>
+        </div>
+      </div>
+
+      <div class="clinic-accordion-item">
+        <button class="clinic-accordion-button">Regenerative <i class="fas fa-chevron-down"></i></button>
+        <div class="clinic-accordion-content">
+          <a href="#">Advanced Therapies</a>
+          <a href="#">Skin Rejuvenation</a>
+          <a href="#">Specialized Treatments</a>
+        </div>
+      </div>
+
+      <div class="clinic-accordion-item">
+        <button class="clinic-accordion-button">Services <i class="fas fa-chevron-down"></i></button>
+        <div class="clinic-accordion-content">
+          <a href="#">Personal Care</a>
+          <a href="#">Virtual Care</a>
+        </div>
+      </div>
+
+      <div class="clinic-accordion-item">
+        <button class="clinic-accordion-button">About Us</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Script -->
   <script>
-    document.querySelectorAll('.tab-button').forEach(button => {
-      button.addEventListener('mouseenter', () => {
-        const parent = button.closest('.mega-dropdown-wrapper');
-        const targetId = button.getAttribute('data-tab');
-        parent.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
-        parent.querySelectorAll('.tab-content-box').forEach(box => box.classList.remove('active'));
-        button.classList.add('active');
-        parent.querySelector(`#${targetId}`).classList.add('active');
+    document.addEventListener("DOMContentLoaded", function () {
+      const openBtn = document.getElementById("clinicOpenDrawer");
+      const closeBtn = document.getElementById("clinicCloseDrawer");
+      const drawer = document.getElementById("clinicDrawer");
+
+      openBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        drawer.classList.add("clinic-active");
+        document.body.classList.add("clinic-no-scroll");
+      });
+
+      closeBtn.addEventListener("click", () => {
+        drawer.classList.remove("clinic-active");
+        document.body.classList.remove("clinic-no-scroll");
+      });
+
+      drawer.addEventListener("click", (e) => e.stopPropagation());
+
+      window.addEventListener("click", (e) => {
+        if (!drawer.contains(e.target) && !openBtn.contains(e.target)) {
+          drawer.classList.remove("clinic-active");
+          document.body.classList.remove("clinic-no-scroll");
+        }
+      });
+
+      const accordions = document.querySelectorAll(".clinic-accordion-button");
+      accordions.forEach((btn) => {
+        btn.addEventListener("click", function () {
+          const item = this.parentElement;
+          const isOpen = item.classList.contains("clinic-open");
+
+          document.querySelectorAll(".clinic-accordion-item.clinic-open").forEach(openItem => {
+            if (openItem !== item) openItem.classList.remove("clinic-open");
+          });
+
+          item.classList.toggle("clinic-open", !isOpen);
+        });
+      });
+
+      // Tabs in Longevity
+      const tabButtons = document.querySelectorAll(".clinic-tab-button");
+      const tabContents = document.querySelectorAll(".clinic-tab-content");
+
+      tabButtons.forEach(button => {
+        button.addEventListener("click", () => {
+          const target = button.getAttribute("data-tab");
+
+          tabButtons.forEach(btn => btn.classList.remove("clinic-active"));
+          tabContents.forEach(content => content.classList.remove("clinic-active"));
+
+          button.classList.add("clinic-active");
+          document.getElementById(target).classList.add("clinic-active");
+        });
       });
     });
   </script>
+
 </body>
 </html>

@@ -918,7 +918,7 @@
 
 
     <!-- Bottom Navigation -->
-    <div class="mobile-bottom-nav">
+    <!-- <div class="mobile-bottom-nav">
         <a href="#" id="openDrawer"><i class="fas fa-bars"></i> <span data-en="Menu" data-ar="القائمة">Menu</span></a>
         <a href="tel:+97145136154"><i class="fas fa-phone"></i> <span data-en="Call" data-ar="اتصل">Call</span></a>
         <a href="#"><i class="fas fa-calendar-check"></i> <span data-en="Book Now" data-ar="احجز الآن">Book
@@ -927,10 +927,10 @@
                 data-ar="المتخصصون">Specialists</span></a>
         <a href="https://wa.me/+971528340712" target="_blank"><i class="fab fa-whatsapp"></i> <span data-en="WhatsApp"
                 data-ar="واتساب">WhatsApp</span></a>
-    </div>
+    </div> -->
 
     <!-- Bottom Menu Drawer -->
-    <div class="bottom-menu-drawer" id="menuDrawer">
+    <!-- <div class="bottom-menu-drawer" id="menuDrawer">
         <div class="drawer-header">
             <h3 data-en="Menu" data-ar="القائمة">Menu</h3>
             <span class="drawer-close" id="closeDrawer">&times;</span>
@@ -986,9 +986,345 @@
                 <button class="accordion-button" data-en="About Us" data-ar="من نحن">About Us</button>
             </div>
         </div>
+    </div> -->
+
+<style>
+    body.clinic-no-scroll {
+      overflow: hidden;
+    }
+
+    .clinic-bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #fff;
+      border-top: 1px solid #ddd;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0;
+      z-index: 10001;
+    }
+
+    .clinic-bottom-nav a {
+      text-align: center;
+      font-size: 14px;
+      color: #000;
+      text-decoration: none;
+    }
+
+    .clinic-drawer {
+      position: fixed;
+      bottom: -100%;
+      left: 0;
+      width: 100%;
+      background: #fff;
+      transition: bottom 0.4s ease;
+      z-index: 10000;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.15);
+      padding: 20px;
+    }
+
+    .clinic-drawer.clinic-active {
+      bottom: 60px;
+    }
+
+    .clinic-drawer-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .clinic-drawer-close {
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+    .clinic-drawer-menu {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .clinic-accordion-item {
+      border-bottom: 1px solid #eee;
+    }
+
+    .clinic-accordion-button {
+      width: 100%;
+      text-align: left;
+      background: none;
+      border: none;
+      font-size: 16px;
+      padding: 12px;
+      cursor: pointer;
+      font-weight: bold;
+      color: #231F20;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      border-radius: 10px;
+    }
+
+    .clinic-accordion-content {
+      display: none;
+      padding-left: 10px;
+      padding-bottom: 10px;
+    }
+
+    .clinic-accordion-item.clinic-open .clinic-accordion-content {
+      display: block;
+    }
+
+    .clinic-accordion-button i {
+      transition: transform 0.3s ease;
+    }
+
+    .clinic-accordion-item.clinic-open .clinic-accordion-button i {
+      transform: rotate(180deg);
+    }
+
+    /* Tabs inside Longevity */
+    .clinic-tabs {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .clinic-tab-button {
+      padding: 6px 12px;
+      background: #eee;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .clinic-tab-button.clinic-active {
+      background: #ccc;
+      font-weight: bold;
+    }
+
+    .clinic-tab-content {
+      display: none;
+    }
+
+    .clinic-tab-content.clinic-active {
+      display: block;
+    }
+
+    .clinic-tab-content ul {
+      padding-left: 16px;
+    }
+
+    .clinic-tab-content li {
+      margin-bottom: 6px;
+      font-size: 14px;
+    }
+
+    @media (min-width: 769px) {
+      .clinic-bottom-nav,
+      .clinic-drawer {
+        display: none !important;
+      }
+    }
+  </style>
+<!-- Bottom Navigation -->
+  <div class="clinic-bottom-nav">
+    <a href="#" id="clinicOpenDrawer"><i class="fas fa-bars"></i><br>Menu</a>
+    <a href="tel:+97145136154"><i class="fas fa-phone"></i><br>Call</a>
+    <a href="#"><i class="fas fa-calendar-check"></i><br>Book Now</a>
+    <a href="#"><i class="fas fa-user-md"></i><br>Specialists</a>
+    <a href="https://wa.me/+971528340712" target="_blank"><i class="fab fa-whatsapp"></i><br>WhatsApp</a>
+  </div>
+
+  <!-- Bottom Drawer -->
+  <div class="clinic-drawer" id="clinicDrawer">
+    <div class="clinic-drawer-header">
+      <h3>Menu</h3>
+      <span class="clinic-drawer-close" id="clinicCloseDrawer">&times;</span>
     </div>
+    <div class="clinic-drawer-menu">
 
+      <div class="clinic-accordion-item">
+        <button class="clinic-accordion-button">About</button>
+      </div>
 
+      <!-- Longevity with TABS -->
+      <div class="clinic-accordion-item">
+        <button class="clinic-accordion-button">Treatments <i class="fas fa-chevron-down"></i></button>
+        <div class="clinic-accordion-content">
+
+          <div class="clinic-tabs">
+            <button class="clinic-tab-button clinic-active" data-tab="clinic-tab1">Tab 1</button>
+            <button class="clinic-tab-button" data-tab="clinic-tab2">Tab 2</button>
+            <button class="clinic-tab-button" data-tab="clinic-tab3">Tab 3</button>
+          </div>
+
+          <div id="clinic-tab1" class="clinic-tab-content clinic-active">
+            <ul>
+              <li>Lorem Ipsum 1</li>
+              <li>Lorem Ipsum 2</li>
+              <li>Lorem Ipsum 3</li>
+            </ul>
+          </div>
+
+          <div id="clinic-tab2" class="clinic-tab-content">
+            <ul>
+              <li>Lorem Ipsum A</li>
+              <li>Lorem Ipsum B</li>
+              <li>Lorem Ipsum C</li>
+            </ul>
+          </div>
+
+          <div id="clinic-tab3" class="clinic-tab-content">
+            <ul>
+              <li>Lorem Ipsum X</li>
+              <li>Lorem Ipsum Y</li>
+              <li>Lorem Ipsum Z</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+      <div class="clinic-accordion-item">
+        <button class="clinic-accordion-button">Exclusives <i class="fas fa-chevron-down"></i></button>
+        <div class="clinic-accordion-content">
+
+          <div class="clinic-tabs">
+            <button class="clinic-tab-button clinic-active" data-tab="clinic-tab1">Tab 1</button>
+            <button class="clinic-tab-button" data-tab="clinic-tab2">Tab 2</button>
+            <button class="clinic-tab-button" data-tab="clinic-tab3">Tab 3</button>
+          </div>
+
+          <div id="clinic-tab1" class="clinic-tab-content clinic-active">
+            <ul>
+              <li>Lorem Ipsum 1</li>
+              <li>Lorem Ipsum 2</li>
+              <li>Lorem Ipsum 3</li>
+            </ul>
+          </div>
+
+          <div id="clinic-tab2" class="clinic-tab-content">
+            <ul>
+              <li>Lorem Ipsum A</li>
+              <li>Lorem Ipsum B</li>
+              <li>Lorem Ipsum C</li>
+            </ul>
+          </div>
+
+          <div id="clinic-tab3" class="clinic-tab-content">
+            <ul>
+              <li>Lorem Ipsum X</li>
+              <li>Lorem Ipsum Y</li>
+              <li>Lorem Ipsum Z</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Other Accordions -->
+      <!-- <div class="clinic-accordion-item">
+        <button class="clinic-accordion-button">Exclusives<i class="fas fa-chevron-down"></i></button>
+        <div class="clinic-accordion-content">
+          <a href="#">Facial Aesthetics</a>
+          <a href="#">Body Aesthetics</a>
+          <a href="#">Hair & Scalp</a>
+        </div>
+      </div> -->
+<div class="clinic-accordion-item">
+        <button class="clinic-accordion-button">Specialist</button>
+      </div>
+      <div class="clinic-accordion-item">
+        <button class="clinic-accordion-button">Magazine <i class="fas fa-chevron-down"></i></button>
+        <div class="clinic-accordion-content">
+         <div>
+             <a href="#">Press</a>
+         </div>
+        <div>
+              <a href="#">Blog</a>
+        </div>
+         <div>
+             <a href="#">News</a>
+         </div>
+        </div>
+      </div>
+
+      <!-- <div class="clinic-accordion-item">
+        <button class="clinic-accordion-button">Services <i class="fas fa-chevron-down"></i></button>
+        <div class="clinic-accordion-content">
+          <a href="#">Personal Care</a>
+          <a href="#">Virtual Care</a>
+        </div>
+      </div> -->
+
+      <div class="clinic-accordion-item">
+        <button class="clinic-accordion-button">Book Now</button>
+      </div>
+
+    </div>
+  </div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const openBtn = document.getElementById("clinicOpenDrawer");
+      const closeBtn = document.getElementById("clinicCloseDrawer");
+      const drawer = document.getElementById("clinicDrawer");
+
+      openBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        drawer.classList.add("clinic-active");
+        document.body.classList.add("clinic-no-scroll");
+      });
+
+      closeBtn.addEventListener("click", () => {
+        drawer.classList.remove("clinic-active");
+        document.body.classList.remove("clinic-no-scroll");
+      });
+
+      drawer.addEventListener("click", (e) => e.stopPropagation());
+
+      window.addEventListener("click", (e) => {
+        if (!drawer.contains(e.target) && !openBtn.contains(e.target)) {
+          drawer.classList.remove("clinic-active");
+          document.body.classList.remove("clinic-no-scroll");
+        }
+      });
+
+      const accordions = document.querySelectorAll(".clinic-accordion-button");
+      accordions.forEach((btn) => {
+        btn.addEventListener("click", function () {
+          const item = this.parentElement;
+          const isOpen = item.classList.contains("clinic-open");
+
+          document.querySelectorAll(".clinic-accordion-item.clinic-open").forEach(openItem => {
+            if (openItem !== item) openItem.classList.remove("clinic-open");
+          });
+
+          item.classList.toggle("clinic-open", !isOpen);
+        });
+      });
+
+      // Tabs in Longevity
+      const tabButtons = document.querySelectorAll(".clinic-tab-button");
+      const tabContents = document.querySelectorAll(".clinic-tab-content");
+
+      tabButtons.forEach(button => {
+        button.addEventListener("click", () => {
+          const target = button.getAttribute("data-tab");
+
+          tabButtons.forEach(btn => btn.classList.remove("clinic-active"));
+          tabContents.forEach(content => content.classList.remove("clinic-active"));
+
+          button.classList.add("clinic-active");
+          document.getElementById(target).classList.add("clinic-active");
+        });
+      });
+    });
+  </script>
 
 
 
@@ -4021,7 +4357,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
     <!-- JS -->
-    <script>
+    <!-- <script>
         const openDrawer = document.getElementById("openDrawer");
         const closeDrawer = document.getElementById("closeDrawer");
         const menuDrawer = document.getElementById("menuDrawer");
@@ -4066,7 +4402,9 @@
                 document.body.classList.remove("body-no-scroll");
             }
         });
-    </script>
+    </script> -->
+    
+
     <!-- Swiper Init Script -->
     <script>
         const doctorSlider = new Swiper('.doctors-swiper', {
@@ -4335,7 +4673,53 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 </script>
+<script>
+    const openDrawer = document.getElementById("openDrawer");
+    const closeDrawer = document.getElementById("closeDrawer");
+    const menuDrawer = document.getElementById("menuDrawer");
 
+    // Open drawer
+    openDrawer.addEventListener("click", (e) => {
+        console.log("Drawer open clicked");
+        e.preventDefault();
+        e.stopPropagation(); // prevent body click from firing
+        menuDrawer.classList.add("active");
+        document.body.classList.add("body-no-scroll");
+    });
+
+    // Close drawer button
+    closeDrawer.addEventListener("click", (e) => {
+        e.stopPropagation();
+        menuDrawer.classList.remove("active");
+        document.body.classList.remove("body-no-scroll");
+    });
+
+    // Prevent clicks inside drawer from closing it
+    menuDrawer.addEventListener("click", (e) => {
+        e.stopPropagation();
+    });
+
+    // Close if clicking outside the drawer
+    window.addEventListener("click", () => {
+        menuDrawer.classList.remove("active");
+        document.body.classList.remove("body-no-scroll");
+    });
+
+    // Accordion toggle
+    const accordionButtons = document.querySelectorAll(".accordion-button");
+    accordionButtons.forEach((button) => {
+        button.addEventListener("click", function () {
+            const item = this.parentElement;
+            const isOpen = item.classList.contains("open");
+
+            document.querySelectorAll(".accordion-item.open").forEach(openItem => {
+                if (openItem !== item) openItem.classList.remove("open");
+            });
+
+            item.classList.toggle("open", !isOpen);
+        });
+    });
+</script>
     </body>
 
 
