@@ -277,21 +277,34 @@
         padding: 8px 18px;
     }
 }
-@media (max-width:1366) {
+@media (max-width:1366px) {
        .dropdown-menu.ext-custom {
-        min-width: calc(100vw - 27vw);
-        transform: translateX(-25%) !important;
+        min-width: calc(100vw - 20vw);
+        transform: translateX(-18%) !important;
     }
 
     .dropdown-menu.ext-custom-exculisive {
-        min-width: calc(100vw - 26vw);
-        transform: translateX(-43%) !important;
+        min-width: calc(100vw - 18vw);
+        transform: translateX(-35%) !important;
     }
 
     .nav-pills .nav-link {
         font-size: 0.95rem;
         padding: 8px 18px;
     }
+}
+@media (max-width:1213px) {
+       .dropdown-menu.ext-custom {
+        min-width: calc(100vw - 20vw);
+        transform: translateX(-10%) !important;
+    }
+
+    .dropdown-menu.ext-custom-exculisive {
+        min-width: calc(100vw - 18vw);
+        transform: translateX(-25%) !important;
+    }
+
+
 }
 /* Tablets (768px - 1024px) */
 @media (max-width: 1024px) {
@@ -4146,7 +4159,7 @@
                 dropdown.addEventListener('mouseenter', () => {
                     clearTimeout(hideTimeout);
                     dropdown.classList.add('open');
-                    activateFirstTab(); // 🔥 Reset active tab every time the menu opens
+                    activateFirstTab();    //  Reset active tab every time the menu opens
                 });
 
                 // Hide on mouse leave
