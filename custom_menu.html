@@ -11,6 +11,7 @@
       font-family: sans-serif;
     }
 
+    /* Logo Centered Above Menu */
     .header-logo {
       text-align: center;
       padding: 1rem 0 0.5rem;
@@ -38,27 +39,21 @@
       position: relative;
     }
 
-    .mega-dropdown-outer {
+    /* Mega Dropdown (Shared) */
+    .mega-dropdown-wrapper {
       position: absolute;
       top: 100%;
-      left: 0;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      z-index: 1000;
-    }
-
-    .mega-dropdown-wrapper {
-      background: #fff;
-      width: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90vw;
       max-width: 1200px;
-      margin: 0 2rem;
+      background: #fff;
       border-radius: 12px;
       box-shadow: 0 10px 20px rgba(0,0,0,0.1);
       padding: 2rem;
       display: none;
+      z-index: 9999;
     }
-
     .nav-item:hover .mega-dropdown-wrapper {
       display: block;
     }
@@ -121,8 +116,7 @@
 
     @media (max-width: 768px) {
       .mega-dropdown-wrapper {
-        width: calc(100% - 2rem);
-        margin: 0 1rem;
+        width: 95vw;
         padding: 1rem;
       }
       .tab-buttons {
@@ -132,52 +126,50 @@
   </style>
 </head>
 <body>
+  <!-- Centered Logo -->
   <div class="header-logo">
     <img src="path-to-your-logo.png" alt="Logo">
   </div>
 
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg bg-light">
     <ul class="navbar-nav">
-      <li class="nav-item">
+      <li class="nav-item position-relative">
         <a class="nav-link" href="#">Treatments</a>
-        <div class="mega-dropdown-outer">
-          <div class="mega-dropdown-wrapper text-center">
-            <div class="tab-buttons">
-              <button class="tab-button active" data-tab="treat-1"><span class="tab-icon">💧</span> Regenerative Wellness</button>
-              <button class="tab-button" data-tab="treat-2"><span class="tab-icon">💧</span> Aesthetics</button>
-              <button class="tab-button" data-tab="treat-3"><span class="tab-icon">💧</span> Regenerative Medicine</button>
-            </div>
-            <div class="tab-content-box active" id="treat-1">
-              <div class="service-item"><span class="tab-icon">💧</span><span>Detox Therapy</span></div>
-              <div class="service-item"><span class="tab-icon">💧</span><span>HBOT</span></div>
-            </div>
-            <div class="tab-content-box" id="treat-2">
-              <div class="service-item"><span class="tab-icon">💧</span><span>Peptide Therapy</span></div>
-            </div>
-            <div class="tab-content-box" id="treat-3">
-              <div class="service-item"><span class="tab-icon">💧</span><span>Shockwave Therapy</span></div>
-            </div>
+        <div class="mega-dropdown-wrapper text-center">
+          <div class="tab-buttons">
+            <button class="tab-button active" data-tab="treat-1"><span class="tab-icon">💧</span> Regenerative Wellness</button>
+            <button class="tab-button" data-tab="treat-2"><span class="tab-icon">💧</span> Aesthetics</button>
+            <button class="tab-button" data-tab="treat-3"><span class="tab-icon">💧</span> Regenerative Medicine</button>
+          </div>
+          <div class="tab-content-box active" id="treat-1">
+            <div class="service-item"><span class="tab-icon">💧</span><span>Detox Therapy</span></div>
+            <div class="service-item"><span class="tab-icon">💧</span><span>HBOT</span></div>
+          </div>
+          <div class="tab-content-box" id="treat-2">
+            <div class="service-item"><span class="tab-icon">💧</span><span>Peptide Therapy</span></div>
+          </div>
+          <div class="tab-content-box" id="treat-3">
+            <div class="service-item"><span class="tab-icon">💧</span><span>Shockwave Therapy</span></div>
           </div>
         </div>
       </li>
-      <li class="nav-item">
+      <li class="nav-item position-relative">
         <a class="nav-link" href="#">Exclusives</a>
-        <div class="mega-dropdown-outer">
-          <div class="mega-dropdown-wrapper text-center">
-            <div class="tab-buttons">
-              <button class="tab-button active" data-tab="ex-1"><span class="tab-icon">💧</span> VIP Access</button>
-              <button class="tab-button" data-tab="ex-2"><span class="tab-icon">💧</span> Private Events</button>
-              <button class="tab-button" data-tab="ex-3"><span class="tab-icon">💧</span> Elite Care</button>
-            </div>
-            <div class="tab-content-box active" id="ex-1">
-              <div class="service-item"><span class="tab-icon">💧</span><span>Luxury Lounge</span></div>
-            </div>
-            <div class="tab-content-box" id="ex-2">
-              <div class="service-item"><span class="tab-icon">💧</span><span>Private Seminars</span></div>
-            </div>
-            <div class="tab-content-box" id="ex-3">
-              <div class="service-item"><span class="tab-icon">💧</span><span>Concierge Health</span></div>
-            </div>
+        <div class="mega-dropdown-wrapper text-center">
+          <div class="tab-buttons">
+            <button class="tab-button active" data-tab="ex-1"><span class="tab-icon">💧</span> VIP Access</button>
+            <button class="tab-button" data-tab="ex-2"><span class="tab-icon">💧</span> Private Events</button>
+            <button class="tab-button" data-tab="ex-3"><span class="tab-icon">💧</span> Elite Care</button>
+          </div>
+          <div class="tab-content-box active" id="ex-1">
+            <div class="service-item"><span class="tab-icon">💧</span><span>Luxury Lounge</span></div>
+          </div>
+          <div class="tab-content-box" id="ex-2">
+            <div class="service-item"><span class="tab-icon">💧</span><span>Private Seminars</span></div>
+          </div>
+          <div class="tab-content-box" id="ex-3">
+            <div class="service-item"><span class="tab-icon">💧</span><span>Concierge Health</span></div>
           </div>
         </div>
       </li>
