@@ -13194,8 +13194,10 @@ Navbar Area CSS
         font-weight: 500;
         letter-spacing: 2.25px;
         padding-left: 6px;
-        padding-top: 17px;
-        padding-bottom: 17px;
+        /* padding-top: 17px; */
+        /* padding-bottom: 17px; */
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 .navbar .navbar-nav .nav-item .nav-link::after {
   position: absolute;
