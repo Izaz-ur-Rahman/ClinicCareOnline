@@ -1809,7 +1809,7 @@
   .top-header-info {
     justify-content: center;
   }
-  /* .navbar .container-fluid {
+   .navbar .container-fluid {
     padding-left: calc(var(--bs-gutter-x) * 0.5);
     padding-right: calc(var(--bs-gutter-x) * 0.5);
     max-width: 960px;
@@ -1826,11 +1826,11 @@
   }
   .navbar .collapse:not(.show) {
     display: block;
-  } */
-  /* .navbar ul {
+  } 
+     .navbar ul {
     display: none;
-  } */
-  /* .navbar .others-option {
+  } 
+   .navbar .others-option {
     position: absolute;
     right: 75px;
     top: 50%;
@@ -1842,12 +1842,12 @@
   .navbar .others-option .option-item .default-btn {
     padding: 10.5px 20px;
     font-size: 15px;
-  } */
+  } 
   .main-header-area {
     padding-top: 20px;
   }
   .responsive-navbar .offcanvas-body .others-option {
-    /* display: none !important; */
+    display: none !important;
   }
   .dental-clinic-slider-area {
     margin-top: 0;
@@ -2238,7 +2238,7 @@
     margin-right: 10px;
   }
   .navbar .navbar-nav .nav-item .nav-link {
-    font-size: 16px;
+    font-size: 20px;
   }
   .navbar .others-option .option-item {
     margin-right: 10px;
