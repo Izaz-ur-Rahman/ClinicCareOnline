@@ -1283,9 +1283,9 @@
   .navbar .collapse:not(.show) {
     display: block;
   }
-  .navbar ul {
+  /* .navbar ul {
     display: none;
-  }
+  } */
   .navbar .others-option {
     position: absolute;
     right: 75px;
@@ -1827,9 +1827,9 @@
   .navbar .collapse:not(.show) {
     display: block;
   } 
-     .navbar ul {
+     /* .navbar ul {
     display: none;
-  } 
+  }  */
    .navbar .others-option {
     position: absolute;
     right: 75px;
